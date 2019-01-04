@@ -1,0 +1,551 @@
+def get_adverts_mascot_orig():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+
+        ("HWM080", "NSW", "1977-01-01", 1, "smh", "Rambler", "Matador", "1976", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "Coupe", "none", "none", "none"),
+        ("MM806", "NSW", "1977-01-01", 2, "smh", "Rambler", "Matador", "7475", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("JAN981", "NSW", "1977-01-01", 3, "smh", "Rambler", "Matador", "1974", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("HZI652", "NSW", "1977-01-01", 4, "smh", "Rambler", "Matador", "1974", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("YGD760", "NSW", "1977-01-01", 5, "smh", "Rambler", "Matador", "1974", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("HDD558", "NSW", "1977-01-01", 6, "smh", "Rambler", "Matador", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("GOP309", "NSW", "1977-01-01", 7, "smh", "Rambler", "Matador", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("GGG095", "NSW", "1977-01-01", 8, "smh", "Rambler", "Matador", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "Wagon", "none", "none", "none"),
+        ("GLH524", "NSW", "1977-01-01", 9, "smh", "Rambler", "Matador", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        (
+        "HCN396", "NSW", "1977-01-01", 10, "smh", "Rambler", "Matador", "none", "none", "unknown", "6672484", "6674460",
+        "none", "WW", "none", "none", "none", "none", "none"),
+        (
+        "ELI190", "NSW", "1977-01-01", 11, "smh", "Rambler", "Matador", "none", "none", "unknown", "6672484", "6674460",
+        "none", "WW", "none", "none", "none", "none", "none"),
+        (
+        "GAX724", "NSW", "1977-01-01", 12, "smh", "Rambler", "Matador", "none", "none", "unknown", "6672484", "6674460",
+        "none", "WW", "none", "Wagon", "none", "none", "none"),
+        ("GBF500", "NSW", "1977-01-01", 13, "smh", "Rambler", "Matador", "none", "none", "unknown", "6672484", "6674460",
+        "none", "WW", "none", "none", "none", "none", "none"),
+        (
+        "HDS432", "NSW", "1977-01-01", 14, "smh", "Rambler", "Javelin", "none", "none", "unknown", "6672484", "6674460",
+        "none", "WW", "none", "Coupe", "none", "none", "none"),
+        (
+        "HFJ677", "NSW", "1977-01-01", 15, "smh", "Rambler", "Javelin", "none", "none", "unknown", "6672484", "6674460",
+        "none", "WW", "none", "Coupe", "none", "none", "none"),
+        ("EVO277", "NSW", "1977-01-01", 16, "smh", "Rambler", "American", "none", "6 cyl", "unknown", "6672484",
+         "6674460",
+         "none", "WW", "none", "none", "440", "none", "none"),
+        ("EIR754", "NSW", "1977-01-01", 17, "smh", "Rambler", "Hornet", "none", "4.2", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("BMZ329", "NSW", "1977-01-01", 18, "smh", "Rambler", "Hornet", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "Red", "none", "none", "none", "none"),
+        ("GZQ779", "NSW", "1977-01-01", 19, "smh", "Rambler", "Hornet", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("DIA925", "NSW", "1977-01-01", 20, "smh", "Rambler", "Hornet", "none", "4.2", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("HZG682", "NSW", "1977-01-01", 21, "smh", "Rambler", "Hornet", "1973", "4.2", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("BFJ871", "NSW", "1977-01-01", 22, "smh", "Rambler", "Rebel", "1970", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("BJR857", "NSW", "1977-01-01", 23, "smh", "Rambler", "Rebel", "1970", "360", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("AXF128", "NSW", "1977-01-01", 24, "smh", "Rambler", "Rebel", "none", "290", "unknown", "6672484", "6674460",
+         "none", "WW", "vinyl", "none", "none", "none", "none"),
+        ("GEZ762", "NSW", "1977-01-01", 25, "smh", "Rambler", "Rebel", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "Wagon", "none", "none", "none"),
+        ("AHY052", "NSW", "1977-01-01", 26, "smh", "Rambler", "Rebel", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "Wagon", "none", "none", "none"),
+        (
+        "DYP313", "NSW", "1977-01-01", 27, "smh", "Rambler", "Classic", "1965", "none", "unknown", "6672484", "6674460",
+        "none", "WW", "none", "none", "660", "none", "none"),
+
+        ("HFJ677", "NSW", "1977-01-08", 1, "smh", "Rambler", "Javelin", "none", "390", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "Coupe", "none", "none", "none"),
+        (
+        "GAX724", "NSW", "1977-01-08", 2, "smh", "Rambler", "Matador", "1974", "none", "Burgundy", "6672484", "6674460",
+        "none", "WW", "none", "none", "none", "none", "none"),
+        ("BJR857", "NSW", "1977-01-08", 3, "smh", "Rambler", "Rebel", "1970", "none", "Blue", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("GLH524", "NSW", "1977-01-08", 4, "smh", "Rambler", "Matador", "1972", "none", "White", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("GEZ762", "NSW", "1977-01-08", 5, "smh", "Rambler", "Rebel", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "Wagon", "none", "none", "none"),
+        ("GZQ779", "NSW", "1977-01-08", 6, "smh", "Rambler", "Hornet", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("ELI190", "NSW", "1977-01-08", 7, "smh", "Rambler", "Matador", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("DIA925", "NSW", "1977-01-08", 8, "smh", "Rambler", "Hornet", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("HCN396", "NSW", "1977-01-08", 9, "smh", "Rambler", "Matador", "1972", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("JAG756", "NSW", "1977-01-08", 10, "smh", "Rambler", "Hornet", "1975", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("JAN891", "NSW", "1977-01-08", 11, "smh", "Rambler", "Matador", "none", "none", "White", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("GGG095", "NSW", "1977-01-08", 12, "smh", "Rambler", "Matador", "1972", "none", "Blue", "6672484", "6674460",
+         "none", "WW", "none", "Wagon", "none", "none", "none"),
+        ("HDD558", "NSW", "1977-01-08", 13, "smh", "Rambler", "Matador", "1972", "none", "Brown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("EVO277", "NSW", "1977-01-08", 14, "smh", "Rambler", "American", "1968", "6-cyl", "unknown", "6672484",
+         "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("HZG682", "NSW", "1977-01-08", 15, "smh", "Rambler", "Hornet", "1973", "none", "Red", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("AHY052", "NSW", "1977-01-08", 16, "smh", "Rambler", "Rebel", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "Wagon", "none", "none", "none"),
+        (
+        "HWM080", "NSW", "1977-01-08", 17, "smh", "Rambler", "Matador", "1976", "none", "unknown", "6672484", "6674460",
+        "none", "WW", "none", "none", "none", "none", "none"),
+        ("AVQ155", "NSW", "1977-01-08", 18, "smh", "Rambler", "American", "1968", "none", "White", "6672484", "6674460",
+         "none", "WW", "Red", "none", "none", "none", "none"),
+        (
+        "MM 806", "NSW", "1977-01-08", 19, "smh", "Rambler", "Matador", "7475", "none", "unknown", "6672484", "6674460",
+        "none", "WW", "none", "none", "none", "none", "none"),
+        (
+        "HZI652", "NSW", "1977-01-08", 20, "smh", "Rambler", "Matador", "1974", "none", "unknown", "6672484", "6674460",
+        "none", "WW", "none", "none", "none", "none", "none"),
+        ("AXF128", "NSW", "1977-01-08", 21, "smh", "Rambler", "Rebel", "1968", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        (
+        "JBH340", "NSW", "1977-01-08", 22, "smh", "Rambler", "Matador", "7475", "none", "unknown", "6672484", "6674460",
+        "none", "WW", "none", "none", "none", "none", "none"),
+        ("BMZ329", "NSW", "1977-01-08", 23, "smh", "Rambler", "Hornet", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        (
+        "GOP309", "NSW", "1977-01-08", 24, "smh", "Rambler", "Matador", "none", "none", "unknown", "6672484", "6674460",
+        "none", "WW", "vinyl", "none", "none", "none", "none"),
+        ("EIR754", "NSW", "1977-01-08", 25, "smh", "Rambler", "Hornet", "1972", "none", "Sienna Brown", "6672484",
+         "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+
+        ("HFJ677", "NSW", "1977-01-15", 1, "smh", "Rambler", "Javelin", "none", "390", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "Coupe", "none", "none", "none"),
+        (
+        "GAX724", "NSW", "1977-01-15", 2, "smh", "Rambler", "Matador", "1974", "none", "Burgundy", "6672484", "6674460",
+        "none", "WW", "none", "none", "none", "none", "none"),
+        ("BJR857", "NSW", "1977-01-15", 3, "smh", "Rambler", "Rebel", "1970", "none", "Blue", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("GLH524", "NSW", "1977-01-15", 4, "smh", "Rambler", "Matador", "1972", "none", "White", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("GEZ762", "NSW", "1977-01-15", 5, "smh", "Rambler", "Rebel", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "Wagon", "none", "none", "none"),
+        ("GZQ779", "NSW", "1977-01-15", 6, "smh", "Rambler", "Hornet", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("ELI190", "NSW", "1977-01-15", 7, "smh", "Rambler", "Matador", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("DIA925", "NSW", "1977-01-15", 8, "smh", "Rambler", "Hornet", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("HCN396", "NSW", "1977-01-15", 9, "smh", "Rambler", "Matador", "1972", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("JAG756", "NSW", "1977-01-15", 10, "smh", "Rambler", "Hornet", "1975", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("JAN891", "NSW", "1977-01-15", 11, "smh", "Rambler", "Matador", "none", "none", "White", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("GGG095", "NSW", "1977-01-15", 12, "smh", "Rambler", "Matador", "1972", "none", "Blue", "6672484", "6674460",
+         "none", "WW", "none", "Wagon", "none", "none", "24000 mis"),
+        ("HDD558", "NSW", "1977-01-15", 13, "smh", "Rambler", "Matador", "1972", "none", "Brown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("EVO277", "NSW", "1977-01-15", 14, "smh", "Rambler", "American", "1968", "6-cyl", "unknown", "6672484",
+         "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        ("HZG682", "NSW", "1977-01-15", 15, "smh", "Rambler", "Hornet", "1973", "none", "White", "6672484", "6674460",
+         "none", "WW", "Red", "none", "none", "none", "none"),
+        ("AHY052", "NSW", "1977-01-15", 16, "smh", "Rambler", "Rebel", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "Wagon", "none", "none", "none"),
+        (
+        "HWM080", "NSW", "1977-01-15", 17, "smh", "Rambler", "Matador", "1976", "none", "unknown", "6672484", "6674460",
+        "none", "WW", "none", "none", "none", "none", "3000 kms"),
+        ("AVO155", "NSW", "1977-01-15", 18, "smh", "Rambler", "American", "1968", "none", "White", "6672484", "6674460",
+         "none", "WW", "Red", "none", "none", "none", "26000 mis"),
+        (
+        "MM 806", "NSW", "1977-01-15", 19, "smh", "Rambler", "Matador", "7475", "none", "unknown", "6672484", "6674460",
+        "none", "WW", "none", "none", "none", "none", "8000 kms"),
+        (
+        "HZI652", "NSW", "1977-01-15", 20, "smh", "Rambler", "Matador", "1974", "none", "unknown", "6672484", "6674460",
+        "none", "WW", "none", "none", "none", "none", "27000 mis"),
+        ("AXF128", "NSW", "1977-01-15", 21, "smh", "Rambler", "Rebel", "1968", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        (
+        "JBH340", "NSW", "1977-01-15", 22, "smh", "Rambler", "Matador", "7475", "none", "unknown", "6672484", "6674460",
+        "none", "WW", "none", "none", "none", "none", "none"),
+        ("BMZ329", "NSW", "1977-01-15", 23, "smh", "Rambler", "Hornet", "none", "none", "unknown", "6672484", "6674460",
+         "none", "WW", "none", "none", "none", "none", "none"),
+        (
+        "GOP309", "NSW", "1977-01-15", 24, "smh", "Rambler", "Matador", "none", "none", "unknown", "6672484", "6674460",
+        "none", "WW", "vinyl", "none", "none", "none", "none"),
+        ("EIR754", "NSW", "1977-01-15", 25, "smh", "Rambler", "Hornet", "1972", "none", "Sienna Brown", "6672484",
+         "6674460", "none", "WW", "none", "none", "none", "none", "none")
+              ]
+    return adverts
+
+
+
+def get_adverts_MM1():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+        ("BBC267", "NSW", "1977-04-09", 1, "smh", "Rambler","AMX","1969","343","unknown","6672484", "6674460", "none", "WW", "none", "Coupe", "none", "none","none"),
+        ("PC 351", "NSW", "1977-04-09", 2, "smh", "Rambler","AMX","none","4-spd","unknown","6672484","6674460","none","WW","none","Coupe","none","none","none"),
+        ("HEZ591", "NSW", "1977-04-09", 3, "smh", "Rambler","Rebel","1971","360","unknown","6672484","6674460", "none", "WW","none","Sedan","none","none","none"),
+        ("HVN306", "NSW", "1977-04-09", 4, "smh", "Rambler","Rebel","1969","343","unknown","6672484","6674460", "none","WW","none","Sedan","none","none","none"),
+        ("EVO277", "NSW", "1977-04-09", 5, "smh", "Rambler","American","none","6-cyl","none","6672484","6674460", "none","WW","none","Sedan","440","none","none"),
+        ("JAW314", "NSW", "1977-04-09", 6, "smh", "Rambler","Matador","7475","360","unknown","6672484","6674460", "none", "WW","none","Sedan","none","none","none"),
+        ("GOP309", "NSW", "1977-04-09", 7, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460", "none", "WW","none","Sedan","none","none","none"),
+        ("MM 347", "NSW", "1977-04-09", 8, "smh", "Rambler","Matador","1974","360","Black","6672484","6674460","none", "WW","none","Sedan","none","none","27000 mis"),
+        ("JBH340", "NSW", "1977-04-09", 9, "smh", "Rambler","Matador","7475","360","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","30000 mis"),
+        ("HEX812", "NSW", "1977-04-09", 10, "smh", "Rambler","Matador","7475","360","unknown","6672484","6674460","none", "WW", "none", "Sedan", "none", "none", "none"),
+        ("HDD558", "NSW", "1977-04-09", 11, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460", "none", "WW", "none", "Sedan", "none", "none", "none"),
+        ("JDF081", "NSW", "1977-04-09", 12, "smh", "Rambler","Matador","1973","360","Carribean","6672484","6674460", "none", "WW", "none", "Sedan", "none", "none", "none"),
+        ("HCQ063", "NSW", "1977-04-09", 13, "smh", "Rambler","Matador","1974","360","unknown","6672484","6674460", "none", "Jeff Fripp", "none", "Sedan", "none", "none", "none"),
+        ("BIT042", "NSW", "1977-04-09", 14, "smh", "Rambler","Hornet","1970","232","unknown","6672484","6674460", "none", "WW", "Bone", "sedan", "none", "none", "none"),
+        ("EIR754", "NSW", "1977-04-09", 15, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none", "WW", "none", "Sedan", "none", "none", "34000 mis"),
+        ("GBE988", "NSW", "1977-04-09", 16, "smh", "Rambler","Hornet","1972","4.2","unknown","6672484","6674460","none", "WW", "none", "Sedan", "none", "none", "none"),
+        ("HHA699", "NSW", "1977-04-09", 17, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460", "none", "WW", "none", "Sedan", "none", "none", "none"),
+        ("GFC061", "NSW", "1977-04-09", 18, "smh", "Rambler","Hornet","7273","4.2","unknown","6672484","6674460", "none", "WW", "none", "Sedan", "none", "none", "none"),
+        ("JAF743", "NSW", "1977-04-09", 19, "smh", "Rambler","Hornet","1975","4.2","unknown","6672484","6674460", "none", "WW", "none", "Sedan", "none", "none", "none")]
+    return adverts
+
+def get_adverts_MM2():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+        ("BAD470", "NSW", "1977-12-17", 1, "smh", "Rambler","Javelin","1969","343","unknown","6672484", "6674460", "none", "WW", "none", "Coupe", "none", "none","none"),
+        ("GJO325", "NSW", "1977-12-17", 2, "smh", "Rambler","Ambassador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("JLQ130", "NSW", "1977-12-17", 3, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460", "none", "WW","none","Wagon","none","none","none"),
+        ("HEJ853", "NSW", "1977-12-17", 4, "smh", "Rambler","Matador","7475","360","unknown","6672484","6674460", "none","WW","none","Sedan","none","none","22000 mis"),
+        ("JNC645", "NSW", "1977-12-17", 5, "smh", "Rambler","Matador","none","360","none","6672484","6674460", "none","WW","none","Sedan","none","none","none"),
+        ("JIK852", "NSW", "1977-12-17", 6, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460", "none", "WW","none","Sedan","none","none","none"),
+        ("JKR071", "NSW", "1977-12-17", 7, "smh", "Rambler","Matador","1974","360","Bamboo","6672484","6674460", "none", "WW","Bone","Sedan","none","none","27000 mis"),
+        ("JNC616", "NSW", "1977-12-17", 8, "smh", "Rambler","Matador","1974","360","White","6672484","6674460","none", "WW","Red","Sedan","none","none","27000 mis"),
+        ("HIW859", "NSW", "1977-12-17", 9, "smh", "Rambler","Matador","7475","360","Silver","6672484","6674460","none", "WW","Red","Sedan","none","none","31000 mis"),
+        ("MM 806", "NSW", "1977-12-17", 10, "smh", "Rambler","Hornet","7576","4.2","unknown","6672484","6674460","none", "WW", "none", "Sedan", "none", "none", "18000 mis"),
+        ("GTK045", "NSW", "1977-12-17", 11, "smh", "Rambler","Hornet","7374","4.2","2 Tone","6672484","6674460", "none", "WW", "none", "Sedan", "none", "none", "none"),
+        ("GHN410", "NSW", "1977-12-17", 12, "smh", "Rambler","Hornet","none","232","unknown","6672484","6674460", "none", "WW", "none", "Sedan", "none", "none", "none"),
+        ("JFL571", "NSW", "1977-12-17", 13, "smh", "Rambler","Rebel","1971","360","unknown","6672484","6674460", "none", "WW", "none", "Wagon", "none", "none", "none"),
+        ("DBQ166", "NSW", "1977-12-17", 14, "smh", "Rambler","Rebel","1971","360","unknown","6672484","6674460", "none", "WW", "Bone", "sedan", "none", "none", "47000 mis"),
+        ("GCL089", "NSW", "1977-12-17", 15, "smh", "Rambler","Rebel","1970","360","unknown","6672484","6674460","none", "WW", "none", "Sedan", "none", "none", "none"),
+        ("HRS929", "NSW", "1977-12-17", 16, "smh", "Toyota","Corona Mk II","7475","none","unknown","6672484","6674460","none", "WW", "none", "Sedan", "none", "none", "none"),
+        ("BEW803", "NSW", "1977-12-17", 17, "smh", "Toyota","Crown","none","4.2","none","6672484","6674460", "none", "WW", "none", "Sedan", "none", "$1485", "none"),
+        ("GOB001", "NSW", "1977-12-17", 18, "smh", "Ford","Falcon","1973","4.2","none","6672484","6674460", "none", "WW", "none", "Sedan", "XA", "$1795", "none"),
+        ("CQN647", "NSW", "1977-12-17", 19, "smh", "Ford","Falcon","1971","4.2","none","6672484","6674460", "none", "WW", "none", "Sedan", "XY", "none", "48000 mis")]
+    return adverts
+
+def get_adverts_MM3():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+        ("JIY995", "NSW", "1977-08-20", 1, "smh", "Rambler","Matador","1974","360","unknown","6672484", "6674460","none","WW","none","Sedan","none","none","none"),
+        ("GYE011", "NSW", "1977-08-20", 2, "smh", "Rambler","Matador","1974","360","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("GCU435", "NSW", "1977-08-20", 3, "smh", "Rambler","Hornet","1872","4.2","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","21000 mis"),
+        ("JBH340", "NSW", "1977-08-20", 4, "smh", "Rambler","Matador","7475","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GBS301", "NSW", "1977-08-20", 5, "smh", "Rambler","Matador","1972","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HRP364", "NSW", "1977-08-20", 6, "smh", "Rambler","Hornet","1970","232","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HEJ853", "NSW", "1977-08-20", 7, "smh", "Rambler","Matador","7475","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","19000 mis"),
+        ("GKS590", "NSW", "1977-08-20", 8, "smh", "Rambler","Rebel","none","360","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","none"),
+        ("GDR412", "NSW", "1977-08-20", 9, "smh", "Rambler","Matador","7273","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("BME548", "NSW", "1977-08-20", 10, "smh", "Rambler","Hornet","70","232","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("JEM113", "NSW", "1977-08-20", 11, "smh", "Rambler","Matador","73","360","Brown","6672484","6674460", "none","WW","none","Sedan","none","none","none"),
+        ("GFC061", "NSW", "1977-08-20", 12, "smh", "Rambler","Hornet","72","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("MM 347", "NSW", "1977-08-20", 13, "smh", "Rambler","Matador","1974","360","Black","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("EWK669", "NSW", "1977-08-20", 14, "smh", "Rambler","Rebel","1967","290","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HWM080", "NSW", "1977-08-20", 15, "smh", "Rambler","Matador","1972","360","Mocca","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("KF 033", "NSW", "1977-08-20", 16, "smh", "Rambler","Rebel","1967","none","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("DBQ295", "NSW", "1977-08-20", 17, "smh", "Rambler","Matador","1971","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("BAY138", "NSW", "1977-08-20", 18, "smh", "Rambler","Rebel","1967","290","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none")]
+    return adverts
+
+
+def get_adverts_MM4():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+        ("HRZ014", "NSW", "1976-04-24", 1, "smh", "Rambler","Matador","none","360","unknown","6672484", "6674460","none","WW","none","Wagon","none","none","none"),
+        ("AIT947", "NSW", "1976-04-24", 2, "smh", "Rambler","Hornet","1970","232","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("CFQ157", "NSW", "1976-04-24", 3, "smh", "Rambler","Classic","none","none","unknown","6672484","6674460","none", "WW","none","Wagon","770","none","none"),
+        ("DIM261", "NSW", "1976-04-24", 4, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HRY918", "NSW", "1976-04-24", 5, "smh", "Rambler","Rebel","1970","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HPS714", "NSW", "1976-04-24", 6, "smh", "Rambler","Hornet","none","232","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GQG683", "NSW", "1976-04-24", 7, "smh", "Rambler","Matador","1972","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("BLU689", "NSW", "1976-04-24", 8, "smh", "Rambler","Hornet","none","232","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","none"),
+        ("GMT840", "NSW", "1976-04-24", 9, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GAU438", "NSW", "1976-04-24", 10, "smh", "Rambler","Hornet","1970","232","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("AVI200", "NSW", "1976-04-24", 11, "smh", "Rambler","Rebel","1970","360","unknown","6672484","6674460", "none","WW","none","Wagon","none","none","none"),
+        ("CJQ827", "NSW", "1976-04-24", 12, "smh", "Rambler","Hornet","1970","232","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HON564", "NSW", "1976-04-24", 13, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HHA699", "NSW", "1976-04-24", 14, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HCI367", "NSW", "1976-04-24", 15, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("AEY035", "NSW", "1976-04-24", 16, "smh", "Rambler","Rebel","1968","none","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("BHQ225", "NSW", "1976-04-24", 17, "smh", "Rambler","Hornet","1970","232","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GAX418", "NSW", "1976-04-24", 18, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none")]
+    return adverts
+
+def get_adverts_MM5():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+        ("HQN564", "NSW", "1976-03-06", 1, "smh", "Rambler","Matador","1972","360","unknown","6672484", "6674460","none","WW","none","Sedan","none","none","none"),
+        ("AKQ327", "NSW", "1976-03-06", 2, "smh", "Rambler","Hornet","1970","232","unknown","6672484","6674460","none","WW","none","Sedan","SST","none","none"),
+        ("AVR020", "NSW", "1976-03-06", 3, "smh", "Rambler","Rebel","1969","none","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","none"),
+        ("GUO243", "NSW", "1976-03-06", 4, "smh", "Rambler","Matador","1971","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("EOY487", "NSW", "1976-03-06", 5, "smh", "Rambler","Classic","1966","none","unknown","6672484","6674460","none","WW","none","Sedan","770","none","none"),
+        ("GMT840", "NSW", "1976-03-06", 6, "smh", "Rambler","Matador","1972","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("ECO800", "NSW", "1976-03-06", 7, "smh", "Rambler","American","1966","none","unknown","6672484","6674460","none","WW","none","Sedan","440","none","none"),
+        ("HQT044", "NSW", "1976-03-06", 8, "smh", "Rambler","Hornet","1972","232","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","none"),
+        ("ENQ389", "NSW", "1976-03-06", 9, "smh", "Rambler","Matador","1972","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("DLD778", "NSW", "1976-03-06", 10, "smh", "Rambler","Rebel","1967","232","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HKP774", "NSW", "1976-03-06", 11, "smh", "Rambler","Hornet","1971","none","unknown","6672484","6674460", "none","WW","none","Sedan","none","none","none"),
+        ("HBI703", "NSW", "1976-03-06", 12, "smh", "Rambler","Matador","1972","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("DVI526", "NSW", "1976-03-06", 13, "smh", "Rambler","Hornet","1971","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("EMC772", "NSW", "1976-03-06", 14, "smh", "Rambler","Classic","1965","none","unknown","6672484","6674460","none","WW","none","Sedan","660","none","none"),
+        ("EWK669", "NSW", "1976-03-06", 15, "smh", "Rambler","Rebel","1967","290","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("AIT945", "NSW", "1976-03-06", 16, "smh", "Rambler","Hornet","1970","232","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GBS422", "NSW", "1976-03-06", 17, "smh", "Rambler","Matador","1972","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("ERI302", "NSW", "1976-03-06", 18, "smh", "Rambler","Hornet","1971","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HHA699", "NSW", "1976-03-06", 19, "smh", "Rambler","Hornet","1971","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none")]
+    return adverts
+
+def get_adverts_MM6():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+        ("BWQ277", "NSW", "1975-10-06", 1, "smh", "Rambler","Hornet","none","none","unknown","6672484", "6674460","none","WW","none","Sedan","none","none","none"),
+        ("BJD557", "NSW", "1975-10-06", 2, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("DL 377", "NSW", "1975-10-06", 3, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","none"),
+        ("BIO113", "NSW", "1975-10-06", 4, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("EXY266", "NSW", "1975-10-06", 5, "smh", "Rambler","Rebel","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("AWN404", "NSW", "1975-10-06", 6, "smh", "Rambler","Rebel","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HEW779", "NSW", "1975-10-06", 7, "smh", "Rambler","Rebel","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GDE457", "NSW", "1975-10-06", 8, "smh", "Rambler","Rebel","none","none","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","none"),
+        ("ASH935", "NSW", "1975-10-06", 9, "smh", "Rambler","Rebel","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("BRN434", "NSW", "1975-10-06", 10, "smh", "Rambler","Rebel","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HOG287", "NSW", "1976-01-03", 1, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460", "none","WW","none","Sedan","none","none","none"),
+        ("HOE944", "NSW", "1976-01-03", 2, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GRE988", "NSW", "1976-01-03", 3, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HLM617", "NSW", "1976-01-03", 4, "smh", "Rambler","Matador","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("ENQ389", "NSW", "1976-01-03", 5, "smh", "Rambler","Matador","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HOX181", "NSW", "1976-01-03", 6, "smh", "Rambler","Matador","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("EMC772", "NSW", "1976-01-03", 7, "smh", "Rambler","Classic","1965","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("EUY467", "NSW", "1976-01-03", 8, "smh", "Rambler","Classic","1966","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GDH155", "NSW", "1976-01-03", 9, "smh", "Rambler","Rebel","none","none","unknown","6672484", "6674460","none","WW","none","Sedan","none","none","none"),
+        ("GE 273", "NSW", "1976-01-03", 10,"smh","Rambler","Rebel","none","none","unknown","6672484", "6674460","none","WW","none","Sedan","none","none","none"),
+        ("BKR226", "NSW", "1976-01-03", 11,"smh", "Rambler","Rebel","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("BBS000", "NSW", "1976-01-03", 1,"smh","Rambler","Hornet","1970","none","unknown","5247172", "none","none", "WW", "none", "Sedan", "none", "none", "none"),
+        ("CIZ741", "NSW", "1976-01-03", 1,"smh","Rambler","Rebel","1971","none","unknown","7597291","none","Lic MD","WW","none","Sedan","none","none","none")]
+    return adverts
+
+def get_adverts_MM7():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+        ("HGY203", "NSW", "1976-06-12", 1, "smh", "Rambler","Hornet","none","none","unknown","6672484", "6674460","none","WW","none","Sedan","none","none","none"),
+        ("HRZ014", "NSW", "1976-06-12", 2, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Wagon","SST","none","none"),
+        ("BDI258", "NSW", "1976-06-12", 3, "smh", "Rambler","Rebel","1970","none","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","none"),
+        ("GFG878", "NSW", "1976-06-12", 4, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("DIM261", "NSW", "1976-06-12", 5, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("MB 278", "NSW", "1976-06-12", 6, "smh", "Rambler","Rebel","1971","360","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("HCI367", "NSW", "1976-06-12", 7, "smh", "Rambler","Matador","1972","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("BCY782", "NSW", "1976-06-12", 8, "smh", "Rambler","Rebel","none","360","unknown","6672484","6674460","none", "WW","none","Wagon","none","none","none"),
+        ("GEU543", "NSW", "1976-06-12", 9, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GTV677", "NSW", "1976-06-12", 10, "smh", "Rambler","Javelin","1971","390","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("RH 509", "NSW", "1976-06-12", 11, "smh", "Rambler","Hornet","1974","4.2","unknown","6672484","6674460", "none","WW","none","Sedan","none","none","none"),
+        ("HUD248", "NSW", "1976-06-12", 12, "smh", "Rambler","Matador","1972","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HRP364", "NSW", "1976-06-12", 13, "smh", "Rambler","Hornet","1972","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GCU577", "NSW", "1976-06-12", 14, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","660","none","none"),
+        ("GAX502", "NSW", "1976-06-12", 15, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HON564", "NSW", "1976-06-12", 16, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GAA631", "NSW", "1976-06-12", 17, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HHA699", "NSW", "1976-06-12", 18, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("AR 011", "NSW", "1976-06-12", 19, "smh", "Rambler","Hornet","1974","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none")]
+    return adverts
+
+def get_adverts_MM8():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+        ("GTV677", "NSW", "1976-06-19", 1, "smh", "Rambler","Javelin","1971","390","unknown","6672484", "6674460","none","WW","none","Coupe","none","none","none"),
+        ("MB 278", "NSW", "1976-06-19", 2, "smh", "Rambler","Rebel","1971","360","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("GCV953", "NSW", "1976-06-19", 3, "smh", "Rambler","Rebel","none","none","unknown","6672484","6674460","none", "WW","none","Wagon","none","none","none"),
+        ("BDI258", "NSW", "1976-06-19", 4, "smh", "Rambler","Rebel","1970","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HCI367", "NSW", "1976-06-19", 5, "smh", "Rambler","Matador","1972","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GCU577", "NSW", "1976-06-19", 6, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("HQN564", "NSW", "1976-06-19", 7, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GEU543", "NSW", "1976-06-19", 8, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","none"),
+        ("GFG878", "NSW", "1976-06-19", 9, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GDR412", "NSW", "1976-06-19", 10, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("AR 011", "NSW", "1976-06-19", 11, "smh", "Rambler","Hornet","1974","4.2","unknown","6672484","6674460", "none","WW","none","Sedan","none","none","none"),
+        ("RH 507", "NSW", "1976-06-19", 12, "smh", "Rambler","Hornet","1974","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HGY203", "NSW", "1976-06-19", 13, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("DIM261", "NSW", "1976-06-19", 14, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","660","none","none"),
+        ("HRP364", "NSW", "1976-06-19", 15, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GAX418", "NSW", "1976-06-19", 16, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HHA699", "NSW", "1976-06-19", 17, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GAA631", "NSW", "1976-06-19", 18, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("CQO273", "NSW", "1976-06-19", 19, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none")]
+    return adverts
+
+def get_adverts_MM9():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+        ("GTV677", "NSW", "1976-06-26", 1, "smh", "Rambler","Javelin","1971","390","unknown","6672484", "6674460","none","WW","none","Coupe","none","none","none"),
+        ("EWM162", "NSW", "1976-06-26", 2, "smh", "Rambler","American","none","6cyl","unknown","6672484","6674460","none","WW","none","Sedan","440","none","none"),
+        ("GDR412", "NSW", "1976-06-26", 3, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","none"),
+        ("GFG878", "NSW", "1976-06-26", 4, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HCI367", "NSW", "1976-06-26", 5, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GCU577", "NSW", "1976-06-26", 6, "smh", "Rambler","Matador","1972","360","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("HQN564", "NSW", "1976-06-26", 7, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GEU543", "NSW", "1976-06-26", 8, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","none"),
+        ("GDO171", "NSW", "1976-06-26", 9, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("AR 011", "NSW", "1976-06-26", 10, "smh", "Rambler","Hornet","1974","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("RH 507", "NSW", "1976-06-26", 11, "smh", "Rambler","Hornet","1974","4.2","unknown","6672484","6674460", "none","WW","none","Sedan","none","none","none"),
+        ("HGY203", "NSW", "1976-06-26", 12, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GAX418", "NSW", "1976-06-26", 13, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("DIM261", "NSW", "1976-06-26", 14, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GAA631", "NSW", "1976-06-26", 15, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HHA699", "NSW", "1976-06-26", 16, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GIT625", "NSW", "1976-06-26", 17, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GHD580", "NSW", "1976-06-26", 18, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HRP364", "NSW", "1976-06-26", 19, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("MB 278", "NSW", "1976-06-26", 20, "smh", "Rambler","Rebel","1971","360","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("GXB625", "NSW", "1976-06-26", 21, "smh", "Rambler","Rebel","1969","none","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("GCV953", "NSW", "1976-06-26", 22, "smh", "Rambler","Rebel","1968","none","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none")]
+    return adverts
+
+def get_adverts_MM10():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+        ("MB 278", "NSW", "1976-07-03", 1, "smh", "Rambler","Rebel","1971","360","unknown","6672484", "6674460","none","WW","none","Wagon","none","none","none"),
+        ("ARW962", "NSW", "1976-07-03", 2, "smh", "Rambler","Rebel","1969","none","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("GXB625", "NSW", "1976-07-03", 3, "smh", "Rambler","Rebel","1969","none","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("GCV953", "NSW", "1976-07-03", 4, "smh", "Rambler","Rebel","1968","none","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("DIM261", "NSW", "1976-07-03", 5, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("AR 011", "NSW", "1976-07-03", 6, "smh", "Rambler","Hornet","1974","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("RH 507", "NSW", "1976-07-03", 7, "smh", "Rambler","Hornet","1974","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HGY203", "NSW", "1976-07-03", 8, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","none"),
+        ("GAX418", "NSW", "1976-07-03", 9, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HHA699", "NSW", "1976-07-03", 10, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GAA631", "NSW", "1976-07-03", 11, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460", "none","WW","none","Sedan","none","none","none"),
+        ("GIT625", "NSW", "1976-07-03", 12, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GDH580", "NSW", "1976-07-03", 13, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("EWM162", "NSW", "1976-07-03", 14, "smh", "Rambler","American","none","none","unknown","6672484","6674460","none","WW","none","Sedan","440","none","none"),
+        ("HQN564", "NSW", "1976-07-03", 15, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HCI367", "NSW", "1976-07-03", 16, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HVU659", "NSW", "1976-07-03", 17, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GFO543", "NSW", "1976-07-03", 18, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GFG695", "NSW", "1976-07-03", 19, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GDR412", "NSW", "1976-07-03", 20, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GCU577", "NSW", "1976-07-03", 21, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none")]
+    return adverts
+
+def get_adverts_MM11():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+        ("GIT625", "NSW", "1976-07-10", 1, "smh", "Rambler","Hornet","none","none","unknown","6672484", "6674460","none","WW","none","Sedan","none","none","none"),
+        ("GZG490", "NSW", "1976-07-10", 2, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GHD580", "NSW", "1976-07-10", 3, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GAA631", "NSW", "1976-07-10", 4, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HGY203", "NSW", "1976-07-10", 5, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("RH 507", "NSW", "1976-07-10", 6, "smh", "Rambler","Hornet","1974","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("DIM261", "NSW", "1976-07-10", 7, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GAX418", "NSW", "1976-07-10", 8, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","none"),
+        ("AR 011", "NSW", "1976-07-10", 9, "smh", "Rambler","Hornet","1974","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GCU577", "NSW", "1976-07-10", 10, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("DAL011", "NSW", "1976-07-10", 11, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460", "none","WW","none","Sedan","none","none","none"),
+        ("GFG695", "NSW", "1976-07-10", 12, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GDR412", "NSW", "1976-07-10", 13, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GEO543", "NSW", "1976-07-10", 14, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HCI367", "NSW", "1976-07-10", 15, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HQN564", "NSW", "1976-07-10", 16, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GCV953", "NSW", "1976-07-10", 17, "smh", "Rambler","Rebel","none","none","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("MM 347", "NSW", "1976-07-10", 18, "smh", "Rambler","Rebel","1970","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("MB 278", "NSW", "1976-07-10", 19, "smh", "Rambler","Rebel","1971","360","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("ARW962", "NSW", "1976-07-10", 20, "smh", "Rambler","Rebel","1969","none","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("GXB625", "NSW", "1976-07-10", 21, "smh", "Rambler","Rebel","1969","none","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none")]
+    return adverts
+
+def get_adverts_MM12():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+        ("HOB163", "NSW", "1976-09-18", 1, "smh", "Rambler","Hornet","1975","4.2","unknown","6672484", "6674460","none","WW","none","Sedan","none","none","none"),
+        ("HKP774", "NSW", "1976-09-18", 2, "smh", "Rambler","Hornet","1971","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HGY203", "NSW", "1976-09-18", 3, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GAA631", "NSW", "1976-09-18", 4, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("DIM261", "NSW", "1976-09-18", 5, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GZG490", "NSW", "1976-09-18", 6, "smh", "Rambler","Hornet","1972","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HXG910", "NSW", "1976-09-18", 7, "smh", "Rambler","Hornet","none","3.8","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GIT625", "NSW", "1976-09-18", 8, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","none"),
+        ("BKL424", "NSW", "1976-09-18", 9, "smh", "Rambler","Hornet","1970","3.8","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("MMj806", "NSW", "1976-09-18", 1, "smh", "Rambler","Javelin","1971","390","unknown","6672484","6674460","none","WW","none","Sedan","none","none", "none"),
+        ("DKL424", "NSW", "1976-09-18", 2, "smh", "Rambler","Hornet","1970","none","unknown","6672484","6674460","none","WW","none","Sedan","none","$1950","none"),
+        ("HXV754", "NSW", "1976-09-18", 1, "smh", "Rambler","Matador","1974","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HXV872", "NSW", "1976-09-18", 2, "smh", "Rambler","Matador","1974","360","unknown","6672484","6674460", "none","WW","none","Sedan","none","none","none"),
+        ("GBF500", "NSW", "1976-09-18", 3, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GDR412", "NSW", "1976-09-18", 4, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HVU059", "NSW", "1976-09-18", 5, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GCU577", "NSW", "1976-09-18", 6, "smh", "Rambler","Matador","1972","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HGY320", "NSW", "1976-09-18", 7, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HRL978", "NSW", "1976-09-18", 1, "smh", "Rambler","Matador","1976","360","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("HUF097", "NSW", "1976-09-18", 2, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("BJQ763", "NSW", "1976-09-18", 3, "smh", "Rambler","Rebel","1969","343","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("?CU490", "NSW", "1976-09-18", 4, "smh", "Rambler","Rebel","1968","none","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("HXU178", "NSW", "1976-09-18", 5, "smh", "Rambler","Classic","1966","none","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none")]
+    return adverts
+
+def get_adverts_MM13():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+        ("HWM080", "NSW", "1976-12-11", 1, "smh", "Rambler","Matador","1976","360","unknown","6672484", "6674460","none","WW","none","Sedan","none","none","3000 kms"),
+        ("HFJ677", "NSW", "1976-12-11", 2, "smh", "Rambler","Matador","1974","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","8000 kma"),
+        ("JAN981", "NSW", "1976-12-11", 3, "smh", "Rambler","Matador","1974","360","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","none"),
+        ("HZI652", "NSW", "1976-12-11", 4, "smh", "Rambler","Matador","1974","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HDD558", "NSW", "1976-12-11", 5, "smh", "Rambler","Matador","1973","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GLH524", "NSW", "1976-12-11", 6, "smh", "Rambler","Matador","1972","360","unknown","6672484","6674460","none","WW","none","Sedann","none","none","none"),
+        ("GAX724", "NSW", "1976-12-11", 7, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GBF500", "NSW", "1976-12-11", 8, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","none"),
+        ("ELI190", "NSW", "1976-12-11", 9, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HCN396", "NSW", "1976-12-11", 10, "smh", "Rambler","Matador","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GZQ779", "NSW", "1976-12-11", 11, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460", "none","WW","none","Sedan","none","none","none"),
+        ("DIA925", "NSW", "1976-12-11", 12, "smh", "Rambler","Hornet","none","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HZG925", "NSW", "1976-12-11", 13, "smh", "Rambler","Hornet","1973","4.2","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("DJF871", "NSW", "1976-12-11", 14, "smh", "Rambler","Rebel","1970","360","unknown","6672484","6674460","none","WW","none","Sedan","660","none","none"),
+        ("VRJ857", "NSW", "1976-12-11", 15, "smh", "Rambler","Rebel","none","360","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("AHY052", "NSW", "1976-12-11", 16, "smh", "Rambler","Rebel","none","none","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("GEZ762", "NSW", "1976-12-11", 17, "smh", "Rambler","Rebel","none","none","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("AXF128", "NSW", "1976-12-11", 18, "smh", "Rambler","Rebel","1968","290","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("EVO277", "NSW", "1976-12-11", 19, "smh", "Rambler","American","none","232","unknown","6672484","6674460","none","WW","none","Sedan","none","none", "none"),
+        ("HDS432", "NSW", "1976-12-11", 20, "smh", "Rambler","Javelin","none","none","unknown","6672484","6674460","none","WW","none","Coupe","none","none","none")]
+    return adverts
+
+def get_adverts_MM14():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+        ("AVQ170", "NSW", "1975-08-09", 1, "smh", "Rambler","Rebel","1970","none","unknown","6672484", "6674460","none","WW","none","Wagon","none","none","none"),
+        ("EJN412", "NSW", "1975-08-09", 2, "smh", "Rambler","American","1967","none","unknown","6672484","6674460","none","WW","none","Sedan","440","none","none"),
+        ("MM 347", "NSW", "1975-08-09", 3, "smh", "Rambler","Matador","1972","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("BHU861", "NSW", "1975-08-09", 4, "smh", "Rambler","Hornet","1970","232","unknown","6672484","6674460","none","WW","none","Sedan","SST","none","none"),
+        ("ASH935", "NSW", "1975-08-09", 5, "smh", "Rambler","Rebel","1969","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("DGU532", "NSW", "1975-08-09", 6, "smh", "Rambler","Classic","1964","none","unknown","6672484","6674460","none","WW","none","Sedan","660","none","none"),
+        ("GDE457", "NSW", "1975-08-09", 7, "smh", "Rambler","Rebel","1970","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HEU779", "NSW", "1975-08-09", 8, "smh", "Rambler","Rebel","1968","none","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","none"),
+        ("GBS184", "NSW", "1975-08-09", 9, "smh", "Rambler","Matador","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HLM616", "NSW", "1975-08-09", 10, "smh", "Rambler","Rebel","1971","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("DRD938", "NSW", "1975-08-09", 11, "smh", "Rambler","Classic","1964","V8","unknown","6672484","6674460", "none","WW","none","Sedan","none","none","none"),
+        ("AIW731", "NSW", "1975-08-09", 12, "smh", "Rambler","Rebel","1970","none","unknown","6672484","6674460","none","WW","none","Wagon","none","none","none"),
+        ("EXY266", "NSW", "1975-08-09", 13, "smh", "Rambler","Rebel","1968","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none")]
+    return adverts
+
+def get_adverts_MM19751206():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+        ("ENQ389", "NSW", "1975-12-06", 1, "smh", "Rambler","Matador","none","none","unknown","6672484", "6674460","none","WW","none","Sedan","none","none","none"),
+        ("HNH994", "NSW", "1975-12-06", 2, "smh", "Rambler","Matador","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HOX181", "NSW", "1975-12-06", 3, "smh", "Rambler","Matador","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HNP176", "NSW", "1975-12-06", 4, "smh", "Rambler","Matador","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HLM617", "NSW", "1975-12-06", 5, "smh", "Rambler","Matador","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("BKC361", "NSW", "1975-12-06", 6, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HOG287", "NSW", "1975-12-06", 7, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("BNQ277", "NSW", "1975-12-06", 8, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","none"),
+        ("HOE944", "NSW", "1975-12-06", 9, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("AVQ852", "NSW", "1975-12-06", 10, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GRL010", "NSW", "1975-12-06", 11, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460", "none","WW","none","Sedan","none","none","none"),
+        ("AIZ538", "NSW", "1975-12-06", 12, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none")]
+    return adverts
+
+def get_adverts_MM19751025():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+        ("BWQ277", "NSW", "1975-10-25", 1, "smh", "Rambler","Hornet","none","none","unknown","6672484", "6674460","none","WW","none","Wagon","none","none","none"),
+        ("GTC874", "NSW", "1975-10-25", 2, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("BKC361", "NSW", "1975-10-25", 3, "smh", "Rambler","Hornetr","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("AS 904", "NSW", "1975-10-25", 4, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HNP176", "NSW", "1975-10-25", 5, "smh", "Rambler","Hornet","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("HIX488", "NSW", "1975-10-25", 6, "smh", "Rambler","Matador","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("ENQ389", "NSW", "1975-10-25", 7, "smh", "Rambler","Matador","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("MM 347", "NSW", "1975-10-25", 8, "smh", "Rambler","Matador","none","none","unknown","6672484","6674460","none", "WW","none","Sedan","none","none","none"),
+        ("HNH994", "NSW", "1975-10-25", 9, "smh", "Rambler","Matador","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("DGQ359", "NSW", "1975-10-25", 10, "smh", "Rambler","Matador","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("EUX631", "NSW", "1975-10-25", 11, "smh", "Rambler","American","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none"),
+        ("GDE457", "NSW", "1975-10-25", 12, "smh", "Rambler","Rebel","1970","360","unknown","6672484","6674460","none","WW","none","Sedan","440","none","none"),
+        ("EFB884", "NSW", "1975-10-25", 13, "smh", "Rambler","Classic","none","none","unknown","6672484","6674460","none","WW","none","Sedan", "none", "none", "none"),
+        ("DGA724", "NSW", "1975-10-25", 14, "smh", "Rambler","Classic","none","none","unknown","6672484","6674460","none","WW","none","Sedan", "none", "none", "none"),
+        ("ADY120", "NSW", "1975-10-25", 15, "smh", "Rambler","Classic","none","none","unknown","6672484","6674460","none","WW","none","Sedan","none","none","none")]
+    return adverts

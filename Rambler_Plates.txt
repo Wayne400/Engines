@@ -1,0 +1,20 @@
+
+def get_rambler_1():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+("AOY270","1976-12-04","Rebel","none","770","290","Ivory","4988866","none","63800"),
+("GBB623","1976-11-06","Hornet","1971","SST","232","Burgundy","9829846","$2945","39000"),
+("GKZ716","1976-10-23","Hornet","1973","SST","4.2","Silver Grey Metallic","321820","$5000","15000"),
+("EYZ471","1976-10-16","Rebel","1968","none","none","unknown","927629","$1950","none"),
+("HDM464","1976-10-16","Classic","1966","none","V8","White","598488","$375","none"),
+("HRE241","1976-10-16","Matador","1976","none","360","unknown","7597291","none","13000"),
+("GEQ455","1976-10-16","Matador","1972","none","360","unknown","7597291","none","35000"),
+("EIO447","1976-10-09","Rebel","1969","none","none","unknown","6616918","$1250","none"),
+("DYM001","1976-10-09","Classic","1966","none","none","unknown","5288213","$550","none"),
+("GDQ455","1976-10-02","Matador","1972","none","360","unknown","7597291","none","35000"),
+("BHQ509","1976-10-02","Classic","none","770","V8","vinyl top","6302611","$1495","none"),
+("JB 610","1976-10-02","Matador","1973","none","360","Yellow","Rydalmere","none","none"),
+("HGE324","1976-10-02","Ambassador","1971","SST","360","unknown","824253","$1590","none"),
+("CPH643","1976-10-02","Ambassador","1971","SST","360","unknown","824253","$1890","none"),
+("GYN390","1976-09-25","Hornet","1974","SST","4.2","unknown","7597291","nome","21000"),
+("BDK353","1976-09-18","Rebel","1969","none","none","unknown","6615060","$1600","none")
+    ]

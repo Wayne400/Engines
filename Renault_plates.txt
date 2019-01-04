@@ -1,0 +1,29 @@
+
+def get_renault_1():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+("GLG798","1974-11-23","R12","1973","TL","White","4494794","$2250","July"),
+("DOQ478","1974-11-23","R12","1972","TL","Light Green","9381767","$1780","none"),
+("AIB817","1974-11-23","R16","1969","TL","unknown","4496428","$725","none"),
+("GSK937","1974-11-23","R16","1974","TS","unknown","6366763","none","none"),
+("EIE553","1974-11-23","R16","1972","XX","unknown","862089","$2600","none"),
+("GOT137","1974-11-23","R16","1974","TS","White","3374926","$2950","none"),
+("ECQ969","1974-11-30","RXX","1972","XX","unknown","6616411","$2000","none")]
+    return adverts
+
+	def get_renault_1():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
+    adverts = [
+("GDE367","1974-09-14","R12","1972","TL","Green","308506","$1700","none"),
+("GYN579","1974-09-14","R12","1974","GL","Avocado Green","6390985","none","August"),
+("EOQ537","1974-09-14","R16","1972","TS","Sage Green","7715934","$2950","August"),
+("BGC547","1974-09-28","R10","1970","XX","unknown","4072419","$500","July"),
+("EOO517","1974-09-28","R10","1967","XX","unknown","4672097","$500","September"),
+("GIC112","1974-09-28","R12","1973","TL","Orange","735563","$2400","none"),
+("EOL561","1974-09-28","R10","1969","XX","unknown","5796617","$890","none"),
+("DIW786","1974-09-28","R12","1972","XX","unknown","6329225","$1740","February"),
+("EYG899","1974-09-28","R10","1968","XX","unknown","980639","$795","none"),
+("GBU835","1974-09-28","R12","1972","GL","unknown","834008","$2400","none"),
+("ESK731","1974-09-28","R10","1968","XX","White","397047","$870","none"),
+("GWB972","1974-09-28","R16","1974","TS","Turquoise","362820","$4000","April"),
+("EZL607","1974-09-28","R10","1968","XX","unknown","590538","none","none"),
+("EZQ500","1974-09-28","R10S","1970","XX","unknown","8248480","$1175","September")]
+    return adverts
