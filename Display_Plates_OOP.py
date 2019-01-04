@@ -192,7 +192,7 @@ def main():
   go_again = 'y'
   while go_again != 'n':
     while True:
-        Make_list = ["Rambler", "Renault", "Peugeot", "Rover", "Ford", "Dealer"]
+        Make_list = ["Rambler", "Renault", "Peugeot", "Rover", "Ford", "Dealer MM"]
         print Make_list
         pick_make = "Wally"
         pick_make = raw_input("Car Make?")
