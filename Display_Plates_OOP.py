@@ -241,7 +241,7 @@ def main():
                                    jurisdiction="NSW")
             break
         elif pick_make == "mm":
-            pick_model = raw_input("please enter Rambler model: ")
+            pick_model = raw_input("please enter Rambler/AMC model: ")
             if pick_model == "h":
                 Rambler_list = ["Hornet"]
             elif pick_model == "m":
