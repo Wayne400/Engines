@@ -267,7 +267,6 @@ def main():
             else:
                 Rambler_list = ["Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American", "AMX"]
 
- #           Mascot_list = ["Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American", "AMX"]
             ads_table = get_sql_data_mascot(car_model_list=Rambler_list, car_make ="Rambler", connectstring="advertisements_indexed.db",
                                      jurisdiction="NSW")
             break
