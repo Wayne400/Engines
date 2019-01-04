@@ -192,7 +192,7 @@ def main():
   go_again = 'y'
   while go_again != 'n':
     while True:
-        Make_list = ["Rambler", "Renault", "Peugeot", "Rover", "Ford", "Dealer"]
+        Make_list = ["Rambler", "Renault", "Peugeot", "Rover", "Ford", "Dealer MM"]
         print Make_list
         pick_make = "Wally"
         pick_make = raw_input("Car Make?")
@@ -241,32 +241,11 @@ def main():
                                    jurisdiction="NSW")
             break
         elif pick_make == "mm":
-            pick_model = raw_input("please enter Rambler model: ")
-            if pick_model == "h":
-                Rambler_list = ["Hornet"]
-            elif pick_model == "m":
-                Rambler_list = ["Matador"]
-            elif pick_model == "r":
-                Rambler_list = ["Rebel"]
-            elif pick_model == "rm":
-                Rambler_list = ["Rebel", "Matador"]
-            elif pick_model == "rac":
-                Rambler_list = ["Rebel", "American","Classic"]
-            elif pick_model == "rmh":
-                Rambler_list = ["Rebel", "Matador", "Hornet"]
-            elif pick_model == "j":
-                Rambler_list = ["Javelin"]
-            elif pick_model == "c":
-                Rambler_list = ["Classic"]
-            elif pick_model == "an":
-                Rambler_list = ["American"]
-            elif pick_model == "x":
-                Rambler_list = ["AMX"]
-            elif pick_model == "ar":
-                Rambler_list = ["Ambassador", "NSW"]
-            else:
-                Rambler_list = ["Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American", "AMX"]
-
+            Rambler_list = ["Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American", "AMX"]
+            print Rambler_list
+            pick_model = raw_input("please enter Rambler/AMC model: ")
+            if pick_model != "all":
+                Rambler_list = [pick_model]
             ads_table = get_sql_data_mascot(car_model_list=Rambler_list, car_make ="Rambler", connectstring="advertisements_indexed.db",
                                      jurisdiction="NSW")
             break
