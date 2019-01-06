@@ -57,7 +57,7 @@ def get_dealers():
 
 '802281': ("Glendenning Motors", "693 Victoria Rd.", "Ryde", "802281"),
 '8488222': ("Les Vagg", " Rd.", "Pennant Hills", "LD"),
-'866727': ("Epping Motors", "58 Rawson St", "Epping", "LD"),
+'865727': ("Epping Motors", "58 Rawson St", "Epping", "LD"),
 
 
 '9382255': ("Murphy Johnston Imported Cars", "620 Pittwater Rd", "Brookvale", "LD253"),
