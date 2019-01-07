@@ -66,7 +66,7 @@ def get_rover():   # creating a list of tuples representing individual ads in th
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 1226
+    master_index1 = 1275
     for row in ads:
         print row
         master_index1 += 1

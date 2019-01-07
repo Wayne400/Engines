@@ -23,16 +23,25 @@ def get_renault_1():   # creating a list of tuples representing individual ads i
 ("AEN064","1975-07-12","R10","6970","XX","unknown","none","317131","$775","none","none"),
 ("AAK082","1975-07-12","R16","1969","XX","unknown","none","946447","$800","none","October"),
 ("CQW097","1975-07-12","R12","1971","TL","unknown","none","3891493","$1950","none","December"),
-("EQL880","1975-07-05","R12","1972","GL","Brilliant Yellow","4523422","none","none","none"),
+("EQL880","1975-07-05","R12","1972","GL","Brilliant Yellow","none","4523422","none","none","none"),
 ("GFD926","1975-07-05","R16","1973","TS","White","none","4871438","$3250","none","none"),
-("GTD583","1977-08-20","R16","1974","TS","unknown","4495946","$3550","April"),
-("EKE271","1977-08-27","R10","1967","XX","Dark Green","430769","$1100","March"),
-("AKI115","1977-08-27","R12","1971","XX","unknown","9601790","$1600","none"),
-("EQL533","1977-08-27","R12","1972","GL","unknown","841405","$2680","July"),
-("EAQ471","1977-08-27","R16","1972","TS","unknown","5794827","$2400","May"),
-("GRL030","1977-09-03","R17","1973","TL","White","4872819","$4200","December"),
-("DCQ574","1977-09-10","R12","1972","TL","unknown","517402","$2200","February"),
-("CRI310","1977-09-10","R16","1971","TS","unknown","5691918","$2400","September"),
+("GRN935","1975-07-05","R12","1974","GL","unknown","none","(047)536488","$3100","none","February"),
+("AKN921","1975-07-05","R16","6970","TS","unknown","none","9602737","$1650","none","none"),
+("GDD225","1975-07-05","R12","1972","GL","Sunburst Yellow","none","417093","$2300","26000","November"),
+("AEN064","1975-07-05","R10","6970","XX","unknown","none","317131","$800","none","January"),
+("AVQ788","1975-06-28","R10S","6970","XX","unknown","none","432956","$1150","none","May"),
+("GTT633","1975-06-28","R12","1974","GL","unknown","none","Punchbowl","$3200","28000mis","December"),
+("AKN921","1975-06-28","R16","6970","TS","unknown","none","9602737","$1800","none","none"),
+("EXY318","1975-06-28","R10","1968","XX","unknown","none","556933","$950","60000mis","June"),
+("BHL847","1975-06-28","R16","1970","XX","unknown","none","5249970","$1550","none","February"),
+("GAT283","1975-06-21","R12","1972","GL","unknown","none","5214459","$2000","35000mis","none"),
+("EJS518","1975-06-21","R10","1967","XX","unknown","none","5464045","$850","none","February"),
+("AMH097","1975-06-21","R16","1970","PS","Barossa Red","Black","(042)847432","none","none","June"),
+("BIL037","1975-06-21","R16","1971","TS","unknown","none","6047351","$1730","none","nne"),
+("BHL347","1975-06-21","R16","1970","XX","unknown","none","5240672","$1650","none","none"),
+("BEJ899","1975-06-21","R10S","1970","XX","Sunburst Gold","Black","Rozelle","$1175","none","none"),
+("EJN601","1975-06-14","R10","1967","XX","Green","Black","Rozelle","none","none","March"),
+
     ]
 
     return adverts
@@ -41,9 +50,9 @@ def get_renault_1():   # creating a list of tuples representing individual ads i
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 1201
+    master_index1 = 1275
     for row in ads:
-        print row
+        print "wally", row
         master_index1 += 1
 
 
