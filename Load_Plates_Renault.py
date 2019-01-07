@@ -23,7 +23,7 @@ def get_renault_1():   # creating a list of tuples representing individual ads i
 ("AEN064","1975-07-12","R10","6970","XX","unknown","none","317131","$775","none","none"),
 ("AAK082","1975-07-12","R16","1969","XX","unknown","none","946447","$800","none","October"),
 ("CQW097","1975-07-12","R12","1971","TL","unknown","none","3891493","$1950","none","December"),
-("BQV507","1977-08-20","R16","1971","TS","unknown","921560","$1800","August"),
+("EQL880","1975-07-05","R12","1972","GL","Brilliant Yellow","4523422","none","none","none"),
 ("GBL016","1977-08-20","R16","1972","TL","unknown","6920448","$2450","September"),
 ("GTD583","1977-08-20","R16","1974","TS","unknown","4495946","$3550","April"),
 ("EKE271","1977-08-27","R10","1967","XX","Dark Green","430769","$1100","March"),
