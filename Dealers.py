@@ -46,7 +46,7 @@ def get_dealers():
 '766988': ("Larke Hoskins", "Homebush", "Homebush", "LD405"),
 '766141': ("Barr Motors", "unknown", "unknown", "LDBARR"),
 '7978044': ("Frank Crott Motors", "Ashfield", "Ashfield", "LD710"),
-'7980000': ("Geoghegans Recreational Vehicles", "253 Parramatta Rd.", "Haberfield", "LD"),
+'7980000': ("Geoghegans Recreational Vehicles", "253 Parramatta Rd.", "Haberfield", "LD188"),
 '7980055': ("RC Phillips", "670 Parramatta Rd.", "Croydon", "LD"),
 '7980900': ("British & Continental Cars", "Haberfield", "Haberfield", "LD"),
 '7984144': ("Anonymous", "Haberfield", "Haberfield", "LD3545"),
