@@ -8,39 +8,29 @@ import sqlite3
 
 def get_renault_1():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
     adverts = [
-("GBP627","1975-07-26","R12","1972","GL","Black","Tan","924830","$2499","27000mis","none"),
-("DQM539","1975-07-26","R12","1972","TL","Green","Brown","4764936","$1850","33000mis","none"),
-("DDQ135","1975-07-26","R16","1972","TS","unknown","none","8714209","$2800","none","none"),
-("GJM431","1975-07-26","R12","1973","XX","unknown","none","6341916","$2700","18000mis","June"),
-("GFC117","1975-07-26","R12","1973","GL","unknown","none","4394667","none","23000mis","none"),
-("AYB900","1975-07-19","R10","1970","XX","unknown","none","865727","none","none","February"),
-("GPD736","1975-07-19","R12","1973","GL","Bronze","Corn","9188471","$2250","none","November"),
-("ADC237","1975-07-19","R10","1967","XX","unknown","none","472699","$650","none","none"),
-("DDQ135","1975-07-19","R16","1972","TS","unknown","none","8714209","$2900","none","none"),
-("EIL420","1975-07-12","R16","1972","TL","Green","none","4494794","$2250","33000mis","July"),
-("GFD926","1975-07-12","R16","1971","TS","White","none","4871438","$3000","31000mis","January"),
-("CUH807","1975-07-12","Gordini","1962","XX","unknown","none","538288","$225","none","none"),
-("AEN064","1975-07-12","R10","6970","XX","unknown","none","317131","$775","none","none"),
-("AAK082","1975-07-12","R16","1969","XX","unknown","none","946447","$800","none","October"),
-("CQW097","1975-07-12","R12","1971","TL","unknown","none","3891493","$1950","none","December"),
-("EQL880","1975-07-05","R12","1972","GL","Brilliant Yellow","none","4523422","none","none","none"),
-("GFD926","1975-07-05","R16","1973","TS","White","none","4871438","$3250","none","none"),
-("GRN935","1975-07-05","R12","1974","GL","unknown","none","(047)536488","$3100","none","February"),
-("AKN921","1975-07-05","R16","6970","TS","unknown","none","9602737","$1650","none","none"),
-("GDD225","1975-07-05","R12","1972","GL","Sunburst Yellow","none","417093","$2300","26000","November"),
-("AEN064","1975-07-05","R10","6970","XX","unknown","none","317131","$800","none","January"),
-("AVQ788","1975-06-28","R10S","6970","XX","unknown","none","432956","$1150","none","May"),
-("GTT633","1975-06-28","R12","1974","GL","unknown","none","Punchbowl","$3200","28000mis","December"),
-("AKN921","1975-06-28","R16","6970","TS","unknown","none","9602737","$1800","none","none"),
-("EXY318","1975-06-28","R10","1968","XX","unknown","none","556933","$950","60000mis","June"),
-("BHL847","1975-06-28","R16","1970","XX","unknown","none","5249970","$1550","none","February"),
-("GAT283","1975-06-21","R12","1972","GL","unknown","none","5214459","$2000","35000mis","none"),
-("EJS518","1975-06-21","R10","1967","XX","unknown","none","5464045","$850","none","February"),
-("AMH097","1975-06-21","R16","1970","PS","Barossa Red","Black","(042)847432","none","none","June"),
-("BIL037","1975-06-21","R16","1971","TS","unknown","none","6047351","$1730","none","nne"),
-("BHL347","1975-06-21","R16","1970","XX","unknown","none","5240672","$1650","none","none"),
-("BEJ899","1975-06-21","R10S","1970","XX","Sunburst Gold","Black","Rozelle","$1175","none","none"),
-("EJN601","1975-06-14","R10","1967","XX","Green","Black","Rozelle","none","none","March"),
+("GXM176","1975-08-23","R12","1974","GL","unknown","none","7980900","$3795","8900mis","July"),
+("GLO245","1975-08-23","R12","1973","GL","Yellow","none","418434","$2990","none","none"),
+("CQA899","1975-08-23","R12","1971","TL","unknown","none","943311","$2100","29000mis","none"),
+("DIW540","1975-08-23","1972","1972","XX","unknown","none","9692086","none","40000mis","March"),
+("GBS015","1975-08-23","R16","1972","TS","unknown","none","7597291","none","none","none"),
+("ESS561","1975-08-23","1968","1968","XX","White","Black","434411","$1050","none","January"),
+("ALF869","1975-08-23","R16","1969","XX","unknown","none","486341","$1100","none","none"),
+("HCJ394","1975-08-23","R12","1974","GL","Track Yellow","none","866727","none","none","none"),
+("GTD847","1975-08-23","R12","1974","TL","White","none","866727","none","none","April"),
+("GEO547","1975-08-23","R12","1972","TL","unknown","none","855226","$2495","none","none"),
+("AQR465","1975-08-23","R16","1971","TS","Sunburst","none","855226","$2895","41000mis","none"),
+("GVD785","1975-08-23","R16","1974","TS","Sun Gold","none","855226","$4495","26000mis","April"),
+("EIX507","1975-08-23","R12","1972","TL","Sun Gold","none","855226","$2895","none","July"),
+("GSI716","1975-08-23","R12","1974","TL","Green","Brown","930461","none","29000mis","none"),
+("GHC356","1975-08-23","R12","1973","GL","Green","none","9973470","none","28000mis","none"),
+("GZN071","1975-08-23","R12","1974","TL","unknown","none","6355593","none","none","none"),
+("EHZ726","1975-08-23","R10","1966","XX","White","none","6444381","$450","none","May"),
+("HEJ157","1975-08-23","R12","1975","GL","White","none","302441","$3800","none","February"),
+("BJJ396","1975-08-23","R10S","1970","XX","unknown","none","7985616","$1499","none","none"),
+("GLB000","1975-08-23","R12","none","TL","Ivory","Tan","7985616","$3999","none","none"),
+("ERN266","1975-08-23","R10","1967","XX","Black","none","none","$590","none","November"),
+("GHN768","1975-08-23","R12","1973","XX","unknown","none","7991111","$2890","none","none"),
+
 
     ]
 
@@ -50,7 +40,7 @@ def get_renault_1():   # creating a list of tuples representing individual ads i
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 1275
+    master_index1 = 1322
     for row in ads:
         print "wally", row
         master_index1 += 1
