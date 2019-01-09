@@ -19,6 +19,8 @@ def get_dealers():
 '418452': ("Lancaster Leyland", "728 Pacific Hwy", "418452", "LD"),
 '430231': ("Rowley Motors", "unknown", "unknown", "LD238"),
 '430702': ("Caldwells GMH", "452 Pacific Hwy", "Crows Nest", "LD"),
+'432999': ("Scotts Motors", "373 Pacific Hwy", "Artarmon", "LD01487"),
+'434411': ("Scotts Motors", "373 Pacific Hwy", "Artarmon", "LD01487"),
 
 '5240214': ("WH Lober & Co", "1 Kiora Rd.", "Miranda", "LD402"),
 '5252277': ("Larke Hoskins", "Miranda", "Miranda", "LD402"),
@@ -26,6 +28,7 @@ def get_dealers():
 '5872115': ("Larry Mason", "Highway", "unknown", "LD389"),
 '5872646': ("Anonymous", "Highway", "unknown", "LD172"),
 
+'6355593': ("John Newell Motors", "155 Great Western Highway", "Westmead", "LD395"),
 '6359755': ("Mazda House", "42-46 Church St.", "Parramatta", "LD"),
 '6371025': ("Marshalls Motors", "Church St.", "Parramatta", "LD"),
 '6481980': ("Ron Muir Cars", "44 Parramatta Rd", "Lidcombe", "LD"),
@@ -43,6 +46,7 @@ def get_dealers():
 '742332': ("John Muirs Quality Corner", "275 Parramatta Rd", "Five Dock", "LD198"),
 '7451255': ("Anonymous", "unknown", "unknown", "LD763"),
 '749705': ("Jubilee", "155 Parramatta Rd", "Five Dock", "LD"),
+'7597291': ("Motor & Marine", "unknown Rd.", "unknown", "LD"),
 '7599774': ("Ronstan Motors", "875 Canterbury Rd.", "Lakemba", "LD"),
 '766988': ("Larke Hoskins", "190 Parramatta Rd.", "Homebush", "LD405"),
 '766141': ("Barr Motors", "unknown", "unknown", "LDBARR"),
@@ -54,15 +58,18 @@ def get_dealers():
 '7985048': ("RC Phillips", "25 Parramatta Rd.", "Five Dock", "LD"),
 '7985155': ("John A Gilbert", "22 Parramatta Rd.", "Summer Hill", "LD"),
 '7985616': ("Lervan Traders", "277 Parramatta Rd.", "Haberfield", "LD01111"),
-'7991111': ("Monaco Motors", "Cnr Sloane St & Parramatta Rd.", "Haberfield", "LD"),
+'7991111': ("Monaco Motors", "Cnr Sloane St & Parramatta Rd.", "Haberfield", "LD18733"),
 
 '802281': ("Glendenning Motors", "693 Victoria Rd.", "Ryde", "802281"),
 '8488222': ("Les Vagg", " Rd.", "Pennant Hills", "LD"),
+'855226': ("Baker Gadd of Ryde", "1026 Victoria Rd", "West Ryde", "LD205"),
 '865727': ("Epping Motors", "58 Rawson St", "Epping", "LD"),
+'866727': ("Epping Motors", "58 Rawson St", "Epping", "LD"),
 
-
+'930461': ("Pacific Ford", "780 Pittwater Rd", "Brookvale", "LD726"),
 '9382255': ("Murphy Johnston Imported Cars", "620 Pittwater Rd", "Brookvale", "LD253"),
 '9699513': ("Norman G Booth", "501 Military Rd", "Mosman", "LD"),
+'9973470': ("unknown", "unknown Rd", "Manly", "LD315"),
 
 
 }
