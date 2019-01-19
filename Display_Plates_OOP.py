@@ -3,6 +3,7 @@ import re
 from collections import defaultdict
 from sydney_exchange import get_exchange_dict
 from datetime import datetime
+from NSW_Plate_Info import get_month
 
 
 
@@ -112,14 +113,17 @@ class RegoPlate(object):
         if self.year == "none":
             self.year = ""
         no_of_ads = len(self.ads_list)
+        estimate_month = get_month(self.title)
+        if estimate_month == "none":
+            estimate_month = ""
 
         #print " {title} {year} {make} {model} {index}".format(index=self.index, title=self.title, year=self.year, make=self.make, model=self.model)
 #        print ('{0:6} | {1:4} | {2:9} | {3:8} | {4:10} | {5:20} | {6:11} | {7:16} | {8:10} | {9:4}| {10:4} | {11:4}'.format(self.title, self.year, self.month,
 #                self.make, self.model, self.colour, self.phone1, self.suburb, self.ad_date, self.year_predict, self.index, no_of_ads))
 
         print ('{0:6} | {1:2} | {2:4} | {3:9} | {4:8} | {5:10} | {6:20} | {7:11} | {8:30} | {9:10} | {10:4}| {11:4}' \
-               .format(self.title, no_of_ads, self.year, self.month, self.make, self.model, self.colour, self.phone1,\
-                       self.suburb, self.ad_date, self.year_predict, self.index ))
+               .format(self.title, no_of_ads, self.year, estimate_month, self.make, self.model, self.colour, self.phone1,\
+                       self.suburb, self.ad_date, self.month, self.index ))
 
 
 
