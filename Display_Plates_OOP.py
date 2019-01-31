@@ -122,8 +122,8 @@ class RegoPlate(object):
 #                self.make, self.model, self.colour, self.phone1, self.suburb, self.ad_date, self.year_predict, self.index, no_of_ads))
 
         print ('{0:6} | {1:2} | {2:4} | {3:9} | {4:8} | {5:10} | {6:20} | {7:11} | {8:30} | {9:10} | {10:4}| {11:4}' \
-               .format(self.title, no_of_ads, self.year, estimate_month, self.make, self.model, self.colour, self.phone1,\
-                       self.suburb, self.ad_date, self.month, self.index ))
+               .format(self.title, no_of_ads, self.year, estimate_month, self.month, self.model, self.colour, self.ad_date,\
+                       self.suburb, self.phone1, self.make, self.index ))
 
 
 
@@ -196,7 +196,7 @@ def main():
   go_again = 'y'
   while go_again != 'n':
     while True:
-        Make_list = ["Rambler", "Renault", "Peugeot", "Rover", "Ford", "Dealer MM"]
+        Make_list = ["Rambler", "Renault", "Peugeot", "Rover", "Ford", "Mascot"]
         print Make_list
         pick_make = "Wally"
         pick_make = raw_input("Car Make?")
@@ -244,7 +244,7 @@ def main():
             ads_table = get_sql_data(car_model_list=Rover_list, car_make ="Rover", connectstring="advertisements_indexed.db",
                                    jurisdiction="NSW")
             break
-        elif pick_make == "mm":
+        elif pick_make == "mm" or pick_make == "Mascot":
             Rambler_list = ["Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American", "AMX"]
             print Rambler_list
             pick_model = raw_input("please enter Rambler/AMC model: ")
@@ -259,6 +259,7 @@ def main():
             print "try again"
     print "finished sql query"
     plate_list_index = []
+    no_of_cars = 0
     for ads_record in ads_table:  # we make a lists of database indexes for distinct plate numbers, insert into dictionary
         plate = str(ads_record[1])
 
@@ -272,6 +273,7 @@ def main():
                                       model=ads_record[7], colour=ads_record[10], phone1=ads_record[11],
                                       car_year=ads_record[8],
                                       month=ads_record[21], ad_date=ads_record[3])
+                no_of_cars = no_of_cars +1
 
                 if new_plate.jurisdiction == "NSW":
                     nsw_list = check_plate_nsw2(target_plate=ads_record[1], model=ads_record[7],make=ads_record[6])
@@ -284,7 +286,7 @@ def main():
                 for plate_stored in plate_list:
                     if plate_stored.title == plate:
                          plate_stored.grow_ad_list(ads_record[0])
-
+    print "no of cars =" , no_of_cars
     go_again = raw_input("Go Again y/n: ")
 
   plate_list.sort()

@@ -49,7 +49,7 @@ def get_month(target_plate):
 '1970-04-01': ("BCL015", "none", "none", "none", "none"),
 '1970-05-01': ("BCY554", "none", "none", "none", "none"),
 '1970-06-01': ("none", "none", "none", "none", "none"),
-'1970-07-01': ("BGT739", "BGP323", "BGJ842", "BFP142", "none"),
+'1970-07-01': ("BGT739", "BGP323", "BGJ842", "BFP142", "BFT325"),
 '1970-08-01': ("BJD879", "none", "none", "none", "none"),
 '1970-09-01': ("none", "none", "none", "none", "none"),
 '1970-10-01': ("BME521", "BLN404", "BLV006", "BMZ218", "BLN403"),
@@ -62,12 +62,12 @@ def get_month(target_plate):
 '1971-04-01': ("BBQ466", "BDQ153", "BGI676", "none", "none"),
 '1971-05-01': ("BMQ458", "BKQ309", "none", "none", "none"),
 '1971-06-01': ("none", "none", "none", "none", "none"),
-'1971-07-01': ("BQV847", "BQV249", "none", "none", "none"),
+'1971-07-01': ("BQV847", "BQV249", "BQV586", "none", "none"),
 '1971-08-01': ("CFQ813", "CUQ354", "none", "none", "none"),
 '1971-09-01': ("CIK740", "none", "none", "none", "none"),
 '1971-10-01': ("CQB172", "none", "none", "none", "none"),
 '1971-11-01': ("DAI235", "none", "none", "none", "none"),
-'1971-12-01': ("none", "none", "none", "none", "none"),
+'1971-12-01': ("DBQ714", "CQO004", "none", "none", "none"),
 
 
 '1972-01-01': ("none", "none", "none", "none", "none"),
