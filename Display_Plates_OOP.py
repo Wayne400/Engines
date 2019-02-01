@@ -121,7 +121,7 @@ class RegoPlate(object):
 #        print ('{0:6} | {1:4} | {2:9} | {3:8} | {4:10} | {5:20} | {6:11} | {7:16} | {8:10} | {9:4}| {10:4} | {11:4}'.format(self.title, self.year, self.month,
 #                self.make, self.model, self.colour, self.phone1, self.suburb, self.ad_date, self.year_predict, self.index, no_of_ads))
 
-        print ('{0:6} | {1:2} | {2:4} | {3:9} | {4:8} | {5:10} | {6:20} | {7:11} | {8:30} | {9:10} | {10:4}| {11:4}' \
+        print ('{0:6} | {1:2} | {2:4} | {3:7} | {4:9} | {5:10} | {6:20} | {7:11} | {8:30} | {9:10} | {10:4}| {11:4}' \
                .format(self.title, no_of_ads, self.year, estimate_month, self.month, self.model, self.colour, self.ad_date,\
                        self.suburb, self.phone1, self.make, self.index ))
 

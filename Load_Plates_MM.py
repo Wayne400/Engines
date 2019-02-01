@@ -8,25 +8,20 @@ import sqlite3
 
 def get_rambler_1():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
     adverts = [
-("HHA699","8","Hornet","1971","4.2","none","yes"),
-("HRZ014","4","Matador","none","360","wagon","no"),
-("HRP364","19","Hornet","none","3.8","$1995","no"),
-("DIM261","18","Hornet","none","4.2","none","no"),
-("BDI258","15","Rebel","1970","360","none","no"),
-("RH 509","3","Hornet","1974","4.2","none","no"),
-("HUD248","12","Matador","none","none","none","yes"),
-("MB278","5","Rebel","1971","none","wagon","no"),
-("GTV677","1","Javelin","1972","390","none","no"),
-("HVC946","2","Hornet","1975","4.2","none","no"),
-("GAX502","16","Hornet","1972","4.2","none","no"),
-("GAA631","17","Hornet","none","4.2","none","no"),
-("HGY203","7","Hornet","1974","4.2","none","yes"),
-("HCI367","10","Matador","none","360","none","yes"),
-("GEO543","11","Matador","none","360","none","yes"),
-("GDR412","9","Matador","none","360","none","yes"),
-("GAX418","6","Hornet","1972","4.2","none","yes"),
-("GFG695","13","Matador","1972","360","none","yes"),
-("BCY782","14","Rebel","1969","none","wagon","no"),
+("HHA699","4","Hornet","1971","4.2","none","yes"),
+("HRZ014","12","Matador","none","360","wagon","no"),
+("HRP364","8","Hornet","none","3.8","none","no"),
+("DIM261","9","Hornet","none","4.2","none","no"),
+("BDI258","13","Rebel","1970","360","none","no"),
+("BHC255","2","Hornet","none","3.8","none","no"),
+("DBQ596","14","Rebel","1971","none","none","no"),
+("MM347","3","Hornet","1972","4.2","none","no"),
+("AIT947","5","Hornet","1970","3.8","none","no"),
+("HPS714","6","Hornet","none","none","none","yes"),
+("HJO665","10","Matador","none","360","none","none"),
+("GHZ670","11","Matador","none","360","wagon","yes"),
+("GAX418","7","Hornet","1972","4.2","none","yes"),
+("BQV731","1","Javelin","1971","390","none","no"),
     ]
 
     return adverts
@@ -35,7 +30,7 @@ def get_rambler_1():   # creating a list of tuples representing individual ads i
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 1561
+    master_index1 = 1580
     for row in ads:
         print row
         master_index1 += 1
@@ -52,7 +47,7 @@ def add_adverts(cursor, ads):
 
         sql = sql.format(master_index=master_index1, rego_plate=row[0],
                         jurisdiction="NSW",
-                        iso_advert_date="1976-06-05",
+                        iso_advert_date="1976-05-08",
                         item_number=row[1], publication="smh",
                         car_make="Rambler", car_model=row[2], model_year=row[3],
                         capacity=row[4],
