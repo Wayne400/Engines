@@ -36,8 +36,7 @@ def get_exchange_dict():
     exchange_dict['43'] = 'Artarmon'
     exchange_dict['44'] = 'Pymble'
     exchange_dict['44'] = 'St Ives'
-    exchange_dict['449'] = 'St Ives'
-    exchange_dict['449'] = 'Turramurra'
+    exchange_dict['449'] = 'St Ives, Turramurra, Pymble'
     exchange_dict['450'] = 'Terry Hills'
     exchange_dict['451'] = 'Belrose'
     exchange_dict['451'] = "French's Forest"
@@ -47,7 +46,7 @@ def get_exchange_dict():
     exchange_dict['47'] = 'Hornsby'
     exchange_dict['476'] = 'Hornsby'
     exchange_dict['48'] = 'Wahroonga'
-    exchange_dict['487'] = 'Waitara'
+    exchange_dict['487'] = 'Waitara, Wahroonga'
     exchange_dict['49'] = 'Gordon'
     exchange_dict['49'] = 'Killara'
     exchange_dict['498'] = 'Gordon'
