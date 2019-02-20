@@ -9,13 +9,14 @@ def get_exchange_dict():
 
     exchange_dict = {}
     exchange_dict['20'] = 'Pitt St.'
+    exchange_dict['211'] = 'Broadway'
     exchange_dict['25'] = 'Hunter St.'
     exchange_dict['27'] = 'Kent St.'
 
     exchange_dict['3'] = 'St. Leonards'
     exchange_dict['30'] = 'Bondi'
     exchange_dict['31'] = 'Darlinghurst, Paddington'
-    exchange_dict['32'] = 'Rushcutters Bay'
+    exchange_dict['32'] = 'Rushcutters Bay, Double Bay'
     exchange_dict['328'] = 'Edgecliff'
     exchange_dict['33'] = 'Darlinghurst'
     exchange_dict['337'] = 'Vaucluse'
@@ -74,6 +75,7 @@ def get_exchange_dict():
     exchange_dict['59'] = 'Rockdale, Arncliffe, Banksia'
 
     exchange_dict['602'] = 'Liverpool'
+    exchange_dict['604'] = 'Smithfield'
     exchange_dict['607'] = 'Mt. Pritchard'
     exchange_dict['61'] = 'Elizabeth St'
     exchange_dict['621'] = 'Seven Hills'
@@ -115,12 +117,13 @@ def get_exchange_dict():
     exchange_dict['77'] = 'Revesby'
     exchange_dict['771'] = 'Panania'
     exchange_dict['773'] = 'Padstow'
+    exchange_dict['797'] = 'Ashfield'
     exchange_dict['798'] = 'Five Dock, Haberfield'
 
     exchange_dict['80'] = 'West Ryde'
     exchange_dict['807'] = 'West Ryde'
     exchange_dict['81'] = 'Drummoyne'
-    exchange_dict['82'] = 'Rozelle'
+    exchange_dict['82'] = 'Rozelle, Balmain'
     exchange_dict['84'] = 'Pennant Hills'
     exchange_dict['848'] = 'Beecroft'
     exchange_dict['85'] = 'Eastwood, West Ryde'

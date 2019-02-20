@@ -8,23 +8,22 @@ import sqlite3
 
 def get_renault_1():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
     adverts = [
-("GYU548","1975-09-20","R16","1974","TS","unknown","none","7508373","$4180","17000kms","none"),
-("DQM910","1975-09-20","R12","1972","XX","unknown","none","9581294","none","24000mis","none"),
-("BMG776","1975-08-30","R16","1970","XX","unknown","none","4984704","$1650","none","none"),
-("HEJ157","1975-08-30","R12","1975","GL","White","Havana","855226","$4695","none","none"),
-("GED765","1975-08-30","R16","1974","TS","Sun Gold","none","855226","$4495","28000kms","none"),
-("ECQ654","1975-08-30","R16","1972","TS","unknown","none","855226","$3495","39000mis","June"),
-("GHA807","1975-08-30","R16","1972","TL","unknown","none","855226","$2195","none","March"),
-("GLO245","1975-08-30","R12","1973","GL","Yellow","Tan","418434","$2990","none","none"),
-("ERN266","1975-08-30","R10","1967","XX","Black","none","5971711","$590","none","November"),
-("GPD567","1975-08-30","R12","1973","GL","unknown","none","4551256","$2800","17000mis","November"),
-("GET653","1975-08-16","R16","1973","TS","Red","Black","2125630","$3250","21000mis","February"),
-("BAZ204","1975-08-16","R10","1970","XX","unknown","none","6636328","$850","none","none"),
-("GYR709","1975-08-16","R12","1974","TL","unknown","none","6481870","$3690","17000kms","none"),
-("DLQ050","1975-08-16","R12","none","TL","Flame Orange","none","6027522","$1850","none","none"),
-("GFR528","1975-08-16","R16","1973","TS","unknown","none","766988","$3399","29000mis","none"),
-("EIR681","1975-08-16","R12","1972","TL","Blue","none","3286186","$2000","23000mis","August"),
-
+("GBS732","1974-07-06","R16","1972","TS","unknown","none","904965","$3500","none","September"),
+("CLI329","1974-07-06","R16","1971","TS","unknown","none","6212572","$2300","none","none"),
+("ANM507","1974-07-06","R16","1969","TL","unknown","none","946626","$1650","none","July"),
+("AXZ594","1974-07-06","R16","1970","XX","unknown","none","895708","$1525","none","none"),
+("ENA013","1974-07-06","R10","1967","XX","unknown","none","6381797","$680","none","none"),
+("ATX973","1974-07-06","R10","1970","XX","White","none","6634876","$890","none","none"),
+("GWX703","1974-07-06","R12","1973","TL","Yellow","none","551326","$2000","none","July"),
+("GGT789","1973-12-01","R12","1973","GL","unknown","none","945320","$2490","5000mis","none"),
+("GBG654","1973-12-01","R12","1972","TL","unknown","none","9491660","nne","12000mis","none"),
+("ELY517","1973-12-01","R10","1969","XX","Blue","none","5254545","$900","45000mis","June"),
+("AVQ862","1973-07-28","R16","1971","TS","White","Black","447709","$2100","none","January"),
+("EOL286","1973-07-28","R8","none","XX","Green","none","947686","$485","none","March"),
+("AGG276","1973-07-28","R10","1970","XX","unknown","none","7277444","$850","none","none"),
+("BJU406","1973-07-28","R16","1970","XX","unknown","none","565251","$1600","none","none"),
+("BGJ917","1973-07-28","R16","1970","XX","unknown","none","4871983","$1600","29000mis","July"),
+("ELI090","1973-07-28","R16","1972","TL","unknown","none","9092679","$2000","none","none"),
     ]
 
     return adverts
@@ -33,7 +32,7 @@ def get_renault_1():   # creating a list of tuples representing individual ads i
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 1784
+    master_index1 = 1870
     for row in ads:
         print "wally", row
         master_index1 += 1

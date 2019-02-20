@@ -6,7 +6,8 @@ def get_dealers():
 
 '112244': ("Wallhampton Motors", "23 Bingo St.", "Wallhampton", "LD007"),
 
-'2114677': ("Anonymous", "unknown st.", "unknown", "LD2060"),
+'2114677': ("Southline Auto", "90 Broadway", "Sydney City", "LD2060"),
+'2114252': ("Southline Auto", "90 Broadway", "Sydney City", "LD2060"),
 '2222': ("Reg Blunty Motors", "47 Beale St", "Memphis", "LD666"),
 
 '303241': ("Anonymous", "unknown", "unknown", "LD503"),
@@ -19,6 +20,7 @@ def get_dealers():
 '3893233': ("Larke Hoskins", "268 Oxford St", "Bondi Junction", "LD404"),
 
 '410377': ("Morisson Motors", "Street", "unknown", "DL"),
+'4122244': ("Seymours of Roseville", "Street", "Roseville", "DL509"),
 '418407': ("Chatswood Motors", "Street", "unknown", "DL2469"),
 '418434': ("Sundell Motors", "821 Pacific Hwy", "Chatswood", "LD848"),
 '418452': ("Lancaster Leyland", "728 Pacific Hwy", "418452", "LD"),
@@ -46,14 +48,18 @@ def get_dealers():
 '5971711': ("Robinsons Motors", "328 Princes Hwy", "Rockdale", "LD109"),
 '5991122': ("Gosson Motors", "272 Princes Hwy", "Rockdale", "LD537"),
 
+'6042881': ("CNR Wreckers", "Smithfield", "Smithfield", "LD"),
 '6332714': ("R.S.C. Motors", "56-58 Church St.", "Parramatta", "LD"),
 '6355593': ("John Newell Motors", "155 Great Western Highway", "Westmead", "LD395"),
 '6359755': ("Mazda House", "42-46 Church St.", "Parramatta", "LD"),
+'6370000': ("Ron Hodgson", "Parramatta Rd.", "Parramatta", "LD42"),
 '6370407': ("Starline Motors", "68 Parramatta Rd.", "Granville", "LD"),
+'6370497': ("CV Murray", "225 Parramatta Rd.", "Granville", "LD2345"),
 '6371025': ("Marshalls Motors", "Church St.", "Parramatta", "LD26"),
 '6375024': ("Ken Allen", "93-97 and 101 Parramatta Rd", "Granville", "LD"),
 '6375781': ("Bryfield Autos", "160 Parramatta Rd", "Granville", "LD961"),
 '6378242': ("Ken Allen", "93-97 and 101 Parramatta Rd", "Granville", "LD"),
+'6376033': ("Anonymous", "Parrammata Rd", "unknown", "LD76"),
 '6481870': ("Bevan Williams Motors", "unknown Rd", "Lidcombe", "LD"),
 '6481980': ("Ron Muir Cars", "44 Parramatta Rd", "Lidcombe", "LD"),
 '6484311': ("John A Gilbert", "76 Parramatta Rd", "Lidcombe", "LD"),
@@ -73,6 +79,7 @@ def get_dealers():
 '7451255': ("Anonymous", "unknown", "unknown", "LD763"),
 '749704': ("Jubilee Motors address 2", "24 Parramatta Rd", "Croydon", "LD951"),
 '749705': ("Jubilee", "155 Parramatta Rd", "Five Dock", "LD951"),
+'7591672': ("Anonymous", "unknown Rd.", "unknown", "LD"),
 '7597291': ("Motor & Marine", "unknown Rd.", "unknown", "LD"),
 '7599774': ("Ronstan Motors", "875 Canterbury Rd.", "Lakemba", "LD"),
 '760333': ("Anonymous", "unknown", "unknown", "LD35"),
@@ -81,6 +88,7 @@ def get_dealers():
 '7641175': ("Anonymous", " unknown", "unknown", "LD249"),
 '766988': ("Larke Hoskins", "190 Parramatta Rd.", "Homebush", "LD405"),
 '766141': ("Barr Motors", "unknown", "unknown", "LDBARR"),
+'7976333': ("Keith Graham's Auto Centre", "Ashfield", "Ashfield", "LD2237"),
 '7978044': ("Frank Crott Motors", "Ashfield", "Ashfield", "LD710"),
 '7976011': ("Renault Ashfield", "143 Parramatta Rd.", "Ashfield", "LD"),
 '7980000': ("Geoghegans Recreational Vehicles", "253 Parramatta Rd.", "Haberfield", "LD188"),
@@ -88,6 +96,7 @@ def get_dealers():
 '7980900': ("British & Continental Cars", "Haberfield", "Haberfield", "LD2109"),
 '7983040': ("Anonymous", "Haberfield", "Haberfield", "LD1184"),
 '7984144': ("Anonymous", "Haberfield", "Haberfield", "LD3545"),
+'7984372': ("Anonymous", "Haberfield", "Haberfield", "LD229"),
 '7985048': ("RC Phillips", "25 Parramatta Rd.", "Five Dock", "LD"),
 '7985155': ("John A Gilbert", "22 Parramatta Rd.", "Summer Hill", "LD"),
 '7985616': ("Lervan Traders", "277 Parramatta Rd.", "Haberfield", "LD01111"),
@@ -96,17 +105,20 @@ def get_dealers():
 
 '802281': ("Glendenning Motors", "693 Victoria Rd.", "Ryde", "802281"),
 '813000': ("Matador Motors", "Drummoyne", "Drummoyne", "LD96"),
+'813305': ("Continental Auto Service", "46 Victoria Rd.", "Drummoyne", "LD2297"),
 '8161133': ("Baker Gadd of Ryde", "1026 Victoria Rd", "West Ryde", "LD205"),
 '8488222': ("Les Vagg", " Rd.", "Pennant Hills", "LD1311"),
 '855226': ("Baker Gadd of Ryde", "1026 Victoria Rd", "West Ryde", "LD205"),
 '865727': ("Epping Motors", "58 Rawson St", "Epping", "LD"),
 '866727': ("Epping Motors", "58 Rawson St", "Epping", "LD"),
 '880249': ("House od David", "297 Lane Cove Rd.", "North Ryde", "LD"),
+'8885329': ("Anonymous", "unknown", "unknown", "LD2403"),
 
 '930461': ("Pacific Ford", "780 Pittwater Rd", "Brookvale", "LD726"),
 '9382255': ("Murphy Johnston Imported Cars", "620 Pittwater Rd", "Brookvale", "LD253"),
-'943311': ("Anonymous", "unknown", "unknown", "LD48"),
+'943311': ("Also LD2403", "unknown", "unknown", "LD48"),
 '9699513': ("Norman G Booth", "501 Military Rd", "Mosman", "LD"),
+'9773255': ("Kinsella-Nicholson", "259 Pittwater Rd", "Manly", "LD060"),
 '9973470': ("unknown", "unknown Rd", "Manly", "LD315"),
 
 
