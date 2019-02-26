@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="added even more renaults, some dealer info">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dealers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dealers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Load_Plates_Renault.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Renault.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NSW_Plate_Info.py" beforeDir="false" afterPath="$PROJECT_DIR$/NSW_Plate_Info.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/advertisements_indexed.db" beforeDir="false" afterPath="$PROJECT_DIR$/advertisements_indexed.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sydney_exchange.py" beforeDir="false" afterPath="$PROJECT_DIR$/sydney_exchange.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,16 +20,16 @@
     <session id="-764073445">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="69" />
+          <entry key="project.closed" value="79" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.10" value="12" />
+          <entry key="project.open.time.10" value="13" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.7" value="11" />
-          <entry key="project.open.time.8" value="31" />
-          <entry key="project.open.time.9" value="12" />
-          <entry key="project.opened" value="70" />
+          <entry key="project.open.time.7" value="14" />
+          <entry key="project.open.time.8" value="34" />
+          <entry key="project.open.time.9" value="16" />
+          <entry key="project.opened" value="81" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -42,35 +39,38 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="19" />
+          <entry key="py" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="19" />
+          <entry key="Python" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="19370" />
-          <entry key="txt" value="229" />
+          <entry key="py" value="22535" />
+          <entry key="txt" value="252" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="229" />
-          <entry key="Python" value="19370" />
+          <entry key="PLAIN_TEXT" value="252" />
+          <entry key="Python" value="22535" />
         </counts>
       </usages-collector>
     </session>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Engines" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NSW_Plate_Info.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4525">
-              <caret line="181" column="36" selection-start-line="181" selection-start-column="36" selection-end-line="181" selection-end-column="36" />
+            <state relative-caret-position="174">
+              <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -87,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Display_Plates_OOP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5700">
-              <caret line="233" column="43" selection-start-line="233" selection-start-column="43" selection-end-line="233" selection-end-column="43" />
+            <state relative-caret-position="225">
+              <caret line="14" column="200" selection-start-line="14" selection-start-column="200" selection-end-line="14" selection-end-column="200" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -112,11 +112,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Load_Plates_Renault.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="19" column="51" lean-forward="true" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+            <state relative-caret-position="800">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -124,8 +124,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sydney_exchange.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+            <state relative-caret-position="2400">
+              <caret line="96" column="34" selection-start-line="96" selection-start-column="34" selection-end-line="96" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Load_Plates_Rover.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -133,8 +142,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dealers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1225">
-              <caret line="49" column="53" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
+            <state relative-caret-position="2300">
+              <caret line="92" column="43" selection-start-line="92" selection-start-column="43" selection-end-line="92" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -155,6 +164,7 @@
       <find>Gi</find>
       <find>229</find>
       <find>637049</find>
+      <find>503</find>
     </findStrings>
     <replaceStrings>
       <replace>column</replace>
@@ -175,10 +185,11 @@
         <option value="$PROJECT_DIR$/Load_Plates_Rambler.py" />
         <option value="$PROJECT_DIR$/Load_Plates_MM.py" />
         <option value="$PROJECT_DIR$/Display_Plates_OOP.py" />
-        <option value="$PROJECT_DIR$/NSW_Plate_Info.py" />
-        <option value="$PROJECT_DIR$/Dealers.py" />
-        <option value="$PROJECT_DIR$/sydney_exchange.py" />
         <option value="$PROJECT_DIR$/Load_Plates_Renault.py" />
+        <option value="$PROJECT_DIR$/sydney_exchange.py" />
+        <option value="$PROJECT_DIR$/Dealers.py" />
+        <option value="$PROJECT_DIR$/Load_Plates_Rover.py" />
+        <option value="$PROJECT_DIR$/NSW_Plate_Info.py" />
       </list>
     </option>
   </component>
@@ -191,11 +202,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-23" />
-    <option name="y" value="20" />
-    <option name="width" value="1386" />
-    <option name="height" value="632" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="y" value="23" />
+    <option name="width" value="1377" />
+    <option name="height" value="703" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -418,7 +429,21 @@
       <option name="project" value="LOCAL" />
       <updated>1550140346604</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added even more renaults, some dealer info">
+      <created>1550659380325</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1550659380325</updated>
+    </task>
+    <task id="LOCAL-00011" summary="more renaults from 1974">
+      <created>1551178332016</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1551178332016</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -431,14 +456,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-7" y="23" width="1377" height="703" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.15476191" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.3296131" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.56153846" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.47803164" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -494,7 +519,8 @@
     <MESSAGE value="updated Rowley Motors and database" />
     <MESSAGE value="added many mascot adds, changed printout for month" />
     <MESSAGE value="added even more renaults, some dealer info" />
-    <option name="LAST_COMMIT_MESSAGE" value="added even more renaults, some dealer info" />
+    <MESSAGE value="more renaults from 1974" />
+    <option name="LAST_COMMIT_MESSAGE" value="more renaults from 1974" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/plate_checker.py">
@@ -529,13 +555,6 @@
         <state relative-caret-position="-2433" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NSW_Plate_Info.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4525">
-          <caret line="181" column="36" selection-start-line="181" selection-start-column="36" selection-end-line="181" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Load_Plates_MM.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
@@ -545,8 +564,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Display_Plates_OOP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5700">
-          <caret line="233" column="43" selection-start-line="233" selection-start-column="43" selection-end-line="233" selection-end-column="43" />
+        <state relative-caret-position="225">
+          <caret line="14" column="200" selection-start-line="14" selection-start-column="200" selection-end-line="14" selection-end-column="200" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -565,24 +584,38 @@
     <entry file="file://$PROJECT_DIR$/engines9.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dealers.py">
+    <entry file="file://$PROJECT_DIR$/Load_Plates_Renault.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1225">
-          <caret line="49" column="53" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
+        <state relative-caret-position="800">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sydney_exchange.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        <state relative-caret-position="2400">
+          <caret line="96" column="34" selection-start-line="96" selection-start-column="34" selection-end-line="96" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Load_Plates_Renault.py">
+    <entry file="file://$PROJECT_DIR$/Dealers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="19" column="51" lean-forward="true" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+        <state relative-caret-position="2300">
+          <caret line="92" column="43" selection-start-line="92" selection-start-column="43" selection-end-line="92" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Load_Plates_Rover.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSW_Plate_Info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
         </state>
       </provider>
     </entry>
