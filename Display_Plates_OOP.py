@@ -12,7 +12,7 @@ def check_plate_nsw2(target_plate, model, make):
     renault_model_start = {'RXX': '1960','R4': '1958', 'R8': '1963', 'R10': '1965', 'R10S': '1970','R12': '1969','R16':'1965', 'R15': '1971','R17':'1973'}
     peugeot_model_start = {'403': '1955', '403B': '1958', '404': '1963', '504': '1969'}
     rover_model_start = {'100': '1960', '2000': '1965', '2000TC': '1965', '3500': '1967','P5B': '1965', 'P5': '1965', 'P5Bcoupe': '1965', 'P5coupe': '1965'}
-    rambler_model_start = {'Ambassador': '1960', 'Hornet': '1970','Gremlin': '1970', 'Rebel': '1967', 'Javelin': '1969', 'AMX': '1969', 'Matador':'1971', 'American':'1963', 'Classic':'1961'}
+    rambler_model_start = {'Ambassador': '1960', 'Hornet': '1970','Gremlin': '1970', 'Rebel': '1967', 'Javelin': '1969', 'AMX': '1969', 'Matador':'1971', 'American':'1963', 'Classic':'1961', 'Marlin':'1964'}
     model_start_year = '1960'
     if make == 'Renault':
         model_start_year = renault_model_start[model]
@@ -204,7 +204,7 @@ def main():
         print go_again
         if pick_make == "ra" or pick_make == "Rambler":
             Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
-                            "AMX"]
+                            "AMX", "Marlin"]
             print Rambler_list
             pick_model = raw_input("please enter Rambler model: ")
             if pick_model != "all":
