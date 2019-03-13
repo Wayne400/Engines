@@ -3,28 +3,17 @@ import sqlite3
 
 def get_rover():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
     adverts = [
-("GUT160","1974-07-13","3500","XX","none","none","Red","Tan","4283501","$6300","none","November"),
-("AAB294","1975-11-22","2000","XX","none","Auto","unknown","none","7991111","$1990","none","none"),
-("EZR580","1975-11-22","2000","XX","1968","Auto","unknown","none","4981414","none","none","September"),
-("BGE260","1975-11-22","2000","XX","1970","Auto","unknown","none","313244","none","29000mis","none"),
-("BME983","1975-11-22","3500","XX","1970","Auto","British Racing Green","none","5257351","$4890","none","October"),
-("EWS600","1975-11-22","2000","TC","1969","none","unknown","none","4493776","$2500","none","none"),
-("DLA423","1975-11-15","2000","XX","1967","Man","White","Cinnamon","430231","none","34000mis","none"),
-("AJD933","1975-11-15","3L","XX","1961","White","unknown","none","8692036","$600","none","June"),
-("EIC144","1975-11-08","3500","XX","1970","Auto","White","Red","(047)213179","none","none","none"),
-("EDY033","1975-11-01","2000","TC","1967","none","unknown","none","766141","$1095","none","July"),
-("EEU478","1975-11-01","2000","XX","1966","Man","unknown","none","7641152","none","none","August"),
-("AFN287","1975-01-11","3500","XX","1971","Auto","unknown","none","802281","none","none","none"),
-("EFB076","1975-01-25","2000","XX","1967","none","Dark Green","none","903693","$2000","none","none"),
-("ETX524","1975-01-25","2000","XX","1968","none","unknown","none","8718187","$1685","none","none"),
-("DUH939","1975-02-08","2000","XX","6566","none","Light Blue","none","7451255","none","none","none"),
-("AKF123","1975-03-08","2000","XX","1967","none","unknown","none","7642603","$1600","none","none"),
-("EFB420","1975-03-08","2000","XX","1967","none","unknown","none","4071358","$1450","none","August"),
-("BEC286","1975-03-29","2000","XX","1968","none","unknown","none","4395081","$2100","none","January"),
-("DUH939","1975-03-29","2000","XX","1966","Man","Light Blue","none","7451255","$795","none","none"),
-("DZL457","1975-03-29","3Litre","XX","1966","Auto","unknown","none","6346316","$1190","none","January"),
-("CJU902","1975-04-22","none","XX","1962","Man","unknown","none","5208884","$1100","none","none"),
-
+("AYV792","1975-08-23","3500","XX","1969","Auto","unknown","none","7985616","$3450","27000mis","none"),
+("AXT187","1975-08-23","3500","XX","1969","none","Gun metal Grey","Red","2114677","$3990","27000mis","none"),
+("BMH176","1975-08-23","105R","XX","1958","none","unknown","none","4985808","$280","none","February"),
+("BGZ457","1975-08-23","90","XX","1957","none","unknown","none","513823","none","none","none"),
+("GTX150","1975-08-23","3500","XX","1974","none","unknown","none","7991111","none","9000mis","none"),
+("CPO239","1975-08-09","3L","XX","none","none","unknown","none","944591","$1995","51000mis","none"),
+("AYV702","1975-08-09","3500","XX","1970","none","unknown","none","7985616","$3450","27000mis","none"),
+("CHZ423","1975-08-09","3L","XX","1963","Auto","unknown","none","9132015","$795","none","August"),
+("ATY575","1975-08-09","3500","XX","1969","Auto","unknown","none","7986644","none","40000mis","none"),
+("BMH176","1975-08-09","105R","XX","1958","none","unknown","none","4985808","$300","none","none"),
+("AGI956","1975-07-26","P5B","XX","1971","Auto","unknown","none","7987447","none","59000","none"),
     ]
 
     return adverts
@@ -33,7 +22,7 @@ def get_rover():   # creating a list of tuples representing individual ads in th
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 1275
+    master_index1 = 1994
     for row in ads:
         print row
         master_index1 += 1
@@ -51,11 +40,11 @@ def add_adverts(cursor, ads):
                         jurisdiction="NSW",
                         iso_advert_date=row[1],
                         item_number=1, publication="smh",
-                        car_make="Rover", car_model=row[3], model_year=row[4],
+                        car_make="Rover", car_model=row[2], model_year=row[4],
                         capacity="none",
                         colour=row[6], phone1=row[8], phone2="none",
                         dealers_licence="none", who="WW", interior_trim=row[7],
-                        body_style="none", trim_level=row[2],
+                        body_style="none", trim_level=row[3],
                         transmission=row[5], price=row[9], milage=row[10],month=row[11])
         print sql
         try:

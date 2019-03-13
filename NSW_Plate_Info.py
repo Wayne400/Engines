@@ -2,6 +2,49 @@
 def get_month(target_plate):
     nsw_plate_search = {
 
+
+'1960-01-01': ("none", "none", "none", "none", "none"),
+'1960-02-01': ("none", "none", "none", "none", "none"),
+'1960-03-01': ("none", "none", "none", "none", "none"),
+'1960-04-01': ("none", "none", "none", "none", "none"),
+'1960-05-01': ("none", "none", "none", "none", "none"),
+'1960-06-01': ("none", "none", "none", "none", "none"),
+'1960-07-01': ("none", "none", "none", "none", "none"),
+'1960-08-01': ("none", "none", "none", "none", "none"),
+'1960-09-01': ("none", "none", "none", "none", "none"),
+'1960-10-01': ("none", "none", "none", "none", "none"),
+'1960-11-01': ("none", "none", "none", "none", "none"),
+'1960-12-01': ("none", "none", "none", "none", "none"),
+
+
+'1961-01-01': ("none", "none", "none", "none", "none"),
+'1961-02-01': ("none", "none", "none", "none", "none"),
+'1961-03-01': ("none", "none", "none", "none", "none"),
+'1961-04-01': ("none", "none", "none", "none", "none"),
+'1961-05-01': ("none", "none", "none", "none", "none"),
+'1961-06-01': ("none", "none", "none", "none", "none"),
+'1961-07-01': ("none", "none", "none", "none", "none"),
+'1961-08-01': ("none", "none", "none", "none", "none"),
+'1961-09-01': ("none", "none", "none", "none", "none"),
+'1961-10-01': ("none", "none", "none", "none", "none"),
+'1961-11-01': ("none", "none", "none", "none", "none"),
+'1961-12-01': ("none", "none", "none", "none", "none"),
+
+
+'1962-01-01': ("none", "none", "none", "none", "none"),
+'1962-02-01': ("none", "none", "none", "none", "none"),
+'1962-03-01': ("none", "none", "none", "none", "none"),
+'1962-04-01': ("none", "none", "none", "none", "none"),
+'1962-05-01': ("none", "none", "none", "none", "none"),
+'1962-06-01': ("none", "none", "none", "none", "none"),
+'1962-07-01': ("none", "none", "none", "none", "none"),
+'1962-08-01': ("none", "none", "none", "none", "none"),
+'1962-09-01': ("none", "none", "none", "none", "none"),
+'1962-10-01': ("none", "none", "none", "none", "none"),
+'1962-11-01': ("none", "none", "none", "none", "none"),
+'1962-12-01': ("none", "none", "none", "none", "none"),
+
+
 '1963-01-01': ("none", "none", "none", "none", "none"),
 '1963-02-01': ("none", "none", "none", "none", "none"),
 '1963-03-01': ("none", "none", "none", "none", "none"),

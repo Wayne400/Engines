@@ -8,11 +8,14 @@ from NSW_Plate_Info import get_month
 
 
 def check_plate_nsw2(target_plate, model, make):
-
-    renault_model_start = {'RXX': '1960','R4': '1958', 'R8': '1963', 'R10': '1965', 'R10S': '1970','R12': '1969','R16':'1965', 'R15': '1971','R17':'1973'}
-    peugeot_model_start = {'403': '1955', '403B': '1958', '404': '1963', '504': '1969'}
-    rover_model_start = {'100': '1960', '2000': '1965', '2000TC': '1965', '3500': '1967','P5B': '1965', 'P5': '1965', 'P5Bcoupe': '1965', 'P5coupe': '1965'}
-    rambler_model_start = {'Ambassador': '1960', 'Hornet': '1970','Gremlin': '1970', 'Rebel': '1967', 'Javelin': '1969', 'AMX': '1969', 'Matador':'1971', 'American':'1963', 'Classic':'1961', 'Marlin':'1964'}
+    if model == 'none':
+        model = "RXX"
+    renault_model_start = {'RXX': '1960','R4': '1958', 'R8': '1963','Gordini': '1963', 'R10': '1965', 'R10S': '1970','R12': '1969','R16':'1965', 'R15': '1971','R17':'1973'}
+    peugeot_model_start = {'RXX': '1960','403': '1955', '403B': '1958', '404': '1963', '504': '1969'}
+    rover_model_start = {'RXX': '1960','90': '1954','100': '1960','105R': '1955', '2000': '1965', '2000TC': '1965', '3500': '1967','P5B': '1965','3L':'1960', 'P5': '1965', 'P5Bcoupe': '1965', 'P5coupe': '1965'}
+    rambler_model_start = {'RXX': '1960','Ambassador': '1960', 'Hornet': '1970','Gremlin': '1970', 'Rebel': '1967', 'Javelin': '1969', 'AMX': '1969', 'Matador':'1971', 'American':'1963', 'Classic':'1961', 'Marlin':'1964'}
+    valiant_model_start = {'RXX': '1960', 'R': '1962', 'S': '1962', 'AP5': '1963', 'AP6': '1965', 'VC': '1966', 'VE': '1968', \
+                            'VF':'1969', 'VG': '1970', 'VH':'1971', 'VJ':'1973', 'VK': '1975', 'CL':'1976', 'CM':'1978'}
     model_start_year = '1960'
     if make == 'Renault':
         model_start_year = renault_model_start[model]
@@ -22,6 +25,9 @@ def check_plate_nsw2(target_plate, model, make):
         model_start_year = peugeot_model_start[model]
     if make == 'Rover':
         model_start_year = rover_model_start[model]
+    if make == 'Valiant':
+        model_start_year = valiant_model_start[model]
+
 
     nsw_series_one = {'1955': 'AUG000', '1956': 'BCC000', '1957': 'BKC000', '1958': 'BSA000', '1959': 'BWA000', '1960': 'CAA000', '1961': 'CLL000', '1962': 'CTA000', '1963' : 'DAA000',
                     '1964': 'DKA000', '1965': 'DOJ000', '1966': 'EDA000', '1967': 'EMA000',
@@ -140,7 +146,7 @@ def get_sql_data(car_model_list, **kwargs):
     car_model_or_string += " )"
     #     sql = "select * from adverts"
     #  car_model_string = "car_model = '{}'".format(car_model_list[0])
-    sql = "select * from adverts where {} and jurisdiction = '{}' and car_make = '{}' ".format(
+    sql = "select * from adverts where {} and jurisdiction = '{}'".format(
         car_model_or_string, jurisdiction, car_make)
     print sql
 
@@ -189,14 +195,69 @@ def get_sql_data_mascot(car_model_list, **kwargs):
         conn.close()
 
 
+def get_sql_data_series(car_model_list, **kwargs):
+    #  print kwargs
+    jurisdiction = kwargs["jurisdiction"]
+    connectstring = kwargs["connectstring"]
+    car_make = kwargs["car_make"]
+    stop = len(car_model_list)
+    car_model_or_string = "( model_code = '{}'".format(car_model_list[0])
+    for x in range(1, stop):
+        car_model_or_string += " or " + "model_code = '{}'".format(car_model_list[x])
+    #      print car_model_list[x]
+    car_model_or_string += " )"
+    #     sql = "select * from adverts"
+    #  car_model_string = "car_model = '{}'".format(car_model_list[0])
+    sql = "select * from adverts where {} and jurisdiction = '{}' and car_make = '{}'".format(
+        car_model_or_string, jurisdiction, car_make)
+    print sql
+
+    try:
+        conn = sqlite3.connect(connectstring)
+        cursor = conn.cursor()
+        print 'connected!' + connectstring
+        results = cursor.execute(sql)
+        ads = results.fetchall()
+        conn.close()
+        return ads
+
+    except:
+        print "I am unable to connect to the database"
+        conn.close()
+
+
+
+def get_sql_data_all( **kwargs):
+    #  print kwargs
+    jurisdiction = kwargs["jurisdiction"]
+    connectstring = kwargs["connectstring"]
+   #     sql = "select * from adverts"
+    sql = "select * from adverts where jurisdiction = '{}' ".format(jurisdiction)
+
+    print sql
+
+    try:
+        conn = sqlite3.connect(connectstring)
+        cursor = conn.cursor()
+        print 'connected!' + connectstring
+        results = cursor.execute(sql)
+        ads = results.fetchall()
+        conn.close()
+        return ads
+
+    except:
+        print "I am unable to connect to the database"
+        conn.close()
+
 
 
 def main():
   plate_list = []
   go_again = 'y'
+  pick_make = 'none'
   while go_again != 'n':
     while True:
-        Make_list = ["Rambler", "Renault", "Peugeot", "Rover", "Ford", "Mascot"]
+        Make_list = ["Rambler", "Renault", "Peugeot", "Rover", "Ford", "Mascot", "Valiant"]
         print Make_list
         pick_make = "Wally"
         pick_make = raw_input("Car Make?")
@@ -218,7 +279,7 @@ def main():
                                      jurisdiction="NSW")
             break
         elif pick_make == "re" or pick_make == "Renault":
-            Renault_list = ["R4", "R8", "R10", "R12", "R16", "R10S", "10S","R15", "R17", "RXX"]
+            Renault_list = ["R4", "R8", "R10", "R12", "R16", "R10S", "10S", "R15", "R17", "RXX"]
             print Renault_list
             pick_model = raw_input("please enter Renault model: ")
             if pick_model != "all":
@@ -236,7 +297,7 @@ def main():
                                    jurisdiction="NSW")
             break
         elif pick_make == "ro" or pick_make == "Rover":
-            Rover_list = ["2000", "2000TC", "3500", "P5B", "P5", "P5Bcoupe", "P5coupe", "100"]
+            Rover_list = ["105R", "2000", "2000TC", "3500", "P5B", "P5", "P5Bcoupe", "P5coupe","3L", "100"]
             print Rover_list
             pick_model = raw_input("please enter Rover model: ")
             if pick_model != "all":
@@ -244,14 +305,18 @@ def main():
             ads_table = get_sql_data(car_model_list=Rover_list, car_make ="Rover", connectstring="advertisements_indexed.db",
                                    jurisdiction="NSW")
             break
-        elif pick_make == "mm" or pick_make == "Mascot":
-            Rambler_list = ["Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American", "AMX"]
-            print Rambler_list
-            pick_model = raw_input("please enter Rambler/AMC model: ")
+        elif pick_make == "val" or pick_make == "Valiant":
+            Valiant_list = ["R", "S", "AP5", "AP6", "VC", "VE", "VF", "VG", "VH", "VJ", "VK", "CL", "CM"]
+            print Valiant_list
+            pick_model = raw_input("please enter Valiant series: ")
             if pick_model != "all":
-                Rambler_list = [pick_model]
-            ads_table = get_sql_data_mascot(car_model_list=Rambler_list, car_make ="Rambler", connectstring="advertisements_indexed.db",
-                                     jurisdiction="NSW")
+                Valiant_list = [pick_model]
+            ads_table = get_sql_data_series(car_model_list=Valiant_list, car_make="Chrysler", connectstring="advertisements_indexed.db",
+                                   jurisdiction="NSW")
+            break
+
+        elif pick_make == "all":
+            ads_table = get_sql_data_all( connectstring="advertisements_indexed.db", jurisdiction="NSW")
             break
         elif pick_make == 'x':
             break
@@ -274,12 +339,19 @@ def main():
                                       car_year=ads_record[8],
                                       month=ads_record[21], ad_date=ads_record[3])
                 no_of_cars = no_of_cars +1
-
+                car_model = ads_record[7]
+                if car_model == "Valiant":
+                    series = ads_record[20]
+                    if series == "none":
+                        series = "RXX"
+                    car_model = series
                 if new_plate.jurisdiction == "NSW":
-                    nsw_list = check_plate_nsw2(target_plate=ads_record[1], model=ads_record[7],make=ads_record[6])
+                   # print ads_record[7], ads_record[0]
+                    nsw_list = check_plate_nsw2(target_plate=ads_record[1], model = car_model, make=ads_record[6])
                     new_plate.set_year_predict("1999")
                     new_plate.set_nsw_epoch(nsw_list)
-                       #print plate_checker_out, nsw_list
+
+
                 plate_list.append(new_plate)
                 plate_list_index.append(plate)
             else:
@@ -287,6 +359,8 @@ def main():
                     if plate_stored.title == plate:
                          plate_stored.grow_ad_list(ads_record[0])
     print "no of cars =" , no_of_cars
+    if pick_make == 'all':
+        break
     go_again = raw_input("Go Again y/n: ")
 
   plate_list.sort()

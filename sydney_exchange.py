@@ -116,11 +116,11 @@ def get_exchange_dict():
     exchange_dict['745'] = 'Five Dock'
     exchange_dict['750'] = 'Lakemba'
     exchange_dict['759'] = 'Punchbowl, Lakemba'
-    exchange_dict['76'] = 'Homebush'
+    exchange_dict['76'] = 'Homebush, Flemington'
     exchange_dict['77'] = 'Revesby'
     exchange_dict['771'] = 'Panania'
     exchange_dict['773'] = 'Padstow'
-    exchange_dict['797'] = 'Ashfield'
+    exchange_dict['797'] = 'Ashfield, Summer Hill'
     exchange_dict['798'] = 'Five Dock, Haberfield'
 
     exchange_dict['80'] = 'West Ryde'
