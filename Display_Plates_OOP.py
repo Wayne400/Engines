@@ -61,7 +61,7 @@ def check_plate_nsw2(target_plate, model, make):
 class RegoPlate(object):
 
     def __init__(self, title="", jurisdiction="NSW", make="", model="", colour="", phone1="", ad_index="",
-                 car_year="", month="None", ad_date="", year_predict="1999", nsw_epoch=7, suburb="wallyville"):
+                 car_year="", month="None", ad_date="", year_predict="1999", nsw_epoch=7, suburb="wallyville", price="$$$"):
 
         self.title = title
         self.jurisdiction = jurisdiction
@@ -77,6 +77,7 @@ class RegoPlate(object):
         self.year_predict = year_predict
         self.nsw_epoch = nsw_epoch
         self.suburb = suburb
+        self.price = price
 
     def set_year_predict(self, year_predict):
         self.year_predict = year_predict
@@ -118,6 +119,11 @@ class RegoPlate(object):
             self.colour = ""
         if self.year == "none":
             self.year = ""
+        if self.model == "none":
+            self.model = ""
+        if self.price == "none":
+            self.price = ""
+
         no_of_ads = len(self.ads_list)
         estimate_month = get_month(self.title)
         if estimate_month == "none":
@@ -127,8 +133,8 @@ class RegoPlate(object):
 #        print ('{0:6} | {1:4} | {2:9} | {3:8} | {4:10} | {5:20} | {6:11} | {7:16} | {8:10} | {9:4}| {10:4} | {11:4}'.format(self.title, self.year, self.month,
 #                self.make, self.model, self.colour, self.phone1, self.suburb, self.ad_date, self.year_predict, self.index, no_of_ads))
 
-        print ('{0:6} | {1:2} | {2:4} | {3:7} | {4:9} | {5:10} | {6:20} | {7:11} | {8:30} | {9:10} | {10:4}| {11:4}' \
-               .format(self.title, no_of_ads, self.year, estimate_month, self.month, self.model, self.colour, self.ad_date,\
+        print ('{0:6} | {1:2} | {2:4} | {3:7} | {4:9} | {5:10} | {6:5} |{7:20} | {8:11} | {9:30} | {10:10} | {11:4}| {12:4}' \
+               .format(self.title, no_of_ads, self.year, estimate_month, self.month, self.model, self.price, self.colour, self.ad_date,\
                        self.suburb, self.phone1, self.make, self.index ))
 
 
@@ -268,8 +274,9 @@ def main():
                             "AMX", "Marlin"]
             print Rambler_list
             pick_model = raw_input("please enter Rambler model: ")
-            if pick_model != "all":
-                Rambler_list = [pick_model]
+            if pick_model == "all":
+                Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
+                            "AMX", "Marlin", "none"]
             ads_table = get_sql_data(car_model_list=Rambler_list, car_make="Rambler", connectstring="advertisements_indexed.db",
                                      jurisdiction="NSW")
             break
@@ -282,7 +289,7 @@ def main():
             Renault_list = ["R4", "R8", "R10", "R12", "R16", "R10S", "10S", "R15", "R17", "RXX"]
             print Renault_list
             pick_model = raw_input("please enter Renault model: ")
-            if pick_model != "all":
+            if pick_model == "all":
                 Renault_list = [pick_model]
             ads_table = get_sql_data(car_model_list=Renault_list, car_make ="Renault", connectstring="advertisements_indexed.db",
                                    jurisdiction="NSW")
@@ -291,8 +298,8 @@ def main():
             Peugeot_list = ["403", "403B", "404", "504"]
             print Peugeot_list
             pick_model = raw_input("please enter Peugeot model: ")
-            if pick_model != "all":
-                Peugeot_list = [pick_model]
+            if pick_model == "all":
+                Peugeot_list = ["403", "403B", "404", "504", "none"]
             ads_table = get_sql_data(car_model_list=Peugeot_list, car_make ="Peugeot", connectstring="advertisements_indexed.db",
                                    jurisdiction="NSW")
             break
@@ -300,17 +307,17 @@ def main():
             Rover_list = ["105R", "2000", "2000TC", "3500", "P5B", "P5", "P5Bcoupe", "P5coupe","3L", "100"]
             print Rover_list
             pick_model = raw_input("please enter Rover model: ")
-            if pick_model != "all":
-                Rover_list = [pick_model]
+            if pick_model == "all":
+                Rover_list = ["105R", "2000", "2000TC", "3500", "P5B", "P5", "P5Bcoupe", "P5coupe","3L", "100", "none"]
             ads_table = get_sql_data(car_model_list=Rover_list, car_make ="Rover", connectstring="advertisements_indexed.db",
                                    jurisdiction="NSW")
             break
         elif pick_make == "val" or pick_make == "Valiant":
             Valiant_list = ["R", "S", "AP5", "AP6", "VC", "VE", "VF", "VG", "VH", "VJ", "VK", "CL", "CM"]
-            print Valiant_list
+            # print Valiant_list
             pick_model = raw_input("please enter Valiant series: ")
-            if pick_model != "all":
-                Valiant_list = [pick_model]
+            if pick_model == "all":
+                Valiant_list = ["R", "S", "AP5", "AP6", "VC", "VE", "VF", "VG", "VH", "VJ", "VK", "CL", "CM", "none"]
             ads_table = get_sql_data_series(car_model_list=Valiant_list, car_make="Chrysler", connectstring="advertisements_indexed.db",
                                    jurisdiction="NSW")
             break
@@ -337,13 +344,15 @@ def main():
                                       make=ads_record[6],
                                       model=ads_record[7], colour=ads_record[10], phone1=ads_record[11],
                                       car_year=ads_record[8],
-                                      month=ads_record[21], ad_date=ads_record[3])
+                                      month=ads_record[21], ad_date=ads_record[3], price=ads_record[18],)
                 no_of_cars = no_of_cars +1
                 car_model = ads_record[7]
                 if car_model == "Valiant":
                     series = ads_record[20]
+                #   print ads_record[0]
                     if series == "none":
                         series = "RXX"
+                #        print ads_record[0]
                     car_model = series
                 if new_plate.jurisdiction == "NSW":
                    # print ads_record[7], ads_record[0]

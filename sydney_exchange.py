@@ -45,7 +45,7 @@ def get_exchange_dict():
     exchange_dict['467'] = 'Lindfield'
     exchange_dict['46'] = 'Lindfield, Roseville'
     exchange_dict['47'] = 'Asquith, Hornsby'
-    exchange_dict['476'] = 'Hornsby'
+    exchange_dict['476'] = 'Hornsby, Asquith'
     exchange_dict['48'] = 'Wahroonga'
     exchange_dict['487'] = 'Waitara, Wahroonga'
     exchange_dict['49'] = 'Gordon'
