@@ -55,7 +55,9 @@ def get_dealers():
 '5993887': ("Suttons Motors", "93 Princes Hwy", "Arncliffe", "LD"),
 
 '6042881': ("CNR Wreckers", "Smithfield", "Smithfield", "LD"),
+'6327953': ("Top Hat Motors", "282 Woodville Rd", "Guildford", "LD"),
 '6332714': ("R.S.C. Motors", "56-58 Church St.", "Parramatta", "LD"),
+'6351001': ("Thomson Ford", "Church St.", "Parramatta", "LD"),
 '6355593': ("John Newell Motors", "155 Great Western Highway", "Westmead", "LD395"),
 '6359755': ("Mazda House", "42-46 Church St.", "Parramatta", "LD"),
 '6370000': ("Ron Hodgson", "Parramatta Rd.", "Parramatta", "LD42"),
@@ -66,6 +68,7 @@ def get_dealers():
 '6375781': ("Bryfield Autos", "160 Parramatta Rd", "Granville", "LD961"),
 '6378242': ("Ken Allen", "93-97 and 101 Parramatta Rd", "Granville", "LD"),
 '6376033': ("Anonymous", "Parrammata Rd", "unknown", "LD76"),
+'6480224': ("Ruslit Motors", "unknown Rd", "Auburn", "LD"),
 '6481870': ("Bevan Williams Motors", "unknown Rd", "Lidcombe", "LD"),
 '6481980': ("Ron Muir Cars", "44 Parramatta Rd", "Lidcombe", "LD"),
 '6484311': ("John A Gilbert", "76 Parramatta Rd", "Lidcombe", "LD"),

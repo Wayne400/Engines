@@ -3,29 +3,30 @@ import sqlite3
 
 def get_valiant():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
     adverts = [
-("ADE008","1975-10-18","VE","VIP","none","1968","273","Auto","unknown","none","2112100","nne","none","none"),
-("HAP088","1975-10-18","VJ","Charger","Sportsman","1974","none","none","Red and White","Tartan","7976333","none","14700kms","October"),
-("DTO408","1976-02-21","none","Valiant","none","none","225","nne","unknown","none","5196765","$290","none","May"),
-("AZD532","1976-02-21","VF","Valiant","none","1969","none","Auto","Alabaster","none","7985666","$1550","42070mis","none"),
-("AWF177","1976-02-21","VF","Safari","none","1969","225","Auto","Alpine White","Tan","7985666","$1750","65000mis","none"),
-("AAJ736","1976-02-21","VF","Valiant","Regal","1969","318","Auto","unknown","none","4515438","$1100","none","August"),
-("GJM130","1976-02-21","VJ","Charger","XL","1973","none","none","Red","none","4982186","$2250","42000mis","none"),
-("EXY758","1976-02-21","VC","Valiant","Regal","none","225","none","unknown","none","6480475","$1095","none","none"),
-("AUF774","1976-02-21","VF","Valiant","VIP","1969","none","none","unknown","none","4985867","$2450","none","October"),
-("DZW798","1976-02-21","AP6","Valiant","none","1966","none","Man","unknown","none","6211220","$600","none","April"),
-("GNY029","1976-02-21","VJ","Charger","XL","1973","245","none","Silver","none","(048)711242","$2500","52000mis","November"),
-("EHK937","1976-02-21","VC","Valiant","Regal","1967","225","Auto","unknown","none","953540","$900","none","none"),
-("CIW255","1976-02-21","VH","Charger","XL","none","245","Auto","unknown","none","7715237","$2250","none","November"),
-("EIF798","1976-02-21","VH","Charger","none","1972","215","none","Gold","none","6653591","$2390","25000mis","June"),
-("CCQ411","1976-02-21","VH","Charger","E38","1971","265","3spd","Sun Roof","none","7591679","$3350","none","none"),
-("GSQ099","1976-02-21","VJ","Charger","none","1974","none","Man","Limelight Black Vinyl","none","5993887","$3500","none","none"),
-("HLC276","1975-10-11","VJ","Charger","none","1974","265","4spd","unknown","none","8489360","$2750","none","none"),
-("GEJ511","1975-10-11","VJ","Charger","none","1973","245","Auto","unknown","none","5879727","$2950","17000mis","none"),
-("GPA103","1975-10-11","VJ","Charger","none","7374","none","none","unknown","none","703339","$2600","none","none"),
-("GAH806","1975-10-11","VJ","Charger","770","1973","none","Autp","unknown","none","7278737","none","none","October"),
-("EDI591","1975-10-11","VH","Charger","770","1972","318","Auto","unknown","none","7474186","$2590","none","March"),
-
-    ]
+("CFQ393","1974-06-15","none","Hardtop","none","1971","Hemi","Auto","Vinyl Top","none","Ron Bourke","none","none","none"),
+("EEE024","1974-06-15","VC","Safari","none","1967","none","none","unknown","none","5237972","$790","none","none"),
+("GLD120","1974-06-15","VJ","Valiant","Ranger","1973","245","Auto","Wagon","none","5228279","$3200","9000kms","July"),
+("DBV863","1974-06-15","AP5","Valiant","Regal","none","225","none","unknown","none","9221464","$760","none","none"),
+("ASD682","1974-06-15","VF","Hardtop","Regal","none","318","none","unknown","none","5243295","$1975","none","September"),
+("AZN532","1974-06-15","VF","Hardtop","770","none","318","Auto","unknown","none","6398886","none","none","February"),
+("AJH843","1974-06-15","none","Valiant","Regal","1969","none","none","unknown","none","Liverpool","none","none","none"),
+("GDS148","1974-06-15","VH","Valiant","Ranger","1972","245","none","Deep Chartreuse","none","6392013","$2600","none","none"),
+("CHO152","1974-06-15","none","VIP","none","1970","318","Auto","unknown","none","Liverpool","none","none","none"),
+("GTS332","1974-06-15","none","Charger","none","1973","245","Auto","unknown","none","9292513","$2500","none","April"),
+("CNQ941","1974-06-15","VH","Ranger","XL","none","265","Auto","unknown","none","5214275","none","none","none"),
+("EWT791","1974-06-15","VE","Valiant","none","none","none","Auto","unknown","none","7506227","$750","none","June"),
+("ESL205","1974-06-15","VC","Regal","none","1967","none","Auto","unknown","none","6392582","$1295","none","none"),
+("ASU080","1974-06-15","VF","Valiant","none","none","225","Auto","unknown","none","5220241","none","none","none"),
+("AVM149","1974-06-15","VF","Regal","770","none","318","Auto","Vinyl Roof","none","6241093","$2150","none","none"),
+("EYO024","1974-06-15","VE","VIP","none","none","273","none","Bronze Red","none","4517697","$1500","none","June"),
+("ESO218","1974-06-15","AP6","Safari","none","none","none","Auto","unknown","none","485921","$1000","none","none"),
+("EGO053","1974-06-15","VC","Regal","none","none","none","Auto","Silver Grey","none","6621327","$1450","none","none"),
+("AGT821","1974-06-15","VE","Valiant","none","1969","160HP","Auto","unknown","none","8698506","$1285","none","none"),
+("EPM080","1974-08-15","VC","Valiant","none","1967","none","Auto","unknown","none","845728","$1450","37000mis","none"),
+("ARR494","1974-08-15","VF","Valiant","none","1969","V8","Auto","unknown","none","7279337","$1150","none","none"),
+("CTB476","1974-08-15","S","Valiant","none","1962","225","Auto","unknown","none","5462037","$725","none","none"),
+("GHW186","1974-08-15","none","Charger","none","1973","245","Auto","unknown","none","5228018","$2950","12000mis","none"),
+   ]
 
     return adverts
 
@@ -33,7 +34,7 @@ def get_valiant():   # creating a list of tuples representing individual ads in 
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 2100
+    master_index1 = 2272
     for row in ads:
         print row
         master_index1 += 1
