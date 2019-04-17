@@ -84,7 +84,7 @@ def get_exchange_dict():
     exchange_dict['623'] = 'St. Marys'
     exchange_dict['622'] = 'Seven Hills, Lalor Park'
     exchange_dict['623'] = 'St. Marys'
-    exchange_dict['625'] = 'Rooty Hill'
+    exchange_dict['625'] = 'Rooty Hill, Mt Druitt'
     exchange_dict['630'] = 'Northmead'
     exchange_dict['631'] = 'Toongabbie'
     exchange_dict['632'] = 'Guilford'

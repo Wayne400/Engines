@@ -13,10 +13,10 @@ def check_plate_nsw2(target_plate, make, model, sort1, sort2, sort3):
     renault_model_start = {'RXX': '1960','R4': '1958', 'R8': '1963','Gordini': '1963', 'R10': '1965', 'R10S': '1970','R12': '1969','R16':'1965', 'R15': '1971','R17':'1973'}
     peugeot_model_start = {'RXX': '1960','403': '1955', '403B': '1958', '404': '1963', '504': '1969'}
     rover_model_start = {'RXX': '1960','90': '1954','100': '1960','105R': '1955', '2000': '1965', '2000TC': '1965', '3500': '1967','P5B': '1965','3L':'1960', 'P5': '1961', 'P5Bcoupe': '1965', 'P5coupe': '1965'}
-    rambler_model_start = {'RXX': '1960','Ambassador': '1960', 'Hornet': '1970','Gremlin': '1970', 'Rebel': '1967', 'Javelin': '1969', 'AMX': '1969', 'Matador':'1971', 'American':'1963', 'Classic':'1961', 'Marlin':'1964'}
+    rambler_model_start = {'Rambler': '1960','Ambassador': '1960', 'Hornet': '1970','Gremlin': '1970', 'Rebel': '1967', 'Javelin': '1969', 'AMX': '1969', 'Matador':'1971', 'American':'1963', 'Classic':'1961', 'Marlin':'1964'}
     valiant_series_start = {'RXX': '1960', 'R': '1962', 'S': '1962', 'AP5': '1963', 'AP6': '1965', 'VC': '1966', 'VE': '1967', \
                             'VF':'1969', 'VG': '1970', 'VH':'1971', 'VJ':'1973', 'VK': '1975', 'CL':'1976', 'CM':'1978','CH':'1973','CJ':'1973', 'CK':'1975'}
-    valiant_model_start = {'Regal': '1963', 'Charger': '1971', 'VIP': '1967', 'Safari': '1966', 'Ranger': '1971', \
+    valiant_model_start = {'Utility':'1965', 'Regal': '1963', 'Charger': '1971', 'VIP': '1967', 'Safari': '1966', 'Ranger': '1971', \
                             'Chrysler':'1972', 'Valiant': '1962', 'Pacer':'1969', 'Hardtop':'1969','Wagon':'1966' }
 
     model_start_year = '1960'
@@ -292,6 +292,8 @@ def main():
             if pick_model == "all":
                 Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
                             "AMX", "Marlin", "none"]
+            if pick_model in Rambler_list:
+                Rambler_list = [pick_model]
             ads_table = get_sql_data(car_model_list=Rambler_list, car_make="Rambler", connectstring="advertisements_indexed.db",
                                      jurisdiction="NSW")
             break
@@ -304,7 +306,7 @@ def main():
             Renault_list = ["R4", "R8", "R10", "R12", "R16", "R10S", "10S", "R15", "R17", "RXX"]
             print Renault_list
             pick_model = raw_input("please enter Renault model: ")
-            if pick_model == "all":
+            if pick_model != "all":
                 Renault_list = [pick_model]
             ads_table = get_sql_data(car_model_list=Renault_list, car_make ="Renault", connectstring="advertisements_indexed.db",
                                    jurisdiction="NSW")
@@ -322,7 +324,9 @@ def main():
             Rover_list = ["105R", "2000", "2000TC", "3500", "P5B", "P5", "P5Bcoupe", "P5coupe","3L", "100"]
             print Rover_list
             pick_model = raw_input("please enter Rover model: ")
-            if pick_model == "all":
+            if pick_model != "all":
+                Rover_list = [pick_model]
+            else:
                 Rover_list = ["105R", "2000", "2000TC", "3500", "P5B", "P5", "P5Bcoupe", "P5coupe","3L", "100", "none"]
             ads_table = get_sql_data(car_model_list=Rover_list, car_make ="Rover", connectstring="advertisements_indexed.db",
                                    jurisdiction="NSW")
@@ -331,10 +335,11 @@ def main():
             Valiant_list = ["R", "S", "AP5", "AP6", "VC", "VE", "VF", "VG", "VH", "VJ", "VK", "CL", "CM"]
             print Valiant_list
             pick_model = raw_input("please enter Valiant series: ")
-            if pick_model == "all":
-                Valiant_list = ["R", "S", "AP5", "AP6", "VC", "VE", "VF", "VG", "VH", "VJ", "VK", "CL", "CM", "none"]
-            else:
+            if pick_model != "all":
                 Valiant_list = [pick_model]
+            else:
+                Valiant_list = ["none","R", "S", "AP5", "AP6", "VC", "VE", "VF", "VG", "VH", "VJ", "VK", "CL", "CM"]
+
             ads_table = get_sql_data_series(car_model_list=Valiant_list, car_make="Chrysler", connectstring="advertisements_indexed.db",
                                    jurisdiction="NSW")
             break

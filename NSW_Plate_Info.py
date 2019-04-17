@@ -113,14 +113,14 @@ def get_month(target_plate):
 
 '1968-01-01': ("EUH083", "none", "none", "none", "none"),
 '1968-02-01': ("EUM835", "EUO022", "EUB862", "none", "none"),
-'1968-03-01': ("EUY146", "EVF770", "none", "none", "none"),
+'1968-03-01': ("EUY146", "EVF770", "EUY884", "none", "none"),
 '1968-04-01': ("EVP414", "none", "none", "none", "none"),
 '1968-05-01': ("EXN005", "EXF134", "none", "none", "none"),
 '1968-06-01': ("none", "none", "none", "none", "none"),
 '1968-07-01': ("EYZ800", "none", "none", "none", "none"),
 '1968-08-01': ("none", "none", "none", "none", "none"),
 '1968-09-01': ("ABF456", "none", "none", "none", "none"),
-'1968-10-01': ("none", "none", "none", "none", "none"),
+'1968-10-01': ("ACF930", "none", "none", "none", "none"),
 '1968-11-01': ("none", "none", "none", "none", "none"),
 '1968-12-01': ("none", "none", "none", "none", "none"),
 
