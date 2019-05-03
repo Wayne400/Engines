@@ -8,20 +8,40 @@ import sqlite3
 
 def get_rambler_1():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
     adverts = [
-("TG212","1974-12-21","Rebel","1970","none","343","unknown","none","6305538","$2750","43000mis","none"),
-("RR398","1974-12-21","Rebel","1971","none","360","Mocha","none","6375484","$3290","none","none"),
-("GKW760","1974-05-18","Matador","1971","none","360","Willow Green","none","6420238","$none","none","none"),
-("DDI945","1974-05-18","Hornet","1972","none","258","unknown","none","6358731","$3400","24000mis","none"),
-("GJO325","1974-05-18","Ambassador","1970","none","360","unknown","none","775627","$4000","none","May"),
-("GLI939","1974-05-18","Rambler","1970","none","none","White","Black","552346","$3000","none","December"),
-("EOE427","1974-05-18","Classic","1966","none","none","unknown","none","6246490","$900","none","none"),
-("AQQ052","1974-05-18","Rambler","1967","none","V8","unknown","none","8882498","none","none","none"),
-("BDF278","1974-05-18","Rambler","1962","none","none","unknown","none","Darlinghurst","$150","none","none"),
-("BKQ184","1974-05-18","Hornet","none","SST","none","White","Brown","838986","none","20000mis","none"),
-("GBP513","1974-05-18","Hornet","1971","SST","4.2","White","Black","6250646","none","23000","September"),
-("BKQ184","1974-04-20","Hornet","none","SST","none","White","Brown","838986","none","20000mis","none"),
-("EQE524","1974-04-20","Classic","1966","770","V8","unknown","none","6442717","$800","none","October"),
-("EBT652","1974-04-20","Classic","1966","none","V8","unknown","none","324055","$1150","none","April"),
+("CIA064","1973-08-11","AMX","1969","none","none","unknown","none","4515700","$4175","none","none"),
+("GNL704","1975-10-18","AMX","1969","none","343","Red","none","703589","$4490","none","none"),
+("AXD241","1976-12-11","AMX","1970","none","none","unknown","none","5466775","$7500","30000mis","none"),
+("GLY898","1978-07-15","Matador","1973","SST","none","unknown","none","512060","$4400","none","July"),
+("DAX625","1978-07-15","Classc","none","660","none","unknown","none","7711314","$450","none","August"),
+("JN230","1978-07-08","Hornet","1972","none","4.2","White","Red","6511375","$3500","none","none"),
+("JTN426","1978-07-01","Rebel","none","770","V8","unknown","none","5335362","$1400","none","July"),
+("JIL602","1978-07-01","Hornet","1973","SST","4.2","unknown","none","6371025","$4999","29600mis","none"),
+("EZF475","1978-06-03","American","1966","440","none","White","none","862870","$850","none","October"),
+("BQT177","1978-06-17","Rebel","1971","SST","360","unknown","none","4514098","$2400","75000mis","none"),
+("BIO998","1978-06-17","Hornet","none","none","none","unknown","none","5423113","none","none","June"),
+("DQD576","1978-06-10","Rebel","1971","none","360","unknown","none","4498166","$2950","none","none"),
+("BLC906","1978-05-27","Hornet","1970","SST","232","unknown","none","7093380","$1900","none","none"),
+("JBP714","1978-05-27","Matador","1973","none","none","Royal Blue","Bone","5236285","$5000","32000mis","none"),
+("GPX321","1978-05-27","Hornet","1973","SST","4.2","Silver Grey","none","4986256","$3950","42000kms","November"),
+("GOH959","1978-05-27","Hornet","1973","none","4.2","White","Brown","4192623","$3850","none","October"),
+("JN230","1978-05-20","Hornet","1972","none","4.2","White","Red","6511375","$3400","none","none"),
+("EAZ588","1978-05-13","Classic","none","none","V8","unknown","none","5237670","$1000","none","June"),
+("GF092","1978-05-13","Hornet","1970","none","232","unknown","none","504621","$3100","none","none"),
+("BLC906","1978-05-13","Hornet","1970","none","232","Blue and White","none","7093380","$2200","none","October"),
+("GPX321","1978-05-06","Hornet","1973","SST","4.2","Silver Grey","none","4986256","$4000","42000kms","November"),
+("JQL053","1978-04-29","Matador","1976","none","360","unknown","none","6672484","none","none","none"),
+("GCU971","1978-04-29","Hornet","none","SST","4.2","unknown","none","6672484","none","none","none"),
+("BLC906","1978-04-29","Hornet","1970","SST","232","Blue and White","none","7093380","$2200","none","October"),
+("APC913","1978-04-29","Rebel","1970","none","none","Wagon","none","6614280","$3250","70000mis","none"),
+("JMG401","1978-04-22","Matador","none","none","360","Wagon","none","6672484","none","none","none"),
+("JQL053","1978-04-22","Matador","1976","none","360","unknown","none","6672484","none","none","none"),
+("JRP821","1978-04-22","Hornet","none","SST","4.2","unknown","none","6672484","none","none","none"),
+("GME327","1978-04-22","Hornet","1973","SST","4.3","unknown","none","9138077","$4000","none","none"),
+("JKQ458","1978-04-22","Rebel","7071","none","360","unknown","none","768711","$2500","none","none"),
+("NF303","1978-04-22","Matador","1973","none","360","wagon","none","(047)312049","$5500","none","none"),
+("BLC906","1978-04-22","Hornet","1970","SST","none","Blue and White","none","7093380","$2200","none","none"),
+("JOF746","1978-04-22","Matador","1976","none","360","Olive","Beige","3494411","none","3785kms","January"),
+("EGL334","1978-04-22","American","none","440","none","unknown","none","5257151","$850","none","none"),
     ]
 
     return adverts
@@ -30,7 +50,7 @@ def get_rambler_1():   # creating a list of tuples representing individual ads i
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 2323
+    master_index1 = 2425
     for column in ads:
         print column
         print column[0], column[11]
