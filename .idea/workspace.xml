@@ -319,9 +319,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Display_PLates_OOP_v2" />
       <item itemvalue="Python.Load_Plates_P76" />
       <item itemvalue="Python.Load_Plates_Rambler" />
+      <item itemvalue="Python.Display_PLates_OOP_v2" />
       <item itemvalue="Python.engines10" />
       <item itemvalue="Python.engines9" />
     </list>
