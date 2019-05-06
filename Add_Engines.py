@@ -20,12 +20,14 @@ def create_table(cursor):
         pass
 
 def get_engines():
+
     engines = {'L4004H' : ("209'G'11", "H09-015", "unknown", "KR"),
 'L4115H' : ("212'G'01", "H09-135", "unknown", "MWh"),
 'L4116H' : ("212'G'08", "L4116H", "unknown", "MWh"),
 'L4183H' : ("302'G'05", "H09-190", "3190808", "BP"),
 'L4184H' : ("302'G'05", "H09-202", "3190808", "AR"),
 'L4254H' : ("302'G'03", "H09-272", "unknown" , "GOC"),
+'L4285H' : ("302'G'09", "H09-294", "unknown", "RS"),
 'L4412H' : ("304'G'02", "L4412H", "3190808", "WW"),
 'L4501H' : ("304'G'02", "L4501H", "3190808", "MD"),
 'L4512H' : ("304'G'07", "L4512H", "3190808", "WW"),
@@ -57,6 +59,7 @@ def get_engines():
 'K5670H' : ("501'A'31", "H39-227", "unknown", "RT"),
 'A036H' : ("708'A'05", "H59-044", "unknown", "DN"),
 'A040H' : ("707'A'30", "H59-040", "unknown", "BB"),
+'A081H' : ("704'A'25", "H59-087", "unknown", "MP"),
 'A095H' : ("704'A'24", "H59-095", "unknown", "CM"),
 'A109H' : ("704'A'23", "H59-103", "unknown", "KS"),
 'A099H' : ("704'A'25", "H59-115", "unknown", "SF"),
@@ -65,6 +68,8 @@ def get_engines():
 'A138H' : ("608'A'20" , "H59-140", "unknown", "AJ"),
 }
     return engines
+
+
 
 
 def add_engines(cursor):
