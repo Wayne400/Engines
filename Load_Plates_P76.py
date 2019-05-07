@@ -3,17 +3,16 @@ import sqlite3
 
 def get_P76():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
     adverts = [
-("HDV572","1977-04-23","P76","none","1974","V8","Auto","unknown","none","9813370","$2900","none","December"),
-("HBS469","1977-04-23","P76","Executive","none","V8","none","Orange Vinyl Roof","Beige","$7891177","$3695","29000kms","none"),
-("GNH301","1977-03-26","P76","none","none","V8","Auto","unknown","none","7093949","$2580","31000ms","August"),
-("GNS086","1977-03-26","P76","Executive","1973","V8","Auto","unknown","none","7500161","$2500","none","April"),
-("HAN286","1976-01-24","P76","Super","none","V8","Auto","unknown","none","5249877","$3000","9500mis","October"),
-("GNH425","1976-01-24","P76","Deluxe","1973","6cyl","Auto","unknown","none","310444","$3295","26000mis","none"),
-("HLK965","1976-06-05","P76","Deluxe","1974","none","Auto","unknown","none","9186653","$2000","none","none"),
-("GPS961","1976-06-05","P76","Deluxe","1973","V8","Auto","White","none","Oatley","$2250","none","none"),
-("HBO910","1976-06-05","P76","Deluxe","1974","V8","4spd","White","Tan","8488222","$2995","none","November"),
-("GZE543","1976-06-05","P76","Targa Florio","1974","none","none","Targa Blue","Parchment","7891177","none","30000kms","February"),
-("GOP078","1976-06-05","P76","Super","none","V8","none","Targa Blue","Parchment","7891177","$2695","none","none"),
+("GIL175","1976-05-29","P76","none","1974","V8","Auto","unknown","none","6272859","$3200","40000kms","none"),
+("HPG420","1976-05-29","P76","none","1973","none","Auto","unknown","none","6370407","$2795","none","none"),
+("HTE118","1976-05-29","P76","none","1974","6cyl","Auto","Crystal White","none","7891177","$2095","none","none"),
+("HAV426","1976-05-29","P76","Executive","1974","V8","Auto","Apricot","Beige","445003","$3500","22500km","none"),
+("GVF494","1976-05-29","P76","none","1974","6cyl","Auto","Orange","Brown","6366642","$2450","12000mis","April"),
+("HTE189","1976-05-22","P76","Executive","none","V8","Auto","Teal Blue","Tan","5796721","$3695","45000kms","none"),
+("GOO108","1976-05-22","P76","Super","none","V8","Auto","Cream","Tan","5879678","$2995","17200mis","none"),
+("HSI728","1976-05-08","P76","Deluxe","1974","6cyl","Auto","unknown","none","8717400","$2750","none","April"),
+("GLO243","1976-05-01","P76","none","1973","none","Auto","Blue","Parchment","766988","none","none","none"),
+("GOF373","1976-05-01","P76","Executive","1973","none","none","unknown","none","616231","$3100","29000mis","October"),
 
     ]
 
@@ -23,7 +22,7 @@ def get_P76():   # creating a list of tuples representing individual ads in the 
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 2488
+    master_index1 = 2499
     for row in ads:
         print row
         master_index1 += 1
