@@ -3,17 +3,17 @@ import sqlite3
 
 def get_rover():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
     adverts = [
-("AYV792","1975-08-23","3500","XX","1969","Auto","unknown","none","7985616","$3450","27000mis","none"),
-("AXT187","1975-08-23","3500","XX","1969","none","Gun metal Grey","Red","2114677","$3990","27000mis","none"),
-("BMH176","1975-08-23","105R","XX","1958","none","unknown","none","4985808","$280","none","February"),
-("BGZ457","1975-08-23","90","XX","1957","none","unknown","none","513823","none","none","none"),
-("GTX150","1975-08-23","3500","XX","1974","none","unknown","none","7991111","none","9000mis","none"),
-("CPO239","1975-08-09","3L","XX","none","none","unknown","none","944591","$1995","51000mis","none"),
-("AYV702","1975-08-09","3500","XX","1970","none","unknown","none","7985616","$3450","27000mis","none"),
-("CHZ423","1975-08-09","3L","XX","1963","Auto","unknown","none","9132015","$795","none","August"),
-("ATY575","1975-08-09","3500","XX","1969","Auto","unknown","none","7986644","none","40000mis","none"),
-("BMH176","1975-08-09","105R","XX","1958","none","unknown","none","4985808","$300","none","none"),
-("AGI956","1975-07-26","P5B","XX","1971","Auto","unknown","none","7987447","none","59000","none"),
+("EIL212","1974-01-12","3500","XX","1972","Auto","unknown","none","7474792","none","none","June"),
+("AKQ680","1974-05-11","3500","XX","1970","Auto","unknown","none","903341","$4500","none","none"),
+("EFB076","1974-12-21","2000","XX","1967","none","Dark Green","Fawn","9081604","$2200","none","July"),
+("AKM903","1974-12-21","90","XX","1957","none","unknown","none","9692842","$225","none","April"),
+("CNV462","1974-05-18","100","XX","1962","none","unknown","none","6397480","$900","none","December"),
+("DSR864","1974-05-18","90","XX","none","none","unknown","none","4986889","$350","none","March"),
+("AQB791","1974-05-18","P5Bcoupe","coupe","1969","Auto","unknown","none","6375781","$1695","none","none"),
+("CBY411","1974-05-18","3L","XX","none","Auto","Grey","Red","4763970","$675","none","none"),
+("EFV410","1975-12-13","2000","XX","1966","Man","unknown","none","956117","$1750","none","February"),
+("AMP822","1975-12-","2000","XX","1969","none","unknown","none","463382","$2695","none","May"),
+
     ]
 
     return adverts
@@ -22,7 +22,7 @@ def get_rover():   # creating a list of tuples representing individual ads in th
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 1994
+    master_index1 = 2571
     for row in ads:
         print row
         master_index1 += 1
