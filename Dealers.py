@@ -41,6 +41,7 @@ def get_dealers():
 '512954': ("Lanock Motors", "unknown", "Camperdown" , "LD505"),
 '514741': ("Lanock Motors", "unknown", "Camperdown" , "LD505"),
 '5196765': ("Anonymous", "unknown", "unknown" , "LD1664"),
+'5206808': ("Anonymous", "unknown", "unknown", "LD3636"),
 '5240214': ("WH Lober & Co", "1 Kiora Rd.", "Miranda", "LD402"),
 '5240666': ("Finnie Ford", "458 Kingsway", "Miranda", "LD"),
 '5252277': ("Larke Hoskins", "Miranda", "Miranda", "LD402"),

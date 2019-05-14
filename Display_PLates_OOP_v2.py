@@ -82,7 +82,7 @@ def check_plate_nsw2(target_plate, model_start_year):
 class RegoPlate(object):
 
     def __init__(self, title="", jurisdiction="NSW", make="", model="", model_level = "", model_code = "",
-                 colour="", phone1="", ad_index="",
+                 colour="", phone1="", ad_index="", trim_level="",
                  car_year="", month="None", ad_date="", year_predict="1999", nsw_epoch=7, suburb="wallyville", price="$$$"):
 
         self.title = title
@@ -91,6 +91,7 @@ class RegoPlate(object):
         self.model = model
         self.model_level = model_level
         self.model_code = model_code
+        self.trim_level = trim_level
         self.colour = colour
         self.phone1 = phone1
         self.ads_list = [ad_index]
@@ -152,13 +153,43 @@ class RegoPlate(object):
                 self.model = self.model_code + " " + self.model_level
             else:
                 self.model = self.model_level
+            if self.trim_level != "none":
+                self.model = self.model + " " + self.trim_level
+
+        if self.model == "P76" and self.trim_level != "none":
+            if self.trim_level != "none":
+                self.model = self.model + " " + self.trim_level
+
+        if self.make == "Rover":
+            if self.model != "none":
+                self.model = self.make + " " + self.model
+
+        if self.make == "Peugeot":
+            if self.model != "none":
+                self.model = self.make + " " + self.model
+
+        if self.make == "Renault":
+            if self.model != 'RXX':
+                self.model = self.make + " " +self.model
+            else:
+                self.model = self.make
+                if self.trim_level != "XX":
+                    self.model = self.model + " " + self.trim_level
+
+        if self.make == "Rambler":
+            if self.model != "none":
+                self.model = self.make + " " + self.model
+            if self.trim_level != "none" and self.model != 'none':
+                self.model = self.model + " " + self.trim_level
+
+
 
         no_of_ads = len(self.ads_list)
         estimate_month = get_month(self.title)
         if estimate_month == "none":
             estimate_month = ""
 
-        print ('{0:6} | {1:2} | {2:4} | {3:7} | {4:9} | {5:12} | {6:5} |{7:20} | {8:11} | {9:30} | {10:10} | {11:4}| {12:4}' \
+        print ('{0:6} | {1:2} | {2:4} | {3:7} | {4:9} | {5:20} | {6:5} |{7:20} | {8:11} | {9:30} | {10:10} | {11:4}| {12:4}' \
                .format(self.title, no_of_ads, self.year, estimate_month, self.month, self.model, self.price, self.colour, self.ad_date,\
                        self.suburb, self.phone1, self.make, self.index ))
 
@@ -369,6 +400,7 @@ def main():
     print "finished sql query"
     plate_list_index = []
     no_of_cars = 0
+    already_found = 0
     for ads_record in ads_table:  # we make a lists of database indexes for distinct plate numbers, insert into dictionary
         plate = str(ads_record[1])
 
@@ -377,7 +409,7 @@ def main():
 
             if plate not in plate_list_index:
                 new_plate = RegoPlate(ad_index=ads_record[0], title=ads_record[1], jurisdiction=ads_record[2],
-                                      make=ads_record[6], model_code=ads_record[20],
+                                      make=ads_record[6], model_code=ads_record[20], trim_level=ads_record[17],
                                       model=ads_record[7], colour=ads_record[10], phone1=ads_record[11],
                                       car_year=ads_record[8], model_level=ads_record[24],
                                       month=ads_record[21], ad_date=ads_record[3], price=ads_record[18],)
@@ -393,10 +425,11 @@ def main():
                 plate_list.append(new_plate)
                 plate_list_index.append(plate)
             else:
+                already_found = already_found + 1
                 for plate_stored in plate_list:
                     if plate_stored.title == plate:
                          plate_stored.grow_ad_list(ads_record[0])
-    print "no of cars =" , no_of_cars
+    print "no of cars =" , no_of_cars , "no_of_ads =" , no_of_cars + already_found
     if pick_make == 'all':
         break
     go_again = raw_input("Go Again y/n: ")
