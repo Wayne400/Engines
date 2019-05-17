@@ -129,7 +129,7 @@ def get_exchange_dict():
     exchange_dict['773'] = 'Padstow'
     exchange_dict['78'] = 'Campsie'
     exchange_dict['797'] = 'Ashfield, Summer Hill'
-    exchange_dict['798'] = 'Five Dock, Haberfield'
+    exchange_dict['798'] = 'Croydon, Five Dock, Haberfield'
 
     exchange_dict['80'] = 'West Ryde'
     exchange_dict['807'] = 'West Ryde'
@@ -142,6 +142,7 @@ def get_exchange_dict():
     exchange_dict['86'] = 'Epping'
     exchange_dict['869'] = 'Epping'
     exchange_dict['871'] = 'Carlingford, North Rocks'
+    exchange_dict['88'] = 'North Ryde'
     exchange_dict['888'] = 'North Ryde'
 
     exchange_dict['90'] = 'Mosman, Neutral Bay'

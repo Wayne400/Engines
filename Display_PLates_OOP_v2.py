@@ -17,7 +17,7 @@ def check_production( make, model, sort1, sort2, sort3):
                          'P5': '1961', 'P5Bcoupe': '1965', 'P5coupe': '1965'}
     rambler_model_start = {'Rambler': '1960','Ambassador': '1960', 'Hornet': '1970','Gremlin': '1970',\
                            'Rebel': '1967', 'Javelin': '1969', 'AMX': '1969', 'Matador':'1971',\
-                           'American':'1963', 'Classic':'1961', 'Marlin':'1964', 'X-Coupe':'1975'}
+                           'American':'1963', 'Classic':'1961', 'Marlin':'1964', 'X-Coupe':'1975', 'RXX':'1960'}
     valiant_series_start = {'RXX': '1960', 'R': '1962', 'S': '1962', 'AP5': '1963', 'AP6': '1965', 'VC': '1966', 'VE': '1967', \
                             'VF':'1969', 'VG': '1970', 'VH':'1971', 'VJ':'1973', 'VK': '1975', 'CL':'1976', 'CM':'1978','CH':'1973','CJ':'1973', 'CK':'1975'}
     valiant_model_start = {'Utility':'1965', 'Regal': '1963', 'Charger': '1971', 'VIP': '1967', 'Safari': '1964', 'Ranger': '1971', \
@@ -195,6 +195,123 @@ class RegoPlate(object):
 
 
 
+class Advertisement(object):
+
+    def __init__(self, title="", jurisdiction="NSW", make="", model="", model_level = "", model_code = "",
+                 colour="", phone1="", ad_index="", trim_level="",
+                 car_year="", month="None", ad_date="", year_predict="1999", nsw_epoch=7, suburb="wallyville", price="$$$"):
+
+        self.title = title
+        self.jurisdiction = jurisdiction
+        self.make = make
+        self.model = model
+        self.model_level = model_level
+        self.model_code = model_code
+        self.trim_level = trim_level
+        self.colour = colour
+        self.phone1 = phone1
+        self.ads_list = [ad_index]
+        self.index = ad_index
+        self.year = car_year
+        self.month = month
+        self.ad_date = ad_date
+        self.year_predict = year_predict
+        self.nsw_epoch = nsw_epoch
+        self.suburb = suburb
+        self.price = price
+
+    def set_year_predict(self, year_predict):
+        self.year_predict = year_predict
+
+    def get_year_predict(self):
+        return self.year_predict
+
+    def set_nsw_epoch(self, nsw_epoch):
+        self.nsw_epoch = nsw_epoch
+
+    def get_nsw_epoch(self):
+        return self.nsw_epoch
+
+    def set_suburb(self):
+        exchange_dictionary = get_exchange_dict()
+        number = self.phone1
+        prefix = '000'
+        if len(number) == 5:
+            prefix = number[:1]
+        if len(number) == 6:
+            prefix = number[:2]
+        if len(number) == 7:
+            prefix = number[:3]
+        exchange_list = list(exchange_dictionary.keys())
+        if prefix in exchange_list:
+            self.suburb = exchange_dictionary[prefix]
+        else:
+            self.suburb = ''
+
+    def grow_ad_list(self,ad_index):
+        self.ads_list.append(ad_index)
+
+    def print_plate(self):
+        months = "January", "February", "March", "April", "May", "June", "July", \
+                 "August", "September", "October", "November", "December"
+        if str(self.month) not in months:
+            self.month = ""
+        if self.colour == "unknown":
+            self.colour = ""
+        if self.year == "none":
+            self.year = ""
+        if self.model == "none":
+            self.model = ""
+        if self.price == "none":
+            self.price = ""
+        if self.model == "Valiant" and self.model_level != "none":
+            if self.model_code != "none":
+                self.model = self.model_code + " " + self.model_level
+            else:
+                self.model = self.model_level
+            if self.trim_level != "none":
+                self.model = self.model + " " + self.trim_level
+
+        if self.model == "P76" and self.trim_level != "none":
+            if self.trim_level != "none":
+                self.model = self.model + " " + self.trim_level
+
+        if self.make == "Rover":
+            if self.model != "none":
+                self.model = self.make + " " + self.model
+
+        if self.make == "Peugeot":
+            if self.model != "none":
+                self.model = self.make + " " + self.model
+
+        if self.make == "Renault":
+            if self.model != 'RXX':
+                self.model = self.make + " " +self.model
+            else:
+                self.model = self.make
+                if self.trim_level != "XX":
+                    self.model = self.model + " " + self.trim_level
+
+        if self.make == "Rambler":
+            if self.model != "none":
+                self.model = self.make + " " + self.model
+            if self.trim_level != "none" and self.model != 'none':
+                self.model = self.model + " " + self.trim_level
+
+
+
+        no_of_ads = len(self.ads_list)
+        estimate_month = get_month(self.title)
+        if estimate_month == "none":
+            estimate_month = ""
+
+        print ('{0:6} | {1:2} | {2:4} | {3:7} | {4:9} | {5:20} | {6:5} |{7:20} | {8:11} | {9:30} | {10:10} | {11:4}| {12:4}' \
+               .format(self.title, no_of_ads, self.year, estimate_month, self.month, self.model, self.price, self.colour, self.ad_date,\
+                       self.suburb, self.phone1, self.make, self.index ))
+
+
+
+
 def get_sql_data(car_model_list, **kwargs):
     #  print kwargs
     jurisdiction = kwargs["jurisdiction"]
@@ -327,17 +444,31 @@ def main():
         print go_again
         if pick_make == "ra" or pick_make == "Rambler":
             Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
-                            "AMX", "Marlin"]
+                            "AMX", "Marlin", "X-Coupe"]
             print Rambler_list
             pick_model = raw_input("please enter Rambler model: ")
             if pick_model == "all":
                 Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
-                            "AMX", "Marlin", "none"]
+                            "AMX", "Marlin", "none","X-Coupe"]
             if pick_model in Rambler_list:
                 Rambler_list = [pick_model]
             ads_table = get_sql_data(car_model_list=Rambler_list, car_make="Rambler", connectstring="advertisements_indexed.db",
                                      jurisdiction="NSW")
             break
+        if  pick_make == "Mascot":
+            Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
+                            "AMX", "Marlin", "X-Coupe"]
+            print Rambler_list
+            pick_model = raw_input("please enter Rambler model: ")
+            if pick_model == "all":
+                Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
+                            "AMX", "Marlin", "none","X-Coupe"]
+            if pick_model in Rambler_list:
+                Rambler_list = [pick_model]
+            ads_table = get_sql_data_mascot(car_model_list=Rambler_list, car_make="Rambler", connectstring="advertisements_indexed.db",
+                                     jurisdiction="NSW")
+            break
+
         elif pick_make == "fo" or pick_make == "Ford":
             Ford_list = ["Falcon", "Cortina", "Capri"]
             ads_table = get_sql_data(car_model_list=Ford_list, car_make="Ford", connectstring="advertisements_indexed.db",
@@ -416,11 +547,13 @@ def main():
                 no_of_cars = no_of_cars +1
 
                 if new_plate.jurisdiction == "NSW":
+                  if not re.match('^[A-Z][A-Z][0-9]{3}', plate):
                     return_above = check_production( make=ads_record[6], model=ads_record[7], sort1=ads_record[20],sort2=ads_record[24], sort3=ads_record[8])
                     nsw_list = check_plate_nsw2(target_plate=ads_record[1], model_start_year=return_above)
                     new_plate.set_year_predict("1999")
                     new_plate.set_nsw_epoch(nsw_list)
-
+                  else:
+                    new_plate.set_nsw_epoch(5)  # for personal plates 5 digit match
 
                 plate_list.append(new_plate)
                 plate_list_index.append(plate)
@@ -435,7 +568,7 @@ def main():
     go_again = raw_input("Go Again y/n: ")
 
   plate_list.sort()
-  for x in range(1, 5):
+  for x in range(1, 6):
       print "*" * 140
       for plate_stored in sorted(plate_list, key=lambda plate: plate.title):
           nsw_epoch = plate_stored.get_nsw_epoch()
