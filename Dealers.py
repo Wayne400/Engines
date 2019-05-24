@@ -176,7 +176,7 @@ def main():
 
     dealers = get_dealers()
 
-    for key in dealers:
+    for key in sorted(dealers):
        dealer_data = dealers[key]
        dealer_name = dealer_data[0]
        print key, dealer_name
