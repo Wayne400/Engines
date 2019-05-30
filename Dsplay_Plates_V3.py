@@ -2,6 +2,7 @@ import sqlite3
 import re
 from collections import defaultdict
 from sydney_exchange import get_exchange_dict
+from Dealers import get_dealers
 from datetime import datetime
 from NSW_Plate_Info import get_month
 
@@ -288,9 +289,9 @@ class Advertisement(object):
                 self.model = self.model + " " + self.trim_level
 
 
-        print ('{0:4} {1:10} {2:6} {3:11} {4:4} {5:20} {6:16} {7:20}' \
-               .format(self.index, self.ad_date, self.price, self.phone1, self.year, self.model, self.colour, \
-                       self.suburb ))
+        print ('{0:6} {1:10} {2:6} {3:11} {4:4} {5:20} {6:16} {7:20} {8:4}' \
+               .format(self.title, self.ad_date, self.price, self.phone1, self.year, self.model, self.colour, \
+                       self.suburb, self.index ))
 
 
 
@@ -416,6 +417,9 @@ def get_sql_data_all( **kwargs):
 def main():
   plate_list = []
   ads_list = []
+  dealers = get_dealers
+
+
   go_again = 'y'
   pick_make = 'none'
   while go_again != 'n':
@@ -579,27 +583,51 @@ def main():
           suburb = plate_stored.set_suburb()
           if x == int(nsw_epoch):  # there are 4 nsw plate lists
               plate_stored.print_plate()
-
+  # ads_dict = []
   go_again = 'y'
   pick_make = 'none'
   while go_again != 'n':
-    while True:
-        plate_search = raw_input("Enter Plate number or q for quit: ")
-        if plate_search != 'q':
-          plate_selected = {}
-          for ad in ads_list:
-            # plate_selected = {}
-            advert = ads_dict[ad]
-            if advert.title == plate_search:
-                plate_selected[advert.ad_date] = advert
-                advert.set_suburb()
-               # advert.print_ad()
-          for key in sorted(plate_selected):
-                 plate_selected[key].print_ad()
-          go_again = plate_search
-        else:
-            go_again = 'n'
-            break
+      while True:
+          plate_search = raw_input("Enter Plate number or q for quit: ")
+          if plate_search != 'q':
+              prefix_search_flag = False
+              plate_selected = {}
+              if plate_search == "number":
+                  plate_search = raw_input("Enter Phone number: ")
+                  # print "wally"
+
+                  print dealers()
+                  for ad2 in ads_list:
+                      # plate_selected = {}
+                      advert = ads_dict[ad2]
+                      # print advert.phone1
+                      if advert.phone1 == plate_search:
+                              advert.print_ad()
+
+
+              else:
+                  if len(plate_search) == 3:
+                      prefix_search_flag = True
+                  for ad in ads_list:
+                      # plate_selected = {}
+                      advert = ads_dict[ad]
+                      if prefix_search_flag:
+                          if advert.title[:3] == plate_search:
+                              plate_selected[advert.ad_date] = advert
+                              advert.set_suburb()
+                      else:
+                          if advert.title == plate_search:
+                              plate_selected[advert.ad_date] = advert
+                              advert.set_suburb()
+                      # advert.print_ad()
+                  for key in sorted(plate_selected):
+                      plate_selected[key].print_ad()
+                  go_again = plate_search
+          else:
+              plate_search = "wally"
+              go_again = 'n'
+              break
+
 
 if __name__ == '__main__':
     main()

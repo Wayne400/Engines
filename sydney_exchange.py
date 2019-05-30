@@ -116,7 +116,7 @@ def get_exchange_dict():
     exchange_dict['709'] = 'Yagoona'
     exchange_dict['72'] = 'Cabramatta'
     exchange_dict['726'] = 'Guildford'
-    exchange_dict['727'] = 'Fairfield'
+    exchange_dict['727'] = 'Fairfield, Cabramatta, Villawood'
     exchange_dict['74'] = 'Burwood, Five Dock'
     exchange_dict['747'] = 'Burwood, Five Dock, Concord, Croydon'
     exchange_dict['745'] = 'Five Dock, Burwood'
@@ -130,6 +130,7 @@ def get_exchange_dict():
     exchange_dict['78'] = 'Campsie'
     exchange_dict['797'] = 'Ashfield, Summer Hill'
     exchange_dict['798'] = 'Croydon, Five Dock, Haberfield'
+    exchange_dict['799'] = 'Haberfield'
 
     exchange_dict['80'] = 'West Ryde'
     exchange_dict['807'] = 'West Ryde'
@@ -166,9 +167,12 @@ def get_exchange_dict():
     exchange_dict['977'] = 'Manly'
     exchange_dict['98'] = 'Collaroy'
     exchange_dict['98'] = 'Dee Why'
-    exchange_dict['982'] = 'Dee Why'
+    exchange_dict['982'] = 'Dee Why, Collaroy'
     exchange_dict['99'] = 'Mona Vale'
     exchange_dict['997'] = 'Newport'
+
+    exchange_dict['043'] = 'Gosford'
+    exchange_dict['066'] = 'Grafton'
 
     return exchange_dict
 
