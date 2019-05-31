@@ -2,7 +2,7 @@ import sqlite3
 import re
 from collections import defaultdict
 from sydney_exchange import get_exchange_dict
-from Dealers import get_dealers
+from Dealers import dealers_list
 from datetime import datetime
 from NSW_Plate_Info import get_month
 
@@ -417,8 +417,6 @@ def get_sql_data_all( **kwargs):
 def main():
   plate_list = []
   ads_list = []
-  dealers = get_dealers
-
 
   go_again = 'y'
   pick_make = 'none'
@@ -545,7 +543,7 @@ def main():
                                       car_year=ads_record[8], capacity=ads_record[9], model_level=ads_record[24],
                                       month=ads_record[21], ad_date=ads_record[3], price=ads_record[18],)
                 no_of_cars = no_of_cars +1
-
+                suburb = new_plate.set_suburb()
                 if new_plate.jurisdiction == "NSW":
                   if not re.match('^[A-Z][A-Z][0-9]{3}', plate):
                     return_above = check_production( make=ads_record[6], model=ads_record[7], sort1=ads_record[20],sort2=ads_record[24], sort3=ads_record[8])
@@ -554,6 +552,7 @@ def main():
                     new_plate.set_nsw_epoch(nsw_list)
                   else:
                     new_plate.set_nsw_epoch(5)  # for personal plates 5 digit match
+
 
                 plate_list.append(new_plate)
                 plate_list_index.append(plate)
@@ -595,8 +594,12 @@ def main():
               if plate_search == "number":
                   plate_search = raw_input("Enter Phone number: ")
                   # print "wally"
-
-                  print dealers()
+                  # for dealer_no in dealers:
+                  for key in sorted(dealers_list):
+                      if plate_search == key:
+                          dealer_data = dealers_list[key]
+                          dealer_name = dealer_data[0]
+                          print key, dealer_name
                   for ad2 in ads_list:
                       # plate_selected = {}
                       advert = ads_dict[ad2]

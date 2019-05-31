@@ -8,26 +8,22 @@ import sqlite3
 
 def get_rambler_1():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
     adverts = [
-("GSM034","1978-09-30","Rambler","1966","none","none","unknown","none","5606396","$300","none","none"),
-("JHV165","1978-09-30","Rebel","1969","none","V8","Ivory","Black","6823692","$1450","none","July"),
-("JIK985","1978-09-30","Rebel","none","none","none","White","Blue","6375024","$2750","none","none"),
-("Hornet","1978-09-23","Hornet","1973","none","4.2","Wrecking Grafton","none","(066)422069","none","none","none"),
-("Hornet","1978-09-23","Hornet","1973","none","none","unknown","none","319174","none","none","none"),
-("DHA434","1978-09-23","Classic","none","660","287","Off White","Red","6370407","none","53800mis","May"),
-("HLM408","1978-09-23","Matador","1975","none","360","White","Red","740554","$6750","65000kms","none"),
-("GF945","1978-09-23","Matador","none","none","none","unknown","none","6672484","none","none","none"),
-("CQD263","1978-09-16","Hornet","1972","none","4.2","unknown","none","9384250","$3450","none","none"),
-("HLM408","1978-09-16","Matador","1975","none","360","White","Red","740554","$6995","65000kms","none"),
-("EST844","1978-09-16","American","none","440","6cyl","unknown","none","9777373","$1400","none","January"),
-("ACQ557","1978-09-09","Hornet","1970","SST","232","unknown","none","6374715","$2250","none","none"),
-("JGZ821","1978-09-09","Rebel","1969","none","V8","Cream","Black","4765068","$1500","none","none"),
-("American","1978-09-02","American","1966","none","6cyl","unknown","none","5257151","$690","none","none"),
-("Rebel","1978-09-02","Rebel","1971","SST","V8","Light Blue Wagon","Bone","5229108","$4990","none","none"),
-("Matador","1978-09-02","Matador","1977","none","360","Yellow","Cloth","5229108","$8990","19000kms","none"),
-("GKZ716","1978-09-02","Hornet","1973","none","4.2","Irridescent Grey","none","321820","none","21000mis","June"),
-("JWO104","1978-09-02","Hornet","1975","none","4.2","unknown","none","3584644","$4999","none","August"),
-("JN230","1978-09-02","Hornet","1972","none","4.2","White","Red","6511375","$3250","none","July"),
-("HXX678","1978-09-02","Hornet","1975","none","4.2","unknown","none","461828","$4850","none","August"),
+("JMF369","1978-01-07","Matador","none","none","360","wagon","none","7977919","$5499","none","none"),
+("JIS975","1978-01-07","Rebel","none","770","V8","White","Black","7993555","$1990","none","none"),
+("HRE244","1978-01-14","Hornet","1972","none","4.2","Sunroof","none","991837","$3950","none","none"),
+("EAO351","1978-01-14","Rambler","none","none","none","White","none","3873987","none","none","none"),
+("AOR650","1978-08-05","Classic","none","660","V8","unknown","none","3375192","$390","none","none"),
+("EDY950","1978-08-05","American","1966","none","6cyl","unknown","none","(046)461548","none","none","August"),
+("AOR650","1978-07-29","Classic","660","660","V8","unknown","none","3375192","$550","none","none"),
+("JGP567","1978-07-29","Classic","770","770","V8","unknown","none","9381836","$750","none","none"),
+("BLC906","1978-07-29","Hornet","1970","none","none","unknown","none","7093380","$1700","none","none"),
+("GDQ810","1978-07-22","Rebel","none","none","none","unknown","none","7644308","$685","none","December"),
+("HPU449","1978-07-22","Ambassador","1963","none","none","unknown","none","4983758","none","none","none"),
+("JBP714","1978-07-22","Matador","1973","none","360","unknown","none","5236285","$4000","33000mis","July"),
+("RL092","1978-07-22","Hornet","1971","SST","none","Sun Roof","none","6876933","$3000","none","none"),
+("EBK821","1978-07-22","Classic","1966","770","287","unknown","none","6211136","$1300","none","July"),
+("GLY898","1978-07-22","Matador","1973","none","360","unknown","none","512060","$4400","none","July"),
+
     ]
 
     return adverts
@@ -36,7 +32,7 @@ def get_rambler_1():   # creating a list of tuples representing individual ads i
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 2729
+    master_index1 = 2749
     for column in ads:
         print column
         print column[0], column[11]

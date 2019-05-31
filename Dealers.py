@@ -1,8 +1,8 @@
 
 
 
-def get_dealers():
-    dealers = {
+
+dealers_list = {
 
 '112244': ("Wallhampton Motors", "23 Bingo St.", "Wallhampton", "LD007"),
 
@@ -122,6 +122,7 @@ def get_dealers():
 '760421': ("Larke Hoskins", "190 Parramatta Rd.", "Homebush", "LD405"),
 '7641152': ("Anonymous", " unknown", "unknown", "LD937"),
 '7641175': ("Anonymous", " unknown", "unknown", "LD249"),
+'7644308': ("Anonymous", "236 Parramatta Rd.", "Homebush", "LD3468"),
 '765666': ("Norm Saville Motors", "12 Parramatta Rd.", "Flemington", "LD111"),
 '766988': ("Larke Hoskins", "190 Parramatta Rd.", "Homebush", "LD405"),
 '766141': ("Barr Motors", "unknown", "unknown", "LD"),
@@ -147,6 +148,7 @@ def get_dealers():
 '7985155': ("John A Gilbert", "22 Parramatta Rd.", "Summer Hill", "LD"),
 '7985616': ("Lervan Traders", "277 Parramatta Rd.", "Haberfield", "LD01111"),
 '7991111': ("Monaco Motors", "Cnr Sloane St & Parramatta Rd.", "Haberfield", "LD1799"),
+'7993555': ("Anonymous", "unknown", "unknown", "LD3286"),
 '7993400': ("City Chrysler", "Cnr Hawthorn Parade & Parramatta Rd.", "Haberfield", "LD"),
 '7995555': ("Ken Peters Distinctive Cars", "179 Parramatta Rd.", "Haberfield", "LD4645"),
 
@@ -175,18 +177,16 @@ def get_dealers():
 
 
 }
-    return dealers
-
 
 
 
 
 def main():
 
-    dealers = get_dealers()
 
-    for key in sorted(dealers):
-       dealer_data = dealers[key]
+
+    for key in sorted(dealers_list):
+       dealer_data = dealers_list[key]
        dealer_name = dealer_data[0]
        print key, dealer_name
 
