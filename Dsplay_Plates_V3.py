@@ -150,41 +150,46 @@ class RegoPlate(object):
             self.model = ""
         if self.price == "none":
             self.price = ""
-        if self.engine == "none":
-            self.engine = ""
+      #  if self.engine == "none":
+       #     self.engine = ""
+        description = ""
         if self.model == "Valiant" and self.model_level != "none":
             if self.model_code != "none":
-                self.model = self.model_code + " " + self.model_level
+                description = self.model_code + " " + self.model_level
             else:
-                self.model = self.model_level
+                description = self.model_level
             if self.trim_level != "none":
-                self.model = self.model + " " + self.trim_level
+                description = self.model + " " + self.trim_level
 
         if self.model == "P76" and self.trim_level != "none":
             if self.trim_level != "none":
-                self.model = self.model + " " + self.trim_level
+                description = self.model + " " + self.trim_level
 
         if self.make == "Rover":
             if self.model != "none":
-                self.model = self.make + " " + self.model
+                description = self.make + " " + self.model
 
         if self.make == "Peugeot":
             if self.model != "none":
-                self.model = self.make + " " + self.model
+                description = self.make + " " + self.model
 
         if self.make == "Renault":
             if self.model != 'RXX':
-                self.model = self.make + " " +self.model
+                description = self.make + " " +self.model
             else:
                 self.model = self.make
                 if self.trim_level != "XX":
-                    self.model = self.model + " " + self.trim_level
+                    description = self.model + " " + self.trim_level
 
         if self.make == "Rambler":
             if self.model != "none":
-                self.model = self.make + " " + self.model
-            if self.trim_level != "none" and self.model != 'none':
-                self.model = self.model + " " + self.trim_level
+                description = self.make + " " + self.model
+            else:
+                description = self.make
+            if self.trim_level != "none":
+                description = description + " " + self.trim_level
+            if self.engine != "none":
+                description = description + " " + self.engine
 
 
 
@@ -194,7 +199,7 @@ class RegoPlate(object):
             estimate_month = ""
 
         print ('{0:6} | {1:2} | {2:4} | {3:7} | {4:9} | {5:22} | {6:7} |{7:20} | {8:5} | {9:30} | {10:10} | {11:4}| {12:4}' \
-               .format(self.title, no_of_ads, self.year, estimate_month, self.month, self.model, self.price, self.colour, self.engine,\
+               .format(self.title, no_of_ads, self.year, estimate_month, self.month, description, self.price, self.colour, self.engine,\
                        self.suburb, self.phone1, self.make, self.index ))
 
 
@@ -254,43 +259,44 @@ class Advertisement(object):
             self.model = ""
         if self.price == "none":
             self.price = ""
+        description = ""
         if self.model == "Valiant" and self.model_level != "none":
             if self.model_code != "none":
-                self.model = self.model_code + " " + self.model_level
+                description = self.model_code + " " + self.model_level
             else:
-                self.model = self.model_level
+                description = self.model_level
             if self.trim_level != "none":
-                self.model = self.model + " " + self.trim_level
+                description = self.model + " " + self.trim_level
 
         if self.model == "P76" and self.trim_level != "none":
             if self.trim_level != "none":
-                self.model = self.model + " " + self.trim_level
+                description = self.model + " " + self.trim_level
 
         if self.make == "Rover":
             if self.model != "none":
-                self.model = self.make + " " + self.model
+                description  = self.make + " " + self.model
 
         if self.make == "Peugeot":
             if self.model != "none":
-                self.model = self.make + " " + self.model
+                description = self.make + " " + self.model
 
         if self.make == "Renault":
             if self.model != 'RXX':
-                self.model = self.make + " " +self.model
+                description = self.make + " " + self.model
             else:
-                self.model = self.make
+                description = self.make
                 if self.trim_level != "XX":
-                    self.model = self.model + " " + self.trim_level
+                    description = self.model + " " + self.trim_level
 
         if self.make == "Rambler":
             if self.model != "none":
-                self.model = self.make + " " + self.model
+                description = self.make + " " + self.model
             if self.trim_level != "none" and self.model != 'none':
-                self.model = self.model + " " + self.trim_level
+                description = self.make + " " + self.model
 
 
         print ('{0:6} {1:10} {2:6} {3:11} {4:4} {5:20} {6:16} {7:20} {8:4}' \
-               .format(self.title, self.ad_date, self.price, self.phone1, self.year, self.model, self.colour, \
+               .format(self.title, self.ad_date, self.price, self.phone1, self.year, description, self.colour, \
                        self.suburb, self.index ))
 
 
@@ -598,8 +604,9 @@ def main():
                   for key in sorted(dealers_list):
                       if plate_search == key:
                           dealer_data = dealers_list[key]
+                          dealer_licence = dealer_data[3]
                           dealer_name = dealer_data[0]
-                          print key, dealer_name
+                          print key, dealer_name, dealer_licence
                   for ad2 in ads_list:
                       # plate_selected = {}
                       advert = ads_dict[ad2]
