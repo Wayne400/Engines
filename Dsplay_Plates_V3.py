@@ -83,8 +83,8 @@ def check_plate_nsw2(target_plate, model_start_year):
 class RegoPlate(object):
 
     def __init__(self, title="", jurisdiction="NSW", make="", model="", model_level = "", model_code = "",
-                 colour="", phone1="", ad_index="", trim_level="", capacity="",
-                 car_year="", month="None", ad_date="", year_predict="1999", nsw_epoch=7, suburb="wallyville", price="$$$"):
+                 colour="", ad_index="", trim_level="", capacity="",
+                 car_year="", month="None", ad_date="", year_predict="1999", nsw_epoch=7):
 
         self.title = title
         self.jurisdiction = jurisdiction
@@ -95,20 +95,21 @@ class RegoPlate(object):
         self.trim_level = trim_level
         self.colour = colour
         self.engine = capacity
-        self.phone1 = phone1
+#        self.phone1 = phone1
         self.ads_list = [ad_index]
-        self.index = ad_index
+#        self.index = ad_index
         self.year = car_year
         self.month = month
         self.ad_date = ad_date
         self.year_predict = year_predict
         self.nsw_epoch = nsw_epoch
-        self.suburb = suburb
-        self.price = price
+      #  self.suburb = suburb
+      #  self.price = price
 
     def set_year_predict(self, year_predict):
         self.year_predict = year_predict
-
+    def set_year(self, year):
+        self.year = year
     def get_year_predict(self):
         return self.year_predict
 
@@ -117,22 +118,6 @@ class RegoPlate(object):
 
     def get_nsw_epoch(self):
         return self.nsw_epoch
-
-    def set_suburb(self):
-        exchange_dictionary = get_exchange_dict()
-        number = self.phone1
-        prefix = '000'
-        if len(number) == 5:
-            prefix = number[:1]
-        if len(number) == 6:
-            prefix = number[:2]
-        if len(number) == 7:
-            prefix = number[:3]
-        exchange_list = list(exchange_dictionary.keys())
-        if prefix in exchange_list:
-            self.suburb = exchange_dictionary[prefix]
-        else:
-            self.suburb = ''
 
     def grow_ad_list(self,ad_index):
         self.ads_list.append(ad_index)
@@ -144,12 +129,15 @@ class RegoPlate(object):
             self.month = ""
         if self.colour == "unknown":
             self.colour = ""
-        if self.year == "none":
-            self.year = ""
         if self.model == "none":
             self.model = ""
-        if self.price == "none":
-            self.price = ""
+#        if self.price == "none":
+#            self.price = ""
+        if self.year == "none":
+            print_year = ""
+        else:
+            print_year = self.year
+
       #  if self.engine == "none":
        #     self.engine = ""
         description = ""
@@ -164,6 +152,8 @@ class RegoPlate(object):
         if self.model == "P76" and self.trim_level != "none":
             if self.trim_level != "none":
                 description = self.model + " " + self.trim_level
+            if self.engine != "none":
+                description = description + " " + self.engine
 
         if self.make == "Rover":
             if self.model != "none":
@@ -192,15 +182,16 @@ class RegoPlate(object):
                 description = description + " " + self.engine
 
 
-
+        no_of_ads_string = ""
         no_of_ads = len(self.ads_list)
+        if no_of_ads > 1:
+            no_of_ads_string = str(no_of_ads)
         estimate_month = get_month(self.title)
         if estimate_month == "none":
             estimate_month = ""
 
-        print ('{0:6} | {1:2} | {2:4} | {3:7} | {4:9} | {5:22} | {6:7} |{7:20} | {8:5} | {9:30} | {10:10} | {11:4}| {12:4}' \
-               .format(self.title, no_of_ads, self.year, estimate_month, self.month, description, self.price, self.colour, self.engine,\
-                       self.suburb, self.phone1, self.make, self.index ))
+        print ('{0:6} | {1:2} | {2:4} | {3:7} | {4:9} | {5:22} | {6:20}' \
+               .format(self.title, no_of_ads_string, print_year, estimate_month, self.month, description, self.colour ))
 
 
 
@@ -208,7 +199,7 @@ class Advertisement(object):
 
     def __init__(self, title="", jurisdiction="NSW", make="", model="", model_level = "", model_code = "",
                  colour="", phone1="", ad_index="", trim_level="", capacity="",
-                 car_year="", month="None", ad_date="", year_predict="1999", suburb="wallyville", price="$$$"):
+                 car_year="", month="None", ad_date="", year_predict="1999", suburb="none", price="$$$"):
 
         self.title = title
         self.jurisdiction = jurisdiction
@@ -253,8 +244,6 @@ class Advertisement(object):
             self.colour = ""
         if self.year == "none":
             self.year = ""
-        if self.engine == "none":
-            self.engine = ""
         if self.model == "none":
             self.model = ""
         if self.price == "none":
@@ -271,6 +260,8 @@ class Advertisement(object):
         if self.model == "P76" and self.trim_level != "none":
             if self.trim_level != "none":
                 description = self.model + " " + self.trim_level
+            if self.engine != "none":
+                description = description + " " + self.engine
 
         if self.make == "Rover":
             if self.model != "none":
@@ -291,8 +282,12 @@ class Advertisement(object):
         if self.make == "Rambler":
             if self.model != "none":
                 description = self.make + " " + self.model
-            if self.trim_level != "none" and self.model != 'none':
-                description = self.make + " " + self.model
+            else:
+                description = self.make
+            if self.trim_level != "none":
+                description = description + " " + self.trim_level
+            if self.engine != "none":
+                description = description + " " + self.engine
 
 
         print ('{0:6} {1:10} {2:6} {3:11} {4:4} {5:20} {6:16} {7:20} {8:4}' \
@@ -538,6 +533,7 @@ def main():
                                   model=ads_record[7], colour=ads_record[10], phone1=ads_record[11],
                                   car_year=ads_record[8], capacity=ads_record[9],model_level=ads_record[24],
                                   month=ads_record[21], ad_date=ads_record[3], price=ads_record[18], )
+            new_ad.set_suburb()
             ads_dict[ads_master_index] = new_ad
         #        if re.match('^[A-Q][A-Z][A-Z][0-9]{3}', plate):  # check valid plate
         if re.match('^[A-Q][A-Z][A-Z][0-9]{3}', plate) or  re.match('^[A-Z][A-Z][0-9]{3}', plate):# check valid plate
@@ -545,11 +541,11 @@ def main():
             if plate not in plate_list_index:
                 new_plate = RegoPlate(ad_index=ads_master_index, title=ads_record[1], jurisdiction=ads_record[2],
                                       make=ads_record[6], model_code=ads_record[20], trim_level=ads_record[17],
-                                      model=ads_record[7], colour=ads_record[10], phone1=ads_record[11],
+                                      model=ads_record[7], colour=ads_record[10],
                                       car_year=ads_record[8], capacity=ads_record[9], model_level=ads_record[24],
-                                      month=ads_record[21], ad_date=ads_record[3], price=ads_record[18],)
+                                      month=ads_record[21], ad_date=ads_record[3] )
                 no_of_cars = no_of_cars +1
-                suburb = new_plate.set_suburb()
+                # new_plate.set_suburb(ads_record[11])
                 if new_plate.jurisdiction == "NSW":
                   if not re.match('^[A-Z][A-Z][0-9]{3}', plate):
                     return_above = check_production( make=ads_record[6], model=ads_record[7], sort1=ads_record[20],sort2=ads_record[24], sort3=ads_record[8])
@@ -570,7 +566,9 @@ def main():
                          if ads_record[10] != "unknown":
                              plate_stored.colour = ads_record[10]
                          if ads_record[6] != "none":
-                             plate_stored.year = ads_record[8]
+                             plate_stored.set_year(ads_record[8])
+ #                        if ads_record[11] != "none":
+#                             plate_stored.set_suburb(ads_record[11])
                          if ads_record[9] != "none":
                              plate_stored.capacity = ads_record[9]
                          if ads_record[21] != "none":
@@ -585,7 +583,7 @@ def main():
       print "*" * 140
       for plate_stored in sorted(plate_list, key=lambda plate: plate.title):
           nsw_epoch = plate_stored.get_nsw_epoch()
-          suburb = plate_stored.set_suburb()
+          # suburb = plate_stored.set_suburb()
           if x == int(nsw_epoch):  # there are 4 nsw plate lists
               plate_stored.print_plate()
   # ads_dict = []
@@ -621,14 +619,15 @@ def main():
                   for ad in ads_list:
                       # plate_selected = {}
                       advert = ads_dict[ad]
+                      # advert.set_suburb()
                       if prefix_search_flag:
                           if advert.title[:3] == plate_search:
                               plate_selected[advert.ad_date] = advert
-                              advert.set_suburb()
+                            #  advert.set_suburb()
                       else:
                           if advert.title == plate_search:
                               plate_selected[advert.ad_date] = advert
-                              advert.set_suburb()
+                             # advert.set_suburb()
                       # advert.print_ad()
                   for key in sorted(plate_selected):
                       plate_selected[key].print_ad()
