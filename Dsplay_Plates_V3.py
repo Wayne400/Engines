@@ -13,7 +13,7 @@ def check_production( make, model, sort1, sort2, sort3):
         model = "RXX"
     renault_model_start = {'RXX': '1960','R4': '1958', 'R8': '1961','Gordini': '1963', 'R10': '1965', 'R10S': '1970','R12': '1969','R16':'1965', 'R15': '1971','R17':'1973'}
     peugeot_model_start = {'RXX': '1960','403': '1955', '403B': '1958', '404': '1963', '504': '1969'}
-    rover_model_start = {'RXX': '1960','75': '1954','90': '1954','P4': '1954','100': '1960','105R': '1955',\
+    rover_model_start = {'RXX': '1960','75': '1954','90': '1954','P4': '1954','95': '1961','100': '1960','110': '1961','105R': '1955',\
                          '2000': '1965', '2000TC': '1965', '3500': '1967','P5B': '1965','3L':'1960',\
                          'P5': '1961', 'P5Bcoupe': '1965', 'P5coupe': '1965'}
     rambler_model_start = {'Rambler': '1960','Ambassador': '1960', 'Hornet': '1970','Gremlin': '1970',\
@@ -142,16 +142,18 @@ class RegoPlate(object):
        #     self.engine = ""
         description = ""
         if self.model == "Valiant" and self.model_level != "none":
+            description = self.model
             if self.model_code != "none":
-                description = self.model_code + " " + self.model_level
+                description = description + " " + self.model_code + " " + self.model_level
             else:
-                description = self.model_level
+                description = description + " " + self.model_level
             if self.trim_level != "none":
-                description = self.model + " " + self.trim_level
+                description = description + " " + self.trim_level
 
-        if self.model == "P76" and self.trim_level != "none":
+        if self.model == "P76":
+            description = self.make + " " + self.model
             if self.trim_level != "none":
-                description = self.model + " " + self.trim_level
+                description = description + " " + self.trim_level
             if self.engine != "none":
                 description = description + " " + self.engine
 
@@ -164,12 +166,12 @@ class RegoPlate(object):
                 description = self.make + " " + self.model
 
         if self.make == "Renault":
+            description = self.make
             if self.model != 'RXX':
-                description = self.make + " " +self.model
-            else:
-                self.model = self.make
-                if self.trim_level != "XX":
-                    description = self.model + " " + self.trim_level
+                description = description + " " + self.model
+            if self.trim_level != "XX":
+                description = description + " " + self.trim_level
+
 
         if self.make == "Rambler":
             if self.model != "none":
@@ -250,18 +252,21 @@ class Advertisement(object):
             self.price = ""
         description = ""
         if self.model == "Valiant" and self.model_level != "none":
+            description = self.model
             if self.model_code != "none":
-                description = self.model_code + " " + self.model_level
+                description = description + " " + self.model_code + " " + self.model_level
             else:
                 description = self.model_level
             if self.trim_level != "none":
                 description = self.model + " " + self.trim_level
 
-        if self.model == "P76" and self.trim_level != "none":
+        if self.model == "P76":
+            description = self.make + " " + self.model
             if self.trim_level != "none":
-                description = self.model + " " + self.trim_level
+                description = description + " " + self.trim_level
             if self.engine != "none":
                 description = description + " " + self.engine
+
 
         if self.make == "Rover":
             if self.model != "none":
@@ -272,12 +277,11 @@ class Advertisement(object):
                 description = self.make + " " + self.model
 
         if self.make == "Renault":
+            description = self.make
             if self.model != 'RXX':
-                description = self.make + " " + self.model
-            else:
-                description = self.make
-                if self.trim_level != "XX":
-                    description = self.model + " " + self.trim_level
+                description = description + " " + self.model
+            if self.trim_level != "XX":
+                description = description + " " + self.trim_level
 
         if self.make == "Rambler":
             if self.model != "none":
