@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="simplification">
+    <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="fix printouts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dealers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dealers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dsplay_Plates_V3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dsplay_Plates_V3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Load_Plates_Rambler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Rambler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/advertisements_indexed.db" beforeDir="false" afterPath="$PROJECT_DIR$/advertisements_indexed.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sydney_exchange.py" beforeDir="false" afterPath="$PROJECT_DIR$/sydney_exchange.py" afterDir="false" />
@@ -36,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sydney_exchange.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+            <state relative-caret-position="117">
+              <caret line="140" column="30" lean-forward="true" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -78,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dealers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3125">
-              <caret line="125" column="69" selection-start-line="125" selection-start-column="69" selection-end-line="125" selection-end-column="69" />
+            <state relative-caret-position="2100">
+              <caret line="84" column="61" selection-start-line="84" selection-start-column="61" selection-end-line="84" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -87,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Load_Plates_Rambler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="100">
+              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -128,6 +127,7 @@
       <find>set_year</find>
       <find>set_subur</find>
       <find>Purn</find>
+      <find>Ryda</find>
     </findStrings>
     <replaceStrings>
       <replace>column</replace>
@@ -159,9 +159,9 @@
         <option value="$PROJECT_DIR$/Display_PLates_OOP_v2.py" />
         <option value="$PROJECT_DIR$/Load_Plates_Mascot.py" />
         <option value="$PROJECT_DIR$/Load_Plates_MM.py" />
-        <option value="$PROJECT_DIR$/Load_Plates_Rambler.py" />
         <option value="$PROJECT_DIR$/Dsplay_Plates_V3.py" />
         <option value="$PROJECT_DIR$/Dealers.py" />
+        <option value="$PROJECT_DIR$/Load_Plates_Rambler.py" />
         <option value="$PROJECT_DIR$/sydney_exchange.py" />
       </list>
     </option>
@@ -176,8 +176,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-17" />
-    <option name="y" value="38" />
+    <option name="x" value="-9" />
+    <option name="y" value="36" />
     <option name="width" value="1327" />
     <option name="height" value="690" />
   </component>
@@ -312,11 +312,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Dealers" />
       <item itemvalue="Python.Display_PLates_OOP_v2" />
+      <item itemvalue="Python.Load_Plates_Rambler" />
       <item itemvalue="Python.Dsplay_Plates_V3" />
       <item itemvalue="Python.Load_Plates_MM" />
-      <item itemvalue="Python.Load_Plates_Rambler" />
+      <item itemvalue="Python.Dealers" />
     </list>
     <recent_temporary>
       <list>
@@ -542,7 +542,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559818820923</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="fix printouts">
+      <created>1560160232907</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1560160232907</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView">
@@ -555,14 +562,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-17" y="38" width="1327" height="690" extended-state="0" />
+    <frame x="-9" y="36" width="1327" height="690" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.13529857" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24943988" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.3296131" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.508079" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.47396767" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -667,7 +674,8 @@
     <MESSAGE value="Improvements . more ramblers from 1978" />
     <MESSAGE value="use dealers to print report" />
     <MESSAGE value="simplification" />
-    <option name="LAST_COMMIT_MESSAGE" value="simplification" />
+    <MESSAGE value="fix printouts" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix printouts" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/plate_checker.py">
@@ -803,22 +811,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dealers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3125">
-          <caret line="125" column="69" selection-start-line="125" selection-start-column="69" selection-end-line="125" selection-end-column="69" />
+        <state relative-caret-position="2100">
+          <caret line="84" column="61" selection-start-line="84" selection-start-column="61" selection-end-line="84" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Load_Plates_Rambler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="100">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sydney_exchange.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+        <state relative-caret-position="117">
+          <caret line="140" column="30" lean-forward="true" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="30" />
         </state>
       </provider>
     </entry>

@@ -137,6 +137,7 @@ def get_exchange_dict():
     exchange_dict['81'] = 'Drummoyne'
     exchange_dict['816'] = 'Gladesville'
     exchange_dict['82'] = 'Rozelle, Balmain'
+    exchange_dict['827'] = 'Balmain'
     exchange_dict['84'] = 'Pennant Hills'
     exchange_dict['848'] = 'Beecroft'
     exchange_dict['85'] = 'Eastwood, West Ryde'
