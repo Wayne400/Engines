@@ -294,8 +294,8 @@ class Advertisement(object):
                 description = description + " " + self.engine
 
 
-        print ('{0:6} {1:10} {2:6} {3:11} {4:4} {5:20} {6:16} {7:20} {8:4}' \
-               .format(self.title, self.ad_date, self.price, self.phone1, self.year, description, self.colour, \
+        print ('{0:6} {1:10} {2:11} {3:7} {4:11} {5:4} {6:20} {7:16} {8:20} {9:4}' \
+               .format(self.title, self.ad_date, self.month, self.price, self.phone1, self.year, description, self.colour, \
                        self.suburb, self.index ))
 
 

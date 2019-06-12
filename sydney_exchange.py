@@ -8,6 +8,11 @@ def get_exchange_dict():
 
 
     exchange_dict = {}
+
+    exchange_dict['042'] = 'Wollongong'
+    exchange_dict['043'] = 'Gosford'
+    exchange_dict['047'] = 'Penrith'
+
     exchange_dict['20'] = 'Pitt St.'
     exchange_dict['211'] = 'Broadway'
     exchange_dict['25'] = 'Hunter St.'
@@ -118,8 +123,8 @@ def get_exchange_dict():
     exchange_dict['726'] = 'Guildford'
     exchange_dict['727'] = 'Fairfield, Cabramatta, Villawood'
     exchange_dict['74'] = 'Burwood, Five Dock'
-    exchange_dict['747'] = 'Burwood, Five Dock, Concord, Croydon'
     exchange_dict['745'] = 'Five Dock, Burwood'
+    exchange_dict['747'] = 'Burwood, Five Dock, Concord, Croydon'
     exchange_dict['750'] = 'Lakemba'
     exchange_dict['759'] = 'Punchbowl, Lakemba'
     exchange_dict['76'] = 'Homebush, Flemington, Strathfield'
