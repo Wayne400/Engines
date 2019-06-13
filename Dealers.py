@@ -51,6 +51,7 @@ dealers_list = {
 '5257151': ("Anonymous", "unknown", "unknown", "LD03329"),
 '5257351': ("Norm Lindroos Motors", "unknown", "unknown", "LD"),
 '5258188': ("Stewart Car Company", "277 The Kingsway", "Caringbah", "LD"),
+'5693211': ("Debiens Motor Auctions", "543 Parramatta Rd", "Leichhardt", "LD658"),
 '568014': ("Bradshaw Motors", "593 New Canterbury Rd", "Dulwich Hill", "LD"),
 '5796333': ("Larke Hoskins", "41 Treacy St.", "Hurstville", "LD403"),
 '5796721': ("Dominelli Ford", "Cnr Forest Rd & Bridge St", "Hurstville", "LD00375"),
