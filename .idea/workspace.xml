@@ -4,7 +4,11 @@
     <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="add ramblers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dealers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dealers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dsplay_Plates_V3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dsplay_Plates_V3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Load_Plates_Rambler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Rambler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Load_Plates_Valiant.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Valiant.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rambler_Plates.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Rambler_Plates.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Renault_plates.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Renault_plates.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/advertisements_indexed.db" beforeDir="false" afterPath="$PROJECT_DIR$/advertisements_indexed.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sydney_exchange.py" beforeDir="false" afterPath="$PROJECT_DIR$/sydney_exchange.py" afterDir="false" />
     </list>
@@ -26,17 +30,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NSW_Plate_Info.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4675">
-              <caret line="187" column="21" selection-start-line="187" selection-start-column="21" selection-end-line="187" selection-end-column="21" />
+            <state relative-caret-position="51">
+              <caret line="229" column="41" selection-start-line="229" selection-start-column="41" selection-end-line="229" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sydney_exchange.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1925">
-              <caret line="77" column="38" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
+            <state relative-caret-position="50">
+              <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -44,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dsplay_Plates_V3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7050">
-              <caret line="288" column="17" selection-start-line="288" selection-start-column="17" selection-end-line="288" selection-end-column="17" />
+            <state relative-caret-position="123">
+              <caret line="191" column="36" lean-forward="true" selection-start-line="191" selection-start-column="36" selection-end-line="191" selection-end-column="36" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -77,17 +81,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dealers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1550">
-              <caret line="62" column="70" selection-start-line="62" selection-start-column="70" selection-end-line="62" selection-end-column="70" />
+            <state relative-caret-position="75">
+              <caret line="22" column="60" lean-forward="true" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Load_Plates_Valiant.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Load_Plates_Rambler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="13" column="91" selection-start-line="13" selection-start-column="91" selection-end-line="13" selection-end-column="91" />
+            <state relative-caret-position="116">
+              <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -148,7 +161,6 @@
       <list>
         <option value="$PROJECT_DIR$/Load_Plates_Renault.py" />
         <option value="$PROJECT_DIR$/Load_Plates_Peugeot.py" />
-        <option value="$PROJECT_DIR$/Load_Plates_Valiant.py" />
         <option value="$PROJECT_DIR$/Display_Plates_OOP.py" />
         <option value="$PROJECT_DIR$/Add_Engines.py" />
         <option value="$PROJECT_DIR$/engines9.py" />
@@ -159,10 +171,11 @@
         <option value="$PROJECT_DIR$/Display_PLates_OOP_v2.py" />
         <option value="$PROJECT_DIR$/Load_Plates_Mascot.py" />
         <option value="$PROJECT_DIR$/Load_Plates_MM.py" />
-        <option value="$PROJECT_DIR$/Dsplay_Plates_V3.py" />
-        <option value="$PROJECT_DIR$/sydney_exchange.py" />
-        <option value="$PROJECT_DIR$/Dealers.py" />
         <option value="$PROJECT_DIR$/Load_Plates_Rambler.py" />
+        <option value="$PROJECT_DIR$/Load_Plates_Valiant.py" />
+        <option value="$PROJECT_DIR$/Dsplay_Plates_V3.py" />
+        <option value="$PROJECT_DIR$/Dealers.py" />
+        <option value="$PROJECT_DIR$/sydney_exchange.py" />
       </list>
     </option>
   </component>
@@ -176,15 +189,29 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="width" value="1327" />
-    <option name="height" value="775" />
+    <option name="x" value="-23" />
+    <option name="y" value="7" />
+    <option name="width" value="1386" />
+    <option name="height" value="630" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Engines" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Engines" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -218,27 +245,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Dealers.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Display_PLates_OOP_v2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Engines" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Display_PLates_OOP_v2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -310,20 +316,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Load_Plates_Valiant" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Engines" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Load_Plates_Valiant.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Dealers" />
-      <item itemvalue="Python.Display_PLates_OOP_v2" />
       <item itemvalue="Python.Dsplay_Plates_V3" />
       <item itemvalue="Python.Load_Plates_MM" />
       <item itemvalue="Python.Load_Plates_Rambler" />
+      <item itemvalue="Python.Load_Plates_Valiant" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Dsplay_Plates_V3" />
+        <item itemvalue="Python.Load_Plates_Valiant" />
         <item itemvalue="Python.Load_Plates_Rambler" />
         <item itemvalue="Python.Dealers" />
         <item itemvalue="Python.Load_Plates_MM" />
-        <item itemvalue="Python.Display_PLates_OOP_v2" />
       </list>
     </recent_temporary>
   </component>
@@ -562,7 +589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1560340298686</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="add ramblers">
+      <created>1560429082724</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1560429082724</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TodoView">
@@ -575,14 +609,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="0" width="1327" height="775" extended-state="0" />
+    <frame x="-23" y="7" width="1386" height="630" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.13529857" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.13501483" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24943988" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.3296131" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4996121" visible="true" weight="0.50155765" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4996121" visible="true" weight="0.4969819" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -745,13 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Load_Plates_Valiant.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Load_Plates_P76.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="925">
@@ -789,30 +817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NSW_Plate_Info.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4675">
-          <caret line="187" column="21" selection-start-line="187" selection-start-column="21" selection-end-line="187" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sydney_exchange.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1925">
-          <caret line="77" column="38" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dsplay_Plates_V3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7050">
-          <caret line="288" column="17" selection-start-line="288" selection-start-column="17" selection-end-line="288" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Load_Plates_MM.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1325">
@@ -830,17 +834,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dealers.py">
+    <entry file="file://$PROJECT_DIR$/Load_Plates_Valiant.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1550">
-          <caret line="62" column="70" selection-start-line="62" selection-start-column="70" selection-end-line="62" selection-end-column="70" />
+        <state relative-caret-position="425">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Load_Plates_Rambler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="13" column="91" selection-start-line="13" selection-start-column="91" selection-end-line="13" selection-end-column="91" />
+        <state relative-caret-position="116">
+          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dsplay_Plates_V3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="191" column="36" lean-forward="true" selection-start-line="191" selection-start-column="36" selection-end-line="191" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSW_Plate_Info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="229" column="41" selection-start-line="229" selection-start-column="41" selection-end-line="229" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dealers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="22" column="60" lean-forward="true" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sydney_exchange.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
         </state>
       </provider>
     </entry>

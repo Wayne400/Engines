@@ -192,8 +192,8 @@ class RegoPlate(object):
         if estimate_month == "none":
             estimate_month = ""
 
-        print ('{0:6} | {1:2} | {2:4} | {3:7} | {4:9} | {5:22} | {6:20}' \
-               .format(self.title, no_of_ads_string, print_year, estimate_month, self.month, description, self.colour ))
+        print ('{0:6} | {1:2} | {2:4} | {3:7} | {4:25} | {5:20}' \
+               .format(self.title, no_of_ads_string, print_year, estimate_month, description, self.colour ))
 
 
 
@@ -331,6 +331,39 @@ def get_sql_data(car_model_list, **kwargs):
         print "I am unable to connect to the database"
         conn.close()
 
+def get_sql_data_rambler(car_model_list, **kwargs):
+    #  print kwargs
+    jurisdiction = kwargs["jurisdiction"]
+    connectstring = kwargs["connectstring"]
+    car_make = kwargs["car_make"]
+    stop = len(car_model_list)
+    if stop == 1 and car_model_list[0] == "Wagon":
+        sql = "select * from adverts where car_make = 'Rambler' and body_style = 'Wagon' and jurisdiction = 'NSW'"
+    else:
+      car_model_or_string = "( car_model = '{}'".format(car_model_list[0])
+      for x in range(1, stop):
+        car_model_or_string += " or " + "car_model = '{}'".format(car_model_list[x])
+      car_model_or_string += " )"
+    #     sql = "select * from adverts"
+    #  car_model_string = "car_model = '{}'".format(car_model_list[0])
+      sql = "select * from adverts where {} and jurisdiction = '{}'".format(
+        car_model_or_string, jurisdiction, car_make)
+    print sql
+
+    try:
+        conn = sqlite3.connect(connectstring)
+        cursor = conn.cursor()
+        print 'connected!' + connectstring
+        results = cursor.execute(sql)
+        ads = results.fetchall()
+        conn.close()
+        return ads
+
+    except:
+        print "I am unable to connect to the database"
+        conn.close()
+
+
 
 def get_sql_data_mascot(car_model_list, **kwargs):
     #  print kwargs
@@ -435,20 +468,22 @@ def main():
         print go_again
         if pick_make == "ra" or pick_make == "Rambler":
             Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
-                            "AMX", "Marlin", "X-Coupe"]
+                            "AMX", "Marlin", "X-Coupe","Wagon"]
             print Rambler_list
             pick_model = raw_input("please enter Rambler model: ")
-            if pick_model == "all":
-                Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
-                            "AMX", "Marlin", "none","X-Coupe"]
+         #   if pick_model == "all":
+         #       Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
+         #                   "AMX", "Marlin", "none","X-Coupe", "Rambler"]
             if pick_model in Rambler_list:
                 Rambler_list = [pick_model]
-            ads_table = get_sql_data(car_model_list=Rambler_list, car_make="Rambler", connectstring="advertisements_indexed.db",
+
+
+            ads_table = get_sql_data_rambler(car_model_list=Rambler_list, car_make="Rambler", connectstring="advertisements_indexed.db",
                                      jurisdiction="NSW")
             break
         if  pick_make == "Mascot":
             Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
-                            "AMX", "Marlin", "X-Coupe"]
+                            "AMX", "Marlin", "X-Coupe","Wagon"]
             print Rambler_list
             pick_model = raw_input("please enter Rambler model: ")
             if pick_model == "all":

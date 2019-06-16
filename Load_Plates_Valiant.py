@@ -3,23 +3,16 @@ import sqlite3
 
 def get_valiant():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
     adverts = [
-("EKQ845","1973-12-22","VH","Valiant","XL","none","none","Auto","Green","beige Vinyl roof","(047)391326","$3250","15000mis","July"),
-("BEW947","1973-12-22","VG","Valiant","Regal","1970","none","265","Light Blue","none","5220785","$2000","none","none"),
-("DLY983","1973-12-22","AP5","Valiant","none","none","225","none","unknown","none","9292434","$325","none","September"),
-("DKZ798","1973-12-22","AP6","Valiant","none","none","225","Auto","unknown","none","9292434","$650","none","September"),
-("BCJ651","1973-12-22","none","Valiant","Regal","1970","none","Auto","White","Beige","4408857","$1850","26000mis","none"),
-("EJH564","1973-12-22","none","Safari","none","1964","none","Auto","unknown","none","5592360","$400","none","April"),
-("EUW730","1973-12-22","none","Valiant","none","1968","none","none","unknown","none","393979","$1800","none","none"),
-("BCF168","1973-12-22","VG","Safari","Regal","1970","318","none","unknown","none","5992207","$2000","none","none"),
-("AWR475","1973-12-22","none","Hardtop","none","1970","none","Auto","Bronze","none","6250616","$1495","none","none"),
-("DFG750","1973-12-22","AP5","Safari","Regal","1964","none","Auto","unknown","none","5879618","$700","none","none"),
-("EQH361","1973-12-22","VH","Charger","none","1972","245","Auto","Hot Mustard","none","5464301","$2490","none","none"),
-("BGJ409","1973-12-22","VG","Safari","Regal","1970","245","Auto","White","Blue","7715093","$2750","none","none"),
-("DLE249","1973-12-22","AP5","Valiant","none","none","225","none","unknown","none","7722514","$450","none","August"),
-("EKG440","1973-12-22","VE","Valiant","none","1968","none","none","unknown","none","988916","$1250","54000mis","July"),
-("GPS202","1973-12-22","VH","Charger","770","none","none","none","Mustard Black V/R","none","5793173","none","10000mis","none"),
-("DYK698","1973-12-22","AP6","Valiant","none","none","225","Auto","unknown","none","9292767","none","none","December"),
-("AAJ845","1973-12-22","VC","Valiant","Regal","1967","225","none","unknown","none","7591818","nne","none","none"),
+("HLI854","1975-08-20","VJ","Charger","770","1975","265","Auto","Sienna","beige","8887866","$new","new","August"),
+("JKJ864","1979-09-15","VK","Charger","none","1976","none","none","unknown","none","9776047","$2750","none","none"),
+("JJO765","1979-09-15","CL","Charger","none","1977","318","Auto","unknown","none","7278544","$4995","none","none"),
+("EQA737","1979-09-15","VH","Charger","770","1973","318","Auto","Silver Grey","Black","6304580","$3300","27000mis","September"),
+("GOA028","1979-09-15","VJ","Charger","none","1973","none","none","Golden Amber","none","9825010","$2200","none","none"),
+("LAC002","1979-08-11","CL","Charger","770","1978","318","4spd","Alpine White","Blue Cloth","4393099","$6490","none","none"),
+("JWD516","1979-08-11","CL","Charger","none","1977","318","Auto","unknown","none","5994455","$3990","none","August"),
+("JIG879","1979-08-11","none","Charger","none","1976","318","none","unknown","none","3495055","$3500","none","September"),
+("GBA428","1979-08-11","VH","Charger","none","1972","none","Auto","unknown","none","6381823","none","none","none"),
+("JGR632","1986-20-10","CL","Valiant","none","1976","245","Auto","Turquoise","none","043844207","none","none","none"),
    ]
 
     return adverts
@@ -28,7 +21,7 @@ def get_valiant():   # creating a list of tuples representing individual ads in 
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 2354
+    master_index1 = 2951
     for row in ads:
         print row
         master_index1 += 1

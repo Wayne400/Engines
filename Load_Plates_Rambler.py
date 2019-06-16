@@ -11,24 +11,25 @@ def get_rambler_1():   # creating a list of tuples representing individual ads i
 ("EPH239","1977-04-16","Rebel","1967","none","V8","unknown","none","779355","$1000","none","August"),
 ("JEA838","1977-04-23","Rambler","1968","none","none","unknown","none","6656408","action","none","April"),
 ("KEK096","1979-09-01","Matador","none","none","none","unknown","none","046327275","$3150","none","none"),
-("GPC136","1979-08-18","Matador","1973","none","none","unknown","none","7979011","auction","none","none"),
-("BHF760","1979-08-18","Hornet","1970","none","none","unknown","none","7979011","auction","none","none"),
-("GBB623","1979-08-18","Hornet","1971","none","none","unknown","none","6672484","$1995","none","none"),
-("KEX564","1979-08-18","Javelin","none","SST","none","unknown","none","6674460","$4250","none","none"),
-("KEH816","1979-08-18","Matador","1974","none","none","unknown","none","6674460","$4950","none","none"),
-("JRY839","1979-08-18","Matador","1976","none","none","unknown","none","6672484","$4950","none","none"),
-("KEX940","1979-08-18","Matador","1974","none","none","Wagon","none","6672484","$4950","none","May"),
-("BQO003","1979-08-25","Hornet","1971","none","none","unknown","none","8698557","$2200","74000mis","August"),
-("Hornet","1979-08-25","Hornet","1972","none","none","unknown","none","5235942","$3400","48000","none"),
-("JQP190","1979-08-25","Hornet","7273","none","none","New Paint","none","733053","none","none","none"),
-("HQF400","1979-08-25","Hornet","1975","none","none","unknown","none","6674460","$4250","none","April"),
-("MM507","1979-08-25","Javelin","none","none","401","unknown","none","6672484","none","none","none"),
-("JRY839","1979-08-25","Matador","1976","none","none","unknown","none","6672484","$5450","none","none"),
-("JCQ218","1979-08-25","Matador","1976","none","none","unknown","none","6672484","none","16000kms","none"),
-("ETC217","1979-08-25","Rebel","1967","none","none","unknown","none","5256307","$1600","none","none"),
-("JIK885","1979-08-25","Rebel","none","none","V8","unknown","none","6375024","$1490","none","December"),
-("KIG060","1979-08-25","X-Coupe","1977","none","none","Red","none","6674460","none","none","none"),
-    ]
+("ETC217","1979-09-01","Rebel","1967","none","none","unknown","none","5256307","none","none","December"),
+("EWI365","1979-09-08","American","1966","none","6cyl","unknown","none","6376463","$300","none","September"),
+("KGY715","1979-09-08","Hornet","1973","SST","none","unknown","none","6672484","none","none","July"),
+("HND414","1979-09-08","Matador","1974","none","Wagon","unknown","none","7273966","$3590","none","June"),
+("GHN657","1979-09-08","Matador","none","none","none","unknown","none","5250843","none","none","April"),
+("HNP119","1979-09-08","Matador","none","none","none","White","none","992716","$3950","none","none"),
+("JRY839","1979-09-08","Matador","1976","none","none","unknown","none","6674460","$5450","none","August"),
+("KEX940","1979-09-08","Matador","1974","none","none","Wagon","none","6672484","$4950","none","none"),
+("KIG060","1979-09-08","X-Coupe","1977","none","none","unknown","none","6674460","none","none","none"),
+("HQT090","1979-09-15","Hornet","1976","none","none","unknown","none","6993002","$3950","48000kms","none"),
+("HQT090","1979-09-22","Hornet","1976","none","none","unknown","none","6993002","$3600","30000mis","none"),
+("GHZ290","1979-09-22","Matador","1973","none","none","Wagon 9-seat","none","7993969","$7995","none","none"),
+("KIW476","1979-09-22","Matador","1976","none","none","Wagon 9-seat Navajoe","none","812281","$6950","none","none"),
+("YIL860","1979-09-22","Matador","1973","none","none","Wagon","none","862866","$2850","57000mis","none"),
+("GBB623","1979-09-29","Hornet","none","SST","none","unknown","none","6672484","$1495","none","February"),
+("HQT090","1979-09-29","Hornet","1975","none","none","unknown","none","6993002","$3500","30000mis","none"),
+("Matador","1979-09-29","Matador","1975","none","none","unknown","none","7983080","$4695","none","none"),
+("JCQ218","1979-09-29","Matador","1976","none","none","unknown","none","6674460","none","16000kms","March"),
+("KGI248","1979-09-29","X-Coupe","1977","none","none","unknown","none","6672484","$7950","none","none"),        ]
 
     return adverts
 
@@ -36,7 +37,7 @@ def get_rambler_1():   # creating a list of tuples representing individual ads i
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 2909
+    master_index1 = 2929
     for column in ads:
         print column
         print column[0], column[11]
