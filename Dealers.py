@@ -55,6 +55,7 @@ dealers_list = {
 '5258188': ("Stewart Car Company", "277 The Kingsway", "Caringbah", "LD"),
 '5693211': ("Debiens Motor Auctions", "543 Parramatta Rd", "Leichhardt", "LD658"),
 '568014': ("Bradshaw Motors", "593 New Canterbury Rd", "Dulwich Hill", "LD"),
+'5602976': ("Frank McGath Motors", "unknown", "Dulwich Hill", "LD132"),
 '5796333': ("Larke Hoskins", "41 Treacy St.", "Hurstville", "LD403"),
 '5796721': ("Dominelli Ford", "Cnr Forest Rd & Bridge St", "Hurstville", "LD00375"),
 '590241': ("Purnell Motors Pty Ltd", "139 Princes Highway", "Arncliffe", "LD"),
@@ -108,6 +109,7 @@ dealers_list = {
 
 '701728': ("Don Stewart", "155 Canterbury Rd", "Bankstown", "LD20"),
 '702166': ("Anonymous", "unknown", "unknown", "LD1533"),
+'702200': ("Mindarie", "unknown", "unknown", "LD2715"),
 '7091234': ("R M Campbell", "unknown", "unknown", "LD1407"),
 '7093891': ("Boyded of Greenacre", "273 Hume Hwy", "Greenacre", "LD"),
 '7097997': ("Boyded of Bankstown", "273 Hume Hwy", "Greenacre", "LD"),
@@ -119,6 +121,7 @@ dealers_list = {
 '7452677': ("Wagon Wheels", "408 Parramatta Rd", "Burwood", "LD228"),
 '7472525': ("Colin Still Family Cars", "356 Parramatta Rd", "Burwood", "LD2104"),
 '7476666': ("John Muirs Quality Corner", "275 Parramatta Rd", "Five Dock", "LD198"),
+'740536': ("Anonymous", "unknown", "unknown", "LD5414"),
 '741618': ("Long & Cortese Motors", "420 Parramatta Rd", "Five Dock", "LD1993"),
 '741790': ("Anonymous", " Parramatta Rd", "Five Dock", "LD904"),
 '742332': ("John Muirs Quality Corner", "275 Parramatta Rd", "Five Dock", "LD198"),
