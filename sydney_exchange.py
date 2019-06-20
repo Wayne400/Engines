@@ -119,6 +119,7 @@ def get_exchange_dict():
     exchange_dict['69'] = 'Redfern'
     exchange_dict['692'] = 'Glebe'
     exchange_dict['698'] = 'Alexandria'
+    exchange_dict['699'] = 'Alexandria'
 
     exchange_dict['70'] = 'Bankstown, Punchbowl'
     exchange_dict['708'] = 'Bankstwn, Yagoona'
