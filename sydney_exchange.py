@@ -153,6 +153,7 @@ def get_exchange_dict():
     exchange_dict['85'] = 'Eastwood, West Ryde'
     exchange_dict['858'] = 'West Ryde'
     exchange_dict['86'] = 'Epping'
+    exchange_dict['868'] = 'Epping'
     exchange_dict['869'] = 'Epping'
     exchange_dict['871'] = 'Carlingford, North Rocks'
     exchange_dict['88'] = 'North Ryde'

@@ -650,13 +650,15 @@ def main():
                           dealer_data = dealers_list[key]
                           dealer_licence = dealer_data[3]
                           dealer_name = dealer_data[0]
-                          print key, dealer_name, dealer_licence
+                          dealer_suburb = dealer_data[2]
+                          if dealer_suburb != "unknown":
+                              print key, dealer_name, dealer_licence, dealer_suburb
+                          else:
+                              print key, dealer_name, dealer_licence
                   for ad2 in ads_list:
-                      # plate_selected = {}
                       advert = ads_dict[ad2]
-                      # print advert.phone1
                       if advert.phone1 == plate_search:
-                              advert.print_ad()
+                          advert.print_ad()
 
 
               else:
