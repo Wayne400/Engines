@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="fix engines10 database reads and compares">
+    <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="add ramblers wagons">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dealers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dealers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Display_PLates_OOP_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Display_PLates_OOP_v2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Load_Plates_P76.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_P76.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Load_Plates_Rover.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Rover.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Load_Plates_MM.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_MM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Load_Plates_Rambler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Rambler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/advertisements_indexed.db" beforeDir="false" afterPath="$PROJECT_DIR$/advertisements_indexed.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sydney_exchange.py" beforeDir="false" afterPath="$PROJECT_DIR$/sydney_exchange.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,40 +25,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engines10.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Load_Plates_P76.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NSW_Plate_Info.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4675">
-              <caret line="187" column="21" selection-start-line="187" selection-start-column="21" selection-end-line="187" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Load_Plates_Rover.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+            <state relative-caret-position="4125">
+              <caret line="165" column="7" selection-start-line="165" selection-start-column="7" selection-end-line="165" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -66,26 +36,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sydney_exchange.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+            <state relative-caret-position="121">
+              <caret line="180" column="29" selection-start-line="180" selection-start-column="29" selection-end-line="180" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Load_Plates_Rambler.py">
+        <entry file="file://$PROJECT_DIR$/Dsplay_Plates_V3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Display_PLates_OOP_v2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="15" column="97" selection-start-line="15" selection-start-column="97" selection-end-line="15" selection-end-column="97" />
+            <state relative-caret-position="199">
+              <caret line="656" column="52" selection-start-line="647" selection-end-line="661" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -94,10 +55,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Load_Plates_MM.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="925">
+              <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Dealers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3100">
-              <caret line="124" column="33" selection-start-line="124" selection-start-column="33" selection-end-line="124" selection-end-column="33" />
+            <state relative-caret-position="74">
+              <caret line="83" column="72" selection-start-line="83" selection-start-column="72" selection-end-line="83" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Load_Plates_Valiant.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Load_Plates_Rambler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="15" column="74" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -113,7 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>colomn</find>
       <find>360</find>
       <find>Gi</find>
       <find>229</find>
@@ -122,10 +109,34 @@
       <find>nsw2</find>
       <find>model_code</find>
       <find>trim</find>
+      <find>get_sql_data_ma</find>
+      <find>Reg</find>
+      <find>RegoPlate</find>
+      <find>plate_Store</find>
+      <find>plate_l</find>
+      <find>sort</find>
+      <find>ads_dict</find>
+      <find>2</find>
+      <find>LD233</find>
+      <find>dealers</find>
+      <find>set_s</find>
+      <find>set_sub</find>
+      <find>set_year</find>
+      <find>set_subur</find>
+      <find>Purn</find>
+      <find>Ryda</find>
+      <find>Brit</find>
+      <find>815</find>
+      <find>engine</find>
+      <find>Bry</find>
+      <find>Ap</find>
+      <find>Ape</find>
     </findStrings>
     <replaceStrings>
       <replace>column</replace>
       <replace>none</replace>
+      <replace>Advertisement</replace>
+      <replace>capacity</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -139,21 +150,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Load_Plates_MM.py" />
         <option value="$PROJECT_DIR$/Load_Plates_Renault.py" />
         <option value="$PROJECT_DIR$/Load_Plates_Peugeot.py" />
-        <option value="$PROJECT_DIR$/Load_Plates_Valiant.py" />
         <option value="$PROJECT_DIR$/Display_Plates_OOP.py" />
-        <option value="$PROJECT_DIR$/Load_Plates_Rambler.py" />
         <option value="$PROJECT_DIR$/Add_Engines.py" />
         <option value="$PROJECT_DIR$/engines9.py" />
         <option value="$PROJECT_DIR$/engines10.py" />
-        <option value="$PROJECT_DIR$/sydney_exchange.py" />
-        <option value="$PROJECT_DIR$/NSW_Plate_Info.py" />
         <option value="$PROJECT_DIR$/Load_Plates_P76.py" />
-        <option value="$PROJECT_DIR$/Dealers.py" />
-        <option value="$PROJECT_DIR$/Display_PLates_OOP_v2.py" />
         <option value="$PROJECT_DIR$/Load_Plates_Rover.py" />
+        <option value="$PROJECT_DIR$/Display_PLates_OOP_v2.py" />
+        <option value="$PROJECT_DIR$/Load_Plates_Mascot.py" />
+        <option value="$PROJECT_DIR$/Load_Plates_Valiant.py" />
+        <option value="$PROJECT_DIR$/NSW_Plate_Info.py" />
+        <option value="$PROJECT_DIR$/Dsplay_Plates_V3.py" />
+        <option value="$PROJECT_DIR$/Load_Plates_Rambler.py" />
+        <option value="$PROJECT_DIR$/Load_Plates_MM.py" />
+        <option value="$PROJECT_DIR$/sydney_exchange.py" />
+        <option value="$PROJECT_DIR$/Dealers.py" />
       </list>
     </option>
   </component>
@@ -167,10 +180,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-6" />
-    <option name="y" value="1" />
-    <option name="width" value="1364" />
-    <option name="height" value="736" />
+    <option name="x" value="12" />
+    <option name="y" value="3" />
+    <option name="width" value="1344" />
+    <option name="height" value="774" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -209,8 +222,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Display_PLates_OOP_v2">
-    <configuration name="Display_PLates_OOP_v2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Dsplay_Plates_V3">
+    <configuration name="Dealers" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Engines" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -222,7 +235,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Display_PLates_OOP_v2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Dealers.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -231,7 +244,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Load_Plates_P76" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Dsplay_Plates_V3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Engines" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -243,7 +256,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Load_Plates_P76.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Dsplay_Plates_V3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -252,7 +265,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Load_Plates_Rover" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Load_Plates_MM" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Engines" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -264,7 +277,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Load_Plates_Rover.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Load_Plates_MM.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -273,7 +286,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="engines10" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Load_Plates_Rambler" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Engines" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -285,7 +298,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/engines10.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Load_Plates_Rambler.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -294,7 +307,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="engines9" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Load_Plates_Valiant" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Engines" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -306,7 +319,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/engines9.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Load_Plates_Valiant.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -316,19 +329,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Display_PLates_OOP_v2" />
-      <item itemvalue="Python.Load_Plates_P76" />
-      <item itemvalue="Python.Load_Plates_Rover" />
-      <item itemvalue="Python.engines10" />
-      <item itemvalue="Python.engines9" />
+      <item itemvalue="Python.Dealers" />
+      <item itemvalue="Python.Dsplay_Plates_V3" />
+      <item itemvalue="Python.Load_Plates_MM" />
+      <item itemvalue="Python.Load_Plates_Rambler" />
+      <item itemvalue="Python.Load_Plates_Valiant" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Display_PLates_OOP_v2" />
-        <item itemvalue="Python.Load_Plates_Rover" />
-        <item itemvalue="Python.Load_Plates_P76" />
-        <item itemvalue="Python.engines10" />
-        <item itemvalue="Python.engines9" />
+        <item itemvalue="Python.Dsplay_Plates_V3" />
+        <item itemvalue="Python.Load_Plates_MM" />
+        <item itemvalue="Python.Load_Plates_Rambler" />
+        <item itemvalue="Python.Load_Plates_Valiant" />
+        <item itemvalue="Python.Dealers" />
       </list>
     </recent_temporary>
   </component>
@@ -483,7 +496,140 @@
       <option name="project" value="LOCAL" />
       <updated>1557227608393</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Finished adding overs">
+      <created>1557523974895</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1557523974895</updated>
+    </task>
+    <task id="LOCAL-00022" summary="more Ramblers from 1979">
+      <created>1557831161122</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1557831161124</updated>
+    </task>
+    <task id="LOCAL-00023" summary="even more Ramblers from 1979">
+      <created>1558087779280</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1558087779280</updated>
+    </task>
+    <task id="LOCAL-00024" summary="even more Ramblers from 1979">
+      <created>1558087803750</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1558087803750</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Mascot Motors , print all ads of singular plate">
+      <created>1558695725054</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1558695725054</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Improvements . more ramblers from 1978">
+      <created>1559212423899</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1559212423899</updated>
+    </task>
+    <task id="LOCAL-00027" summary="use dealers to print report">
+      <created>1559302948309</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1559302948309</updated>
+    </task>
+    <task id="LOCAL-00028" summary="use dealers to print report">
+      <created>1559647181909</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1559647181909</updated>
+    </task>
+    <task id="LOCAL-00029" summary="simplification">
+      <created>1559818820923</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1559818820923</updated>
+    </task>
+    <task id="LOCAL-00030" summary="fix printouts">
+      <created>1560160232907</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1560160232907</updated>
+    </task>
+    <task id="LOCAL-00031" summary="add ramblers">
+      <created>1560255186527</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1560255186527</updated>
+    </task>
+    <task id="LOCAL-00032" summary="add ramblers">
+      <created>1560340298686</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1560340298686</updated>
+    </task>
+    <task id="LOCAL-00033" summary="add ramblers">
+      <created>1560429082724</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1560429082724</updated>
+    </task>
+    <task id="LOCAL-00034" summary="add ramblers wagons">
+      <created>1560668940527</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1560668940527</updated>
+    </task>
+    <task id="LOCAL-00035" summary="add ramblers wagons">
+      <created>1560775421121</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1560775421121</updated>
+    </task>
+    <task id="LOCAL-00036" summary="add ramblers wagons">
+      <created>1561030602526</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1561030602526</updated>
+    </task>
+    <task id="LOCAL-00037" summary="add ramblers wagons">
+      <created>1561187298908</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1561187298908</updated>
+    </task>
+    <task id="LOCAL-00038" summary="add ramblers wagons">
+      <created>1561465068673</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1561465068673</updated>
+    </task>
+    <task id="LOCAL-00039" summary="add ramblers wagons">
+      <created>1561552725885</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1561552725886</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView">
@@ -496,14 +642,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="1" width="1364" height="736" extended-state="0" />
+    <frame x="12" y="3" width="1344" height="774" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.15384616" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.14508928" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.24943988" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.3296131" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4792703" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4996121" weight="0.5335413" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -511,9 +657,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32872504" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003879" side_tool="true" weight="0.47396767" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.3778559" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32864675" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3271028" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -601,7 +747,17 @@
     <MESSAGE value="added even more P76s" />
     <MESSAGE value="fix engines10 database" />
     <MESSAGE value="fix engines10 database reads and compares" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix engines10 database reads and compares" />
+    <MESSAGE value="Finished adding overs" />
+    <MESSAGE value="more Ramblers from 1979" />
+    <MESSAGE value="even more Ramblers from 1979" />
+    <MESSAGE value="Mascot Motors , print all ads of singular plate" />
+    <MESSAGE value="Improvements . more ramblers from 1978" />
+    <MESSAGE value="use dealers to print report" />
+    <MESSAGE value="simplification" />
+    <MESSAGE value="fix printouts" />
+    <MESSAGE value="add ramblers" />
+    <MESSAGE value="add ramblers wagons" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ramblers wagons" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/plate_checker.py">
@@ -621,19 +777,9 @@
         <state relative-caret-position="-1515" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Load_Plates_Mascot.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Add_Mascot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2433" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Load_Plates_MM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/display_engines.py">
@@ -667,65 +813,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Display_Plates_OOP.py">
+    <entry file="file://$PROJECT_DIR$/Load_Plates_P76.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+        <state relative-caret-position="925">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Display_PLates_OOP_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13150">
+          <caret line="531" column="17" selection-end-line="583" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Load_Plates_Valiant.py">
+    <entry file="file://$PROJECT_DIR$/Display_Plates_OOP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        <state relative-caret-position="1725">
+          <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Load_Plates_Mascot.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Load_Plates_Rover.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/engines10.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+        <state relative-caret-position="4400">
+          <caret line="177" column="24" selection-start-line="177" selection-start-column="24" selection-end-line="177" selection-end-column="24" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Load_Plates_P76.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NSW_Plate_Info.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4675">
-          <caret line="187" column="21" selection-start-line="187" selection-start-column="21" selection-end-line="187" selection-end-column="21" />
+        <state relative-caret-position="4125">
+          <caret line="165" column="7" selection-start-line="165" selection-start-column="7" selection-end-line="165" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sydney_exchange.py">
+    <entry file="file://$PROJECT_DIR$/Load_Plates_MM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+        <state relative-caret-position="925">
+          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Load_Plates_Valiant.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Load_Plates_Rambler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        <state relative-caret-position="375">
+          <caret line="15" column="74" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Display_PLates_OOP_v2.py">
+    <entry file="file://$PROJECT_DIR$/sydney_exchange.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="15" column="97" selection-start-line="15" selection-start-column="97" selection-end-line="15" selection-end-column="97" />
+        <state relative-caret-position="121">
+          <caret line="180" column="29" selection-start-line="180" selection-start-column="29" selection-end-line="180" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dsplay_Plates_V3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="656" column="52" selection-start-line="647" selection-end-line="661" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -734,15 +907,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dealers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3100">
-          <caret line="124" column="33" selection-start-line="124" selection-start-column="33" selection-end-line="124" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Load_Plates_Rover.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        <state relative-caret-position="74">
+          <caret line="83" column="72" selection-start-line="83" selection-start-column="72" selection-end-line="83" selection-end-column="72" />
         </state>
       </provider>
     </entry>
