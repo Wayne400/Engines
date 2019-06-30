@@ -34,6 +34,7 @@ def get_exchange_dict():
     exchange_dict['357'] = 'Kings Cross'
     exchange_dict['358'] = 'East Sydney'
     exchange_dict['37'] = 'Rose Bay'
+    exchange_dict['371'] = 'Rose Bay'
     exchange_dict['38'] = 'Woollahra'
     exchange_dict['389']= 'Bondi Junction'
     exchange_dict['39'] = 'Randwick'
