@@ -115,6 +115,7 @@ def get_exchange_dict():
     exchange_dict['665'] = 'Coogee'
     exchange_dict['666'] = 'Botany'
     exchange_dict['667'] = 'Mascot'
+    exchange_dict['669'] = 'Botany'
     exchange_dict['67'] = 'Mascot'
     exchange_dict['683'] = 'North Parramatta'
     exchange_dict['69'] = 'Redfern'
