@@ -96,7 +96,7 @@ def get_exchange_dict():
     exchange_dict['623'] = 'St. Marys'
     exchange_dict['625'] = 'Rooty Hill, Mt Druitt'
     exchange_dict['627'] = 'Riverstone'
-    exchange_dict['630'] = 'Northmead, Dundas'
+    exchange_dict['630'] = 'Northmead, Dundas, Winston Hills'
     exchange_dict['631'] = 'Toongabbie'
     exchange_dict['632'] = 'Guilford'
     exchange_dict['635'] = 'Parramatta, Westmead'
@@ -140,7 +140,7 @@ def get_exchange_dict():
     exchange_dict['771'] = 'Revesby'
     exchange_dict['773'] = 'Padstow'
     exchange_dict['78'] = 'Campsie'
-    exchange_dict['797'] = 'Ashfield, Summer Hill'
+    exchange_dict['797'] = 'Ashfield, Summer Hill, Haberfield'
     exchange_dict['798'] = 'Croydon, Five Dock, Haberfield, Ashfield'
     exchange_dict['799'] = 'Haberfield'
 

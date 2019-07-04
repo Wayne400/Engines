@@ -60,6 +60,7 @@ dealers_list = {
 '5258188': ("Stewart Car Company", "277 The Kingsway", "Caringbah", "LD"),
 '5272194': ("Cartere Motors", "unknown", "unknown", "LD5029"),
 '5463521': ("Anonymous", "unknown", "unknown", "LD1171"),
+'5592033': ("Anonymous", "unknown", "unknown", "LD04721"),
 '5693211': ("Debiens Motor Auctions", "543 Parramatta Rd", "Leichhardt", "LD658"),
 '568014': ("Bradshaw Motors", "593 New Canterbury Rd", "Dulwich Hill", "LD"),
 '5602976': ("Frank McGath Motors", "unknown", "Dulwich Hill", "LD132"),
@@ -87,6 +88,7 @@ dealers_list = {
 '6302611': ("Magnum Motors", "unknown", "unknown", "LD1656"),
 '6327953': ("Top Hat Motors", "282 Woodville Rd", "Guildford", "LD"),
 '6332714': ("R.S.C. Motors", "56-58 Church St.", "Parramatta", "LD"),
+'6333214': ("Robert Beasley Motors", "unknown", "Parramatta", "LD2262"),
 '6351001': ("Thomson Ford", "Church St.", "Parramatta", "LD"),
 '6355593': ("John Newell Motors", "155 Great Western Highway", "Westmead", "LD395"),
 '6359755': ("Mazda House", "42-46 Church St.", "Parramatta", "LD"),
@@ -121,6 +123,7 @@ dealers_list = {
 '6821399': ("Catchpenny Cars", "Woodville/Halsall", "Ganville", "LD8011"),
 '6831933': ("Maypow Motors", "606 Church St", "North Parramatta", "LD"),
 '648XXXX': ("Robert Carroll Motors", "99 Parramatta Rd", "Auburn", "LD284"),
+'6994596': ("Anonymous", "unknown", "unknown", "LD1171"),
 
 '701728': ("Don Stewart", "155 Canterbury Rd", "Bankstown", "LD20"),
 '702166': ("Anonymous", "unknown", "unknown", "LD1533"),

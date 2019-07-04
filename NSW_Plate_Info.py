@@ -199,7 +199,7 @@ def get_month(target_plate):
 '1974-04-01': ("none", "none", "none", "none", "none"),
 '1974-05-01': ("GVK199", "none", "none", "none", "none"),
 '1974-06-01': ("none", "none", "none", "none", "none"),
-'1974-07-01': ("GYE144", "none", "none", "none", "none"),
+'1974-07-01': ("GYE144", "GXX834", "none", "none", "none"),
 '1974-08-01': ("GZY893", "none", "none", "none", "none"),
 '1974-09-01': ("HAV241", "HAV053", "none", "none", "none"),
 '1974-10-01': ("HBI236", "none", "none", "none", "none"),
@@ -233,6 +233,20 @@ def get_month(target_plate):
 '1976-10-01': ("none", "none", "none", "none", "none"),
 '1976-11-01': ("none", "none", "none", "none", "none"),
 '1976-12-01': ("none", "none", "none", "none", "none"),
+
+
+'1977-01-01': ("none", "none", "none", "none", "none"),
+'1977-02-01': ("none", "none", "none", "none", "none"),
+'1977-03-01': ("JCF700", "none", "none", "none", "none"),
+'1977-04-01': ("none", "none", "none", "none", "none"),
+'1977-05-01': ("none", "none", "none", "none", "none"),
+'1977-06-01': ("none", "none", "none", "none", "none"),
+'1977-07-01': ("none", "none", "none", "none", "none"),
+'1977-08-01': ("none", "none", "none", "none", "none"),
+'1977-09-01': ("none", "none", "none", "none", "none"),
+'1977-10-01': ("none", "none", "none", "none", "none"),
+'1977-11-01': ("none", "none", "none", "none", "none"),
+'1977-12-01': ("none", "none", "none", "none", "none"),
 
 
 }

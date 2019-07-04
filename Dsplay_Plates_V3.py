@@ -207,7 +207,7 @@ class RegoPlate(object):
 class Advertisement(object):
 
     def __init__(self, title="", jurisdiction="NSW", make="", model="", model_level = "", model_code = "",
-                 colour="", phone1="", ad_index="", trim_level="", capacity="",
+                 colour="", phone1="", ad_index="", trim_level="", capacity="", interior_trim="",
                  car_year="", month="None", ad_date="", year_predict="1999", suburb="none", price="$$$"):
 
         self.title = title
@@ -217,6 +217,7 @@ class Advertisement(object):
         self.model_level = model_level
         self.model_code = model_code
         self.trim_level = trim_level
+        self.interior_trim = interior_trim
         self.colour = colour
         self.capacity = capacity
         self.phone1 = phone1
@@ -578,6 +579,7 @@ def main():
                                   make=ads_record[6], model_code=ads_record[20], trim_level=ads_record[17],
                                   model=ads_record[7], colour=ads_record[10], phone1=ads_record[11],
                                   car_year=ads_record[8], capacity=ads_record[9],model_level=ads_record[24],
+                                  interior_trim=ads_record[15],
                                   month=ads_record[21], ad_date=ads_record[3], price=ads_record[18], )
             new_ad.set_suburb()
             ads_dict[ads_master_index] = new_ad
