@@ -249,6 +249,34 @@ def get_month(target_plate):
 '1977-12-01': ("none", "none", "none", "none", "none"),
 
 
+'1978-01-01': ("none", "none", "none", "none", "none"),
+'1978-02-01': ("none", "none", "none", "none", "none"),
+'1978-03-01': ("JCF700", "none", "none", "none", "none"),
+'1978-04-01': ("none", "none", "none", "none", "none"),
+'1978-05-01': ("none", "none", "none", "none", "none"),
+'1978-06-01': ("none", "none", "none", "none", "none"),
+'1978-07-01': ("none", "none", "none", "none", "none"),
+'1978-08-01': ("none", "none", "none", "none", "none"),
+'1978-09-01': ("none", "none", "none", "none", "none"),
+'1978-10-01': ("none", "none", "none", "none", "none"),
+'1978-11-01': ("none", "none", "none", "none", "none"),
+'1978-12-01': ("none", "none", "none", "none", "none"),
+
+
+'1981-01-01': ("none", "none", "none", "none", "none"),
+'1981-02-01': ("none", "none", "none", "none", "none"),
+'1981-03-01': ("none", "none", "none", "none", "none"),
+'1981-04-01': ("none", "none", "none", "none", "none"),
+'1981-05-01': ("none", "none", "none", "none", "none"),
+'1981-06-01': ("none", "none", "none", "none", "none"),
+'1981-07-01': ("none", "none", "none", "none", "none"),
+'1981-08-01': ("LKF926", "none", "none", "none", "none"),
+'1981-09-01': ("LPG487", "none", "none", "none", "none"),
+'1981-10-01': ("none", "none", "none", "none", "none"),
+'1981-11-01': ("none", "none", "none", "none", "none"),
+'1981-12-01': ("none", "none", "none", "none", "none"),
+
+
 }
     found_month = "none"
     for key in sorted(nsw_plate_search):
