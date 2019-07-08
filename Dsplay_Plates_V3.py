@@ -83,7 +83,7 @@ def check_plate_nsw2(target_plate, model_start_year):
 class RegoPlate(object):
 
     def __init__(self, title="", jurisdiction="NSW", make="", model="", model_level = "", model_code = "",
-                 colour="", ad_index="", trim_level="", capacity="",
+                 colour="", ad_index="", trim_level="", capacity="",  interior_trim = "none",
                  car_year="", month="None", ad_date="", year_predict="1999", nsw_epoch=7):
 
         self.title = title
@@ -94,6 +94,7 @@ class RegoPlate(object):
         self.model_code = model_code
         self.trim_level = trim_level
         self.colour = colour
+        self.interior_trim = interior_trim
         self.capacity = capacity
 #        self.phone1 = phone1
         self.ads_list = [ad_index]
@@ -112,6 +113,8 @@ class RegoPlate(object):
         self.year = year
     def set_capacity(self, capacity):
         self.capacity = capacity
+    def set_interior_trim(self, interior_trim):
+        self.interior_trim = interior_trim
 
 
     def get_year_predict(self):
@@ -153,6 +156,9 @@ class RegoPlate(object):
                 description = description + " " + self.model_level
             if self.trim_level != "none":
                 description = description + " " + self.trim_level
+            if self.year != "none":
+                description = self.year + " " + description
+
 
         if self.model == "P76":
             description = self.make + " " + self.model
@@ -160,10 +166,16 @@ class RegoPlate(object):
                 description = description + " " + self.trim_level
             if self.capacity != "none":
                 description = description + " " + self.capacity
+            if self.year != "none":
+                description = self.year + " " + description
+
 
         if self.make == "Rover":
             if self.model != "none":
                 description = self.make + " " + self.model
+            if self.year != "none":
+                description = self.year + " " + description
+
 
         if self.make == "Peugeot":
             if self.model != "none":
@@ -190,6 +202,13 @@ class RegoPlate(object):
             if self.capacity != "none":
                 description = description + " " + self.capacity
 
+        colour_description = ""
+        if self.colour != "unknown":
+            colour_description = self.colour
+        if self.interior_trim != "none":
+            colour_description = colour_description + " with " + self.interior_trim + " Trim"
+
+
 
         no_of_ads_string = ""
         no_of_ads = len(self.ads_list)
@@ -199,15 +218,15 @@ class RegoPlate(object):
         if estimate_month == "none":
             estimate_month = ""
 
-        print ('{0:6} | {1:2} | {2:4} | {3:7} | {4:25} | {5:20}' \
-               .format(self.title, no_of_ads_string, print_year, estimate_month, description, self.colour ))
+        print ('{0:6} | {1:2} | {2:7} | {3:30} | {4:20}' \
+               .format(self.title, no_of_ads_string, estimate_month, description, colour_description ))
 
 
 
 class Advertisement(object):
 
     def __init__(self, title="", jurisdiction="NSW", make="", model="", model_level = "", model_code = "",
-                 colour="", phone1="", ad_index="", trim_level="", capacity="", interior_trim="",
+                 colour="", phone1="", ad_index="", trim_level="", capacity="", interior_trim="none",
                  car_year="", month="None", ad_date="", year_predict="1999", suburb="none", price="$$$"):
 
         self.title = title
@@ -591,6 +610,7 @@ def main():
                                       make=ads_record[6], model_code=ads_record[20], trim_level=ads_record[17],
                                       model=ads_record[7], colour=ads_record[10],
                                       car_year=ads_record[8], capacity=ads_record[9], model_level=ads_record[24],
+                                      interior_trim=ads_record[15],
                                       month=ads_record[21], ad_date=ads_record[3] )
                 no_of_cars = no_of_cars +1
                 # new_plate.set_suburb(ads_record[11])
@@ -613,6 +633,8 @@ def main():
                          plate_stored.grow_ad_list(ads_record[0])
                          if ads_record[10] != "unknown":
                              plate_stored.colour = ads_record[10]
+                         if ads_record[15] != "none":
+                             plate_stored.set_interior_trim(ads_record[15])
                          if ads_record[8] != "none":
                              plate_stored.set_year(ads_record[8])
  #                        if ads_record[11] != "none":

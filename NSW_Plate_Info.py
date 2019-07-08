@@ -174,7 +174,7 @@ def get_month(target_plate):
 '1972-06-01': ("EIA945", "none", "none", "none", "none"),
 '1972-07-01': ("EQZ589", "EIE430", "none", "none", "none"),
 '1972-08-01': ("GAA280", "EIY761", "GAX474", "GAX601", "none"),
-'1972-09-01': ("GBA418", "GBS966", "none", "none", "none"),
+'1972-09-01': ("GBA418", "GBS966", "GBF483", "none", "none"),
 '1972-10-01': ("GBB809", "GCH970", "none", "none", "none"),
 '1972-11-01': ("GDW436", "none", "none", "none", "none"),
 '1972-12-01': ("GDK650", "GDP317", "none", "none", "none"),
@@ -182,15 +182,15 @@ def get_month(target_plate):
 
 '1973-01-01': ("none", "none", "none", "none", "none"),
 '1973-02-01': ("GFF896", "GGM292", "GFR340", "none", "none"),
-'1973-03-01': ("GHD856", "GGR191", "GHN644", "GHD520", "none"),
+'1973-03-01': ("GHD856", "GGR191", "GHN644", "GHD520", "GHO608"),
 '1973-04-01': ("GHU453", "GHT996", "GIX301", "none", "none"),
 '1973-05-01': ("GJO186", "GJU823", "GJC670", "none", "none"),
 '1973-06-01': ("GKH196", "GKV554", "GIZ636", "none", "none"),
 '1973-07-01': ("GKI211", "GLO643", "GLO466", "GLO467", "GLH214"),
-'1973-08-01': ("GMV932", "none", "none", "none", "none"),
+'1973-08-01': ("GMV932", "GMG114", "none", "none", "none"),
 '1973-09-01': ("none", "none", "none", "none", "none"),
 '1973-10-01': ("GNS270", "GNF450", "none", "none", "none"),
-'1973-11-01': ("GOS442", "none", "none", "none", "none"),
+'1973-11-01': ("GOS442", "GPX980", "none", "none", "none"),
 '1973-12-01': ("GQY252", "none", "none", "none", "none"),
 
 '1974-01-01': ("GRL801", "none", "none", "none", "none"),
@@ -198,11 +198,11 @@ def get_month(target_plate):
 '1974-03-01': ("GTX069", "GTO283", "GUE017", "none", "none"),
 '1974-04-01': ("none", "none", "none", "none", "none"),
 '1974-05-01': ("GVK199", "none", "none", "none", "none"),
-'1974-06-01': ("none", "none", "none", "none", "none"),
+'1974-06-01': ("GUD399", "none", "none", "none", "none"),
 '1974-07-01': ("GYE144", "GXX834", "none", "none", "none"),
 '1974-08-01': ("GZY893", "none", "none", "none", "none"),
 '1974-09-01': ("HAV241", "HAV053", "none", "none", "none"),
-'1974-10-01': ("HBI236", "none", "none", "none", "none"),
+'1974-10-01': ("HBI236", "HAN286", "none", "none", "none"),
 '1974-11-01': ("HBB697", "none", "none", "none", "none"),
 '1974-12-01': ("HDD459", "HCN997", "HDU867", "HDV023", "none"),
 
@@ -232,7 +232,7 @@ def get_month(target_plate):
 '1976-09-01': ("none", "none", "none", "none", "none"),
 '1976-10-01': ("none", "none", "none", "none", "none"),
 '1976-11-01': ("none", "none", "none", "none", "none"),
-'1976-12-01': ("none", "none", "none", "none", "none"),
+'1976-12-01': ("JSL325", "none", "none", "none", "none"),
 
 
 '1977-01-01': ("none", "none", "none", "none", "none"),
@@ -263,6 +263,35 @@ def get_month(target_plate):
 '1978-12-01': ("none", "none", "none", "none", "none"),
 
 
+'1979-01-01': ("none", "none", "none", "none", "none"),
+'1979-02-01': ("none", "none", "none", "none", "none"),
+'1979-03-01': ("none", "none", "none", "none", "none"),
+'1979-04-01': ("none", "none", "none", "none", "none"),
+'1979-05-01': ("none", "none", "none", "none", "none"),
+'1979-06-01': ("none", "none", "none", "none", "none"),
+'1979-07-01': ("none", "none", "none", "none", "none"),
+'1979-08-01': ("none", "none", "none", "none", "none"),
+'1979-09-01': ("none", "none", "none", "none", "none"),
+'1979-10-01': ("none", "none", "none", "none", "none"),
+'1979-11-01': ("KMG348", "none", "none", "none", "none"),
+'1979-12-01': ("none", "none", "none", "none", "none"),
+
+
+'1980-01-01': ("none", "none", "none", "none", "none"),
+'1980-02-01': ("none", "none", "none", "none", "none"),
+'1980-03-01': ("none", "none", "none", "none", "none"),
+'1980-04-01': ("none", "none", "none", "none", "none"),
+'1980-05-01': ("KSD681", "none", "none", "none", "none"),
+'1980-06-01': ("none", "none", "none", "none", "none"),
+'1980-07-01': ("none", "none", "none", "none", "none"),
+'1980-08-01': ("none", "none", "none", "none", "none"),
+'1980-09-01': ("none", "none", "none", "none", "none"),
+'1980-10-01': ("none", "none", "none", "none", "none"),
+'1980-11-01': ("none", "none", "none", "none", "none"),
+'1980-12-01': ("none", "none", "none", "none", "none"),
+
+
+
 '1981-01-01': ("none", "none", "none", "none", "none"),
 '1981-02-01': ("none", "none", "none", "none", "none"),
 '1981-03-01': ("none", "none", "none", "none", "none"),
@@ -276,6 +305,19 @@ def get_month(target_plate):
 '1981-11-01': ("none", "none", "none", "none", "none"),
 '1981-12-01': ("none", "none", "none", "none", "none"),
 
+
+'1983-01-01': ("none", "none", "none", "none", "none"),
+'1983-02-01': ("MDG365", "none", "none", "none", "none"),
+'1983-03-01': ("none", "none", "none", "none", "none"),
+'1983-04-01': ("none", "none", "none", "none", "none"),
+'1983-05-01': ("none", "none", "none", "none", "none"),
+'1983-06-01': ("none", "none", "none", "none", "none"),
+'1983-07-01': ("none", "none", "none", "none", "none"),
+'1983-08-01': ("none", "none", "none", "none", "none"),
+'1983-09-01': ("none", "none", "none", "none", "none"),
+'1983-10-01': ("none", "none", "none", "none", "none"),
+'1983-11-01': ("none", "none", "none", "none", "none"),
+'1983-12-01': ("none", "none", "none", "none", "none"),
 
 }
     found_month = "none"

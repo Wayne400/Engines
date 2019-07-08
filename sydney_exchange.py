@@ -81,7 +81,7 @@ def get_exchange_dict():
     exchange_dict['569'] = 'Leichhardt'
     exchange_dict['57'] = 'Hurstvlle, Penshurst'
     exchange_dict['570'] = 'Hurstville'
-    exchange_dict['579'] = 'Oatley, Hurstville'
+    exchange_dict['579'] = 'Oatley, Hurstville, Penshurst'
     exchange_dict['587'] = 'Hurstville'
     exchange_dict['59'] = 'Rockdale, Arncliffe, Banksia'
     exchange_dict['599'] = 'Rockdale, Arncliffe, Banksia'
