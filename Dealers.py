@@ -44,7 +44,7 @@ dealers_list = {
 '4988866': ("Alto Ford", "Pacific Hwy.", "Gordon", "LD0071"),
 
 
-'5022432': ("Anonymous", "unknown", "unknown" , "LD5747"),
+'5022432': ("Anonymous", "6 Stoney Creek Rd", "Bexley" , "LD5747/DL3256"),
 '512954': ("Lanock Motors", "unknown", "Camperdown" , "LD505"),
 '514741': ("Lanock Motors", "unknown", "Camperdown" , "LD505"),
 '5195157': ("Anonymous", "unknown", "unknown" , "LD1849"),
@@ -68,6 +68,7 @@ dealers_list = {
 '5602976': ("Frank McGath Motors", "unknown", "Dulwich Hill", "LD132"),
 '5796333': ("Larke Hoskins", "41 Treacy St.", "Hurstville", "LD403"),
 '5796721': ("Dominelli Ford", "Cnr Forest Rd & Bridge St", "Hurstville", "LD00375"),
+'5870218': ("Anonymous", "Highway", "Hurstville", "LD4214"),
 '5871154': ("Andrews Autos", "Highway", "Hurstville", "LD167"),
 '5872115': ("Larry Mason", "Highway", "Hurstville", "LD389"),
 '5872646': ("Anonymous", "Highway", "Hurstville", "LD172"),
@@ -111,11 +112,13 @@ dealers_list = {
 '6378008': ("Bryfield Autos", "160 Parramatta Rd", "Granville", "LD961"),
 '6381823': ("JJ Roberts", "1 Euston St", "Rydalmere", "LD2781"),
 '6396377': ("John Creasey Cars", "11-13 Old Northern Rd", "Baulkham Hills", "LD"),
+'648XXXX': ("Robert Carroll Motors", "99 Parramatta Rd", "Auburn", "LD284"),
 '6480224': ("Ruslit Motors", "unknown Rd", "Auburn", "LD"),
 '6481870': ("Bevan Williams Motors", "unknown Rd", "Lidcombe", "LD"),
 '6481980': ("Ron Muir Cars", "44 Parramatta Rd", "Lidcombe", "LD"),
 '6482030': ("York Toyota Lidcombe", "48 Parramatta Rd", "Lidcombe", "LD415"),
 '6483681': ("Anonymous", "84 Parramatta Rd", "Lidcombe", "LD"),
+'6484000': ("John L Motors", "250 Parramatta Rd", "Auburn", "LD2"),
 '6484311': ("John A Gilbert", "76 Parramatta Rd", "Lidcombe", "LD"),
 '6488033': ("Capitol Motors", "Parramatta Rd", "Unknown", "LD410"),
 '6488211': ("Sydney Motor Auctions", "16-22 Carter Street", "Lidcombe", "LD36"),
@@ -124,10 +127,11 @@ dealers_list = {
 '6674121': ("Svenska Car Centre", "unknown", "unknown", "LD3166"),
 '6674460': ("Mascot Motors", "180 O'Riordan St.", "Mascot", "LD1091"),
 '6692945': ("Renault Australia", "789 Botany Rd", "Rosebery", "LD575"),
+
+'6812811': ("Anonymous", "unknown", "unknown", "LD6089"),
 '6821087': ("Brian Anthony", "unknown", "Ganville", "LD1010"),
 '6821399': ("Catchpenny Cars", "Woodville/Halsall", "Ganville", "LD8011"),
 '6831933': ("Maypow Motors", "606 Church St", "North Parramatta", "LD"),
-'648XXXX': ("Robert Carroll Motors", "99 Parramatta Rd", "Auburn", "LD284"),
 '6994596': ("Anonymous", "unknown", "unknown", "LD1171"),
 
 '701728': ("Don Stewart", "155 Canterbury Rd", "Bankstown", "LD20"),
