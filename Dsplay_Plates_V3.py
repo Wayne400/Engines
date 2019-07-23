@@ -227,7 +227,7 @@ class Advertisement(object):
 
     def __init__(self, title="", jurisdiction="NSW", make="", model="", model_level = "", model_code = "",
                  colour="", phone1="", ad_index="", trim_level="", capacity="", interior_trim="none",
-                 car_year="", month="None", ad_date="", year_predict="1999", suburb="none", price="$$$"):
+                 car_year="", month="None", ad_date="", year_predict="1999", suburb="none", price="$$$", milage="none"):
 
         self.title = title
         self.jurisdiction = jurisdiction
@@ -247,6 +247,7 @@ class Advertisement(object):
         self.year_predict = year_predict
         self.suburb = suburb
         self.price = price
+        self.milage = milage
 
     def set_suburb(self):
         exchange_dictionary = get_exchange_dict()
@@ -271,13 +272,11 @@ class Advertisement(object):
             self.month = ""
         if self.colour == "unknown":
             self.colour = ""
-        if self.year == "none":
-            self.year = ""
-        if self.model == "none":
-            self.model = ""
         if self.price == "none":
             self.price = ""
         description = ""
+
+
         if self.model == "Valiant" and self.model_level != "none":
             description = self.model
             if self.model_code != "none":
@@ -320,9 +319,14 @@ class Advertisement(object):
             if self.capacity != "none":
                 description = description + " " + self.capacity
 
+        if self.milage != "none":
+            description = description + " " + self.milage
+        if self.year != "none":
+            description = self.year + " " + description
 
-        print ('{0:6} {1:10} {2:11} {3:7} {4:11} {5:4} {6:20} {7:16} {8:20} {9:4}' \
-               .format(self.title, self.ad_date, self.month, self.price, self.phone1, self.year, description, self.colour, \
+
+        print ('{0:6} {1:10} {2:11} {3:7} {4:11} {5:35} {6:16} {7:20} {8:4}' \
+               .format(self.title, self.ad_date, self.month, self.price, self.phone1, description, self.colour, \
                        self.suburb, self.index ))
 
 
@@ -599,7 +603,7 @@ def main():
                                   model=ads_record[7], colour=ads_record[10], phone1=ads_record[11],
                                   car_year=ads_record[8], capacity=ads_record[9],model_level=ads_record[24],
                                   interior_trim=ads_record[15],
-                                  month=ads_record[21], ad_date=ads_record[3], price=ads_record[18], )
+                                  month=ads_record[21], ad_date=ads_record[3], price=ads_record[18],milage=ads_record[19] )
             new_ad.set_suburb()
             ads_dict[ads_master_index] = new_ad
         #        if re.match('^[A-Q][A-Z][A-Z][0-9]{3}', plate):  # check valid plate
