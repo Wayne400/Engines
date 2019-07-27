@@ -106,7 +106,7 @@ def get_month(target_plate):
 '1967-07-01': ("none", "none", "none", "none", "none"),
 '1967-08-01': ("none", "none", "none", "none", "none"),
 '1967-09-01': ("ESX827", "EPX812", "none", "none", "none"),
-'1967-10-01': ("none", "none", "none", "none", "none"),
+'1967-10-01': ("EPC471", "none", "none", "none", "none"),
 '1967-11-01': ("none", "none", "none", "none", "none"),
 '1967-12-01': ("none", "none", "none", "none", "none"),
 
@@ -150,7 +150,7 @@ def get_month(target_plate):
 '1970-09-01': ("BLA532", "none", "none", "none", "none"),
 '1970-10-01': ("BME521", "BLN404", "BLV006", "BMZ218", "BLN403"),
 '1970-11-01': ("ACQ643", "none", "none", "none", "none"),
-'1970-12-01': ("ABQ154", "BMK203", "AMQ153", "none", "none"),
+'1970-12-01': ("ABQ154", "BMK203", "AMQ153", "AKQ327", "none"),
 
 '1971-01-01': ("AVQ692", "AIL658", "AWI069", "AIL145", "none"),
 '1971-02-01': ("none", "none", "none", "none", "none"),
@@ -227,7 +227,7 @@ def get_month(target_plate):
 
 '1976-01-01': ("none", "none", "none", "none", "none"),
 '1976-02-01': ("none", "none", "none", "none", "none"),
-'1976-03-01': ("none", "none", "none", "none", "none"),
+'1976-03-01': ("HQY411", "none", "none", "none", "none"),
 '1976-04-01': ("none", "none", "none", "none", "none"),
 '1976-05-01': ("none", "none", "none", "none", "none"),
 '1976-06-01': ("none", "none", "none", "none", "none"),
@@ -250,13 +250,14 @@ def get_month(target_plate):
 '1977-08-01': ("none", "none", "none", "none", "none"),
 '1977-09-01': ("none", "none", "none", "none", "none"),
 '1977-10-01': ("none", "none", "none", "none", "none"),
-'1977-11-01': ("none", "none", "none", "none", "none"),
+'1977-11-01': ("JXV057", "none", "none", "none", "none"),
 '1977-12-01': ("none", "none", "none", "none", "none"),
 
+#     JPE050  ** ** 1978 ** ** **
 
 '1978-01-01': ("none", "none", "none", "none", "none"),
 '1978-02-01': ("none", "none", "none", "none", "none"),
-'1978-03-01': ("JCF700", "none", "none", "none", "none"),
+'1978-03-01': ("none", "none", "none", "none", "none"),
 '1978-04-01': ("none", "none", "none", "none", "none"),
 '1978-05-01': ("none", "none", "none", "none", "none"),
 '1978-06-01': ("none", "none", "none", "none", "none"),
@@ -266,6 +267,8 @@ def get_month(target_plate):
 '1978-10-01': ("none", "none", "none", "none", "none"),
 '1978-11-01': ("none", "none", "none", "none", "none"),
 '1978-12-01': ("none", "none", "none", "none", "none"),
+
+#        KBH050  ** ** 1979 ** ** **
 
 
 '1979-01-01': ("none", "none", "none", "none", "none"),
@@ -281,11 +284,12 @@ def get_month(target_plate):
 '1979-11-01': ("KMG348", "none", "none", "none", "none"),
 '1979-12-01': ("none", "none", "none", "none", "none"),
 
+# FOA000  ** ** 1980 ** **
 
 '1980-01-01': ("none", "none", "none", "none", "none"),
 '1980-02-01': ("none", "none", "none", "none", "none"),
 '1980-03-01': ("none", "none", "none", "none", "none"),
-'1980-04-01': ("none", "none", "none", "none", "none"),
+'1980-04-01': ("KQR472", "none", "none", "none", "none"),
 '1980-05-01': ("KSD681", "none", "none", "none", "none"),
 '1980-06-01': ("none", "none", "none", "none", "none"),
 '1980-07-01': ("none", "none", "none", "none", "none"),
@@ -295,9 +299,9 @@ def get_month(target_plate):
 '1980-11-01': ("none", "none", "none", "none", "none"),
 '1980-12-01': ("none", "none", "none", "none", "none"),
 
+#   LCZ050  ** ** 1981 ** **
 
-
-'1981-01-01': ("none", "none", "none", "none", "none"),
+    '1981-01-01': ("none", "none", "none", "none", "none"),
 '1981-02-01': ("none", "none", "none", "none", "none"),
 '1981-03-01': ("none", "none", "none", "none", "none"),
 '1981-04-01': ("none", "none", "none", "none", "none"),
@@ -320,7 +324,7 @@ def get_month(target_plate):
 '1983-07-01': ("none", "none", "none", "none", "none"),
 '1983-08-01': ("none", "none", "none", "none", "none"),
 '1983-09-01': ("none", "none", "none", "none", "none"),
-'1983-10-01': ("none", "none", "none", "none", "none"),
+'1983-10-01': ("MGJ923", "none", "none", "none", "none"),
 '1983-11-01': ("none", "none", "none", "none", "none"),
 '1983-12-01': ("none", "none", "none", "none", "none"),
 

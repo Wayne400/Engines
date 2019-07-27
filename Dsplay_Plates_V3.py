@@ -325,9 +325,9 @@ class Advertisement(object):
             description = self.year + " " + description
 
 
-        print ('{0:6} {1:10} {2:11} {3:7} {4:11} {5:35} {6:16} {7:20} {8:4}' \
-               .format(self.title, self.ad_date, self.month, self.price, self.phone1, description, self.colour, \
-                       self.suburb, self.index ))
+        print ('{0:6} {1:10} {2:11} {3:7} {4:35} {5:16} {6:11} {7:20}' \
+               .format(self.title, self.ad_date, self.month, self.price, description, self.colour, \
+                       self.phone1, self.suburb))
 
 
 
@@ -482,6 +482,29 @@ def get_sql_data_all( **kwargs):
         conn.close()
 
 
+def get_sql_data_state( **kwargs):
+    #  print kwargs
+    jurisdiction = kwargs["jurisdiction"]
+    connectstring = kwargs["connectstring"]
+   #     sql = "select * from adverts"
+    sql = "select * from adverts where jurisdiction = '{}' ".format(jurisdiction)
+
+    print sql
+
+    try:
+        conn = sqlite3.connect(connectstring)
+        cursor = conn.cursor()
+        print 'connected!' + connectstring
+        results = cursor.execute(sql)
+        ads = results.fetchall()
+        conn.close()
+        return ads
+
+    except:
+        print "I am unable to connect to the database"
+        conn.close()
+
+
 
 def main():
   plate_list = []
@@ -581,6 +604,9 @@ def main():
         elif pick_make == "all":
             ads_table = get_sql_data_all( connectstring="advertisements_indexed.db", jurisdiction="NSW")
             break
+        elif pick_make == "NSW" or pick_make == "VIC" or pick_make == "QLD":
+            ads_table = get_sql_data_state( connectstring="advertisements_indexed.db",jurisdiction=pick_make )
+            break
         elif pick_make == 'x':
             break
         else:
@@ -626,7 +652,8 @@ def main():
                     new_plate.set_nsw_epoch(nsw_list)
                   else:
                     new_plate.set_nsw_epoch(5)  # for personal plates 5 digit match
-
+                if new_plate.jurisdiction == "VIC" or new_plate.jurisdiction == "QLD":
+                    new_plate.set_nsw_epoch(5)  # for personal plates 5 digit match
 
                 plate_list.append(new_plate)
                 plate_list_index.append(plate)
