@@ -139,6 +139,7 @@ dealers_list = {
 '6831933': ("Maypow Motors", "606 Church St", "North Parramatta", "LD"),
 '6994596': ("Anonymous", "unknown", "unknown", "LD1171"),
 
+'700271': ("Ern Jones", "350 Hume Hwy", "Bankstown", "LD608"),
 '701728': ("Don Stewart", "155 Canterbury Rd", "Bankstown", "LD20"),
 '702166': ("Anonymous", "unknown", "unknown", "LD1533"),
 '702200': ("Mindarie", "unknown", "unknown", "LD2715"),

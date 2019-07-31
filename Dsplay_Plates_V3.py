@@ -83,8 +83,8 @@ def check_plate_nsw2(target_plate, model_start_year):
 class RegoPlate(object):
 
     def __init__(self, title="", jurisdiction="NSW", make="", model="", model_level = "", model_code = "",
-                 colour="", ad_index="", trim_level="", capacity="",  interior_trim = "none",
-                 car_year="", month="None", ad_date="", year_predict="1999", nsw_epoch=7):
+                 colour="", ad_index="", trim_level="", capacity="none",  interior_trim = "none",
+                 car_year="none", month="None", ad_date="", year_predict="1999", nsw_epoch=7):
 
         self.title = title
         self.jurisdiction = jurisdiction
@@ -96,9 +96,7 @@ class RegoPlate(object):
         self.colour = colour
         self.interior_trim = interior_trim
         self.capacity = capacity
-#        self.phone1 = phone1
         self.ads_list = [ad_index]
-#        self.index = ad_index
         self.year = car_year
         self.month = month
         self.ad_date = ad_date
@@ -110,10 +108,13 @@ class RegoPlate(object):
     def set_year_predict(self, year_predict):
         self.year_predict = year_predict
     def set_year(self, year):
-        self.year = year
+        if self.year == 'none':
+            self.year = year
     def set_capacity(self, capacity):
+      if self.capacity() == 'none':
         self.capacity = capacity
     def set_interior_trim(self, interior_trim):
+      if self.interior_trim == 'none':
         self.interior_trim = interior_trim
 
 
@@ -140,51 +141,45 @@ class RegoPlate(object):
             self.model = ""
 #        if self.price == "none":
 #            self.price = ""
-        if self.year == "none":
-            print_year = ""
-        else:
-            print_year = self.year
+
 
       #  if self.capacity == "none":
        #     self.capacity = ""
-        description = ""
+        description = self.make
+        if self.year != "none":
+            description = self.year + " " + description
+
         if self.model == "Valiant" and self.model_level != "none":
             description = self.model
+            if self.year != "none":
+                description = self.year + " " + description
             if self.model_code != "none":
                 description = description + " " + self.model_code + " " + self.model_level
             else:
                 description = description + " " + self.model_level
             if self.trim_level != "none":
                 description = description + " " + self.trim_level
-            if self.year != "none":
-                description = self.year + " " + description
 
 
         if self.model == "P76":
-            description = self.make + " " + self.model
+            description = description + " " + self.model
             if self.trim_level != "none":
                 description = description + " " + self.trim_level
             if self.capacity != "none":
                 description = description + " " + self.capacity
-            if self.year != "none":
-                description = self.year + " " + description
 
 
         if self.make == "Rover":
             if self.model != "none":
-                description = self.make + " " + self.model
-            if self.year != "none":
-                description = self.year + " " + description
+                description = description + " " + self.model
 
 
         if self.make == "Peugeot":
-            if self.model != "none":
-                description = self.make + " " + self.model
+            if self.model != 'none':
+                description = description + " " + self.model
+
 
         if self.make == "Renault":
-            description = self.make
-            if self.year != "none":
-                description = self.year + " " + description
             if self.model != 'RXX':
                 description = description + " " + self.model
             if self.trim_level != "XX":
@@ -192,10 +187,7 @@ class RegoPlate(object):
 
 
         if self.make == "Rambler":
-            description = self.make
-            if self.year != "none":
-                description = self.year + " " + description
-            if self.model != "none":
+            if self.model != "none" or self.model != "Rambler":
                 description = description+ " " + self.model
             if self.trim_level != "none":
                 description = description + " " + self.trim_level
@@ -227,7 +219,7 @@ class Advertisement(object):
 
     def __init__(self, title="", jurisdiction="NSW", make="", model="", model_level = "", model_code = "",
                  colour="", phone1="", ad_index="", trim_level="", capacity="", interior_trim="none",
-                 car_year="", month="None", ad_date="", year_predict="1999", suburb="none", price="$$$", milage="none"):
+                 car_year="none", month="None", ad_date="", year_predict="1999", suburb="none", price="$$$", milage="none"):
 
         self.title = title
         self.jurisdiction = jurisdiction
@@ -274,8 +266,8 @@ class Advertisement(object):
             self.colour = ""
         if self.price == "none":
             self.price = ""
-        description = ""
 
+        description = self.make
 
         if self.model == "Valiant" and self.model_level != "none":
             description = self.model
@@ -287,7 +279,7 @@ class Advertisement(object):
                 description = self.model + " " + self.trim_level
 
         if self.model == "P76":
-            description = self.make + " " + self.model
+            description = description + " " + self.model
             if self.trim_level != "none":
                 description = description + " " + self.trim_level
             if self.capacity != "none":
@@ -296,24 +288,21 @@ class Advertisement(object):
 
         if self.make == "Rover":
             if self.model != "none":
-                description  = self.make + " " + self.model
+                description  = description  + " " + self.model
 
         if self.make == "Peugeot":
             if self.model != "none":
-                description = self.make + " " + self.model
+                description =  description + " " + self.model
 
         if self.make == "Renault":
-            description = self.make
             if self.model != 'RXX':
                 description = description + " " + self.model
             if self.trim_level != "XX":
                 description = description + " " + self.trim_level
 
         if self.make == "Rambler":
-            if self.model != "none":
-                description = self.make + " " + self.model
-            else:
-                description = self.make
+            if self.model != "none" or self.model != "Rambler":
+                description = description  + " " + self.model
             if self.trim_level != "none":
                 description = description + " " + self.trim_level
             if self.capacity != "none":
@@ -338,14 +327,14 @@ def get_sql_data(car_model_list, **kwargs):
     connectstring = kwargs["connectstring"]
     car_make = kwargs["car_make"]
     stop = len(car_model_list)
-    car_model_or_string = "( car_model = '{}'".format(car_model_list[0])
+    car_model_or_string = "(car_model = '{}'".format(car_model_list[0])
     for x in range(1, stop):
         car_model_or_string += " or " + "car_model = '{}'".format(car_model_list[x])
     #      print car_model_list[x]
     car_model_or_string += " )"
     #     sql = "select * from adverts"
     #  car_model_string = "car_model = '{}'".format(car_model_list[0])
-    sql = "select * from adverts where {} and jurisdiction = '{}'".format(
+    sql = "select * from adverts where {0} and jurisdiction = '{1}'  and car_make = '{2}'".format(
         car_model_or_string, jurisdiction, car_make)
     print sql
 
@@ -661,13 +650,13 @@ def main():
                 already_found = already_found + 1
                 for plate_stored in plate_list:
                     if plate_stored.title == plate:
+                         plate_stored.set_year(ads_record[8])
                          plate_stored.grow_ad_list(ads_record[0])
                          if ads_record[10] != "unknown":
                              plate_stored.colour = ads_record[10]
                          if ads_record[15] != "none":
                              plate_stored.set_interior_trim(ads_record[15])
-                         if ads_record[8] != "none":
-                             plate_stored.set_year(ads_record[8])
+#                         plate_stored.set_year(ads_record[8])
  #                        if ads_record[11] != "none":
 #                             plate_stored.set_suburb(ads_record[11])
                          if ads_record[9] != "none":
