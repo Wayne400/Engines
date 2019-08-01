@@ -49,7 +49,7 @@ def check_production( make, model, sort1, sort2, sort3):
     return  model_start_year
 
 
-def check_plate_nsw2(target_plate, model_start_year):
+def check_plate_nsw3(target_plate, model_start_year):
 
     nsw_series_one = {'1955': 'AUG000', '1956': 'BCC000', '1957': 'BKC000', '1958': 'BSA000', '1959': 'BWA000', '1960': 'CAA000', '1961': 'CLL000', '1962': 'CSA000', '1963' : 'DAA000',
                     '1964': 'DAA000', '1965': 'DOJ000', '1966': 'EAA000', '1967': 'EMA000',
@@ -57,8 +57,12 @@ def check_plate_nsw2(target_plate, model_start_year):
 
     year_list = list(nsw_series_one.keys())
     nsw_list = 0
-    model_start_plate = "AUG001"
+    model_start_plate = "AAA000"
     nsw_era_4_start = "GAA000"
+    nsw_era_4_end = "KZZ999"
+    nsw_era_5_start = "FAA000"
+    nsw_era_5_end = "FZZ999"
+    nsw_era_6_start = "LAA000"
     nsw_era_2_end = "EZZ999"
     if model_start_year in year_list:
         model_start_plate = nsw_series_one[model_start_year]
@@ -67,8 +71,15 @@ def check_plate_nsw2(target_plate, model_start_year):
     if (re.match('[A-E][I|Q][A-Z]', target_plate)) or (re.match('[A-E][A-Z][I|Q]', target_plate)) and target_plate < nsw_era_4_start:
         nsw_list = 3
     # got to era 4
-    if target_plate >= nsw_era_4_start:
+    if target_plate >= nsw_era_4_start and target_plate <= nsw_era_4_end:
         nsw_list = 4
+    # check the F era 1979/1980
+    if target_plate >= nsw_era_5_start and target_plate <= nsw_era_5_end:
+        nsw_list = 5
+    # check > 1981
+    if target_plate >= nsw_era_6_start:
+        nsw_list = 6
+
     # go to era 1 after checking model introduction year
     if (target_plate > model_start_plate and target_plate < nsw_era_2_end) \
             and nsw_list == 0 and model_start_year < "1969":
@@ -636,13 +647,13 @@ def main():
                 if new_plate.jurisdiction == "NSW":
                   if not re.match('^[A-Z][A-Z][0-9]{3}', plate):
                     return_above = check_production( make=ads_record[6], model=ads_record[7], sort1=ads_record[20],sort2=ads_record[24], sort3=ads_record[8])
-                    nsw_list = check_plate_nsw2(target_plate=ads_record[1], model_start_year=return_above)
+                    nsw_list = check_plate_nsw3(target_plate=ads_record[1], model_start_year=return_above)
                     new_plate.set_year_predict("1999")
                     new_plate.set_nsw_epoch(nsw_list)
                   else:
-                    new_plate.set_nsw_epoch(5)  # for personal plates 5 digit match
+                    new_plate.set_nsw_epoch(7)  # for personal plates 5 digit match
                 if new_plate.jurisdiction == "VIC" or new_plate.jurisdiction == "QLD":
-                    new_plate.set_nsw_epoch(5)  # for personal plates 5 digit match
+                    new_plate.set_nsw_epoch(7)  # for personal plates 5 digit match
 
                 plate_list.append(new_plate)
                 plate_list_index.append(plate)
@@ -669,8 +680,8 @@ def main():
     go_again = raw_input("Go Again y/n: ")
 
   plate_list.sort()
-  for x in range(1, 6):
-      print "*" * 140
+  for x in range(1, 8):
+      print "*" * 80
       for plate_stored in sorted(plate_list, key=lambda plate: plate.title):
           nsw_epoch = plate_stored.get_nsw_epoch()
           # suburb = plate_stored.set_suburb()
