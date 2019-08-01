@@ -8,6 +8,12 @@ import sqlite3
 
 def get_rambler_1():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
     adverts = [
+("Hornet","1971-02-06","Hornet","1970","none","none","Safety Wattle, new 12/70","Black","700187","none","none","none"),
+("American","1971-02-06","American","1967","none","232","Turquoise","Bone","700271","$1990","none","none"),
+("American","1971-02-06","American","1968","440","none","White","Black","700271","$1990","none","none"),
+("Rebel","1971-02-06","Rebel","1969","none","290","Sky Blue","Black","7899000","none","none","none"),
+
+
 ("MQE683","1984-01-14","Matador","1974","none","none","Wagon","none","9382022","$4990","none","none"),
 ("HEX756","1984-01-14","Rambler","1970","none","none","unknown","none","6488211","auction","none","none"),
 ("HQY411","1984-01-21","Classic","1965","none","none","unknown","none","765469","$500","none","March"),

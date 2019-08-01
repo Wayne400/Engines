@@ -685,23 +685,26 @@ def main():
           if plate_search != 'q':
               prefix_search_flag = False
               plate_selected = {}
-              if plate_search == "number":
-                  plate_search = raw_input("Enter Phone number: ")
+              if plate_search == "number" or plate_search == "n":
+                  number_search = raw_input("Enter Phone number: ")
                   # print "wally"
                   # for dealer_no in dealers:
-                  for key in sorted(dealers_list):
-                      if plate_search == key:
-                          dealer_data = dealers_list[key]
+                  if number_search in dealers_list:
+                          dealer_data = dealers_list[number_search]
+                          #key = number_search
+#                  for key in sorted(dealers_list):
+#                      if number_search == key:
+                          #dealer_data = dealers_list[key]
                           dealer_licence = dealer_data[3]
                           dealer_name = dealer_data[0]
                           dealer_suburb = dealer_data[2]
                           if dealer_suburb != "unknown":
-                              print key, dealer_name, dealer_licence, dealer_suburb
+                              print number_search, dealer_name, dealer_licence, dealer_suburb
                           else:
-                              print key, dealer_name, dealer_licence
+                              print number_search, dealer_name, dealer_licence
                   for ad2 in ads_list:
                       advert = ads_dict[ad2]
-                      if advert.phone1 == plate_search:
+                      if advert.phone1 == number_search:
                           advert.print_ad()
 
 
