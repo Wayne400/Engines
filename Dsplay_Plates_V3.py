@@ -15,7 +15,7 @@ def check_production( make, model, sort1, sort2, sort3):
     peugeot_model_start = {'RXX': '1960','403': '1955', '403B': '1958', '404': '1963', '504': '1969'}
     rover_model_start = {'RXX': '1960','75': '1954','90': '1954','P4': '1954','95': '1961','100': '1960','110': '1961','105R': '1955',\
                          '2000': '1965', '2000TC': '1965', '3500': '1967','P5B': '1965','3L':'1960',\
-                         'P5': '1961', 'P5Bcoupe': '1965', 'P5coupe': '1965'}
+                         'P5': '1959', 'P5Bcoupe': '1967', 'P5coupe': '1964'}
     rambler_model_start = {'Rambler': '1960','Ambassador': '1960', 'Hornet': '1970','Gremlin': '1970',\
                            'Rebel': '1967', 'Javelin': '1969', 'AMX': '1969', 'Matador':'1971',\
                            'American':'1963', 'Classic':'1961', 'Marlin':'1964', 'X-Coupe':'1975', 'RXX':'1960'}
