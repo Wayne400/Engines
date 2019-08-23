@@ -1,18 +1,19 @@
 
 import sqlite3
 
+
 def get_valiant():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
     adverts = [
-("HLI854","1975-08-20","VJ","Charger","770","1975","265","Auto","Sienna","beige","8887866","$new","new","August"),
-("JKJ864","1979-09-15","VK","Charger","none","1976","none","none","unknown","none","9776047","$2750","none","none"),
-("JJO765","1979-09-15","CL","Charger","none","1977","318","Auto","unknown","none","7278544","$4995","none","none"),
-("EQA737","1979-09-15","VH","Charger","770","1973","318","Auto","Silver Grey","Black","6304580","$3300","27000mis","September"),
-("GOA028","1979-09-15","VJ","Charger","none","1973","none","none","Golden Amber","none","9825010","$2200","none","none"),
-("LAC002","1979-08-11","CL","Charger","770","1978","318","4spd","Alpine White","Blue Cloth","4393099","$6490","none","none"),
-("JWD516","1979-08-11","CL","Charger","none","1977","318","Auto","unknown","none","5994455","$3990","none","August"),
-("JIG879","1979-08-11","none","Charger","none","1976","318","none","unknown","none","3495055","$3500","none","September"),
-("GBA428","1979-08-11","VH","Charger","none","1972","none","Auto","unknown","none","6381823","none","none","none"),
-("JGR632","1986-20-10","CL","Valiant","none","1976","245","Auto","Turquoise","none","043844207","none","none","none"),
+# model_code = row[2], model_year = row[3], model_level = row[4], trim_level = row[5],
+# body_style= row[6], capacity = row[7], transmission = row[8], colour = row[9],
+# phone1 = row[10], price = row[11], milage = row[12], month = row[13])
+("AJJ379","1976-01-24","none","1968","Safari","none","Wagon","none","none","unknown","6606738","$500","none","September"),
+("DBV506","1976-01-24","AP5","none","Regal","none","Sedan","none","Auto","unknown", "432169","$695","none","November"),
+("DFD799","1976-01-24","AP5","none","none","none","Sedan","none","Auto","unknown","6601115","$450","none","none"),
+("EHX691","1976-01-24","AP6","1966","Regal","none","Sedan","none","none","unknown","7983040","$995","none","November"),
+("AVI149","1976-01-24","none","1970","Regal","770","Coupe","V8","Auto","unknown","750598","$1995","none","none"),
+
+
    ]
 
     return adverts
@@ -21,7 +22,7 @@ def get_valiant():   # creating a list of tuples representing individual ads in 
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 2951
+    master_index1 = 3840
     for row in ads:
         print row
         master_index1 += 1
@@ -39,12 +40,12 @@ def add_adverts(cursor, ads):
                         jurisdiction="NSW",
                         iso_advert_date=row[1],
                         item_number=1, publication="smh",
-                        car_make="Chrysler",model_code= row[2], car_model="Valiant", model_year=row[5],
-                        capacity=row[6],
-                        colour=row[8], phone1=row[10], phone2="none",
-                        dealers_licence="none", who="WW", interior_trim=row[9],
-                        body_style="none", model_level=row[3], trim_level=row[4],
-                        transmission=row[7], price=row[11], milage=row[12],month=row[13])
+                        car_make="Chrysler",model_code= row[2], car_model="Valiant", model_year=row[3],
+                        capacity=row[7], body_style=row[6],
+                        colour=row[9], phone1=row[10], phone2="none",
+                        dealers_licence="none", who="WW", interior_trim="none",
+                        model_level=row[4], trim_level=row[5],
+                        transmission=row[8], price=row[11], milage=row[12],month=row[13])
         print sql
         try:
             cursor.execute(sql)

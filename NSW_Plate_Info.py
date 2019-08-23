@@ -328,6 +328,46 @@ def get_month(target_plate):
 '1983-11-01': ("none", "none", "none", "none", "none"),
 '1983-12-01': ("none", "none", "none", "none", "none"),
 
+
+'1984-01-01': ("none", "none", "none", "none", "none"),
+'1984-02-01': ("none", "none", "none", "none", "none"),
+'1984-03-01': ("none", "none", "none", "none", "none"),
+'1984-04-01': ("none", "none", "none", "none", "none"),
+'1984-05-01': ("none", "none", "none", "none", "none"),
+'1984-06-01': ("none", "none", "none", "none", "none"),
+'1984-07-01': ("none", "none", "none", "none", "none"),
+'1984-08-01': ("none", "none", "none", "none", "none"),
+'1984-09-01': ("none", "none", "none", "none", "none"),
+'1984-10-01': ("none", "none", "none", "none", "none"),
+'1984-11-01': ("none", "none", "none", "none", "none"),
+'1984-12-01': ("none", "none", "none", "none", "none"),
+
+'1985-01-01': ("none", "none", "none", "none", "none"),
+'1985-02-01': ("none", "none", "none", "none", "none"),
+'1985-03-01': ("none", "none", "none", "none", "none"),
+'1985-04-01': ("none", "none", "none", "none", "none"),
+'1985-05-01': ("none", "none", "none", "none", "none"),
+'1985-06-01': ("none", "none", "none", "none", "none"),
+'1985-07-01': ("none", "none", "none", "none", "none"),
+'1985-08-01': ("none", "none", "none", "none", "none"),
+'1985-09-01': ("none", "none", "none", "none", "none"),
+'1985-10-01': ("none", "none", "none", "none", "none"),
+'1985-11-01': ("none", "none", "none", "none", "none"),
+'1985-12-01': ("none", "none", "none", "none", "none"),
+
+'1986-01-01': ("none", "none", "none", "none", "none"),
+'1986-02-01': ("none", "none", "none", "none", "none"),
+'1986-03-01': ("none", "none", "none", "none", "none"),
+'1986-04-01': ("none", "none", "none", "none", "none"),
+'1986-05-01': ("none", "none", "none", "none", "none"),
+'1986-06-01': ("none", "none", "none", "none", "none"),
+'1986-07-01': ("none", "none", "none", "none", "none"),
+'1986-08-01': ("none", "none", "none", "none", "none"),
+'1986-09-01': ("none", "none", "none", "none", "none"),
+'1986-10-01': ("OCF362", "none", "none", "none", "none"),
+'1986-11-01': ("none", "none", "none", "none", "none"),
+'1986-12-01': ("none", "none", "none", "none", "none"),
+
 }
     found_month = "none"
     for key in sorted(nsw_plate_search):

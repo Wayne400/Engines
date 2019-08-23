@@ -65,6 +65,7 @@ dealers_list = {
 '5258188': ("Stewart Car Company", "277 The Kingsway", "Caringbah", "LD"),
 '5272194': ("Cartere Motors", "unknown", "unknown", "LD5029"),
 '5463521': ("Anonymous", "unknown", "unknown", "LD1171"),
+'5551312': ("Balmain Cars", "unknown", "unknown", "LD9343"),
 '5592033': ("Anonymous", "unknown", "unknown", "LD04721"),
 '567763': ("Ward Morris Motors", "380 Parramatta Rd", "Petersham", "LD"),
 '5693211': ("Debiens Motor Auctions", "543 Parramatta Rd", "Leichhardt", "LD658"),
@@ -82,6 +83,7 @@ dealers_list = {
 '590425': ("James House Of Cars", "58 Princes Hwy", "Rockdale", "LD"),
 '592503': ("McLeod Ford", "283 Princes Highway", "Banksia", "LD1233"),
 '593711': ("C V Holland", "601 Princes Hwy", "Rockdale", "LD6633"),
+'594000': ("Anthony Motors", "589 Princes Hwy", "Rockdale", "LD"),
 '5971695': ("Anonymous", "unknown", "Rockdale", "LD4367"),
 '5971711': ("Robinsons Motors", "328 Princes Hwy", "Rockdale", "LD109"),
 '5972966': ("St George Auctions", "301-307 Princes Hwy", "Rockdale", "LD7003"),
@@ -96,6 +98,7 @@ dealers_list = {
 '6029464': ("Morrie Muller", "unknown", "Liverpool", "LD2872"),
 '6029911': ("Provincial Motors Industries", "50 Hume Highway", "Liverpool", "LD619"),
 '6042881': ("CNR Wreckers", "Smithfield", "Smithfield", "LD"),
+'6230312': ("Lance Motors", "unknown", "St. Marys", "LD"),
 '6302611': ("Magnum Motors", "unknown", "unknown", "LD1656"),
 '6308033': ("Anonymous", "unknown", "unknown", "LD6504"),
 '6323111': ("Family Car Centre", "35-47 Woodville Rd", "Guildford", "LD7289"),
@@ -118,6 +121,7 @@ dealers_list = {
 '6378242': ("Ken Allen", "93-97 and 101 Parramatta Rd", "Granville", "LD"),
 '6376024': ("Anonymous", "Parrammata Rd", "unknown", "LD301"),
 '6376033': ("Anonymous", "Parrammata Rd", "unknown", "LD76"),
+'6376092': ("Howard Yip Motors", "54 Parrammata Rd", "Granville", "LD1548"),
 '6378008': ("Bryfield Autos", "160 Parramatta Rd", "Granville", "LD961"),
 '6381823': ("JJ Roberts", "1 Euston St", "Rydalmere", "LD2781"),
 '6396377': ("John Creasey Cars", "11-13 Old Northern Rd", "Baulkham Hills", "LD"),
@@ -162,17 +166,19 @@ dealers_list = {
 '7278877': ("Ken Sale Motors", "726 Woodville Rd", "Villawood", "LD813"),
 '7279544': ("Ken Sale Motors", "216 Hume Hwy", "Cabramatta", "LD5689"),
 '7361871': ("Anonymous", "unknown", "unknown", "LD23"),
-'7452677': ("Wagon Wheels", "408 Parramatta Rd", "Burwood", "LD228"),
-'7472525': ("Colin Still Family Cars", "356 Parramatta Rd", "Burwood", "LD2104"),
-'7476666': ("John Muirs Quality Corner", "275 Parramatta Rd", "Five Dock", "LD198"),
 '740536': ("Anonymous", "unknown", "unknown", "LD5414"),
+'740598': ("Wagon Wheels", "408 Parramatta Rd", "Burwood", "LD228"),
 '741618': ("Long & Cortese Motors", "420 Parramatta Rd", "Five Dock", "LD1993"),
 '741790': ("Anonymous", " Parramatta Rd", "Five Dock", "LD904"),
 '742332': ("John Muirs Quality Corner", "275 Parramatta Rd", "Five Dock", "LD198"),
-'7451255': ("Anonymous", "unknown", "unknown", "LD763"),
-'7452933': ("Cord Car Co", "320 Parramatta Rd", "Burwood", "LD4538"),
 '749704': ("Jubilee Motors address 2", "24 Parramatta Rd", "Croydon", "LD951"),
 '749705': ("Jubilee", "24 or 155 Parramatta Rd", "Five Dock", "LD951"),
+'7452677': ("Wagon Wheels", "408 Parramatta Rd", "Burwood", "LD228"),
+'7472112': ("Colin Still Family Cars", "356 Parramatta Rd", "Burwood", "LD2104"),
+'7472525': ("Colin Still Family Cars", "356 Parramatta Rd", "Burwood", "LD2104"),
+'7476666': ("John Muirs Quality Corner", "275 Parramatta Rd", "Five Dock", "LD198"),
+'7451255': ("Anonymous", "unknown", "unknown", "LD763"),
+'7452933': ("Cord Car Co", "320 Parramatta Rd", "Burwood", "LD4538"),
 '7591672': ("Anonymous", "unknown Rd.", "unknown", "LD"),
 '7591679': ("Greg Jackson Motors", "908 Canterbury Rd.", "Lakemba", "LD"),
 '7597291': ("Motor & Marine", "unknown Rd.", "unknown", "LD"),
@@ -184,6 +190,7 @@ dealers_list = {
 '7641152': ("Anonymous", " unknown", "Homebush", "LD937"),
 '7641175': ("Anonymous", " unknown", "Homebush", "LD249"),
 '7641199': ("Anonymous", " unknown", "Homebush", "LD4380"),
+'7644219': ("Anonymous", "unknown", "Homebush", "LD8364"),
 '7644308': ("Anonymous", "236 Parramatta Rd.", "Homebush", "LD3468"),
 '765666': ("Norm Saville Motors", "12 Parramatta Rd.", "Flemington", "LD111"),
 '766988': ("Larke Hoskins", "190 Parramatta Rd.", "Homebush", "LD405"),
@@ -197,11 +204,13 @@ dealers_list = {
 '7976333': ("Keith Graham's Auto Centre", "Ashfield", "Ashfield", "LD2237"),
 '7978044': ("Frank Crott Motors", "Ashfield", "Ashfield", "LD710"),
 '7976011': ("Renault Ashfield", "143 Parramatta Rd.", "Ashfield", "LD"),
+'7977311': ("Ken Mathews", "unknown Rd.", "unknown", "LD204"),
 '7977919': ("Anonymous", "unknown Rd.", "unknown", "LD2618"),
 '7979011': ("Motor Market Auction", "53 Parramatta Rd.", "Five Dock", "LD40"),
 '7980000': ("Geoghegans Recreational Vehicles", "253 Parramatta Rd.", "Haberfield", "LD188/LD7159"),
 '7980055': ("RC Phillips", "670 Parramatta Rd.", "Croydon", "LD"),
 '7984028': ("LERVAN'S", "277 Parramatta Rd.", "Haberfield", "LD2046"),
+'7984088': ("Austin Tauranac Motors", "249 Parramatta Rd.", "Haberfield", "LD2790"),
 '7984533': ("Clive Phillips", "688 Parramatta Rd.", "Croydon", "LD4807"),
 '7985666': ("Anonymous", "Parramatta Rd.", "none", "LD2946"),
 '7986644': ("RC Phillips", "25 Parramatta Rd.", "Five Dock", "LD165"),
@@ -248,6 +257,7 @@ dealers_list = {
 '943311': ("Also LD2403", "unknown", "unknown", "LD48"),
 '943185': ("unknown", "unknown", "unknown", "LD807"),
 '9491660': ("unknown", "unknown", "Balgowlah, Seaforth", "LD1024"),
+'9692555': ("Mosman Toyota", "501 Military Rd", "Mosman", "LD9241"),
 '9699513': ("Norman G Booth", "501 Military Rd", "Mosman", "LD"),
 '9773255': ("Kinsella-Nicholson", "259 Pittwater Rd", "Manly", "LD060"),
 '9973470': ("unknown", "unknown Rd", "Manly", "LD315"),
@@ -265,7 +275,10 @@ def main():
     for key in sorted(dealers_list):
        dealer_data = dealers_list[key]
        dealer_name = dealer_data[0]
-       print key, dealer_name
+       dealer_licence = dealer_data[3]
+       dealer_suburb = dealer_data[2]
+       dealer_address = dealer_data[1]
+       print key, dealer_name, dealer_address, dealer_suburb, dealer_licence
 
 
 
