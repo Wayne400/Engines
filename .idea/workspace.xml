@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="make improvements to V3">
+    <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="make improvements to V3 valiants">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dealers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dealers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Display_PLates_OOP_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Display_PLates_OOP_v2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dsplay_Plates_V3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dsplay_Plates_V3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Load_Plates_Rambler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Rambler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Load_Plates_Valiant.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Valiant.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSW_Plate_Info.py" beforeDir="false" afterPath="$PROJECT_DIR$/NSW_Plate_Info.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/advertisements_indexed.db" beforeDir="false" afterPath="$PROJECT_DIR$/advertisements_indexed.db" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
@@ -47,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Dsplay_Plates_V3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+            <state relative-caret-position="118">
+              <caret line="35" column="26" lean-forward="true" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -89,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Load_Plates_Valiant.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="34" column="84" lean-forward="true" selection-start-line="34" selection-start-column="84" selection-end-line="34" selection-end-column="84" />
+            <state relative-caret-position="93">
+              <caret line="43" column="13" lean-forward="true" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -364,13 +359,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546911100455</updated>
-    </task>
-    <task id="LOCAL-00003" summary="updated Rowley Motors and database">
-      <created>1546982456827</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1546982456827</updated>
     </task>
     <task id="LOCAL-00004" summary="updated Rowley Motors and database">
       <created>1547075619599</created>
@@ -708,7 +696,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565439392951</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="make improvements to V3 valiants">
+      <created>1566556258528</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1566556258536</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TodoView">
@@ -721,8 +716,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.14468727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24925596" />
@@ -791,7 +785,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added 12 Renaults , some dealer info" />
     <MESSAGE value="More Ramblers, now using Wheels photo database" />
     <MESSAGE value="updated Rowley Motors and database" />
     <MESSAGE value="added many mascot adds, changed printout for month" />
@@ -816,7 +809,8 @@
     <MESSAGE value="add ramblers wagons" />
     <MESSAGE value="add ramblers 1984" />
     <MESSAGE value="make improvements to V3" />
-    <option name="LAST_COMMIT_MESSAGE" value="make improvements to V3" />
+    <MESSAGE value="make improvements to V3 valiants" />
+    <option name="LAST_COMMIT_MESSAGE" value="make improvements to V3 valiants" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/plate_checker.py">
@@ -976,15 +970,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Load_Plates_Valiant.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="34" column="84" lean-forward="true" selection-start-line="34" selection-start-column="84" selection-end-line="34" selection-end-column="84" />
+        <state relative-caret-position="93">
+          <caret line="43" column="13" lean-forward="true" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Dsplay_Plates_V3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+        <state relative-caret-position="118">
+          <caret line="35" column="26" lean-forward="true" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

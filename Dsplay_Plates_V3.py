@@ -34,17 +34,20 @@ def check_production( make, model, sort1, sort2, sort3):
     if make == 'Rover':
         model_start_year = rover_model_start[model]
     if model == 'Valiant':
-      # if sort3 > '1961' and sort3 < '1981':
-      #  model_start_year = sort3
-      # else:
-        if sort1 == "none":
+        if sort3 > '5000' and sort3 != 'none':
+          sort3 = '19' + sort3[0:2]
+
+        if sort1 != "none":
             #print sort2 , target_plate
-            model_start_year = valiant_model_start[sort2]
-            #print model_start_year
-        else:
             model_start_year = valiant_series_start[sort1]
+            #print model_start_year
+        elif sort1 == "none"  and sort2 != "none":
+            model_start_year = valiant_model_start[sort2]
             #print sort1, target_plate
             #print model_start_year
+        elif sort1 == "none"  and sort2 == "none" and sort3 != "none":
+            model_start_year = sort3
+        #    print make, model, sort1, sort2, sort3, model_start_year,
 
     return  model_start_year
 
@@ -55,6 +58,8 @@ def check_plate_nsw3(target_plate, model_start_year):
                     '1964': 'DAA000', '1965': 'DOJ000', '1966': 'EAA000', '1967': 'EMA000',
                       '1968': 'AEZ000', '1969': 'BAJ000', '1970': 'BZZ999'}
 
+    #if target_plate == 'AFJ078':
+    #    print "i'm here"
     year_list = list(nsw_series_one.keys())
     nsw_list = 0
     model_start_plate = "AAA000"
@@ -70,20 +75,29 @@ def check_plate_nsw3(target_plate, model_start_year):
     # got to era 3
     if (re.match('[A-E][I|Q][A-Z]', target_plate)) or (re.match('[A-E][A-Z][I|Q]', target_plate)) and target_plate < nsw_era_4_start:
         nsw_list = 3
-    # got to era 4
+    # go to era 4
     if target_plate >= nsw_era_4_start and target_plate <= nsw_era_4_end:
         nsw_list = 4
+        #if target_plate == 'AFJ078':
+        #    print "i'm here  nsw = 4"
+
     # check the F era 1979/1980
     if target_plate >= nsw_era_5_start and target_plate <= nsw_era_5_end:
         nsw_list = 5
+        #if target_plate == 'AFJ078':
+        #    print "i'm here  nsw = 5"
+
     # check > 1981
     if target_plate >= nsw_era_6_start:
         nsw_list = 6
 
-    # go to era 1 after checking model introduction year
+    # go to era 1 after checking model introduction year , 1968 onwards is when repeats happened
     if (target_plate > model_start_plate and target_plate < nsw_era_2_end) \
-            and nsw_list == 0 and model_start_year < "1969":
+            and nsw_list == 0 and model_start_year < '1969':
         nsw_list = 1
+        #if target_plate == 'AFJ078':
+        #    print "i'm here  nsw = 1" , model_start_year, model_start_plate, nsw_era_2_end
+
     # go to era 2 , the reuse era
     if nsw_list == 0:
         nsw_list = 2
@@ -94,7 +108,7 @@ def check_plate_nsw3(target_plate, model_start_year):
 class RegoPlate(object):
 
     def __init__(self, title="", jurisdiction="NSW", make="", model="", model_level = "", model_code = "",
-                 colour="", ad_index="", trim_level="", capacity="none",  interior_trim = "none",
+                 colour="", ad_index="", trim_level="", capacity="none", body_style = "none", interior_trim = "none",
                  car_year="none", year_predict="1999", nsw_epoch=7):
 
         self.title = title
@@ -107,6 +121,7 @@ class RegoPlate(object):
         self.colour = colour
         self.interior_trim = interior_trim
         self.capacity = capacity
+        self.body_style = body_style
         self.ads_list = [ad_index]
         self.year = car_year
         self.year_predict = year_predict
@@ -157,6 +172,8 @@ class RegoPlate(object):
                 description = description + " " + self.model_level
             if self.trim_level != "none":
                 description = description + " " + self.trim_level
+            if self.body_style != "none" and self.body_style != "Sedan":
+                description = description + " " + self.body_style
 
 
 
@@ -211,7 +228,7 @@ class RegoPlate(object):
         if estimate_month == "none":
             estimate_month = ""
 
-        print ('{0:6} | {1:2} | {2:7} | {3:30} | {4:20}' \
+        print ('{0:6} | {1:2} | {2:7} | {3:40} | {4:30}' \
                .format(self.title, no_of_ads_string, estimate_month, description, colour_description ))
 
 
@@ -220,7 +237,7 @@ class Advertisement(object):
 
     def __init__(self, title="", jurisdiction="NSW", make="", model="", model_level = "", model_code = "",
                  colour="", phone1="", ad_index="", trim_level="", capacity="", interior_trim="none",
-                 car_year="none", month="None", ad_date="", year_predict="1999", suburb="none", price="$$$", milage="none"):
+                 car_year="none", month="none", ad_date="", year_predict="1999", suburb="none", price="$$$", milage="none"):
 
         self.title = title
         self.jurisdiction = jurisdiction
@@ -630,8 +647,9 @@ def main():
                 new_plate = RegoPlate(ad_index=ads_master_index, title=ads_record[1], jurisdiction=ads_record[2],
                                       make=ads_record[6], model_code=ads_record[20], trim_level=ads_record[17],
                                       model=ads_record[7], colour=ads_record[10],
-                                      car_year=ads_record[8], capacity=ads_record[9], model_level=ads_record[24],
-                                      interior_trim=ads_record[15])
+                                      car_year=ads_record[8], capacity=ads_record[9], body_style=ads_record[16],
+                                      model_level=ads_record[24], interior_trim=ads_record[15])
+
                 no_of_cars = no_of_cars +1
                 # new_plate.set_suburb(ads_record[11])
                 if new_plate.jurisdiction == "NSW":
