@@ -174,6 +174,8 @@ class RegoPlate(object):
                 description = description + " " + self.trim_level
             if self.body_style != "none" and self.body_style != "Sedan":
                 description = description + " " + self.body_style
+            if self.capacity != "none":
+                description = description + " " + self.capacity
 
 
 
@@ -236,7 +238,7 @@ class RegoPlate(object):
 class Advertisement(object):
 
     def __init__(self, title="", jurisdiction="NSW", make="", model="", model_level = "", model_code = "",
-                 colour="", phone1="", ad_index="", trim_level="", capacity="", interior_trim="none",
+                 colour="", phone1="", ad_index="", trim_level="", capacity="", body_style="", interior_trim="none",
                  car_year="none", month="none", ad_date="", year_predict="1999", suburb="none", price="$$$", milage="none"):
 
         self.title = title
@@ -249,6 +251,7 @@ class Advertisement(object):
         self.interior_trim = interior_trim
         self.colour = colour
         self.capacity = capacity
+        self.body_style = body_style
         self.phone1 = phone1
         self.index = ad_index
         self.year = car_year
@@ -287,6 +290,7 @@ class Advertisement(object):
 
         description = self.make
 
+
         if self.model == "Valiant":
             description = self.model
             if self.model_code != "none":
@@ -295,6 +299,10 @@ class Advertisement(object):
                 description = description + " " + self.model_level
             if self.trim_level != "none":
                 description = description + " " + self.trim_level
+            if self.body_style != "none" and self.body_style != "Sedan":
+                description = description + " " + self.body_style
+            if self.capacity != "none":
+                description = description + " " + self.capacity
 
 
         if self.model == "P76":
@@ -635,8 +643,8 @@ def main():
             new_ad = Advertisement(ad_index=ads_master_index, title=ads_record[1], jurisdiction=ads_record[2],
                                   make=ads_record[6], model_code=ads_record[20], trim_level=ads_record[17],
                                   model=ads_record[7], colour=ads_record[10], phone1=ads_record[11],
-                                  car_year=ads_record[8], capacity=ads_record[9],model_level=ads_record[24],
-                                  interior_trim=ads_record[15],
+                                  car_year=ads_record[8], capacity=ads_record[9], body_style=ads_record[16],
+                                  model_level=ads_record[24], interior_trim=ads_record[15],
                                   month=ads_record[21], ad_date=ads_record[3], price=ads_record[18],milage=ads_record[19] )
             new_ad.set_suburb()
             ads_dict[ads_master_index] = new_ad
@@ -703,19 +711,14 @@ def main():
               plate_selected = {}
               if plate_search == "number" or plate_search == "n":
                   number_search = raw_input("Enter Phone number: ")
-                  # print "wally"
-                  # for dealer_no in dealers:
                   if number_search in dealers_list:
                           dealer_data = dealers_list[number_search]
-                          #key = number_search
-#                  for key in sorted(dealers_list):
-#                      if number_search == key:
-                          #dealer_data = dealers_list[key]
+                          dealer_street = dealer_data[1]
                           dealer_licence = dealer_data[3]
                           dealer_name = dealer_data[0]
                           dealer_suburb = dealer_data[2]
                           if dealer_suburb != "unknown":
-                              print number_search, dealer_name, dealer_licence, dealer_suburb
+                              print dealer_name, dealer_street, dealer_suburb, dealer_licence
                           else:
                               print number_search, dealer_name, dealer_licence
                   for ad2 in ads_list:
