@@ -1,40 +1,15 @@
 
 
 
-
-
-
 import sqlite3
 
 def get_rambler_1():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
     adverts = [
-("Classic","1980-09-13","Classic","1962","none","6cyl","side valve","none","6672484","$200","none","none"),
-("EWK029","1980-09-13","Rambler","1963","none","none","unknown","none","6488211","auction","none","none"),
-("JLT847","1980-09-13","Hornet","1974","none","none","unknown","none","4513307","$2500","55000mis","July"),
-("Matador","1980-09-13","Matador","1970","none","360","unknown","none","5162279","$1490","none","none"),
-("JNO072","1980-09-20","Javelin","none","AMX","none","Extensive front damage","none","6376781","$1500","none","April"),
-("Matador","1980-09-20","Matador","1970","none","360","unknown","none","5162279","$1490","none","none"),
-("JPB162","1980-09-27","Classic","none","660","none","unknown","none","5879997","$1250","none","August"),
-("JLM339","1980-09-27","Hornet","1976","none","none","unknown","none","5295346","$3700","none","none"),
-("KSK805","1980-10-04","Hornet","none","none","6-cyl","unknown","none","6672484","$1495","none","August"),
-("KWE403","1980-10-04","Javelin","none","none","390","Red","Black","6672484","none","none","none"),
-("GEU732","1980-10-04","Matador","1971","none","none","unknown","none","5162279","$1000","none","October"),
-("GUY763","1980-10-04","Matador","1971","none","none","unknown","none","5162279","$1200","none","October"),
-("JRZ132","1980-10-11","American","none","none","none","unknown","none","5971695","$1990","38000mis","none"),
-("JTO658","1980-10-11","Matador","1972","none","none","unknown","none","4563749","$2000","none","none"),
-("JKH208","1980-10-11","Rebel","1969","none","V8","unknown","none","539384","$700","none","January"),
-("JPB162","1980-10-18","Classic","none","660","none","unknown","none","5879997","$1250","none","none"),
-("KWE403","1980-10-18","Javelin","none","none","390","Red","Black","6672484","$5900","55000mis","none"),
-("KYH099","1980-10-18","Javelin","none","none","343","White","Black","812281","$5950","52000mis","none"),
-("JCF700","1980-10-18","Matador","1977","none","none","White","Burgundy","9382255","$4700","none","none"),
-("JTO658","1980-10-18","Matador","1972","none","none","unknown","none","4563749","$1850","none","none"),
-("AGI601","1980-10-25","Ambassador","none","none","360","unknown","none","5871154","$1495","none","March"),
-("KVA717","1980-10-25","Javelin","1970","none","none","unknown","none","812281","$6995","none","none"),
-("KWE403","1980-10-25","Javelin","none","none","390","Orange","Black","6672484","$5900","55000","none"),
-("HCH037","1980-10-25","Matador","none","none","none","Blue","Bone","590501","$3495","none","none"),
-("JCF700","1980-10-25","Matador","1977","none","none","White","Burgundy","9382255","$4990","none","none"),
-("JTO658","1980-10-25","Matador","1972","none","none","unknown","none","4563749","$1700","none","none"),
-    ]
+
+("DNV490","1975-09-13","Classic","1965","660","V8","unknown","none","St. Marys","$875","none","none"),
+("GIT625","1975-09-13","Hornet","1971","none","none","Vinyl Top","none","705305","$3300","none","none"),
+
+      ]
 
     return adverts
 
@@ -42,7 +17,7 @@ def get_rambler_1():   # creating a list of tuples representing individual ads i
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 3224
+    master_index1 = 3863
     for column in ads:
         print column
         print column[0], column[11]

@@ -189,8 +189,11 @@ class RegoPlate(object):
         if estimate_month == "none":
             estimate_month = ""
 
-        print ('{0:6} | {1:2} | {2:4} | {3:7} | {4:9} | {5:20} | {6:5} |{7:20} | {8:11} | {9:30} | {10:10} | {11:4}| {12:4}' \
-               .format(self.title, no_of_ads, self.year, estimate_month, self.month, self.model, self.price, self.colour, self.ad_date,\
+ #       print ('{0:6} | {1:2} | {2:4} | {3:7} | {4:9} | {5:20} | {6:5} |{7:20} | {8:11} | {9:30} | {10:10} | {11:4}| {12:4}' \
+  #             .format(self.title, no_of_ads, self.year, estimate_month, self.month, self.model, self.price, self.colour, self.ad_date,\
+   #                    self.suburb, self.phone1, self.make, self.index ))
+        print ('{0:6} | {1:2} | {2:4} | {3:20} | {4:5} |{5:20} | {6:11} | {7:30} | {8:10} | {9:4}| {10:4}' \
+               .format(self.title, no_of_ads, self.year, self.model, self.price, self.colour, self.ad_date,\
                        self.suburb, self.phone1, self.make, self.index ))
 
 
@@ -305,10 +308,13 @@ class Advertisement(object):
         if estimate_month == "none":
             estimate_month = ""
 
-        print ('{0:6} | {1:2} | {2:4} | {3:7} | {4:9} | {5:20} | {6:5} |{7:20} | {8:11} | {9:30} | {10:10} | {11:4}| {12:4}' \
-               .format(self.title, no_of_ads, self.year, estimate_month, self.month, self.model, self.price, self.colour, self.ad_date,\
-                       self.suburb, self.phone1, self.make, self.index ))
+#        print ('{0:6} | {1:2} | {2:4} | {3:7} | {4:9} | {5:20} | {6:5} |{7:20} | {8:11} | {9:30} | {10:10} | {11:4}| {12:4}' \
+#              .format(self.title, no_of_ads, self.year, estimate_month, self.month, self.model, self.price, self.colour, self.ad_date,\
+#                      self.suburb, self.phone1, self.make, self.index ))
 
+        print ('{0:6} | {1:2} | {2:4} | {3:20} | {4:5} |{5:20} | {6:11} | {7:30} | {8:10} | {9:4}| {10:4}' \
+               .format(self.title, no_of_ads, self.year, self.model, self.price, self.colour, self.ad_date,\
+                       self.suburb, self.phone1, self.make, self.index ))
 
 
 

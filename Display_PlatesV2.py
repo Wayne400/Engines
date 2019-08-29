@@ -372,18 +372,8 @@ def main():
             ad_index = ads_index_list[0]  ### temporary
             #          print x, nsw_dummy_object[1]
             if x == int(nsw_dummy_object[1]):  # there are 4 nsw plate lists
+                plate_stored.print_plate()
   #              print ad_index
-
-  if pick_make == "ra":
-      print_rambler(search_index=ad_index, sql_data=ads_table, total_no_of_ads=no_of_ads,
-                    year_estimate=nsw_dummy_object[0])
-  elif pick_make == "re":
-      print_renault_nsw(search_index=ad_index, sql_data=ads_table, total_no_of_ads=no_of_ads,
-                        year_estimate=nsw_dummy_object[0])
-  elif pick_make == "fo":
-      print_ford(search_index=ad_index, sql_data=ads_table, total_no_of_ads=no_of_ads)
-  else:
-      print "ouch"
 
 
 if __name__ == '__main__':
