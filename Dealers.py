@@ -44,7 +44,7 @@ dealers_list = {
 '4495573': ("Pymble Prestige Cars", "none", "Pymble", "LD2060"),
 '463382': ("Anonymous", "unknown", "Linfield, Roseville", "LD295"),
 '480213': ("John A Gilbert(N. Side)", "90 Pacific Hwy.", "Waitara", "LD195"),
-'4872044': ("Motor Fair - Chrysler", "64-72 Pacific Highway", "Waitara", "LD"),
+'4872044': ("Motor Fair - Chrysler", "64-72 Pacific Highway", "Waitara", "LD193"),
 '4988866': ("Alto Ford", "Pacific Hwy.", "Gordon", "LD0071"),
 
 
@@ -106,6 +106,8 @@ dealers_list = {
 '6042881': ("CNR Wreckers", "Smithfield", "Smithfield", "LD"),
 '6220400': ("Noel Schmutter Sales", "145 Main St.", "Blacktown", "LD"),
 '6230312': ("Lance Motors", "unknown", "St. Marys", "LD"),
+'6235337': ("Anonymous", "unknown", "St. Marys", "LD3069"),
+'6236054': ("Anonymous", "unknown", "St. Marys", "LD3069"),
 '6302611': ("Magnum Motors", "unknown", "unknown", "LD1656"),
 '6307303': ("Maypow Motors", "Church and Ferris St", "North Parramatta", "LD"),
 '6308033': ("Anonymous", "unknown", "unknown", "LD6504"),
@@ -222,7 +224,7 @@ dealers_list = {
 '7984028': ("LERVAN'S", "277 Parramatta Rd.", "Haberfield", "LD2046"),
 '7984088': ("Austin Tauranac Motors", "249 Parramatta Rd.", "Haberfield", "LD2790"),
 '7984533': ("Clive Phillips", "688 Parramatta Rd.", "Croydon", "LD4807"),
-'7985666': ("Midland Chrysler", "Parramatta Rd.", "none", "LD2946"),
+'7985666': ("Milland Chrysler", "636 Parramatta Rd.", "Croydon", "LD2946"),
 '7986644': ("RC Phillips", "25 Parramatta Rd.", "Five Dock", "LD165"),
 '7986888': ("Ron Hodson", "157 Parramatta Rd.", "Ashfield", "LD"),
 '7989993': ("Apex Motors", "unknown", "unknown", "LD1184"),

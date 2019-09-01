@@ -8,7 +8,7 @@ from NSW_Plate_Info import get_month
 
 
 
-def check_production( make, model, sort1, sort2, sort3):
+def check_production( make, model, sort1, sort2, sort3 , sort4):
     if model == 'none' and make != 'Chrysler':
         model = "RXX"
     renault_model_start = {'RXX': '1960','R4': '1958', 'R8': '1961','Gordini': '1963', 'R10': '1965', 'R10S': '1970','R12': '1969','R16':'1965', 'R15': '1971','R17':'1973'}
@@ -19,8 +19,10 @@ def check_production( make, model, sort1, sort2, sort3):
     rambler_model_start = {'Rambler': '1960','Ambassador': '1960', 'Hornet': '1970','Gremlin': '1970',\
                            'Rebel': '1967', 'Javelin': '1969', 'AMX': '1969', 'Matador':'1971',\
                            'American':'1963', 'Classic':'1961', 'Marlin':'1964', 'X-Coupe':'1975', 'RXX':'1960'}
-    valiant_series_start = {'RXX': '1960', 'R': '1962', 'S': '1962', 'AP5': '1963', 'AP6': '1965', 'VC': '1966', 'VE': '1967', \
-                            'VF':'1969', 'VG': '1970', 'VH':'1971', 'VJ':'1973', 'VK': '1975', 'CL':'1976', 'CM':'1978','CH':'1973','CJ':'1973', 'CK':'1975'}
+    valiant_series_start = {'RXX': '1960', 'R': '1960', 'S': '1961', 'AP5': '1962', 'AP6': '1964',
+                            'VC': '1965', 'VE': '1966', \
+                            'VF':'1969', 'VG': '1970', 'VH':'1971', 'VJ':'1973', 'VK': '1975',
+                            'CL':'1976', 'CM':'1978','CH':'1973','CJ':'1973', 'CK':'1975'}
     valiant_model_start = {'Utility':'1965', 'Regal': '1963', 'Charger': '1971', 'VIP': '1967', 'Safari': '1964', 'Ranger': '1971', \
                             'Chrysler':'1972', 'Valiant': '1962', 'Pacer':'1969', 'Hardtop':'1969','Wagon':'1966' }
 
@@ -34,32 +36,32 @@ def check_production( make, model, sort1, sort2, sort3):
     if make == 'Rover':
         model_start_year = rover_model_start[model]
     if model == 'Valiant':
+        # print "checking valiants" , sort1, sort2, sort3
         if sort3 > '5000' and sort3 != 'none':
           sort3 = '19' + sort3[0:2]
 
         if sort1 != "none":
-            #print sort2 , target_plate
             model_start_year = valiant_series_start[sort1]
-            #print model_start_year
+            # print "case 1" , model_start_year
         elif sort1 == "none"  and sort2 != "none":
             model_start_year = valiant_model_start[sort2]
-            #print sort1, target_plate
-            #print model_start_year
+            # print "case 2" , model_start_year
         elif sort1 == "none"  and sort2 == "none" and sort3 != "none":
             model_start_year = sort3
-        #    print make, model, sort1, sort2, sort3, model_start_year,
+            # print sort4, "case 3" , model_start_year,
 
     return  model_start_year
 
 
 def check_plate_nsw3(target_plate, model_start_year):
 
-    nsw_series_one = {'1955': 'AUG000', '1956': 'BCC000', '1957': 'BKC000', '1958': 'BSA000', '1959': 'BWA000', '1960': 'CAA000', '1961': 'CLL000', '1962': 'CSA000', '1963' : 'DAA000',
+    nsw_series_one = {'1955': 'AUG000', '1956': 'BCC000', '1957': 'BKC000', '1958': 'BSA000', '1959': 'BWA000',
+                      '1960': 'CAA000', '1961': 'CLL000', '1962': 'CSA000', '1963' : 'DAA000',
                     '1964': 'DAA000', '1965': 'DOJ000', '1966': 'EAA000', '1967': 'EMA000',
                       '1968': 'AEZ000', '1969': 'BAJ000', '1970': 'BZZ999'}
 
-    #if target_plate == 'AFJ078':
-    #    print "i'm here"
+    if target_plate == 'xDJM017':
+        print "i'm here start"
     year_list = list(nsw_series_one.keys())
     nsw_list = 0
     model_start_plate = "AAA000"
@@ -78,14 +80,14 @@ def check_plate_nsw3(target_plate, model_start_year):
     # go to era 4
     if target_plate >= nsw_era_4_start and target_plate <= nsw_era_4_end:
         nsw_list = 4
-        #if target_plate == 'AFJ078':
-        #    print "i'm here  nsw = 4"
+        if target_plate == 'xDJM017':
+            print "i'm here  nsw = 4"
 
     # check the F era 1979/1980
     if target_plate >= nsw_era_5_start and target_plate <= nsw_era_5_end:
         nsw_list = 5
-        #if target_plate == 'AFJ078':
-        #    print "i'm here  nsw = 5"
+        if target_plate == 'xDJM017':
+            print "i'm here  nsw = 5"
 
     # check > 1981
     if target_plate >= nsw_era_6_start:
@@ -95,8 +97,8 @@ def check_plate_nsw3(target_plate, model_start_year):
     if (target_plate > model_start_plate and target_plate < nsw_era_2_end) \
             and nsw_list == 0 and model_start_year < '1969':
         nsw_list = 1
-        #if target_plate == 'AFJ078':
-        #    print "i'm here  nsw = 1" , model_start_year, model_start_plate, nsw_era_2_end
+        if target_plate == 'xDJM017':
+            print "i'm here  nsw = 1" , model_start_year, model_start_plate, nsw_era_2_end
 
     # go to era 2 , the reuse era
     if nsw_list == 0:
@@ -662,7 +664,7 @@ def main():
                 # new_plate.set_suburb(ads_record[11])
                 if new_plate.jurisdiction == "NSW":
                   if not re.match('^[A-Z][A-Z][0-9]{3}', plate):
-                    return_above = check_production( make=ads_record[6], model=ads_record[7], sort1=ads_record[20],sort2=ads_record[24], sort3=ads_record[8])
+                    return_above = check_production( make=ads_record[6], model=ads_record[7], sort1=ads_record[20],sort2=ads_record[24], sort3=ads_record[8], sort4=ads_record[1])
                     nsw_list = check_plate_nsw3(target_plate=ads_record[1], model_start_year=return_above)
                     new_plate.set_year_predict("1999")
                     new_plate.set_nsw_epoch(nsw_list)
