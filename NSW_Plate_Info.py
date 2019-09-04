@@ -387,7 +387,7 @@ def get_month(target_plate):
 def main():
 
     nsw_plate_search = get_month("HXX979")
-    print nsw_plate_search
+    print (nsw_plate_search)
 
 
 

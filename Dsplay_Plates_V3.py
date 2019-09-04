@@ -61,7 +61,7 @@ def check_plate_nsw3(target_plate, model_start_year):
                       '1968': 'AEZ000', '1969': 'BAJ000', '1970': 'BZZ999'}
 
     if target_plate == 'xDJM017':
-        print "i'm here start"
+        print ("i'm here start")
     year_list = list(nsw_series_one.keys())
     nsw_list = 0
     model_start_plate = "AAA000"
@@ -81,13 +81,13 @@ def check_plate_nsw3(target_plate, model_start_year):
     if target_plate >= nsw_era_4_start and target_plate <= nsw_era_4_end:
         nsw_list = 4
         if target_plate == 'xDJM017':
-            print "i'm here  nsw = 4"
+            print ("i'm here  nsw = 4")
 
     # check the F era 1979/1980
     if target_plate >= nsw_era_5_start and target_plate <= nsw_era_5_end:
         nsw_list = 5
         if target_plate == 'xDJM017':
-            print "i'm here  nsw = 5"
+            print ("i'm here  nsw = 5")
 
     # check > 1981
     if target_plate >= nsw_era_6_start:
@@ -98,7 +98,7 @@ def check_plate_nsw3(target_plate, model_start_year):
             and nsw_list == 0 and model_start_year < '1969':
         nsw_list = 1
         if target_plate == 'xDJM017':
-            print "i'm here  nsw = 1" , model_start_year, model_start_plate, nsw_era_2_end
+            print ("i'm here  nsw = 1" , model_start_year, model_start_plate, nsw_era_2_end)
 
     # go to era 2 , the reuse era
     if nsw_list == 0:
@@ -365,19 +365,19 @@ def get_sql_data(car_model_list, **kwargs):
     #  car_model_string = "car_model = '{}'".format(car_model_list[0])
     sql = "select * from adverts where {0} and jurisdiction = '{1}'  and car_make = '{2}'".format(
         car_model_or_string, jurisdiction, car_make)
-    print sql
+    print (sql)
 
     try:
         conn = sqlite3.connect(connectstring)
         cursor = conn.cursor()
-        print 'connected!' + connectstring
+        print ('connected!' + connectstring)
         results = cursor.execute(sql)
         ads = results.fetchall()
         conn.close()
         return ads
 
     except:
-        print "I am unable to connect to the database"
+        print ("I am unable to connect to the database")
         conn.close()
 
 def get_sql_data_rambler(car_model_list, **kwargs):
@@ -397,19 +397,19 @@ def get_sql_data_rambler(car_model_list, **kwargs):
     #  car_model_string = "car_model = '{}'".format(car_model_list[0])
       sql = "select * from adverts where {} and jurisdiction = '{}'".format(
         car_model_or_string, jurisdiction, car_make)
-    print sql
+    print (sql)
 
     try:
         conn = sqlite3.connect(connectstring)
         cursor = conn.cursor()
-        print 'connected!' + connectstring
+        print ('connected!' + connectstring)
         results = cursor.execute(sql)
         ads = results.fetchall()
         conn.close()
         return ads
 
     except:
-        print "I am unable to connect to the database"
+        print ("I am unable to connect to the database")
         conn.close()
 
 
@@ -429,19 +429,19 @@ def get_sql_data_mascot(car_model_list, **kwargs):
     #  car_model_string = "car_model = '{}'".format(car_model_list[0])
     sql = "select * from adverts where {} and jurisdiction = '{}' and car_make = '{}' and phone1 = '6672484'".format(
         car_model_or_string, jurisdiction, car_make)
-    print sql
+    print (sql)
 
     try:
         conn = sqlite3.connect(connectstring)
         cursor = conn.cursor()
-        print 'connected!' + connectstring
+        print ('connected!' + connectstring)
         results = cursor.execute(sql)
         ads = results.fetchall()
         conn.close()
         return ads
 
     except:
-        print "I am unable to connect to the database"
+        print ("I am unable to connect to the database")
         conn.close()
 
 
@@ -460,19 +460,19 @@ def get_sql_data_series(car_model_list, **kwargs):
     #  car_model_string = "car_model = '{}'".format(car_model_list[0])
     sql = "select * from adverts where {} and jurisdiction = '{}' and car_make = '{}'".format(
         car_model_or_string, jurisdiction, car_make)
-    print sql
+    print (sql)
 
     try:
         conn = sqlite3.connect(connectstring)
         cursor = conn.cursor()
-        print 'connected!' + connectstring
+        print ('connected!' + connectstring)
         results = cursor.execute(sql)
         ads = results.fetchall()
         conn.close()
         return ads
 
     except:
-        print "I am unable to connect to the database"
+        print ("I am unable to connect to the database")
         conn.close()
 
 
@@ -484,19 +484,19 @@ def get_sql_data_all( **kwargs):
    #     sql = "select * from adverts"
     sql = "select * from adverts where jurisdiction = '{}' ".format(jurisdiction)
 
-    print sql
+    print (sql)
 
     try:
         conn = sqlite3.connect(connectstring)
         cursor = conn.cursor()
-        print 'connected!' + connectstring
+        print ('connected!' + connectstring)
         results = cursor.execute(sql)
         ads = results.fetchall()
         conn.close()
         return ads
 
     except:
-        print "I am unable to connect to the database"
+        print ("I am unable to connect to the database")
         conn.close()
 
 
@@ -507,246 +507,261 @@ def get_sql_data_state( **kwargs):
    #     sql = "select * from adverts"
     sql = "select * from adverts where jurisdiction = '{}' ".format(jurisdiction)
 
-    print sql
+    print (sql)
 
     try:
         conn = sqlite3.connect(connectstring)
         cursor = conn.cursor()
-        print 'connected!' + connectstring
+        print ('connected!' + connectstring)
         results = cursor.execute(sql)
         ads = results.fetchall()
         conn.close()
         return ads
 
     except:
-        print "I am unable to connect to the database"
+        print ("I am unable to connect to the database")
         conn.close()
 
 
-
 def main():
-  plate_list = []
-  ads_list = []
+    start_again = True
+    while start_again:
+        print("welcome to the number Australian plate anaylser")
+        plate_list = []
+        ads_list = []
 
-  go_again = 'y'
-  pick_make = 'none'
-  while go_again != 'n':
-    while True:
-        Make_list = ["Rambler", "Renault", "Peugeot", "Rover", "Ford", "Mascot", "Valiant", "Leyland"]
-        print Make_list
-        pick_make = "Wally"
-        pick_make = raw_input("Car Make?")
-        print pick_make
-        print go_again
-        if pick_make == "ra" or pick_make == "Rambler":
-            Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
-                            "AMX", "Marlin", "X-Coupe","Wagon"]
-            print Rambler_list
-            pick_model = raw_input("please enter Rambler model: ")
-         #   if pick_model == "all":
-         #       Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
-         #                   "AMX", "Marlin", "none","X-Coupe", "Rambler"]
-            if pick_model in Rambler_list:
-                Rambler_list = [pick_model]
+        go_again = 'y'
+        pick_make = 'none'
+        while go_again != 'n':
+            while True:
+                Make_list = ["Rambler", "Renault", "Peugeot", "Rover", "Ford", "Mascot", "Valiant", "Leyland"]
+                print(Make_list)
+                pick_make = "Wally"
+                pick_make = input("Car Make?")
+                print(pick_make)
+                print(go_again)
+                if pick_make == "ra" or pick_make == "Rambler":
+                    Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin",
+                                    "American",
+                                    "AMX", "Marlin", "X-Coupe", "Wagon"]
+                    print(Rambler_list)
+                    pick_model = input("please enter Rambler model: ")
+                    #   if pick_model == "all":
+                    #       Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
+                    #                   "AMX", "Marlin", "none","X-Coupe", "Rambler"]
+                    if pick_model in Rambler_list:
+                        Rambler_list = [pick_model]
 
+                    ads_table = get_sql_data_rambler(car_model_list=Rambler_list, car_make="Rambler",
+                                                     connectstring="advertisements_indexed.db",
+                                                     jurisdiction="NSW")
+                    break
+                if pick_make == "Mascot":
+                    Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin",
+                                    "American",
+                                    "AMX", "Marlin", "X-Coupe", "Wagon"]
+                    print(Rambler_list)
+                    pick_model = input("please enter Rambler model: ")
+                    if pick_model == "all":
+                        Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin",
+                                        "American",
+                                        "AMX", "Marlin", "none", "X-Coupe"]
+                    if pick_model in Rambler_list:
+                        Rambler_list = [pick_model]
+                    ads_table = get_sql_data_mascot(car_model_list=Rambler_list, car_make="Rambler",
+                                                    connectstring="advertisements_indexed.db",
+                                                    jurisdiction="NSW")
+                    break
 
-            ads_table = get_sql_data_rambler(car_model_list=Rambler_list, car_make="Rambler", connectstring="advertisements_indexed.db",
-                                     jurisdiction="NSW")
-            break
-        if  pick_make == "Mascot":
-            Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
-                            "AMX", "Marlin", "X-Coupe","Wagon"]
-            print Rambler_list
-            pick_model = raw_input("please enter Rambler model: ")
-            if pick_model == "all":
-                Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
-                            "AMX", "Marlin", "none","X-Coupe"]
-            if pick_model in Rambler_list:
-                Rambler_list = [pick_model]
-            ads_table = get_sql_data_mascot(car_model_list=Rambler_list, car_make="Rambler", connectstring="advertisements_indexed.db",
-                                     jurisdiction="NSW")
-            break
+                elif pick_make == "fo" or pick_make == "Ford":
+                    Ford_list = ["Falcon", "Cortina", "Capri"]
+                    ads_table = get_sql_data(car_model_list=Ford_list, car_make="Ford",
+                                             connectstring="advertisements_indexed.db",
+                                             jurisdiction="NSW")
+                    break
+                elif pick_make == "re" or pick_make == "Renault":
+                    Renault_list = ["R4", "R8", "R10", "R12", "R16", "R10S", "10S", "R15", "R17", "RXX"]
+                    print(Renault_list)
+                    pick_model = input("please enter Renault model: ")
+                    if pick_model != "all":
+                        Renault_list = [pick_model]
+                    ads_table = get_sql_data(car_model_list=Renault_list, car_make="Renault",
+                                             connectstring="advertisements_indexed.db",
+                                             jurisdiction="NSW")
+                    break
+                elif pick_make == "pe" or pick_make == "Peugeot":
+                    Peugeot_list = ["403", "403B", "404", "504"]
+                    print(Peugeot_list)
+                    pick_model = input("please enter Peugeot model: ")
+                    if pick_model == "all":
+                        Peugeot_list = ["403", "403B", "404", "504", "none"]
+                    ads_table = get_sql_data(car_model_list=Peugeot_list, car_make="Peugeot",
+                                             connectstring="advertisements_indexed.db",
+                                             jurisdiction="NSW")
+                    break
+                elif pick_make == "ro" or pick_make == "Rover":
+                    Rover_list = ["105R", "2000", "2000TC", "3500", "P5B", "P5", "P5Bcoupe", "P5coupe", "3L", "100"]
+                    print(Rover_list)
+                    pick_model = input("please enter Rover model: ")
+                    if pick_model != "all":
+                        Rover_list = [pick_model]
+                    else:
+                        Rover_list = ["75", "90", "105R", "2000", "2000TC", "3500", "P5B", "P5", "P5Bcoupe", "P5coupe",
+                                      "3L", "100", "none"]
+                    ads_table = get_sql_data(car_model_list=Rover_list, car_make="Rover",
+                                             connectstring="advertisements_indexed.db",
+                                             jurisdiction="NSW")
+                    break
+                elif pick_make == "Leyland":
+                    Leyland_list = ["P76"]
+                    ads_table = get_sql_data(car_model_list=Leyland_list, car_make="Leyland",
+                                             connectstring="advertisements_indexed.db",
+                                             jurisdiction="NSW")
+                    break
+                elif pick_make == "val" or pick_make == "Valiant":
+                    Valiant_list = ["R", "S", "AP5", "AP6", "VC", "VE", "VF", "VG", "VH", "VJ", "VK", "CL", "CM"]
+                    print(Valiant_list)
+                    pick_model = input("please enter Valiant series: ")
+                    if pick_model != "all":
+                        Valiant_list = [pick_model]
+                    else:
+                        Valiant_list = ["none", "R", "S", "AP5", "AP6", "VC", "VE", "VF", "VG", "VH", "VJ", "VK", "CL",
+                                        "CM"]
 
-        elif pick_make == "fo" or pick_make == "Ford":
-            Ford_list = ["Falcon", "Cortina", "Capri"]
-            ads_table = get_sql_data(car_model_list=Ford_list, car_make="Ford", connectstring="advertisements_indexed.db",
-                                     jurisdiction="NSW")
-            break
-        elif pick_make == "re" or pick_make == "Renault":
-            Renault_list = ["R4", "R8", "R10", "R12", "R16", "R10S", "10S", "R15", "R17", "RXX"]
-            print Renault_list
-            pick_model = raw_input("please enter Renault model: ")
-            if pick_model != "all":
-                Renault_list = [pick_model]
-            ads_table = get_sql_data(car_model_list=Renault_list, car_make ="Renault", connectstring="advertisements_indexed.db",
-                                   jurisdiction="NSW")
-            break
-        elif pick_make == "pe" or pick_make == "Peugeot":
-            Peugeot_list = ["403", "403B", "404", "504"]
-            print Peugeot_list
-            pick_model = raw_input("please enter Peugeot model: ")
-            if pick_model == "all":
-                Peugeot_list = ["403", "403B", "404", "504", "none"]
-            ads_table = get_sql_data(car_model_list=Peugeot_list, car_make ="Peugeot", connectstring="advertisements_indexed.db",
-                                   jurisdiction="NSW")
-            break
-        elif pick_make == "ro" or pick_make == "Rover":
-            Rover_list = ["105R", "2000", "2000TC", "3500", "P5B", "P5", "P5Bcoupe", "P5coupe","3L", "100"]
-            print Rover_list
-            pick_model = raw_input("please enter Rover model: ")
-            if pick_model != "all":
-                Rover_list = [pick_model]
-            else:
-                Rover_list = ["75","90","105R", "2000", "2000TC", "3500", "P5B", "P5", "P5Bcoupe", "P5coupe","3L", "100", "none"]
-            ads_table = get_sql_data(car_model_list=Rover_list, car_make ="Rover", connectstring="advertisements_indexed.db",
-                                   jurisdiction="NSW")
-            break
-        elif pick_make == "Leyland":
-            Leyland_list = ["P76"]
-            ads_table = get_sql_data(car_model_list=Leyland_list, car_make ="Leyland", connectstring="advertisements_indexed.db",
-                                   jurisdiction="NSW")
-            break
-        elif pick_make == "val" or pick_make == "Valiant":
-            Valiant_list = ["R", "S", "AP5", "AP6", "VC", "VE", "VF", "VG", "VH", "VJ", "VK", "CL", "CM"]
-            print Valiant_list
-            pick_model = raw_input("please enter Valiant series: ")
-            if pick_model != "all":
-                Valiant_list = [pick_model]
-            else:
-                Valiant_list = ["none","R", "S", "AP5", "AP6", "VC", "VE", "VF", "VG", "VH", "VJ", "VK", "CL", "CM"]
+                    ads_table = get_sql_data_series(car_model_list=Valiant_list, car_make="Chrysler",
+                                                    connectstring="advertisements_indexed.db",
+                                                    jurisdiction="NSW")
+                    break
 
-            ads_table = get_sql_data_series(car_model_list=Valiant_list, car_make="Chrysler", connectstring="advertisements_indexed.db",
-                                   jurisdiction="NSW")
-            break
+                elif pick_make == "all":
+                    ads_table = get_sql_data_all(connectstring="advertisements_indexed.db", jurisdiction="NSW")
+                    break
+                elif pick_make == "NSW" or pick_make == "VIC" or pick_make == "QLD":
+                    ads_table = get_sql_data_state(connectstring="advertisements_indexed.db", jurisdiction=pick_make)
+                    break
+                elif pick_make == 'x':
+                    break
+                else:
+                    print("try again")
+            print("finished sql query")
+            ###### process data but can gather more
 
-        elif pick_make == "all":
-            ads_table = get_sql_data_all( connectstring="advertisements_indexed.db", jurisdiction="NSW")
-            break
-        elif pick_make == "NSW" or pick_make == "VIC" or pick_make == "QLD":
-            ads_table = get_sql_data_state( connectstring="advertisements_indexed.db",jurisdiction=pick_make )
-            break
-        elif pick_make == 'x':
-            break
-        else:
-            print "try again"
-    print "finished sql query"
-    ###### process data but can gather more
+            plate_list_index = []
+            no_of_cars = 0
+            already_found = 0
+            ads_dict = {}
+            for ads_record in ads_table:  # we make a lists of database indexes for distinct plate numbers, insert into dictionary
+                plate = str(ads_record[1])
+                ads_master_index = ads_record[0]
+                if ads_master_index not in ads_list:
+                    ads_list.append(ads_master_index)
+                    new_ad = Advertisement(ad_index=ads_master_index, title=ads_record[1], jurisdiction=ads_record[2],
+                                           make=ads_record[6], model_code=ads_record[20], trim_level=ads_record[17],
+                                           model=ads_record[7], colour=ads_record[10], phone1=ads_record[11],
+                                           car_year=ads_record[8], capacity=ads_record[9], body_style=ads_record[16],
+                                           model_level=ads_record[24], interior_trim=ads_record[15],
+                                           month=ads_record[21], ad_date=ads_record[3], price=ads_record[18],
+                                           milage=ads_record[19])
+                    new_ad.set_suburb()
+                    ads_dict[ads_master_index] = new_ad
+                #        if re.match('^[A-Q][A-Z][A-Z][0-9]{3}', plate):  # check valid plate
+                if re.match('^[A-Q][A-Z][A-Z][0-9]{3}', plate) or re.match('^[A-Z][A-Z][0-9]{3}',
+                                                                           plate):  # check valid plate
 
+                    if plate not in plate_list_index:
+                        new_plate = RegoPlate(ad_index=ads_master_index, title=ads_record[1],
+                                              jurisdiction=ads_record[2],
+                                              make=ads_record[6], model_code=ads_record[20], trim_level=ads_record[17],
+                                              model=ads_record[7], colour=ads_record[10],
+                                              car_year=ads_record[8], capacity=ads_record[9], body_style=ads_record[16],
+                                              model_level=ads_record[24], interior_trim=ads_record[15])
 
-    plate_list_index = []
-    no_of_cars = 0
-    already_found = 0
-    ads_dict = {}
-    for ads_record in ads_table:  # we make a lists of database indexes for distinct plate numbers, insert into dictionary
-        plate = str(ads_record[1])
-        ads_master_index = ads_record[0]
-        if ads_master_index not in ads_list:
-            ads_list.append(ads_master_index)
-            new_ad = Advertisement(ad_index=ads_master_index, title=ads_record[1], jurisdiction=ads_record[2],
-                                  make=ads_record[6], model_code=ads_record[20], trim_level=ads_record[17],
-                                  model=ads_record[7], colour=ads_record[10], phone1=ads_record[11],
-                                  car_year=ads_record[8], capacity=ads_record[9], body_style=ads_record[16],
-                                  model_level=ads_record[24], interior_trim=ads_record[15],
-                                  month=ads_record[21], ad_date=ads_record[3], price=ads_record[18],milage=ads_record[19] )
-            new_ad.set_suburb()
-            ads_dict[ads_master_index] = new_ad
-        #        if re.match('^[A-Q][A-Z][A-Z][0-9]{3}', plate):  # check valid plate
-        if re.match('^[A-Q][A-Z][A-Z][0-9]{3}', plate) or  re.match('^[A-Z][A-Z][0-9]{3}', plate):# check valid plate
+                        no_of_cars = no_of_cars + 1
+                        # new_plate.set_suburb(ads_record[11])
+                        if new_plate.jurisdiction == "NSW":
+                            if not re.match('^[A-Z][A-Z][0-9]{3}', plate):
+                                return_above = check_production(make=ads_record[6], model=ads_record[7],
+                                                                sort1=ads_record[20], sort2=ads_record[24],
+                                                                sort3=ads_record[8], sort4=ads_record[1])
+                                nsw_list = check_plate_nsw3(target_plate=ads_record[1], model_start_year=return_above)
+                                new_plate.set_year_predict("1999")
+                                new_plate.set_nsw_epoch(nsw_list)
+                            else:
+                                new_plate.set_nsw_epoch(7)  # for personal plates 5 digit match
+                        if new_plate.jurisdiction == "VIC" or new_plate.jurisdiction == "QLD":
+                            new_plate.set_nsw_epoch(7)  # for personal plates 5 digit match
 
-            if plate not in plate_list_index:
-                new_plate = RegoPlate(ad_index=ads_master_index, title=ads_record[1], jurisdiction=ads_record[2],
-                                      make=ads_record[6], model_code=ads_record[20], trim_level=ads_record[17],
-                                      model=ads_record[7], colour=ads_record[10],
-                                      car_year=ads_record[8], capacity=ads_record[9], body_style=ads_record[16],
-                                      model_level=ads_record[24], interior_trim=ads_record[15])
+                        plate_list.append(new_plate)
+                        plate_list_index.append(plate)
+                    else:
+                        already_found = already_found + 1
+                        for plate_stored in plate_list:
+                            if plate_stored.title == plate:
+                                plate_stored.set_year(ads_record[8])
+                                plate_stored.set_colour(ads_record[10])
+                                plate_stored.grow_ad_list(ads_record[0])
+                                if ads_record[15] != "none":
+                                    plate_stored.set_interior_trim(ads_record[15])
+                                if ads_record[9] != "none":
+                                    plate_stored.capacity = ads_record[9]
 
-                no_of_cars = no_of_cars +1
-                # new_plate.set_suburb(ads_record[11])
-                if new_plate.jurisdiction == "NSW":
-                  if not re.match('^[A-Z][A-Z][0-9]{3}', plate):
-                    return_above = check_production( make=ads_record[6], model=ads_record[7], sort1=ads_record[20],sort2=ads_record[24], sort3=ads_record[8], sort4=ads_record[1])
-                    nsw_list = check_plate_nsw3(target_plate=ads_record[1], model_start_year=return_above)
-                    new_plate.set_year_predict("1999")
-                    new_plate.set_nsw_epoch(nsw_list)
-                  else:
-                    new_plate.set_nsw_epoch(7)  # for personal plates 5 digit match
-                if new_plate.jurisdiction == "VIC" or new_plate.jurisdiction == "QLD":
-                    new_plate.set_nsw_epoch(7)  # for personal plates 5 digit match
+            print("no of cars =", no_of_cars, "no_of_ads =", no_of_cars + already_found)
+            if pick_make == 'all':
+                break
+            go_again = input("Go Again y/n: ")
 
-                plate_list.append(new_plate)
-                plate_list_index.append(plate)
-            else:
-                already_found = already_found + 1
-                for plate_stored in plate_list:
-                    if plate_stored.title == plate:
-                         plate_stored.set_year(ads_record[8])
-                         plate_stored.set_colour(ads_record[10])
-                         plate_stored.grow_ad_list(ads_record[0])
-#                         if ads_record[10] != "unknown":
-#                             plate_stored.colour = ads_record[10]
-                         if ads_record[15] != "none":
-                             plate_stored.set_interior_trim(ads_record[15])
-                         if ads_record[9] != "none":
-                             plate_stored.capacity = ads_record[9]
+        # plate_list.sort()
+        for x in range(1, 8):
+            print("*" * 90)
+            for plate_stored in sorted(plate_list, key=lambda plate: plate.title):
+                nsw_epoch = plate_stored.get_nsw_epoch()
+                # suburb = plate_stored.set_suburb()
+                if x == int(nsw_epoch):  # there are 4 nsw plate lists
+                    plate_stored.print_plate()
+        # ads_dict = []
+        go_again = 'y'
+        pick_make = 'none'
+        while go_again != 'n':
+            while True:
+                plate_search = input("Enter Plate number or q for quit: ")
+                if plate_search != 'q':
+                    prefix_search_flag = False
+                    plate_selected = {}
+                    if plate_search == "number" or plate_search == "n":
+                        number_search = input("Enter Phone number: ")
+                        if number_search in dealers_list:
+                            dealer_data = dealers_list[number_search]
+                            dealer_street = dealer_data[1]
+                            dealer_licence = dealer_data[3]
+                            dealer_name = dealer_data[0]
+                            dealer_suburb = dealer_data[2]
+                            if dealer_suburb != "unknown":
+                                print(dealer_name, dealer_street, dealer_suburb, dealer_licence)
+                            else:
+                                print(number_search, dealer_name, dealer_licence)
+                        for ad2 in ads_list:
+                            advert = ads_dict[ad2]
+                            if advert.phone1 == number_search:
+                                advert.print_ad()
 
-    print "no of cars =" , no_of_cars , "no_of_ads =" , no_of_cars + already_found
-    if pick_make == 'all':
-        break
-    go_again = raw_input("Go Again y/n: ")
-
-  plate_list.sort()
-  for x in range(1, 8):
-      print "*" * 80
-      for plate_stored in sorted(plate_list, key=lambda plate: plate.title):
-          nsw_epoch = plate_stored.get_nsw_epoch()
-          # suburb = plate_stored.set_suburb()
-          if x == int(nsw_epoch):  # there are 4 nsw plate lists
-              plate_stored.print_plate()
-  # ads_dict = []
-  go_again = 'y'
-  pick_make = 'none'
-  while go_again != 'n':
-      while True:
-          plate_search = raw_input("Enter Plate number or q for quit: ")
-          if plate_search != 'q':
-              prefix_search_flag = False
-              plate_selected = {}
-              if plate_search == "number" or plate_search == "n":
-                  number_search = raw_input("Enter Phone number: ")
-                  if number_search in dealers_list:
-                          dealer_data = dealers_list[number_search]
-                          dealer_street = dealer_data[1]
-                          dealer_licence = dealer_data[3]
-                          dealer_name = dealer_data[0]
-                          dealer_suburb = dealer_data[2]
-                          if dealer_suburb != "unknown":
-                              print dealer_name, dealer_street, dealer_suburb, dealer_licence
-                          else:
-                              print number_search, dealer_name, dealer_licence
-                  for ad2 in ads_list:
-                      advert = ads_dict[ad2]
-                      if advert.phone1 == number_search:
-                          advert.print_ad()
-
-
-              else:
-                  if len(plate_search) == 3 or len(plate_search) == 2:
-                      prefix_search_flag = True
-                  for ad in ads_list:
-                      advert = ads_dict[ad]
-                      if prefix_search_flag:
-                          if advert.title[:3] == plate_search or advert.title[:2] == plate_search:
-                              plate_selected[advert.ad_date] = advert
-                      else:
-                          if advert.title == plate_search:
-                              plate_selected[advert.ad_date] = advert
-                  for key in sorted(plate_selected):
-                      plate_selected[key].print_ad()
-                  go_again = plate_search
-          else:
-              plate_search = "wally"
-              go_again = 'n'
-              break
+                    else:
+                        if len(plate_search) == 3 or len(plate_search) == 2:
+                            prefix_search_flag = True
+                        for ad in ads_list:
+                            advert = ads_dict[ad]
+                            if prefix_search_flag:
+                                if advert.title[:3] == plate_search or advert.title[:2] == plate_search:
+                                    plate_selected[advert.ad_date] = advert
+                            else:
+                                if advert.title == plate_search:
+                                    plate_selected[advert.ad_date] = advert
+                        for key in sorted(plate_selected):
+                            plate_selected[key].print_ad()
+                        go_again = plate_search
+                else:
+                    plate_search = "wally"
+                    go_again = 'n'
+                    break
 
 
 if __name__ == '__main__':

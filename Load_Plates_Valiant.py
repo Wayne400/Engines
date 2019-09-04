@@ -7,38 +7,26 @@ def get_valiant():   # creating a list of tuples representing individual ads in 
 # rego_plate = row[0], ad_date = row[1], model_code = row[2], model_year = row[2],
 # model_level = row[4], trim_level = row[5], body_style= row[6], capacity = row[7]
 # transmission = row[8], colour = row[9], phone1 = row[10], price = row[11], milage = row[12], month = row[13])
-("EUJ389","1977-01-29","AP5","none","Valiant","none","Sedan","none","Man","unknown","6241047","$690","none","none"),
-("RFJ247","1977-01-29","VH","1971","Charger","770","Coupe","6pack","none","Iridescent Bronze","043692189","$2950","none","October"),
-("DOQ399","1977-01-29","VH","1972","Charger","770","Coupe","none","Auto","unknown","924545","none","43000mis","none"),
-("GPX077","1977-01-29","none","1973","Charger","none","Coupe","none","Auto","unknown","6381823","none","34000kms","none"),
-("HSY322","1977-01-29","VJ","1973","Charger","none","Coupe","215","Man","Yellow with Tan Trim","7592583","$2100","none","none"),
-("GWX367","1977-01-29","none","1974","Charger","none","Coupe","none","floor","unknown","6381823","38000kms","none","none"),
-("EDI774","1977-01-29","none","none","Charger","770","Coupe","none","none","Gold","7591266","$3290","none","April"),
-("HWO250","1977-01-29","none","none","Regal","770","Coupe","none","Auto","unknown","5691165","$1850","none","none"),
-("DAQ537","1977-01-29","none","1972","Valiant","none","Sedan","none","Auto","unknown","6666650","$2400","none","none"),
-("DLK924","1977-01-29","none","1965","Valiant","none","Sedan","none","none","Green","6256816","$650","none","June"),
-("AQZ328","1977-01-29","none","1971","Pacer","none","Sedan","none","none","unknown","5697514","$1650","none","none"),
-("AXV827","1977-01-29","none","1969","Pacer","none","Sedan","none","none","unknown","6601045","$900","none","January"),
-("DEQ641","1977-01-29","VH","1971","Ranger","XL","Sedan","265","Auto","Dark Green with Beige","4492970","$2600","23000mis","December"),
-("HHN836","1977-01-29","none","1975","Regal","none","Sedan","none","none","Vinyl Roof","4497641","$4200","none","none"),
-("ELX261","1977-01-29","none","1967","none","none","Sedan","none","Auto","unknown","5972873","none","none","none"),
-("ENW134","1977-01-29","VC","none","Regal","none","Sedan","none","Auto","unknown","4872044","none","none","none"),
-("EVA323","1977-01-29","VC","none","Valiant","none","Sedan","none","Auto","unknown","6238831","$850","none","none"),
-("EWI377","1977-01-29","VC","none","Valiant","none","Sedan","none","none","unknown","Arncliffe","$499","none","none"),
-("AUY388","1977-01-29","VE","1969","Valiant","none","Sedan","225","Man","unknown","6235337","$1295","none","January"),
-("EUE865","1977-01-29","VE","none","Regal","none","Sedan","none","none","unknown","591802","$1000","none","none"),
-("EVY894","1977-01-29","VE","1968","Valiant","none","Sedan","none","none","unknown","577744","$1250","none","none"),
-("BJN315","1977-01-29","VF","1970","Valiant","none","Sedan","none","Man","unknown","5285300","$1100","none","none"),
-("BIK996","1977-01-29","VG","1970","Valiant","none","Coupe","none","Auto","unknown","8887046","$1800","none","September"),
-("CQU222","1977-01-29","none","1972","Regal","none","Sedan","none","Auto","unknown","442213","$2750","none","January"),
-("EQH363","1977-01-29","VH","1972","Ranger","none","Sedan","none","none","unknown","6373800","$1799","none","none"),
-("GDN086","1977-01-29","none","1973","Valiant","none","Sedan","none","none","unknown","6346236","$2495","20000mis","December"),
-("GKZ398","1977-01-29","VJ","none","Valiant","none","Coupe","none","Auto","Vinyl Roof","6484000","none","none","none"),
-("HAP966","1977-01-29","VJ","none","Valiant","none","Wagon","265","Auto","Mahogany","8887866","$4290","44000kms","October"),
-("HKJ303","1977-01-29","VJ","1974","Regal","none","Wagon","V8","none","unknown","4498149","$3600","none","none"),
-("HYC389","1977-01-29","VJ","1973","Regal","none","Sedan","none","none","White","485054","$2250","none","none"),
-("HZW668","1977-01-29","none","1975","Valiant","none","Sedan","none","Auto","White with Vinyl Top","7985666","$3690","December","none"),
-("HKN820","1977-01-29","none","1973","Valiant","none","Wagon","V8","Auto","unknown","6381823","none","none","none"),
+("BKZ238","1978-04-15","none","none","VIP","none","Sedan","none","none","unknown","6372780","$1500","none","none"),
+("BMM067","1978-04-15","VG","1970","Valiant","none","Wagon","none","Auto","unknwn","3871585","none","none","none"),
+("JPJ398","1978-04-15","none","1976","Ranger","none","Wagon","none","none","unknown","441098","$4980","12000kms","April"),
+("EBD444","1978-04-15","none","1970","Pacer","none","Sedan","none","none","unknown","5259027","$1350","none","none"),
+("EZU389","1978-04-15","VF","none","Pacer","none","Sedan","none","none","unknown","6076186","$700","none","none"),
+("BID922","1978-04-15","VH","1971","Ranger","none","Sedan","none","Auto","unknown","6393541","$2250","none","none"),
+("GSL591","1978-04-15","none","1974","Ranger","Sportsman","Sedan","none","none","Metallic Blue","6306327","$2850","none","March"),
+("CWG509","1978-04-15","S","1963","Valiant","none","none","Sedan","Auto","unknown","4988866","none","55400mis","none"),
+("AJX348","1978-04-15","VE","none","Regal","none","Sedan","V8","none","unknown","5256694","$1600","none","April"),
+("EVD283","1978-04-15","VE","1968","Valiant","none","Sedan","none","none","unknown","6448985","$850","none","August"),
+("EXD191","1978-04-15","VE","1968","Valiant","none","Sedan","none","none","unknown","3495632","$500","none","none"),
+("ARX182","1978-04-15","VF","1969","Valiant","none","Sedan","none","none","unknown","304129","$1325","none","September"),
+("BII866","1978-04-15","VG","1971","Valiant","none","Sedan","none","Auto","unknown","9295010","$1950","none","April"),
+("BIY170","1978-04-15","none","none","Ranger","XL","Sedan","none","none","unknown","7474601","$1690","none","none"),
+("GBI837","1978-04-15","none","1972","Regal","none","Sedan","none","Auto","unknown","7506940","$1950","none","none"),
+("BCL881","1978-04-15","none","1970","VIP","none","Sedan","V8","Auto","unknown","364550","$2150","43300mis","none"),
+("GOT334","1978-04-15","VJ","none","Regal","none","Sedan","none","Auto","Amber Metallic","8886513","$2900","none","December"),
+("GSC114","1978-04-15","VJ","1972","Ranger","none","Wagon","6cyl","Auto","Blue","6256406","$1850","none","August"),
+("JFO822","1978-04-15","CL","none","Valiant","Drifter","Van","V8","4spd","Yellow","7452677","none","none","April"),
+("JDJ657","1978-04-15","CL","none","Valiant","none","Van","6cyl","none","unknown","591802","$3995","30200kms","March"),
 
    ]
 
@@ -48,9 +36,9 @@ def get_valiant():   # creating a list of tuples representing individual ads in 
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 3911
+    master_index1 = 3943
     for row in ads:
-        print row
+        print (row)
         master_index1 += 1
 
 
@@ -72,7 +60,7 @@ def add_adverts(cursor, ads):
                         dealers_licence="none", who="WW", interior_trim="none",
                         model_level=row[4], trim_level=row[5],
                         transmission=row[8], price=row[11], milage=row[12],month=row[13])
-        print sql
+        print (sql)
         try:
             cursor.execute(sql)
         except:

@@ -291,7 +291,7 @@ def main():
        dealer_licence = dealer_data[3]
        dealer_suburb = dealer_data[2]
        dealer_address = dealer_data[1]
-       print key, dealer_name, dealer_address, dealer_suburb, dealer_licence
+       print (key, dealer_name, dealer_address, dealer_suburb, dealer_licence)
 
 
 
