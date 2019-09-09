@@ -174,7 +174,7 @@ class RegoPlate(object):
                 description = description + " " + self.model_level
             if self.trim_level != "none":
                 description = description + " " + self.trim_level
-            if self.body_style != "none" and self.body_style != "Sedan":
+            if self.body_style != "none" and (self.body_style != "Sedan" and self.model_level != "Charger"):
                 description = description + " " + self.body_style
             if self.capacity != "none":
                 description = description + " " + self.capacity
@@ -301,7 +301,7 @@ class Advertisement(object):
                 description = description + " " + self.model_level
             if self.trim_level != "none":
                 description = description + " " + self.trim_level
-            if self.body_style != "none" and self.body_style != "Sedan":
+            if self.body_style != "none" and (self.body_style != "Sedan" and self.model_level != "Charger"):
                 description = description + " " + self.body_style
             if self.capacity != "none":
                 description = description + " " + self.capacity
@@ -655,18 +655,23 @@ def main():
                 ads_master_index = ads_record[0]
                 if ads_master_index not in ads_list:
                     ads_list.append(ads_master_index)
+                    number_search = ads_record[11]
+                    if number_search in dealers_list:
+                        number_search = number_search + "*"
                     new_ad = Advertisement(ad_index=ads_master_index, title=ads_record[1], jurisdiction=ads_record[2],
                                            make=ads_record[6], model_code=ads_record[20], trim_level=ads_record[17],
-                                           model=ads_record[7], colour=ads_record[10], phone1=ads_record[11],
+                                           model=ads_record[7], colour=ads_record[10], phone1=number_search,
                                            car_year=ads_record[8], capacity=ads_record[9], body_style=ads_record[16],
                                            model_level=ads_record[24], interior_trim=ads_record[15],
                                            month=ads_record[21], ad_date=ads_record[3], price=ads_record[18],
                                            milage=ads_record[19])
                     new_ad.set_suburb()
+                    number_search = ads_record[11]
+
                     ads_dict[ads_master_index] = new_ad
                 #        if re.match('^[A-Q][A-Z][A-Z][0-9]{3}', plate):  # check valid plate
-                if re.match('^[A-Q][A-Z][A-Z][0-9]{3}', plate) or re.match('^[A-Z][A-Z][0-9]{3}',
-                                                                           plate):  # check valid plate
+                if re.match('^[A-Q][A-Z][A-Z][0-9]{3}', plate) or \
+                        re.match('^[A-Z][A-Z][0-9]{3}', plate):  # check valid plate
 
                     if plate not in plate_list_index:
                         new_plate = RegoPlate(ad_index=ads_master_index, title=ads_record[1],

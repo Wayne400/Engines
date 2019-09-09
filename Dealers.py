@@ -4,9 +4,9 @@
 
 dealers_list = {
 
-'112244': ("Wallhampton Motors", "23 Bingo St.", "Wallhampton", "LD007"),
+'112244': ("Wallhampton Motors", "23 Bingo St.", "Wallhampton", "LD8786"),
 
-'2112100': ("Century Chrylser", "112 Broadway", "Sydney City", "LD"),
+'2112100': ("Century Chrylser", "112 Broadway", "Sydney City", "LD5464"),
 '2114677': ("Southline Auto", "90 Broadway", "Sydney City", "LD2060"),
 '2114252': ("Southline Auto", "90 Broadway", "Sydney City", "LD2060"),
 '2222': ("Reg Blunty Motors", "47 Beale St", "Memphis", "LD666"),
