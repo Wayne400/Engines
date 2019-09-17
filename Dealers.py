@@ -207,7 +207,7 @@ dealers_list = {
 '765666': ("Norm Saville Motors", "12 Parramatta Rd.", "Flemington", "LD111"),
 '766988': ("Larke Hoskins", "190 Parramatta Rd.", "Homebush", "LD405"),
 '766141': ("Barr Motors", "unknown", "unknown", "LD"),
-'7891177': ("L & D Motors/Campsie Leyland", "unknown", "Campsie", "LD299"),
+'7891177': ("L & D Motors/Campsie Leyland", "459 Canterbury Rd", "Campsie", "LD299"),
 '7899000': ("Maypow Motors", "249 Parramatta Rd", "Haberfield", "LD"),
 '7970166': ("Anonymous", "164 Parramatta Rd.", "Ashfield", "LD6080"),
 '7970516': ("The Commercial Centre", "unknown", "unknown", "LD5246"),
