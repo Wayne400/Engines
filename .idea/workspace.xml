@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="make improvements to V3 valiants">
+    <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="add more mascot">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dsplay_Plates_V3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dsplay_Plates_V3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Load_Plates_MM.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_MM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Load_Plates_Rover.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Rover.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/advertisements_indexed.db" beforeDir="false" afterPath="$PROJECT_DIR$/advertisements_indexed.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,9 +15,6 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Engines$Display_Plates_OOP.coverage" NAME="Display_Plates_OOP Coverage Results" MODIFIED="1546911119426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="Engines" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -95,7 +94,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Load_Plates_Rambler" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Load_Plates_Rover" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Engines" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -107,7 +106,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Load_Plates_Rambler.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Load_Plates_Rover.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -161,17 +160,17 @@
     <list>
       <item itemvalue="Python.Dsplay_Plates_V3" />
       <item itemvalue="Python.Load_Plates_MM" />
-      <item itemvalue="Python.Load_Plates_Rambler" />
+      <item itemvalue="Python.Load_Plates_Rover" />
       <item itemvalue="Python.Load_Plates_Valiant" />
       <item itemvalue="Python.engines10" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Dsplay_Plates_V3" />
+        <item itemvalue="Python.Load_Plates_Rover" />
         <item itemvalue="Python.Load_Plates_MM" />
         <item itemvalue="Python.engines10" />
         <item itemvalue="Python.Load_Plates_Valiant" />
-        <item itemvalue="Python.Load_Plates_Rambler" />
       </list>
     </recent_temporary>
   </component>
@@ -185,13 +184,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546911100455</updated>
-    </task>
-    <task id="LOCAL-00005" summary="More Ramblers, now using Wheels photo database">
-      <created>1547875665165</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1547875665165</updated>
     </task>
     <task id="LOCAL-00006" summary="updated Rowley Motors and database">
       <created>1548931211532</created>
@@ -529,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566564200293</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="add more mascot">
+      <created>1591954084763</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1591954084763</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TodoView">
@@ -571,7 +570,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="More Ramblers, now using Wheels photo database" />
     <MESSAGE value="updated Rowley Motors and database" />
     <MESSAGE value="added many mascot adds, changed printout for month" />
     <MESSAGE value="more renaults from 1974" />
@@ -596,24 +594,41 @@
     <MESSAGE value="add ramblers 1984" />
     <MESSAGE value="make improvements to V3" />
     <MESSAGE value="make improvements to V3 valiants" />
-    <option name="LAST_COMMIT_MESSAGE" value="make improvements to V3 valiants" />
+    <MESSAGE value="add more mascot" />
+    <option name="LAST_COMMIT_MESSAGE" value="add more mascot" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1331" height="289" key="GridCell.Tab.0.bottom" timestamp="1591877401769">
+    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1591954083208">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1331" height="289" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1591877401769" />
-    <state width="1331" height="289" key="GridCell.Tab.0.center" timestamp="1591877401769">
+    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1591954083208" />
+    <state width="1328" height="283" key="GridCell.Tab.0.bottom" timestamp="1593168614906">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1331" height="289" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1591877401769" />
-    <state width="1331" height="289" key="GridCell.Tab.0.left" timestamp="1591877401769">
+    <state width="1328" height="283" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1593168614906" />
+    <state width="1328" height="283" key="GridCell.Tab.0.center" timestamp="1593168614906">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1331" height="289" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1591877401769" />
-    <state width="1331" height="289" key="GridCell.Tab.0.right" timestamp="1591877401769">
+    <state width="1328" height="283" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1593168614906" />
+    <state width="1328" height="283" key="GridCell.Tab.0.left" timestamp="1593168614905">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1331" height="289" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1591877401769" />
+    <state width="1328" height="283" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1593168614905" />
+    <state width="1328" height="283" key="GridCell.Tab.0.right" timestamp="1593168614906">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1328" height="283" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1593168614906" />
+    <state x="275" y="112" key="Vcs.Push.Dialog.v2" timestamp="1591954087665">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="275" y="112" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1591954087665" />
+    <state x="165" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1593083719088">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="165" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.768@0.0.1366.768" timestamp="1593083719088" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1593085122401">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1593085122401" />
   </component>
 </project>

@@ -8,27 +8,24 @@ import sqlite3
 
 def get_rambler_1():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
     adverts = [
-("JCJ506","1","Rebel","none","none","Wagon","37000mis","yes"),
-("MM347","2","Matador","1974","none","Black/Bone","27000mis","yes"),
-("GTL935","3","Hornet","7374","none","unknown","22000mis","no"),
-("JDF081","4","Matador","none","none","Carribean","none","yes"),
-("ACI771","5","American","none","6cyl","unknown","none","no"),
-("XX116","6","Hornet","1975","none","unknown","none","no"),
-("HEX812","7","Matador","7475","none","unknown","none","yes"),
-("HHA699","8","Hornet","none","none","unknown","none","yes"),
-("GQZ536","9","Javelin","none","390","unknown","none","no"),
-("HDD558","10","Matador","1973","none","brown/bone","none","yes"),
-("EIR754","11","Hornet","none","4.2","unknown","34000mis","no"),
-("CKN622","12","Rebel","1970","360","unknown","none","no"),
-("JBH340","13","Matador","7475","none","green/green vinyl","none","no"),
-("DIA925","14","Hornet","none","4.2","unknown","none","no"),
-("CCC095","15","Matador","none","none","Wagon","24000mis","no"),
-("GFC061","16","Hornet","7273","none","unknown","none","yes"),
-("COP309","17","Matador","none","none","unknown","none","no"),
-("CBE988","18","Hornet","none","none","unknown","39000mis","no"),
-("CAX724","19","Matador","none","none","unknown","none","yes"),
-("BEW925","20","Hornet","none","232","unknown","none","no"),
-("JAN981","21","Matador","none","none","unknown","none","yes"),
+("HQB163","1","Hornet","1975","none","unknown","none","no"),
+("HGY203","2","Hornet","none","4.2","unknown","none","yes"),
+("DIM261","3","Hornet","none","none","unknown","none","no"),
+("HVF097","4","Matador","none","none","Wagon","none","no"),
+("GOF194","5","Matador","none","none","unknown","19000mis","no"),
+("HXV754","6","Matador","1974","none","unknown","none","yes"),
+("GDR412","7","Matador","none","none","unknown","none","yes"),
+("GBF500","8","Matador","none","360","unknown","none","no"),
+("GLH524","9","Matador","none","none","unknown","none","yes"),
+("GAX724","10","Matador","none","none","unknown","none","yes"),
+("HDS432","11","Javelin","none","none","imported","none","no"),
+("MM806","12","Javelin","1971","390","unknown","none","no"),
+("BJR857","13","Rebel","1970","360","unknown","none","no"),
+("DA1153","14","Rebel","1969","343","unknown","none","no"),
+("AGG853","15","Rebel","1968","290","unknown","none","no"),
+("GEZ762","16","Rebel","none","none","Wagon","none","no"),
+("HXU178","17","Classic","none","none","Wagon","none","no"),
+("EFU83","18","Classic","1966","770","unknown","none","no"),
 
    ]
 
@@ -38,7 +35,7 @@ def get_rambler_1():   # creating a list of tuples representing individual ads i
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 3911
+    master_index1 = 3951
     for row in ads:
         print row
         master_index1 += 1
@@ -55,7 +52,7 @@ def add_adverts(cursor, ads):
 
         sql = sql.format(master_index=master_index1, rego_plate=row[0],
                         jurisdiction="NSW",
-                        iso_advert_date="1977-03-12",
+                        iso_advert_date="1976-10-16",
                         item_number=row[1], publication="smh",
                         car_make="Rambler", car_model=row[2], model_year=row[3],
                         capacity=row[4],

@@ -14,7 +14,7 @@ def check_production( make, model, sort1, sort2, sort3):
     renault_model_start = {'RXX': '1960','R4': '1958', 'R8': '1961','Gordini': '1963', 'R10': '1965', 'R10S': '1970','R12': '1969','R16':'1965', 'R15': '1971','R17':'1973'}
     peugeot_model_start = {'RXX': '1960','403': '1955', '403B': '1958', '404': '1963', '504': '1969'}
     rover_model_start = {'RXX': '1960','75': '1954','90': '1954','P4': '1954','95': '1961','100': '1960','110': '1961','105R': '1955',\
-                         '2000': '1965', '2000TC': '1965', '3500': '1967','P5B': '1965','3L':'1960',\
+                         '105S': '1955','2000': '1965', '2000TC': '1965', '3500': '1967','P5B': '1965','3L':'1960',\
                          'P5': '1959', 'P5Bcoupe': '1967', 'P5coupe': '1964'}
     rambler_model_start = {'Rambler': '1960','Ambassador': '1960', 'Hornet': '1970','Gremlin': '1970',\
                            'Rebel': '1967', 'Javelin': '1969', 'AMX': '1969', 'Matador':'1971',\
@@ -589,13 +589,13 @@ def main():
                                    jurisdiction="NSW")
             break
         elif pick_make == "ro" or pick_make == "Rover":
-            Rover_list = ["105R", "2000", "2000TC", "3500", "P5B", "P5", "P5Bcoupe", "P5coupe","3L", "100"]
+            Rover_list = ["105R","105S", "2000", "2000TC", "3500", "P5B", "P5", "P5Bcoupe", "P5coupe","3L", "100"]
             print Rover_list
             pick_model = raw_input("please enter Rover model: ")
             if pick_model != "all":
                 Rover_list = [pick_model]
             else:
-                Rover_list = ["75","90","105R", "2000", "2000TC", "3500", "P5B", "P5", "P5Bcoupe", "P5coupe","3L", "100", "none"]
+                Rover_list = ["75","90","105R","105S","2000", "2000TC", "3500", "P5B", "P5", "P5Bcoupe", "P5coupe","3L", "100", "none"]
             ads_table = get_sql_data(car_model_list=Rover_list, car_make ="Rover", connectstring="advertisements_indexed.db",
                                    jurisdiction="NSW")
             break
