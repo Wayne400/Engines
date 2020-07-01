@@ -4,7 +4,6 @@
     <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="add more mascot">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dsplay_Plates_V3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dsplay_Plates_V3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Load_Plates_MM.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_MM.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Load_Plates_Rover.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Rover.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/advertisements_indexed.db" beforeDir="false" afterPath="$PROJECT_DIR$/advertisements_indexed.db" afterDir="false" />
     </list>
@@ -160,9 +159,9 @@
     <list>
       <item itemvalue="Python.Dsplay_Plates_V3" />
       <item itemvalue="Python.Load_Plates_MM" />
-      <item itemvalue="Python.Load_Plates_Rover" />
       <item itemvalue="Python.Load_Plates_Valiant" />
       <item itemvalue="Python.engines10" />
+      <item itemvalue="Python.Load_Plates_Rover" />
     </list>
     <recent_temporary>
       <list>
@@ -184,13 +183,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546911100455</updated>
-    </task>
-    <task id="LOCAL-00006" summary="updated Rowley Motors and database">
-      <created>1548931211532</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1548931211532</updated>
     </task>
     <task id="LOCAL-00007" summary="added many mascot adds, changed printout for month">
       <created>1548984632079</created>
@@ -528,7 +520,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591954084763</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="add more mascot">
+      <created>1593245048418</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1593245048418</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TodoView">
@@ -598,30 +597,30 @@
     <option name="LAST_COMMIT_MESSAGE" value="add more mascot" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1591954083208">
+    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1593245047147">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1591954083208" />
-    <state width="1328" height="283" key="GridCell.Tab.0.bottom" timestamp="1593168614906">
+    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1593245047147" />
+    <state width="1348" height="246" key="GridCell.Tab.0.bottom" timestamp="1593606605286">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1328" height="283" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1593168614906" />
-    <state width="1328" height="283" key="GridCell.Tab.0.center" timestamp="1593168614906">
+    <state width="1348" height="246" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1593606605286" />
+    <state width="1348" height="246" key="GridCell.Tab.0.center" timestamp="1593606605285">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1328" height="283" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1593168614906" />
-    <state width="1328" height="283" key="GridCell.Tab.0.left" timestamp="1593168614905">
+    <state width="1348" height="246" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1593606605285" />
+    <state width="1348" height="246" key="GridCell.Tab.0.left" timestamp="1593606605280">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1328" height="283" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1593168614905" />
-    <state width="1328" height="283" key="GridCell.Tab.0.right" timestamp="1593168614906">
+    <state width="1348" height="246" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1593606605280" />
+    <state width="1348" height="246" key="GridCell.Tab.0.right" timestamp="1593606605286">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1328" height="283" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1593168614906" />
-    <state x="275" y="112" key="Vcs.Push.Dialog.v2" timestamp="1591954087665">
+    <state width="1348" height="246" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1593606605286" />
+    <state x="275" y="112" key="Vcs.Push.Dialog.v2" timestamp="1593245052112">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="112" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1591954087665" />
+    <state x="275" y="112" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1593245052112" />
     <state x="165" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1593083719088">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

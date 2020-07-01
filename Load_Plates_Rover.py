@@ -3,19 +3,24 @@ import sqlite3
 
 def get_rover():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
     adverts = [
-("APO981","1979-04-28","3L","MkIII","XX","none","Auto","unknown","Bone Leather","3986287","$3500","none","none"),
-("DGT553","1979-04-28","3L","none","XX","1967","Auto","unknown","none","4501524","$2450","55000mis","none"),
-("EJO608","1979-04-28","3L","none","XX","1966","Auto","unknown","none","9976675","$1100","none","January"),
-("ETP103","1979-04-28","3L","none","XX","none","Auto","unknown","none","3874513","$1500","none","none"),
-("GHN861","1979-04-28","3500","none","S","1973","Man","unknown","none","7988652","$5600","none","none"),
-("AHY817","1979-05-05","P5B","none","XX","1969","Auto","White","Burgundy","361266","none","58000mis","none"),
-("EGJ680","1979-05-05","3L","MkIII","XX","none","Auto","White","Red Leather","9092594","$1650","none","January"),
-("EJO698","1979-05-05","3L","MkII","XX","1966","none","unknown","none","9976675","$1100","none","January"),
-("AIB891","1979-05-05","P5B","none","XX","1971","Auto","Light Grey","Red Leather","5229108","$4990","52000mis","none"),
-("DYC270","1979-05-05","2000","none","XX","1965","Man","unknown","none","6375024","none","none","none"),
-("DYK999","1979-05-05","2000","none","XX","1965","Man","unknown","none","5215811","$499","none","January"),
-("BBZ296","1979-05-05","90","none","XX","1956","none","Black","none","6307229","none","none","none"),
-("CTA626","1979-05-05","105","none","S","none","Man","unknown","none","4499480","$700","none","June"),
+("CYS519","1979-05-19","3L","MkI","XX","none","none","unknown","none","9187080","$500","none","none"),
+("CQW327","1979-05-19","2000","none","XX","1970","Auto","unknown","none","3448786","$3150","none","none"),
+("DWE575","1979-05-19","2000","none","XX","none","none","Grey","Champagne","9189968","$795","none","August"),
+("EDQ495","1979-05-19","2000","none","XX","none","Auto","unknown","none","334420","none","53000mis","none"),
+("BJV104","1979-05-19","3500","none","XX","none","Auto","unknown","none","9696873","$3750","none","October"),
+("EGU555","1979-05-26","3L","MkIII","XX","none","none","unknown","none","474960","$2950","57000mis","October"),
+("EQW270","1979-05-26","2000","none","TC","none","none","unknown","none","7993969","$3975","none","none"),
+("BEB084","1979-05-26","3500","none","XX","1970","none","unknown","none","3286830","$3300","59000mis","May"),
+("CTZ077","1979-05-26","90","none","XX","1953","none","unknown","none","Glebe","$750","none","April"),
+("CYF519","1979-06-02","3L","none","XX","none","none","unknown","none","9187080","$300","none","May"),
+("AHY817","1979-06-02","3.5L","none","Sedan","1969","Auto","unknown","none","361266","$3750","58000mis","none"),
+("AQJ342","1979-06-02","2000","none","TC","1970","none","unknown","none","9601371","$2390","none","none"),
+("DYC270","1979-06-02","2000","none","XX","1965","4spd","Cream","Black","6375024","$1250","none","none"),
+("EQN270","1979-06-02","2000","none","TC","1971","none","unknown","none","7993969","$3975","none","none"),
+("ERH961","1979-06-02","2000","none","XX","1968","none","unknown","none","5256621","$2350","none","none"),
+("BEB084","1979-06-02","3500","none","XX","none","none","White","Beige","3286320","$3300","none","May"),
+("BQH842","1979-06-02","3500","none","XX","1970","Auto","unknown","none","4493458","$4250","none","none"),
+("CQW327","1979-06-02","2000","none","XX","none","none","unknown","none","3448786","$2850","none","none"),
 
 
 
@@ -27,7 +32,7 @@ def get_rover():   # creating a list of tuples representing individual ads in th
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 3987
+    master_index1 = 4000
     for row in ads:
         print row
         master_index1 += 1

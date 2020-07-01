@@ -109,7 +109,7 @@ class RegoPlate(object):
 
     def __init__(self, title="", jurisdiction="NSW", make="", model="", model_level = "", model_code = "",
                  colour="", ad_index="", trim_level="", capacity="none", body_style = "none", interior_trim = "none",
-                 car_year="none", year_predict="1999", nsw_epoch=7):
+                 car_year="none", year_predict="1999", nsw_epoch=7, transmission="none"):
 
         self.title = title
         self.jurisdiction = jurisdiction
@@ -126,6 +126,7 @@ class RegoPlate(object):
         self.year = car_year
         self.year_predict = year_predict
         self.nsw_epoch = nsw_epoch
+        self.transmission = transmission
 
     def set_year_predict(self, year_predict):
         self.year_predict = year_predict
@@ -161,6 +162,9 @@ class RegoPlate(object):
             self.colour = ""
         if self.model == "none":
             self.model = ""
+        if self.transmission == "none":
+            self.transmission = ""
+
 
         description = self.make
 
@@ -189,7 +193,8 @@ class RegoPlate(object):
 
         if self.make == "Rover":
             if self.model != "none":
-                description = description + " " + self.model
+                description  = description  + " " + self.model + " " + self.transmission
+
 
 
         if self.make == "Peugeot":
@@ -239,7 +244,7 @@ class Advertisement(object):
 
     def __init__(self, title="", jurisdiction="NSW", make="", model="", model_level = "", model_code = "",
                  colour="", phone1="", ad_index="", trim_level="", capacity="", body_style="", interior_trim="none",
-                 car_year="none", month="none", ad_date="", year_predict="1999", suburb="none", price="$$$", milage="none"):
+                 car_year="none", month="none", ad_date="", year_predict="1999", suburb="none", price="$$$", milage="none", transmission="none"):
 
         self.title = title
         self.jurisdiction = jurisdiction
@@ -261,6 +266,7 @@ class Advertisement(object):
         self.suburb = suburb
         self.price = price
         self.milage = milage
+        self.transmission = transmission
 
     def set_suburb(self):
         exchange_dictionary = get_exchange_dict()
@@ -287,6 +293,8 @@ class Advertisement(object):
             self.colour = ""
         if self.price == "none":
             self.price = ""
+        if self.transmission == "none":
+            self.transmission = ""
 
         description = self.make
 
@@ -315,7 +323,7 @@ class Advertisement(object):
 
         if self.make == "Rover":
             if self.model != "none":
-                description  = description  + " " + self.model
+                description  = description  + " " + self.model + " " + self.transmission
 
         if self.make == "Peugeot":
             if self.model != "none":
@@ -645,7 +653,7 @@ def main():
                                   model=ads_record[7], colour=ads_record[10], phone1=ads_record[11],
                                   car_year=ads_record[8], capacity=ads_record[9], body_style=ads_record[16],
                                   model_level=ads_record[24], interior_trim=ads_record[15],
-                                  month=ads_record[21], ad_date=ads_record[3], price=ads_record[18],milage=ads_record[19] )
+                                  month=ads_record[21], ad_date=ads_record[3], price=ads_record[18],milage=ads_record[19],transmission=ads_record[22] )
             new_ad.set_suburb()
             ads_dict[ads_master_index] = new_ad
         #        if re.match('^[A-Q][A-Z][A-Z][0-9]{3}', plate):  # check valid plate
@@ -656,7 +664,7 @@ def main():
                                       make=ads_record[6], model_code=ads_record[20], trim_level=ads_record[17],
                                       model=ads_record[7], colour=ads_record[10],
                                       car_year=ads_record[8], capacity=ads_record[9], body_style=ads_record[16],
-                                      model_level=ads_record[24], interior_trim=ads_record[15])
+                                      model_level=ads_record[24], interior_trim=ads_record[15],transmission=ads_record[22])
 
                 no_of_cars = no_of_cars +1
                 # new_plate.set_suburb(ads_record[11])
