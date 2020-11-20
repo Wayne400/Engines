@@ -645,12 +645,19 @@ def main():
     ads_dict = {}
     for ads_record in ads_table:  # we make a lists of database indexes for distinct plate numbers, insert into dictionary
         plate = str(ads_record[1])
+        jurisdiction = ads_record[2]
+        ad_date = ads_record[3]
+        publication = ads_record[5]
+        make = ads_record[6]
+        model = ads_record[7]
+        colour = ads_record[10]
+        phone1 = ads_record[11]
         ads_master_index = ads_record[0]
         if ads_master_index not in ads_list:
             ads_list.append(ads_master_index)
-            new_ad = Advertisement(ad_index=ads_master_index, title=ads_record[1], jurisdiction=ads_record[2],
-                                  make=ads_record[6], model_code=ads_record[20], trim_level=ads_record[17],
-                                  model=ads_record[7], colour=ads_record[10], phone1=ads_record[11],
+            new_ad = Advertisement(ad_index=ads_master_index, title=ads_record[1], jurisdiction=jurisdiction,
+                                  make=make, model_code=ads_record[20], trim_level=ads_record[17],
+                                  model=model, colour=colour, phone1=phone1,
                                   car_year=ads_record[8], capacity=ads_record[9], body_style=ads_record[16],
                                   model_level=ads_record[24], interior_trim=ads_record[15],
                                   month=ads_record[21], ad_date=ads_record[3], price=ads_record[18],milage=ads_record[19],transmission=ads_record[22] )
@@ -694,6 +701,9 @@ def main():
                              plate_stored.set_interior_trim(ads_record[15])
                          if ads_record[9] != "none":
                              plate_stored.capacity = ads_record[9]
+        elif (plate == model) or (plate == make): # Dont create a plate object
+            print make, model, colour,publication,ad_date, phone1, jurisdiction
+
 
     print "no of cars =" , no_of_cars , "no_of_ads =" , no_of_cars + already_found
     if pick_make == 'all':
@@ -741,7 +751,7 @@ def main():
                   for ad in ads_list:
                       advert = ads_dict[ad]
                       if prefix_search_flag:
-                          if advert.title[:3] == plate_search or advert.title[:2] == plate_search:
+                          if advert.title[:3] == plate_search or advert.title[:2] == plate_search or advert.title[:4] == plate_search:
                               plate_selected[advert.ad_date] = advert
                       else:
                           if advert.title == plate_search:

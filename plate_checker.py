@@ -86,13 +86,15 @@ def main():
 
 
 
-    target_plate = 'AAA878'
+    target_plate = 'AQA878'
     plate_list = []
     if re.match('^[A-Q][A-Z][A-Z][0-9][0-9][0-9]',target_plate):
         print "valid nsw plate"
 
     if re.match('^[A-E][I,Q][A-Z][0-9][0-9][0-9]',target_plate):
         print "2rd digit IQ woopeeh"
+        h = re.match('^[A-E][I,Q][A-Z][0-9][0-9][0-9]',target_plate)
+        print h.group(0)
     if re.match('^[A-E][A-Z][I,Q][0-9][0-9][0-9]',target_plate):
         print "3rd digit IQ woopeeh"
 
