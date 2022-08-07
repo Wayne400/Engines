@@ -63,7 +63,7 @@ def get_month(target_plate):
 '1964-03-01': ("none", "none", "none", "none", "none"),
 '1964-04-01': ("DHC311", "none", "none", "none", "none"),
 '1964-05-01': ("none", "none", "none", "none", "none"),
-'1964-06-01': ("none", "none", "none", "none", "none"),
+'1964-06-01': ("DJN412", "none", "none", "none", "none"),
 '1964-07-01': ("none", "none", "none", "none", "none"),
 '1964-08-01': ("none", "none", "none", "none", "none"),
 '1964-09-01': ("none", "none", "none", "none", "none"),
@@ -387,7 +387,7 @@ def get_month(target_plate):
 def main():
 
     nsw_plate_search = get_month("HXX979")
-    print nsw_plate_search
+    print(nsw_plate_search)
 
 
 

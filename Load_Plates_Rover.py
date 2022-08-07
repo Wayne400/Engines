@@ -3,26 +3,25 @@ import sqlite3
 
 def get_rover():   # creating a list of tuples representing individual ads in the newspapers , item_number is > 1 if multiple cars listed
     adverts = [
-("CYS519","1979-05-19","3L","MkI","XX","none","none","unknown","none","9187080","$500","none","none"),
-("CQW327","1979-05-19","2000","none","XX","1970","Auto","unknown","none","3448786","$3150","none","none"),
-("DWE575","1979-05-19","2000","none","XX","none","none","Grey","Champagne","9189968","$795","none","August"),
-("EDQ495","1979-05-19","2000","none","XX","none","Auto","unknown","none","334420","none","53000mis","none"),
-("BJV104","1979-05-19","3500","none","XX","none","Auto","unknown","none","9696873","$3750","none","October"),
-("EGU555","1979-05-26","3L","MkIII","XX","none","none","unknown","none","474960","$2950","57000mis","October"),
-("EQW270","1979-05-26","2000","none","TC","none","none","unknown","none","7993969","$3975","none","none"),
-("BEB084","1979-05-26","3500","none","XX","1970","none","unknown","none","3286830","$3300","59000mis","May"),
-("CTZ077","1979-05-26","90","none","XX","1953","none","unknown","none","Glebe","$750","none","April"),
-("CYF519","1979-06-02","3L","none","XX","none","none","unknown","none","9187080","$300","none","May"),
-("AHY817","1979-06-02","3.5L","none","Sedan","1969","Auto","unknown","none","361266","$3750","58000mis","none"),
-("AQJ342","1979-06-02","2000","none","TC","1970","none","unknown","none","9601371","$2390","none","none"),
-("DYC270","1979-06-02","2000","none","XX","1965","4spd","Cream","Black","6375024","$1250","none","none"),
-("EQN270","1979-06-02","2000","none","TC","1971","none","unknown","none","7993969","$3975","none","none"),
-("ERH961","1979-06-02","2000","none","XX","1968","none","unknown","none","5256621","$2350","none","none"),
-("BEB084","1979-06-02","3500","none","XX","none","none","White","Beige","3286320","$3300","none","May"),
-("BQH842","1979-06-02","3500","none","XX","1970","Auto","unknown","none","4493458","$4250","none","none"),
-("CQW327","1979-06-02","2000","none","XX","none","none","unknown","none","3448786","$2850","none","none"),
-
-
+("CWE193","1985-06-01","3L","MkII","XX","1963","none","unknown","none","901268","$2000","none","none"),
+("DXE503","1985-06-01","3L","none","XX","1965","Auto","unknown","none","465241","$2300","none","March"),
+("ABW847","1985-06-01","2000","none","XX","1968","none","Off-White","Black","6344679","$2800","none","October"),
+("BMI968","1985-06-01","2000","none","XX","1969","Man","unknown","none","(043)257360","$1050","none","April"),
+("GAS528","1985-06-01","2000","none","TC","1971","Man","unknown","none","4981375","$2500","none","none"),
+("GQR792","1985-06-01","2000","none","XX","1970","none","unknown","none","955860","$1750","none","none"),
+("A0A264","1984-03-10","3.5","none","XX","1969","none","unknown","none","3272329","$3200","40000mis","none"),
+("AGI101","1984-03-10","3500","none","XX","1970","none","unknown","none","8181153","none","none","none"),
+("A0A273","1984-03-10","P5Bcoupe","none","XX","1969","none","unknown","none","3272329","$3200","40000mis","none"),
+("KMG348","1984-03-17","3500","SDI","XX","1979","Auto","Deep Blue","none","5023522","$10250","none","November"),
+("CDL973","1984-05-05","3L","none","XX","1961","none","unknown","none","3575407","none","none","none"),
+("DUH642","1984-05-12","3L","MKII","XX","none","none","unknown","none","9293347","$2600","none","none"),
+("AWQ416","1984-10-27","2000","none","XX","none","Auto","unknown","none","484001","$2800","none","none"),
+("ERX360","1984-10-27","2000","none","XX","none","Auto","unknown","none","3985546","$300","none","November"),
+("DYC883","1984-11-03","P5coupe","MKII","XX","1965","Auto","unknown","none","4873576","$3000","57000mis","November"),
+("CTQ023","1984-11-17","2000","none","XX","1972","Auto","B.R.G.","Tan","6626536","$3200","40000mis","none"),
+("BBJ058","1984-12-01","2000","MKII","TC","1971","Auto","unknown","none","4498649","$950","none","July"),
+("HHN648","1984-12-01","3500","none","XX","1974","Auto","White","none","4672941","$4300","82000mis","April"),
+("DAI158","1984-12-08","3500","none","XX","none","none","unknown","none","4985039","$4250","none","none"),
 
     ]
 
@@ -32,7 +31,7 @@ def get_rover():   # creating a list of tuples representing individual ads in th
 
 def add_adverts(cursor, ads):
 
-    master_index1 = 4000
+    master_index1 = 4105
     for row in ads:
         print row
         master_index1 += 1
@@ -62,6 +61,7 @@ def add_adverts(cursor, ads):
         except:
             print ("failed to add data")
             pass
+GAA
 
 
 def open_database(db_name):

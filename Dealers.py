@@ -15,10 +15,10 @@ dealers_list = {
 '310333': ("Grenville Motors", "83-97 Flinders St.", "Darlinghurst", "LD"),
 '310444': ("Lancaster Motors", "101 William St.", "Sydney", "LD420"),
 '310878': ("Anonymous", " St.", "Darlinghurst", "LD4377"),
-'311945': ("Anonymous", " St.", "unknown", "LD3131-LD3692"),
+'311945': ("Anonymous", " St.", "LD 4727", "LD3131-LD3692"),
 '313244': ("Anonymous", " St.", "unknown", "LD901"),
 '315298': ("Capitol Motors", " St.", "Unknown", "LD"),
-'319125': ("Anonymous", " St.", "unknown", "LD108"),
+'319125': ("David Tyson", " St.", "unknown", "LD108"),
 '3286000': ("Holmes Garage", "244 New South Head Rd.", "Edgecliff", "LD"),
 '335671': ("Anonymous", "unknown", "unknown", "LD7161"),
 '3312805': ("Anonymous", "unknown", "unknown", "LD1916"),
@@ -32,19 +32,22 @@ dealers_list = {
 '3999206': ("Eastern Suburbs Motor Co", "unknown", "unknown", "none"),
 
 '410377': ("Morisson Motors", "Street", "unknown", "DL"),
+'4115577': ("Unknown", "Street", "Suburb", "DL5181"),
 '4122244': ("Seymours of Roseville", "Street", "Roseville", "DL509"),
 '418407': ("Chatswood Motors", "Street", "unknown", "DL2469"),
 '418434': ("Sundell Motors", "821 Pacific Hwy", "Chatswood", "LD848"),
 '418452': ("Lancaster Leyland", "728 Pacific Hwy", "418452", "LD"),
-'430231': ("Rowley Motors", "393 Pacific Hwy", "Artarmon", "LD237"),
+'430231': ("Rowley Motors", "393 Pacific Hwy", "Artarmon", "LD238"),
 '430702': ("Caldwells GMH", "452 Pacific Hwy", "Crows Nest", "LD"),
 '432999': ("Scotts Motors", "373 Pacific Hwy", "Artarmon", "LD01487"),
 '434411': ("Scotts Motors", "373 Pacific Hwy", "Artarmon", "LD01487"),
+'4383000': ("Autosearch", "unknown", "unknown", "LD5177"),
 '4393099': ("North Shore Chrysler", "521 Pacific Hwy.", "Crows Nest", "LD5567"),
 '4495573': ("Pymble Prestige Cars", "none", "Pymble", "LD2060"),
 '463382': ("Anonymous", "unknown", "Linfield, Roseville", "LD295"),
 '480213': ("John A Gilbert(N. Side)", "90 Pacific Hwy.", "Waitara", "LD195"),
 '4872044': ("Motor Fair - Chrysler", "64-72 Pacific Highway", "Waitara", "LD"),
+'4988834': ("Killara Motor Sales", "Pacific Hwy.", "Gordon", "LD5604"),
 '4988866': ("Alto Ford", "Pacific Hwy.", "Gordon", "LD0071"),
 
 
@@ -56,6 +59,7 @@ dealers_list = {
 '5206287': ("Jim", "unknown", "unknown", "LD3636"),
 '5206808': ("Anonymous", "unknown", "unknown", "LD3636"),
 '5227122': ("Tom Fry's", "unknown", "unknown", "LD289"),
+'5226211': ("Tynan Motors", "105 Princes Hwy", "Sylvania" , "LD1980"),
 '5226333': ("Anonymous", "unknown", "unknown" , "LD5747"),
 '5229108': ("Apex Motors", "unknown", "Sylvania", "LD396"),
 '522XXXX': ("Anonymous", "11 Melrose Ave", "Sylvania", "LD1642"),
@@ -93,6 +97,7 @@ dealers_list = {
 '595454': ("Brian Maher", "45 Princes Hwy", "Arncliffe", "LD"),
 '5971695': ("Anonymous", "unknown", "Rockdale", "LD4367"),
 '5971711': ("Robinsons Motors", "328 Princes Hwy", "Rockdale", "LD109"),
+'5972333': ("Bayson Volvo", "376-388 Princes Hwy", "Rockdale", "LD71090"),
 '5972966': ("St George Auctions", "301-307 Princes Hwy", "Rockdale", "LD7003"),
 '5974122': ("4 x 4 Australia", "6 Princes Hwy", "Arncliffe", "LD3147"),
 '5974199': ("The Karmart", "257-261 Princes Hwy", "Rockdale", "LD6481"),
@@ -125,6 +130,7 @@ dealers_list = {
 '6371025': ("Marshalls Motors", "Church St.", "Parramatta", "LD26"),
 '6372738': ("Anonymous", "Parrammata Rd", "unknown", "LD75"),
 '6373800': ("Lorack Motors", "35 Parramatta Rd", "Granville", "LD2400"),
+'6374138': ("Geoff Muir Cars Pty Ltd", "99 Parramatta Rd", "Granville", "LD4830"),
 '6375024': ("Ken Allen", "93-97 and 101 Parramatta Rd", "Granville", "LD301"),
 '6375781': ("Bryfield Autos", "160 Parramatta Rd", "Granville", "LD961"),
 '6378242': ("Ken Allen", "93-97 and 101 Parramatta Rd", "Granville", "LD"),
@@ -133,7 +139,7 @@ dealers_list = {
 '6376092': ("Howard Yip Motors", "54 Parrammata Rd", "Granville", "LD1548"),
 '6378008': ("Bryfield Autos", "160 Parramatta Rd", "Granville", "LD961"),
 '6381823': ("JJ Roberts", "1 Euston St", "Rydalmere", "LD2781"),
-'6396377': ("John Creasey Cars", "11-13 Old Northern Rd", "Baulkham Hills", "LD"),
+'6396377': ("John Creasey Cars", "11-15 Old Northern Rd", "Baulkham Hills", "LD4653"),
 '6441066': ("Family Car Centre", "35-47 Woodville Rd", "Guildford", "LD7289"),
 '648XXXX': ("Robert Carroll Motors", "99 Parramatta Rd", "Auburn", "LD284"),
 '6480224': ("Ruslit Motors", "unknown Rd", "Auburn", "LD451"),
@@ -155,6 +161,9 @@ dealers_list = {
 '6812811': ("Anonymous", "unknown", "unknown", "LD6089"),
 '6821087': ("Brian Anthony", "unknown", "Ganville", "LD1010"),
 '6821399': ("Catchpenny Cars", "Woodville/Halsall", "Ganville", "LD8011"),
+'6831220': ("Bryan Dean Autos", "588 Church St", "North Parramatta", "LD1775"),
+'6831224': ("Bryan Dean Autos", "588 Church St", "North Parramatta", "LD1775"),
+'6920162': ("Anonymous", "59 Arundel St", "Glebe", "LD1629"),
 '6831933': ("Maypow Motors", "606 Church St", "North Parramatta", "LD"),
 '6994596': ("Anonymous", "unknown", "unknown", "LD1171"),
 
@@ -166,7 +175,7 @@ dealers_list = {
 '702346': ("Anonymous", "unknown", "unknown", "LD316"),
 '704030': ("The Little Battler", "410 Hume Hwy", "Yagoona", "LD8421"),
 '7071847': ("The Little Battler", "410 Hume Hwy", "Yagoona", "LD8421"),
-'7091234': ("R M Campbell", "unknown", "unknown", "LD1407"),
+'7091234': ("R M Campbell", "245 Hume Hwy", "Greenacre", "LD1407"),
 '7093891': ("Boyded of Greenacre", "273 Hume Hwy", "Greenacre", "LD"),
 '7097997': ("Boyded of Bankstown", "273 Hume Hwy", "Greenacre", "LD"),
 '710257': ("Brian Maher", "157 Parramatta Rd", "Ashfield", "LD"),
@@ -243,6 +252,7 @@ dealers_list = {
 '7993969': ("Horseless Carriages", "unknown", "Haberfield", "LD2618"),
 '7993400': ("City Chrysler", "Cnr Hawthorn Parade & Parramatta Rd.", "Haberfield", "LD"),
 '7995555': ("Ken Peters Distinctive Cars", "179 Parramatta Rd.", "Haberfield", "LD4645"),
+'7995782': ("Ideal Cars", "unknown", "Haberfield", "LD"),
 
 '802281': ("Glendenning Motors", "693 Victoria Rd.", "Ryde", "LD"),
 '811323': ("Anonymous", "unknown", "unknown", "LD3277"),
@@ -262,6 +272,7 @@ dealers_list = {
 '8885329': ("Anonymous", "unknown", "unknown", "LD2403"),
 '8887866': ("Ryde Chrysler", "31 Epping Rd.", "North Ryde", "LD1080"),
 
+'901100': ("T.W. Motors", "312 Falcon St. ", "Neutral Bay", "LD6251"),
 '9132344': ("John Mola Motors", "unknown", "unknown", "LD351"),
 '928615': ("British & Continental Cars", "259 Pacific H'way", "North Sydney", "LD"),
 '930461': ("Pacific Ford", "780 Pittwater Rd", "Brookvale", "LD726"),
@@ -292,7 +303,7 @@ def main():
        dealer_licence = dealer_data[3]
        dealer_suburb = dealer_data[2]
        dealer_address = dealer_data[1]
-       print key, dealer_name, dealer_address, dealer_suburb, dealer_licence
+       print(key, dealer_name, dealer_address, dealer_suburb, dealer_licence)
 
 
 

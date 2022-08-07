@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="add more mascot">
+    <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="print transmission type for Rovers">
+      <change afterPath="$PROJECT_DIR$/Just_Cars_Fix_Date.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Just_Cars_Rambler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Load_Plates_Menu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Unique_Cars_Fix_Date.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Unique_Cars_Rambler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advertisements_indexed - NewCopy.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advertisements_indexed - oldcopy.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Engines.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Engines.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dealer_Dict.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dealer_Dict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dealers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dealers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dsplay_Plates_V3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dsplay_Plates_V3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Load_Plates_Rover.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Rover.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSW_Plate_Info.py" beforeDir="false" afterPath="$PROJECT_DIR$/NSW_Plate_Info.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/advertisements_indexed.db" beforeDir="false" afterPath="$PROJECT_DIR$/advertisements_indexed.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sydney_exchange.py" beforeDir="false" afterPath="$PROJECT_DIR$/sydney_exchange.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +43,14 @@
       </map>
     </option>
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
@@ -40,17 +61,21 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectId" id="1SrwyjRVNTpdYBYSozXG4RikHi3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.Dsplay_Plates_V3">
+  <component name="RunManager" selected="Python.Load_Plates_Menu">
     <configuration name="Dsplay_Plates_V3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Engines" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -72,7 +97,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Load_Plates_MM" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Load_Plates_Menu" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Engines" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -84,7 +109,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Load_Plates_MM.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Load_Plates_Menu.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -114,7 +139,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Load_Plates_Valiant" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Unique_Cars_Fix_Date" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Engines" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -126,7 +151,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Load_Plates_Valiant.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Unique_Cars_Fix_Date.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -135,7 +160,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="engines10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Unique_Cars_Rambler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Engines" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -147,7 +172,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/engines10.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Unique_Cars_Rambler.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -158,21 +183,22 @@
     </configuration>
     <list>
       <item itemvalue="Python.Dsplay_Plates_V3" />
-      <item itemvalue="Python.Load_Plates_MM" />
-      <item itemvalue="Python.Load_Plates_Valiant" />
-      <item itemvalue="Python.engines10" />
+      <item itemvalue="Python.Load_Plates_Menu" />
       <item itemvalue="Python.Load_Plates_Rover" />
+      <item itemvalue="Python.Unique_Cars_Fix_Date" />
+      <item itemvalue="Python.Unique_Cars_Rambler" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Load_Plates_Menu" />
         <item itemvalue="Python.Dsplay_Plates_V3" />
         <item itemvalue="Python.Load_Plates_Rover" />
-        <item itemvalue="Python.Load_Plates_MM" />
-        <item itemvalue="Python.engines10" />
-        <item itemvalue="Python.Load_Plates_Valiant" />
+        <item itemvalue="Python.Unique_Cars_Rambler" />
+        <item itemvalue="Python.Unique_Cars_Fix_Date" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -183,27 +209,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546911100455</updated>
-    </task>
-    <task id="LOCAL-00007" summary="added many mascot adds, changed printout for month">
-      <created>1548984632079</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1548984632079</updated>
-    </task>
-    <task id="LOCAL-00008" summary="added even more renaults, some dealer info">
-      <created>1549418215515</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1549418215515</updated>
-    </task>
-    <task id="LOCAL-00009" summary="added even more renaults, some dealer info">
-      <created>1550140346604</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1550140346604</updated>
     </task>
     <task id="LOCAL-00010" summary="added even more renaults, some dealer info">
       <created>1550659380325</created>
@@ -527,7 +532,28 @@
       <option name="project" value="LOCAL" />
       <updated>1593245048418</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="print transmission type for Rovers">
+      <created>1593606675888</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1593606675889</updated>
+    </task>
+    <task id="LOCAL-00057" summary="add some dealers">
+      <created>1602967648536</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1602967648537</updated>
+    </task>
+    <task id="LOCAL-00058" summary="print transmission type for Rovers">
+      <created>1605862691735</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1605862691735</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TodoView">
@@ -569,8 +595,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated Rowley Motors and database" />
-    <MESSAGE value="added many mascot adds, changed printout for month" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="more renaults from 1974" />
     <MESSAGE value="added even more renaults, some dealer info" />
     <MESSAGE value="added valiants" />
@@ -594,40 +619,8 @@
     <MESSAGE value="make improvements to V3" />
     <MESSAGE value="make improvements to V3 valiants" />
     <MESSAGE value="add more mascot" />
-    <option name="LAST_COMMIT_MESSAGE" value="add more mascot" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1593245047147">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1593245047147" />
-    <state width="1348" height="246" key="GridCell.Tab.0.bottom" timestamp="1593606605286">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state width="1348" height="246" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1593606605286" />
-    <state width="1348" height="246" key="GridCell.Tab.0.center" timestamp="1593606605285">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state width="1348" height="246" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1593606605285" />
-    <state width="1348" height="246" key="GridCell.Tab.0.left" timestamp="1593606605280">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state width="1348" height="246" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1593606605280" />
-    <state width="1348" height="246" key="GridCell.Tab.0.right" timestamp="1593606605286">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state width="1348" height="246" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1593606605286" />
-    <state x="275" y="112" key="Vcs.Push.Dialog.v2" timestamp="1593245052112">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="275" y="112" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1593245052112" />
-    <state x="165" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1593083719088">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="165" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.768@0.0.1366.768" timestamp="1593083719088" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1593085122401">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1593085122401" />
+    <MESSAGE value="add some dealers" />
+    <MESSAGE value="print transmission type for Rovers" />
+    <option name="LAST_COMMIT_MESSAGE" value="print transmission type for Rovers" />
   </component>
 </project>

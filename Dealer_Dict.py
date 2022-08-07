@@ -58,7 +58,7 @@ def get_exchange_dict():
     exchange_dict['56'] = 'Stanmore'
     exchange_dict['560'] = 'Dulwich Hill'
     exchange_dict['579'] = 'Oatley, Hurstville'
-    exchange_dict['59'] = 'Rockdale, Arncliffe'
+    exchange_dict['590241'] = 'Purnell Motors'
 
     exchange_dict['602'] = 'Liverpool'
     exchange_dict['61'] = 'Elizabeth St'
