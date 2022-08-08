@@ -589,7 +589,7 @@ def main():
                 Rambler_list = [pick_model]
 
 
-            ads_table = get_sql_data(car_model_list=Rambler_list, car_make="Rambler", connectstring="advertisements_indexed.db",
+            ads_table = get_sql_data(car_model_list=Rambler_list, car_make="Rambler", connectstring="../advertisements_indexed.db",
                                      jurisdiction=pick_state)
             break
         if  pick_make == "Mascot":
@@ -602,13 +602,13 @@ def main():
                             "AMX", "Marlin", "none","X-Coupe"]
             if pick_model in Rambler_list:
                 Rambler_list = [pick_model]
-            ads_table = get_sql_data_mascot(car_model_list=Rambler_list, car_make="Rambler", connectstring="advertisements_indexed.db",
+            ads_table = get_sql_data_mascot(car_model_list=Rambler_list, car_make="Rambler", connectstring="../advertisements_indexed.db",
                                      jurisdiction=pick_state)
             break
 
         elif pick_make == "fo" or pick_make == "Ford":
             Ford_list = ["Falcon", "Cortina", "Capri"]
-            ads_table = get_sql_data(car_model_list=Ford_list, car_make="Ford", connectstring="advertisements_indexed.db",
+            ads_table = get_sql_data(car_model_list=Ford_list, car_make="Ford", connectstring="../advertisements_indexed.db",
                                      jurisdiction=pick_state)
             break
         elif pick_make == "re" or pick_make == "Renault":
@@ -617,7 +617,7 @@ def main():
             pick_model = input("please enter Renault model: ")
             if pick_model != "all":
                 Renault_list = [pick_model]
-            ads_table = get_sql_data(car_model_list=Renault_list, car_make ="Renault", connectstring="advertisements_indexed.db",
+            ads_table = get_sql_data(car_model_list=Renault_list, car_make ="Renault", connectstring="../advertisements_indexed.db",
                                    jurisdiction=pick_state)
             break
         elif pick_make == "pe" or pick_make == "Peugeot":
@@ -626,7 +626,7 @@ def main():
             pick_model = input("please enter Peugeot model: ")
             if pick_model == "all":
                 Peugeot_list = ["403", "403B", "404", "504", "none"]
-            ads_table = get_sql_data(car_model_list=Peugeot_list, car_make ="Peugeot", connectstring="advertisements_indexed.db",
+            ads_table = get_sql_data(car_model_list=Peugeot_list, car_make ="Peugeot", connectstring="../advertisements_indexed.db",
                                    jurisdiction=pick_state)
             break
         elif pick_make == "ro" or pick_make == "Rover":
@@ -637,12 +637,12 @@ def main():
                 Rover_list = [pick_model]
             else:
                 Rover_list = ["75","90","105R","105S","2000", "2000TC", "3500", "P5B", "P5", "P5Bcoupe", "P5coupe","3L", "100", "none"]
-            ads_table = get_sql_data(car_model_list=Rover_list, car_make ="Rover", connectstring="advertisements_indexed.db",
+            ads_table = get_sql_data(car_model_list=Rover_list, car_make ="Rover", connectstring="../advertisements_indexed.db",
                                    jurisdiction=pick_state)
             break
         elif pick_make == "Leyland":
             Leyland_list = ["P76"]
-            ads_table = get_sql_data(car_model_list=Leyland_list, car_make ="Leyland", connectstring="advertisements_indexed.db",
+            ads_table = get_sql_data(car_model_list=Leyland_list, car_make ="Leyland", connectstring="../advertisements_indexed.db",
                                    jurisdiction=pick_state)
             break
         elif pick_make == "val" or pick_make == "Valiant":
@@ -654,12 +654,12 @@ def main():
             else:
                 Valiant_list = ["none","R", "S", "AP5", "AP6", "VC", "VE", "VF", "VG", "VH", "VJ", "VK", "CL", "CM"]
 
-            ads_table = get_sql_data_series(car_model_list=Valiant_list, car_make="Chrysler", connectstring="advertisements_indexed.db",
+            ads_table = get_sql_data_series(car_model_list=Valiant_list, car_make="Chrysler", connectstring="../advertisements_indexed.db",
                                    jurisdiction=pick_state)
             break
 
         elif pick_make == "all":
-            ads_table = get_sql_data_all( connectstring="advertisements_indexed.db", jurisdiction=pick_state, publication=pick_publication)
+            ads_table = get_sql_data_all( connectstring="../advertisements_indexed.db", jurisdiction=pick_state, publication=pick_publication)
             break
         elif pick_make == 'x':
             break

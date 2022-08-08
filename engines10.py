@@ -87,7 +87,7 @@ def add_engines(cursor, engine_nos):
                         amc_code=engine_data[0],
                         body_no=engine_data[1],
                         casting_no=engine_data[2], contact=engine_data[3])
-        print sql
+        print( sql)
         try:
             cursor.execute(sql)
         except:
@@ -99,14 +99,14 @@ def get_sql_data_all(cursor, connectstring):
 
     sql = "select * from engine_table"
 
-    print sql
+    print (sql)
     try:
         results = cursor.execute(sql)
         ads = results.fetchall()
         return ads
 
     except:
-        print "I am unable to connect to the database"
+        print("I am unable to connect to the database")
 
 def add_engine(cursor, serial_new,amc_code_new,body_no_new, casting_no_new, contact_new):
 
@@ -120,7 +120,7 @@ def add_engine(cursor, serial_new,amc_code_new,body_no_new, casting_no_new, cont
                         amc_code=amc_code_new,
                         body_no=body_no_new,
                         casting_no=casting_no_new, contact=contact_new)
-        print sql
+        print( sql)
         try:
             cursor.execute(sql)
         except:
@@ -146,7 +146,7 @@ def diff_month(d1, d2):
                 month += 1
             d3 = datetime(year, month , 1)
             if engine_count != 1:
-              print "----------------------------- NO DATA --------------------------------------" , d3.strftime('%B %Y')
+              print( "----------------------------- NO DATA --------------------------------------" , d3.strftime('%B %Y'))
 
     return months_apart
 
@@ -177,7 +177,7 @@ def main():
     for serial in engine_nos:
         engine_data = engine_nos[serial]
         if serial not in engine_table_key_array:
-            print "found one"
+            print("found one")
             add_engine(cursor,serial,engine_data[0],engine_data[1],engine_data[2],engine_data[3])
     conn.commit()
     conn.close()
@@ -199,7 +199,8 @@ def main():
     last_month_object = date_object
     global engine_count
     engine_count = 0
-    for key, value in sorted(engine_nos_iso.iteritems(), key=lambda (k,v): (v,k)):
+   # for key, value in sorted(engine_nos_iso.iteritems(), key=lambda (k,v): (v,k)):
+    for value in engine_nos_iso:
        engine_count += 1
        date_object = datetime.strptime(value, '%Y-%m-%d')
        this_month = date_object.strftime('%B %Y')
@@ -211,9 +212,9 @@ def main():
        contact = engine_data[3]
        if (this_month != last_month): # and (last_month != first_month):
          months_apart = diff_month(date_object, last_month_object)
-         print "****************************************************************************************"
-         print "******************************  " , "{:>16s}".format(this_month) , "  ************************************"
-       print "%s %s %7s %7s %3s %28s" % (key, amc_code, body_no, casting_no, contact, full_date)
+         print ("****************************************************************************************")
+         print ("******************************  " , "{:>16s}".format(this_month) , "  ************************************")
+       print ("%s %s %7s %7s %3s %28s" % (key, amc_code, body_no, casting_no, contact, full_date))
        last_month = this_month
        last_month_object = date_object
        last_month_iso_date = value
