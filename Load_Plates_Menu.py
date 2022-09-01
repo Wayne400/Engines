@@ -4,7 +4,7 @@ import re
 def get_sql_plate_data( plate ):
     #  print kwargs
 
-    conn = open_database('advertisements_indexed.db')
+    conn = open_database('../advertisements_indexed.db')
 
     sql = "select * from adverts where rego_plate LIKE '{0}%'".format( plate)
 
@@ -28,7 +28,7 @@ def open_database(db_name):
 
 def add_adverts( row):
 
-        conn = open_database('advertisements_indexed.db')
+        conn = open_database('../advertisements_indexed.db')
         cursor = conn.cursor()
 
 
@@ -79,7 +79,7 @@ def add_adverts( row):
 
 
 def main():
-    from Dsplay_Plates_V3 import Advertisement
+    from Display_Plates_V3 import Advertisement
     Data_Fill = { "master_index": '99999999',
                   "rego_plate": 'ABC123',
                   "jurisdiction": 'NSW',
@@ -87,8 +87,8 @@ def main():
                   "item_number": 1 ,
                   "publication": 'smh',
                   "car_make": 'aston martin',
-                  "model_year": '1965',
                   "car_model": 'DB5',
+                  "model_year": '1965',
                   "model_code": 'MKIV',
                   "model_level": 'none',
                   "trim_level": 'XXX',
@@ -112,29 +112,144 @@ def main():
 
 
     while True:
-      Make_list = ["Rambler", "Renault", "Peugeot", "Rover", "Ford", "Mascot", "Valiant", "Leyland", "x = exit"]
+      Make_list = ["Rambler", "Renault", "Peugeot", "Rover", "Triumph", "Ford", "Mascot", "Valiant", "Leyland", "x = exit"]
       print(Make_list)
       pick_make = input("Car Make?")
       if pick_make != 'x':
         print(pick_make)
-        if pick_make == "ra" or pick_make == "Rambler":
+        if pick_make == "Ram" or pick_make == "Rambler":
             Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
                             "AMX", "Marlin", "X-Coupe", "Wagon"]
             print(Rambler_list)
+            dont_ask = {'master_index': '99999999',
+                        'jurisdiction': 'NSW',
+                        'item_number': 1,
+                        'publication': "smh",
+                        'car_make': 'Rambler',
+                        'transmission': 'none',
+                        'phone2': 'none',
+                        'dealers_licence': 'none',
+                        'who': 'WW',
+                        "model_code": "none",
+                        'body_style': 'none',
+                        'air': 'none',
+                        'model_level': 'none',
+                        'VIN': 'none',
+                        'Engine_No': 'none',
+                        'Body_No': 'none',
+                        'Location': 'Sydney'}
+            must_ask = {"rego_plate": 'RAM232',
+                        "iso_advert_date": '1970-02-28',
+                        "car_model": "NO Default",
+                        "trim_level": 'none',
+                        "model_year": 'none',
+                        "capacity": 'none',
+                        "colour": 'unknown',
+                        "interior_trim": 'none',
+                        "phone1": 'No Default',
+                        "price": 'none',
+                        "milage": 'none',
+                        "month": 'none'}
+            clues = {"rego_plate": "RAM258", 'iso_advert_date': "1984-12-25",
+                    'car_model': ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
+                                  "AMX", "Marlin", "X-Coupe", "Wagon"],
+                    'trim_level': ["SST", "770", "440", "660", "330"],
+                    'model_year': ["1960", "1979"],
+                    'capacity': ["232", "258", "290", "360", "287", "6cyl"],
+                    'colour': ["Big Bad Orange", "White", "Cream", "Grey", "Black"],
+                    'interior_trim': ["Bone", "Red", "Beige", "Buckskin", "Tan", "Fawn","Brown", "Black"],
+                    'phone1': ["91844207"], 'price': ["$3400"], 'milage': ["40000mis", "55000kms"],
+                    'month': ["January", "February", "March"]}
+
+
 
         elif pick_make == "fo" or pick_make == "Ford":
             Ford_list = ["Falcon", "Cortina", "Capri"]
             print(Ford_list)
 
-        elif pick_make == "re" or pick_make == "Renault":
-            Renault_list = ["R4", "R8", "R10", "R12", "R16", "R10S", "10S", "R15", "R17", "RXX"]
-            print(Renault_list)
+        elif pick_make == "Ren" or pick_make == "Renault":
+            Renault_list = ["R4", "R8", "R10", "R12", "R16", "R10S", "10S", "R15", "R17", "1.4", "RXX"]
+         #   print(Renault_list)
+            dont_ask = {'master_index': '99999999',
+                        'jurisdiction': 'NSW',
+                        'item_number': 1,
+                        'publication': "smh",
+                        'car_make': 'Renault',
+                        'capacity': 'none',
+                        'phone2': 'none',
+                        'dealers_licence': 'none',
+                        'who': 'WW',
+                        "model_code": "none",
+                        'body_style': 'none',
+                        'air': 'none',
+                        'model_level': 'none',
+                        'VIN': 'none',
+                        'Engine_No': 'none',
+                        'Body_No': 'none',
+                        'Location': 'Sydney'}
+            must_ask = {"rego_plate": 'REN123',
+                        "iso_advert_date": '1970-02-28',
+                        "car_model": "RXX",
+                        "trim_level": 'XX',
+                        "model_year": 'none',
+                        "transmission": 'none',
+                        "colour": 'unknown',
+                        "interior_trim": 'none',
+                        "phone1": 'No Default',
+                        "price": 'none',
+                        "milage": 'none',
+                        "month": 'none'}
+            clues = {"rego_plate": "REN123", 'iso_advert_date': "1984-12-25",
+                    'car_model': ["750", "R4", "R8", "R10", "R12", "R16", "R10S", "10S", "R15", "R17", "1.4", "R20", "RXX"],
+                    'trim_level': ["TL", "TS", "GL", "S", "Gordini"],
+                    'model_year': ["1960", "1979"],
+                    'transmission': ["Auto", "Man"],
+                    'colour': ["White", "Cream", "Grey", "Black"],
+                    'interior_trim': ["Champagne", "Red Leather", "Burgundy", "Bone Leather", "Tan", "Fawn","Brown", "Brick"],
+                    'phone1': ["91844207"], 'price': ["$3400"], 'milage': ["40000mis", "55000kms"],
+                    'month': ["January", "February", "March"]}
 
-        elif pick_make == "pe" or pick_make == "Peugeot":
-            Peugeot_list = ["403", "403B", "404", "504"]
-            print(Peugeot_list)
+        elif pick_make == "Peu" or pick_make == "Peugeot":
+            Peugeot_list = ["403", "403B", "404", "504", "203", "203C"]
+            dont_ask = {'master_index': '99999999',
+                        'jurisdiction': 'NSW',
+                        'item_number': 1,
+                        'publication': "smh",
+                        'car_make': 'Peugeot',
+                        'capacity': 'none',
+                        'phone2': 'none',
+                        'dealers_licence': 'none',
+                        'who': 'WW',
+                        "model_code": "none",
+                        'body_style': 'none',
+                        "trim_level": 'none',
+                        'air': 'none',
+                        'model_level': 'none',
+                        'VIN': 'none',
+                        'Engine_No': 'none',
+                        'Body_No': 'none',
+                        'Location': 'Sydney'}
+            must_ask = {"rego_plate": 'PEU123',
+                        "iso_advert_date": '1970-02-28',
+                        "car_model": "X0X",
+                        "model_year": 'none',
+                        "transmission": 'none',
+                        "colour": 'unknown',
+                        "interior_trim": 'none',
+                        "phone1": 'No Default',
+                        "price": 'none',
+                        "milage": 'none',
+                        "month": 'none'}
+            clues = {"rego_plate": "PEU123", 'iso_advert_date': "1984-12-25",
+                    'car_model': Peugeot_list,
+                    'model_year': ["1960", "1979"],
+                    'transmission': ["Auto", "Man"],
+                    'colour': ["White", "Ivory", "Burgundy","Maroon", "Black"],
+                    'interior_trim': ["Champagne", "Red Leather", "Burgundy", "Bone Leather", "Tan", "Fawn","Brown", "Brick"],
+                    'phone1': ["91844207"], 'price': ["$3400"], 'milage': ["40000mis", "55000kms"],
+                    'month': ["January", "February", "March"]}
 
-        elif pick_make == "ro" or pick_make == "Rover":
+        elif pick_make == "Rov" or pick_make == "Rover":
             Rover_list = ["105R", "105S", "2000", "2000TC", "3500", "P5B", "P5", "P5Bcoupe", "P5coupe", "3L", "100"]
             #print(Rover_list)
             dont_ask = {'master_index': '99999999',
@@ -167,10 +282,52 @@ def main():
                         "milage": 'none',
                         "month": 'none'}
             clues = {"rego_plate": "ROV123", 'iso_advert_date': "1984-12-25",
-                    'car_model': ["75", "90", "100", "105R", "105S", "110", "2000", "2000TC", "3500", "P5B",
+                    'car_model': ["75", "90", "95", "100", "105R", "105S", "110", "2000", "2000TC", "3500", "P5B",
                     "P5", "P5Bcoupe","P5coupe", "3L", "3.5L", "SD1"],
                     'model_code': ["MKI", "MKII", "MKIII"],
                     'trim_level': ["TC", "Coupe", "S"],
+                    'model_year': ["1960", "1979"],
+                    'transmission': ["Auto", "Man"],
+                    'colour': ["White", "Cream", "Grey", "Black"],
+                    'interior_trim': ["Champagne", "Red Leather", "Burgundy", "Bone Leather", "Tan", "Fawn","Brown", "Brick"],
+                    'phone1': ["(043)844207"], 'price': ["$3400"], 'milage': ["40000mis", "55000kms"],
+                    'month': ["January", "February", "March"]}
+
+        elif pick_make == "Tri" or pick_make == "Triumph":
+            Triumph_list = ["2000", "2500" ]
+            dont_ask = {'master_index': '99999999',
+                        'jurisdiction': 'NSW',
+                        'item_number': 1,
+                        'publication': "smh",
+                        'car_make': 'Triumph',
+                        'capacity': 'none',
+                        'phone2': 'none',
+                        'dealers_licence': 'none',
+                        'who': 'WW',
+                        'body_style': 'none',
+                        'air': 'none',
+                        'model_level': 'none',
+                        'VIN': 'none',
+                        'Engine_No': 'none',
+                        'Body_No': 'none',
+                        'Location': 'Sydney'}
+            must_ask = {"rego_plate": 'TRI123',
+                        "iso_advert_date": '1970-02-28',
+                        "car_model": "NO Default",
+                        "model_code": "none",
+                        "trim_level": 'none',
+                        "model_year": 'none',
+                        "transmission": 'none',
+                        "colour": 'unknown',
+                        "interior_trim": 'none',
+                        "phone1": 'No Default',
+                        "price": 'none',
+                        "milage": 'none',
+                        "month": 'none'}
+            clues = {"rego_plate": "TRI123", 'iso_advert_date': "1984-12-25",
+                    'car_model': Triumph_list,
+                    'model_code': ["MKI", "MKII"],
+                    'trim_level': ["TC", "PI", "S"],
                     'model_year': ["1960", "1979"],
                     'transmission': ["Auto", "Man"],
                     'colour': ["White", "Cream", "Grey", "Black"],
@@ -182,7 +339,7 @@ def main():
             Leyland_list = ["P76"]
             print(Leyland_list)
 
-        elif pick_make == "val" or pick_make == "Valiant":
+        elif pick_make == "Val" or pick_make == "Valiant":
             #print(Valiant_list)
             dont_ask = {'master_index': '99999998',
                         'jurisdiction': 'NSW',

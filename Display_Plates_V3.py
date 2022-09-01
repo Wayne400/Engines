@@ -11,11 +11,12 @@ from NSW_Plate_Info import get_month
 def check_production( make, model, sort1, sort2, sort3):
     if model == 'none' and make != 'Chrysler':
         model = "RXX"
-    renault_model_start = {'RXX': '1960','R4': '1958', 'R8': '1961','Gordini': '1963', 'R10': '1965', 'R10S': '1970','R12': '1969','R16':'1965', 'R15': '1971','R17':'1973'}
-    peugeot_model_start = {'RXX': '1960','403': '1955', '403B': '1958', '404': '1963', '504': '1969'}
+    renault_model_start = {'750': '1950', 'RXX': '1960','R4': '1958', 'R8': '1961','Gordini': '1963', 'R10': '1965',
+                           'R10S': '1970','R12': '1969','R16':'1965', 'R15': '1971','R17':'1973','1.4':'1976','R20':'1975'}
+    peugeot_model_start = {'203': '1952','203C': '1955', '40X': '1960', '403': '1955', '403B': '1958', '404': '1963', '504': '1969'}
     rover_model_start = {'P3': '1948','RXX': '1960','75': '1954','90': '1954','P4': '1954','95': '1961','100': '1960','110': '1961','105R': '1955',\
                          '105S': '1955','105': '1959', 'P6': '1965NSW', '2000': '1965','2000TC': '1965', '3500': '1967','P5B': '1965','3L':'1960',\
-                         'P5': '1959', 'P5Bcoupe': '1967', '3.5L': '1967','P5coupe': '1964','NO Default': '1950','SD1': '1978'}
+                         'P5': '1959', 'P5Bcoupe': '1967', '3.5L': '1967', '3.5': '1967', 'P5coupe': '1964','NO Default': '1950','SD1': '1978'}
     rambler_model_start = {'Rambler': '1960','Ambassador': '1960', 'Hornet': '1970','Gremlin': '1970',\
                            'Rebel': '1967', 'Javelin': '1969', 'AMX': '1969', 'Matador':'1971',\
                            'American':'1963', 'Classic':'1961', 'Marlin':'1964', 'X-Coupe':'1975', 'RXX':'1960'}
@@ -190,6 +191,17 @@ class RegoPlate(object):
             if self.capacity != "none":
                 description = description + " " + self.capacity
 
+        if self.make == "Triumph":
+                description = description + " " + self.model
+                if self.model_code != "none":
+                    description = description + " " + self.model_code
+                if self.body_style != "none":
+                    description = description + " " + self.body_style
+                if self.trim_level != "none":
+                    description  = description + " " + self.trim_level + " " + self.transmission
+                else:
+                    description  = description + " " + self.transmission
+
 
         if self.make == "Rover":
             if self.model != "none":
@@ -297,7 +309,7 @@ class Advertisement(object):
         if number in dealers_list:
             dealer_data = dealers_list[number]
             self.dealers_licence = dealer_data[3]
-            print("found you dealer", dealer_data[0], dealer_data[3])
+            print("found you dealer", dealer_data[0], dealer_data[1], dealer_data[2], dealer_data[3])
 
     def print_ad(self):
         months = "January", "February", "March", "April", "May", "June", "July", \
@@ -347,6 +359,17 @@ class Advertisement(object):
             else:
                     description  = description + " " + self.transmission
 
+        if self.make == "Triumph":
+                description = description + " " + self.model
+                if self.model_code != "none":
+                    description = description + " " + self.model_code
+                if self.body_style != "none":
+                    description = description + " " + self.body_style
+                if self.trim_level != "none":
+                    description  = description + " " + self.trim_level + " " + self.transmission
+                else:
+                    description  = description + " " + self.transmission
+
         if self.make == "Peugeot":
             if self.model != "none":
                 description =  description + " " + self.model
@@ -370,15 +393,21 @@ class Advertisement(object):
         if self.year == "none":
             self.year = ""
 
+        if self.month != "none":
+            self.month = self.month[0:3]
+
         if self.dealers_licence == "none":
             self.dealers_licence = ""
 
             # description = self.year + " " + description
 
 
-        print('{0:6} {1:3} {2:10} {3:4} {4:35} {5:16} {6:7} {7:11} {8:20} {9:7}' \
-               .format(self.title, self.month[0:3], self.ad_date, self.year, description, self.colour, \
+        print('{0:6} {1:10} {2:3} {3:4} {4:35} {5:16} {6:7} {7:11} {8:20} {9:7}' \
+               .format(self.title, self.ad_date, self.month, self.year, description, self.colour, \
                         self.price, self.phone1, self.suburb, self.dealers_licence))
+#        print('{0:6} {1:10} {2:3} {3:4} {4:35} {5:16} {6:7} {7:11} {8:20}' \
+#               .format(self.title, self.ad_date, self.month, self.year, description, self.colour, \
+#                        self.price, self.phone1, self.suburb))
 
 
 
@@ -386,21 +415,33 @@ class Advertisement(object):
 def get_sql_data(car_model_list, **kwargs):
     #  print kwargs
     jurisdiction = kwargs["jurisdiction"]
+    publication = kwargs["publication"]
+    publication_year = kwargs["publication_year"]
+    print(jurisdiction, publication, publication_year)
     connectstring = kwargs["connectstring"]
     car_make = kwargs["car_make"]
     stop = len(car_model_list)
     car_model_or_string = "(car_model = '{}'".format(car_model_list[0])
-    for x in range(1, stop):
+    if car_model_list[0] != "all":
+      for x in range(1, stop):
         car_model_or_string += " or " + "car_model = '{}'".format(car_model_list[x])
+      car_model_or_string = car_model_or_string + " and "
+      car_model_or_string += " )"
+    else:
+        car_model_or_string = ""
     #      print car_model_list[x]
-    car_model_or_string += " )"
+   # car_model_or_string += " )"
     #     sql = "select * from adverts"
     #  car_model_string = "car_model = '{}'".format(car_model_list[0])
-    if jurisdiction != "all":
-      sql = "select * from adverts where {0} and jurisdiction = '{1}'  and car_make = '{2}'".format(
+    if jurisdiction != "all" and publication == "all":
+        sql = "select * from adverts where {0} jurisdiction = '{1}'  and car_make = '{2}' ".format(
         car_model_or_string, jurisdiction, car_make)
+    elif jurisdiction == "all" and publication != "all" and publication_year != "all":
+        sql = "select * from adverts where {0} car_make = '{1}' and publication = '{2}' and iso_advert_date LIKE '{3}%'".format(car_model_or_string,  car_make, publication, publication_year[0:4])
+    elif jurisdiction != "all" and publication != "all" and publication_year != "all":
+        sql = "select * from adverts where {0} jurisdiction = '{1}' and car_make = '{2}' and publication = '{3}' and iso_advert_date LIKE '{4}%'".format(car_model_or_string, jurisdiction,  car_make, publication, publication_year)
     else:
-        sql = "select * from adverts where {0}  and car_make = '{1}'".format(
+        sql = "select * from adverts where {0} car_make = '{1}'".format(
             car_model_or_string, car_make)
 
     print(sql)
@@ -527,6 +568,8 @@ def get_sql_data_all( **kwargs):
     jurisdiction = kwargs["jurisdiction"]
     connectstring = kwargs["connectstring"]
     publication = kwargs["publication"]
+    publication_year = kwargs["publication_year"]
+
    #     sql = "select * from adverts"
     if jurisdiction == "all"  and publication == "all":
         sql = "select * from adverts"
@@ -534,6 +577,8 @@ def get_sql_data_all( **kwargs):
         sql = "select * from adverts where jurisdiction = '{}'".format(jurisdiction)
     elif  jurisdiction == "all"  and publication != "all":
         sql = "select * from adverts where publication = '{}'".format(publication)
+    elif jurisdiction != "all" and publication != "all" and publication_year != "all":
+        sql = "select * from adverts where publication = '{0}' and iso_advert_date LIKE '{1}%'".format(publication, publication_year)
     else:
         sql = "select * from adverts where jurisdiction = '{}' and publication = '{}' ".format(
                      jurisdiction, publication)
@@ -571,6 +616,14 @@ def main():
         Publication_list = ["smh", "age", "Just Cars", "Unique Cars", "all"]
         print(Publication_list)
         pick_publication = input("Which Publication?")
+        pick_year = input("Which Year?")
+        if pick_year == "":
+            pick_year = "all"
+ #       if pick_year != "all":
+ #          if int(pick_year) > 1950 and int(pick_year) < 1999:
+ #             print("good pick")
+ #          else:
+ #             pick_year = "all"
         Make_list = ["Rambler", "Renault", "Peugeot", "Rover", "Ford", "Mascot", "Valiant", "Leyland"]
         print(Make_list)
         pick_make = "Wally"
@@ -587,10 +640,11 @@ def main():
          #                   "AMX", "Marlin", "none","X-Coupe", "Rambler"]
             if pick_model in Rambler_list:
                 Rambler_list = [pick_model]
-
+            else:
+                Rambler_list = ["all"]
 
             ads_table = get_sql_data(car_model_list=Rambler_list, car_make="Rambler", connectstring="../advertisements_indexed.db",
-                                     jurisdiction=pick_state)
+                                     jurisdiction=pick_state, publication_year=pick_year, publication=pick_publication)
             break
         if  pick_make == "Mascot":
             Rambler_list = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
@@ -609,42 +663,53 @@ def main():
         elif pick_make == "fo" or pick_make == "Ford":
             Ford_list = ["Falcon", "Cortina", "Capri"]
             ads_table = get_sql_data(car_model_list=Ford_list, car_make="Ford", connectstring="../advertisements_indexed.db",
-                                     jurisdiction=pick_state)
+                                     jurisdiction=pick_state, publication_year=pick_year, publication=pick_publication)
             break
-        elif pick_make == "re" or pick_make == "Renault":
+        elif pick_make == "Ren" or pick_make == "Renault":
             Renault_list = ["R4", "R8", "R10", "R12", "R16", "R10S", "10S", "R15", "R17", "RXX"]
             print(Renault_list)
             pick_model = input("please enter Renault model: ")
-            if pick_model != "all":
-                Renault_list = [pick_model]
+            if pick_model == "":
+                pick_model = "all"
+            if pick_model == "all":
+                Renault_list = ["all"]
             ads_table = get_sql_data(car_model_list=Renault_list, car_make ="Renault", connectstring="../advertisements_indexed.db",
-                                   jurisdiction=pick_state)
+                                   jurisdiction=pick_state, publication_year=pick_year, publication=pick_publication)
             break
-        elif pick_make == "pe" or pick_make == "Peugeot":
+        elif pick_make == "Peu" or pick_make == "Peugeot":
             Peugeot_list = ["403", "403B", "404", "504"]
             print(Peugeot_list)
             pick_model = input("please enter Peugeot model: ")
             if pick_model == "all":
-                Peugeot_list = ["403", "403B", "404", "504", "none"]
+              #  Peugeot_list = ["403", "403B", "404", "504", "none"]
+                Peugeot_list = ["all"]
+            else:
+                Peugeot_list = [pick_model]
             ads_table = get_sql_data(car_model_list=Peugeot_list, car_make ="Peugeot", connectstring="../advertisements_indexed.db",
-                                   jurisdiction=pick_state)
+                                   jurisdiction=pick_state, publication_year=pick_year, publication=pick_publication)
             break
-        elif pick_make == "ro" or pick_make == "Rover":
+        elif pick_make == "Rov" or pick_make == "Rover":
             Rover_list = ["105R","105S", "2000", "2000TC", "3500", "P5B", "P5", "P5Bcoupe", "P5coupe","3L", "100"]
             print(Rover_list)
             pick_model = input("please enter Rover model: ")
             if pick_model != "all":
                 Rover_list = [pick_model]
             else:
-                Rover_list = ["75","90","105R","105S","2000", "2000TC", "3500", "P5B", "P5", "P5Bcoupe", "P5coupe","3L", "100", "none"]
+                Rover_list = ["all"]
             ads_table = get_sql_data(car_model_list=Rover_list, car_make ="Rover", connectstring="../advertisements_indexed.db",
-                                   jurisdiction=pick_state)
+                                   jurisdiction=pick_state, publication_year=pick_year, publication=pick_publication)
             break
-        elif pick_make == "Leyland":
+        elif pick_make == "Leyland" or pick_make == "Ley":
             Leyland_list = ["P76"]
             ads_table = get_sql_data(car_model_list=Leyland_list, car_make ="Leyland", connectstring="../advertisements_indexed.db",
-                                   jurisdiction=pick_state)
+                                   jurisdiction=pick_state, publication_year=pick_year, publication=pick_publication)
             break
+        elif pick_make == "Triumph" or pick_make == "Tri":
+            Triumph_list = ["2000", "2500"]
+            ads_table = get_sql_data(car_model_list=Triumph_list, car_make ="Triumph", connectstring="../advertisements_indexed.db",
+                                   jurisdiction=pick_state, publication_year=pick_year, publication=pick_publication)
+            break
+
         elif pick_make == "val" or pick_make == "Valiant":
             Valiant_list = ["R", "S", "AP5", "AP6", "VC", "VE", "VF", "VG", "VH", "VJ", "VK", "CL", "CM"]
             print(Valiant_list)
@@ -659,7 +724,7 @@ def main():
             break
 
         elif pick_make == "all":
-            ads_table = get_sql_data_all( connectstring="../advertisements_indexed.db", jurisdiction=pick_state, publication=pick_publication)
+            ads_table = get_sql_data_all( connectstring="../advertisements_indexed.db", jurisdiction=pick_state, publication=pick_publication, publication_year=pick_year)
             break
         elif pick_make == 'x':
             break

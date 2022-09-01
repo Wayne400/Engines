@@ -19,8 +19,8 @@ def add_adverts(cursor, ads):
 
     master_index1 = 3863
     for column in ads:
-        print column
-        print column[0], column[11]
+        print(column)
+        print(column[0], column[11])
         master_index1 += 1
 
 
@@ -42,7 +42,7 @@ def add_adverts(cursor, ads):
                         dealers_licence="none", who="WW", interior_trim=column[7],
                         body_style="none",
                         trim_level=column[4], price=column[9], milage=column[10], month=column[11])
-        print sql
+        print(sql)
         try:
             cursor.execute(sql)
         except:

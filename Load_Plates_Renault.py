@@ -49,7 +49,7 @@ def add_adverts(cursor, ads):
                         dealers_licence="none", who="WW", interior_trim=row[6],
                         body_style="none",
                         trim_level=row[4], price=row[8], milage=row[9],month=row[10])
-        print sql
+        print (sql)
         try:
             cursor.execute(sql)
         except:

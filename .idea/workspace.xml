@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="print transmission type for Rovers">
-      <change afterPath="$PROJECT_DIR$/Just_Cars_Fix_Date.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Just_Cars_Rambler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Load_Plates_Menu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Unique_Cars_Fix_Date.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Unique_Cars_Rambler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/advertisements_indexed - NewCopy.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/advertisements_indexed - oldcopy.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Engines.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Engines.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dealer_Dict.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dealer_Dict.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dealers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dealers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dsplay_Plates_V3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dsplay_Plates_V3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Load_Plates_Rover.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Rover.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSW_Plate_Info.py" beforeDir="false" afterPath="$PROJECT_DIR$/NSW_Plate_Info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/advertisements_indexed.db" beforeDir="false" afterPath="$PROJECT_DIR$/advertisements_indexed.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Display_Plates_V3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Display_Plates_V3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Load_Plates_Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Load_Plates_Rambler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Rambler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Load_Plates_Renault.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Renault.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sydney_exchange.py" beforeDir="false" afterPath="$PROJECT_DIR$/sydney_exchange.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,12 +26,12 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -70,12 +60,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.Load_Plates_Menu">
+  <component name="RunManager" selected="Python.engines10">
     <configuration name="Dsplay_Plates_V3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Engines" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -139,27 +131,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unique_Cars_Fix_Date" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Engines" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Unique_Cars_Fix_Date.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Unique_Cars_Rambler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Engines" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -181,20 +152,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="engines10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Engines" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/engines10.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Dsplay_Plates_V3" />
       <item itemvalue="Python.Load_Plates_Menu" />
       <item itemvalue="Python.Load_Plates_Rover" />
-      <item itemvalue="Python.Unique_Cars_Fix_Date" />
       <item itemvalue="Python.Unique_Cars_Rambler" />
+      <item itemvalue="Python.engines10" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Load_Plates_Menu" />
+        <item itemvalue="Python.engines10" />
         <item itemvalue="Python.Dsplay_Plates_V3" />
+        <item itemvalue="Python.Load_Plates_Menu" />
         <item itemvalue="Python.Load_Plates_Rover" />
         <item itemvalue="Python.Unique_Cars_Rambler" />
-        <item itemvalue="Python.Unique_Cars_Fix_Date" />
       </list>
     </recent_temporary>
   </component>
@@ -209,13 +201,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546911100455</updated>
-    </task>
-    <task id="LOCAL-00010" summary="added even more renaults, some dealer info">
-      <created>1550659380325</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1550659380325</updated>
     </task>
     <task id="LOCAL-00011" summary="more renaults from 1974">
       <created>1551178332016</created>
@@ -553,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605862691735</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="start of cleanup">
+      <created>1659996179736</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1659996179737</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TodoView">
@@ -596,7 +588,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="more renaults from 1974" />
     <MESSAGE value="added even more renaults, some dealer info" />
     <MESSAGE value="added valiants" />
     <MESSAGE value="added more valiants" />
@@ -621,6 +612,7 @@
     <MESSAGE value="add more mascot" />
     <MESSAGE value="add some dealers" />
     <MESSAGE value="print transmission type for Rovers" />
-    <option name="LAST_COMMIT_MESSAGE" value="print transmission type for Rovers" />
+    <MESSAGE value="start of cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="start of cleanup" />
   </component>
 </project>
