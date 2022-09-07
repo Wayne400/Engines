@@ -88,10 +88,10 @@ def main():
                   "publication": 'smh',
                   "car_make": 'aston martin',
                   "car_model": 'DB5',
-                  "model_year": '1965',
-                  "model_code": 'MKIV',
                   "model_level": 'none',
+                  "model_code": 'MKIV',
                   "trim_level": 'XXX',
+                  "model_year": '1965',
                   "body_style": 'Coupe',
                   "transmission": 'Man',
                   "capacity": 'none',                 # 5 - 9
@@ -335,9 +335,52 @@ def main():
                     'phone1': ["(043)844207"], 'price': ["$3400"], 'milage': ["40000mis", "55000kms"],
                     'month': ["January", "February", "March"]}
 
-        elif pick_make == "Leyland":
-            Leyland_list = ["P76"]
-            print(Leyland_list)
+        elif pick_make == "Leyland" or pick_make == "Ley":
+            Leyland_list = ["P76", "Austin", "Morris", "Mini", "Wolseley"]
+            # print(Leyland_list)
+            dont_ask = {'master_index': '99999998',
+                        'jurisdiction': 'NSW',
+                        'item_number': 1,
+                        'publication': "smh",
+                        'car_make': 'Leyland',
+                        "body_style": 'none',
+                        "model_code": 'none',
+                        'phone2': 'none',
+                        'dealers_licence': 'none',
+                        'who': 'WW',
+                        "interior_trim": "none",
+                        'air': 'none',
+                        'VIN': 'none',
+                        'Engine_No': 'none',
+                        'Body_No': 'none',
+                        'Location': 'Sydney'}
+            must_ask = {"rego_plate": 'LEY123',
+                        "iso_advert_date": '1970-02-28',
+                        "model_year": "none",
+                        'car_model': "none",
+                        "model_level": 'none',
+                        "trim_level": 'none',
+                        "capacity": 'none',
+                        "transmission": 'none',
+                        "colour": 'unknown',
+                        "phone1": 'No Default',
+                        "price": 'none',
+                        "milage": 'none',
+                        "month": 'none'}
+            clues = {"rego_plate": "LEY123",
+                    'iso_advert_date': "1984-12-25",
+                    'car_model': Leyland_list,
+                    'model_year': ["1960", "1979"],
+                    'model_code': ["MKI","MKII"],
+                    'model_level': ["Marina", "Tasman", "Kimberley", "1100", "1300", "1500", "1800","Freeway"],
+                    'trim_level': ["Super Six", "Deluxe", "Executive"],
+                    'transmission': ["Auto", "Man"],
+                    'capacity': ["1750", "2200"],
+                    'colour': ["White", "Cream", "Grey", "Black"],
+                    'phone1': ["(043)844207"],
+                    'price': ["$2100"],
+                    'milage': ["40000mis", "55000kms"],
+                    'month': ["January", "February", "March"]}
 
         elif pick_make == "Val" or pick_make == "Valiant":
             #print(Valiant_list)
