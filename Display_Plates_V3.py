@@ -184,32 +184,18 @@ class RegoPlate(object):
                 description = description + " " + self.capacity
 
         if self.make == "Leyland":
-          if self.model == "P76":
-            description = description + " " + self.model
+            if self.model == "P76":
+                description = description + " " + self.model
+            else:
+                description = self.model
+                if self.model_level != "none":
+                    description = description + " " + self.model_level
             if self.trim_level != "none":
                 description = description + " " + self.trim_level
             if self.capacity != "none":
                 description = description + " " + self.capacity
-          if self.model == "Morris":
-            description = self.model
-            if self.model_level != "none":
-                description = description + " " + self.model_level
-            if self.trim_level != "none":
-                description = description + " " + self.trim_level
-          if self.model == "Mini":
-            description = self.model
-            if self.model_level != "none":
-                description = description + " " + self.model_level
-            if self.trim_level != "none":
-                description = description + " " + self.trim_level
-          if self.model == "Austin":
-            description =  self.model
-            if self.model_level != "none":
-                description = description + " " + self.model_level
-            if self.trim_level != "none":
-                description = description + " " + self.trim_level
-
-
+            if self.transmission != "none":
+                description = description + " " + self.transmission
 
         if self.make == "Triumph":
                 description = description + " " + self.model
@@ -255,6 +241,15 @@ class RegoPlate(object):
                 description = description + " " + self.trim_level
             if self.capacity != "none":
                 description = description + " " + self.capacity
+
+        if self.make == "Volkswagen":
+                description = description + " " + self.model
+                if self.model_code != "none":
+                    description = description + " " + self.model_code
+                if self.capacity != "none":
+                    description = description + " " + self.capacity
+                if self.body_style != "none":
+                    description = description + " " + self.body_style
 
         colour_description = ""
         if self.colour != "unknown":
@@ -362,17 +357,16 @@ class Advertisement(object):
         if self.make == "Leyland":
             if self.model == "P76":
                 description = description + " " + self.model
-                if self.trim_level != "none":
-                    description = description + " " + self.trim_level
-                if self.capacity != "none":
-                    description = description + " " + self.capacity
             else:
                 description = self.model
                 if self.model_level != "none":
                     description = description + " " + self.model_level
-                if self.trim_level != "none":
-                    description = description + " " + self.trim_level
-
+            if self.trim_level != "none":
+                description = description + " " + self.trim_level
+            if self.capacity != "none":
+                description = description + " " + self.capacity
+            if self.transmission != "none":
+                description = description + " " + self.transmission
 
         if self.make == "Rover":
             description = description + " " + self.model
@@ -413,6 +407,16 @@ class Advertisement(object):
                 description = description + " " + self.trim_level
             if self.capacity != "none":
                 description = description + " " + self.capacity
+
+        if self.make == "Volkswagen":
+                description = description + " " + self.model
+                if self.model_code != "none":
+                    description = description + " " + self.model_code
+                if self.capacity != "none":
+                    description = description + " " + self.capacity
+                if self.body_style != "none":
+                    description = description + " " + self.body_style
+
 
         if self.milage != "none":
             description = description + " " + self.milage
@@ -612,8 +616,10 @@ def get_sql_data(car_model_list, **kwargs):
     #  car_model_string = "car_model = '{}'".format(car_model_list[0])
     if car_model == "ALL":
         car_model_or_string = ""
-    if jurisdiction != "all" and publication == "all":
+    if jurisdiction != "all" and publication == "all" and publication_year == "all":
         sql = f"select * from adverts where {car_model_or_string} jurisdiction = '{jurisdiction}' and car_make = '{car_make}' "
+    elif jurisdiction != "all" and publication == "all" and publication_year != "all" :
+        sql = f"select * from adverts where {car_model_or_string} jurisdiction = '{jurisdiction}' and car_make = '{car_make}'and iso_advert_date LIKE '{publication_year}%' "
     elif jurisdiction == "all" and publication != "all" and publication_year != "all":
         sql = f"select * from adverts where {car_model_or_string} car_make = '{car_make}' and " \
               f"publication = '{publication}' and iso_advert_date LIKE '{publication_year}%'"
@@ -762,6 +768,18 @@ def main():
 
             ads_table = get_sql_data_series(car_model_list=Valiant_list, car_make="Chrysler", connectstring="../advertisements_indexed.db",
                                    jurisdiction=pick_state)
+            break
+
+        elif pick_make == "Volkswagen" or pick_make == "VW":
+            if pick_make == "VW":
+                pick_make = "Volkswagen"
+            Model_list = ["Beetle", "Bug", "Super Bug", "1300", "1500", "1600", "Karman Ghia", "Kombi Van", "Camper Van"]
+            print(Model_list)
+            pick_model = input("please enter " +  pick_make + " model: ")
+            if pick_model not in Model_list and pick_model != "all":
+                pick_model = "all"
+            ads_table = get_sql_data(car_model_list=Model_list, car_make ="Volkswagen", car_model=pick_model, connectstring="../advertisements_indexed.db",
+                                   jurisdiction=pick_state, publication_year=pick_year, publication=pick_publication)
             break
 
         elif pick_make == "all":

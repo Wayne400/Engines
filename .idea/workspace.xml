@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="print transmission type for Rovers">
+    <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dealers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dealers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Display_Plates_V3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Display_Plates_V3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Load_Plates_Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Load_Plates_Rambler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Rambler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Load_Plates_Renault.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Renault.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sydney_exchange.py" beforeDir="false" afterPath="$PROJECT_DIR$/sydney_exchange.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +64,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.engines10">
+  <component name="RunManager" selected="Python.Dsplay_Plates_V3">
     <configuration name="Dsplay_Plates_V3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Engines" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -182,8 +179,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.engines10" />
         <item itemvalue="Python.Dsplay_Plates_V3" />
+        <item itemvalue="Python.engines10" />
         <item itemvalue="Python.Load_Plates_Menu" />
         <item itemvalue="Python.Load_Plates_Rover" />
         <item itemvalue="Python.Unique_Cars_Rambler" />
@@ -201,20 +198,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546911100455</updated>
-    </task>
-    <task id="LOCAL-00011" summary="more renaults from 1974">
-      <created>1551178332016</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1551178332016</updated>
-    </task>
-    <task id="LOCAL-00012" summary="added even more renaults, some dealer info">
-      <created>1551182569649</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1551182569649</updated>
     </task>
     <task id="LOCAL-00013" summary="added valiants">
       <created>1552475009133</created>
@@ -545,7 +528,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659996179737</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="add Triumph">
+      <created>1662067419396</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1662067419411</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Morris , Austin, Mini">
+      <created>1662585161619</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1662585161619</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TodoView">
@@ -588,8 +585,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added even more renaults, some dealer info" />
-    <MESSAGE value="added valiants" />
     <MESSAGE value="added more valiants" />
     <MESSAGE value="added more valiants ramblers renaults rovers" />
     <MESSAGE value="added P76s" />
@@ -613,6 +608,8 @@
     <MESSAGE value="add some dealers" />
     <MESSAGE value="print transmission type for Rovers" />
     <MESSAGE value="start of cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="start of cleanup" />
+    <MESSAGE value="add Triumph" />
+    <MESSAGE value="Morris , Austin, Mini" />
+    <option name="LAST_COMMIT_MESSAGE" value="Morris , Austin, Mini" />
   </component>
 </project>

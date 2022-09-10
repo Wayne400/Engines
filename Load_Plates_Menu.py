@@ -112,7 +112,7 @@ def main():
 
 
     while True:
-      Make_list = ["Rambler", "Renault", "Peugeot", "Rover", "Triumph", "Ford", "Mascot", "Valiant", "Leyland", "x = exit"]
+      Make_list = ["Ford", "Leyland", "Peugeot", "Rambler", "Renault", "Rover", "Triumph", "Valiant", "Volkswagen", "x = exit"]
       print(Make_list)
       pick_make = input("Car Make?")
       if pick_make != 'x':
@@ -160,8 +160,6 @@ def main():
                     'interior_trim': ["Bone", "Red", "Beige", "Buckskin", "Tan", "Fawn","Brown", "Black"],
                     'phone1': ["91844207"], 'price': ["$3400"], 'milage': ["40000mis", "55000kms"],
                     'month': ["January", "February", "March"]}
-
-
 
         elif pick_make == "fo" or pick_make == "Ford":
             Ford_list = ["Falcon", "Cortina", "Capri"]
@@ -427,6 +425,52 @@ def main():
                     'price': ["$2100"],
                     'milage': ["40000mis", "55000kms"],
                     'month': ["January", "February", "March"]}
+
+        elif pick_make == "VW" or pick_make == "Volkswagen":
+            VW_list = ["Beetle", "Bug", "Super Bug" , "1500", "1600",
+                       "Karman Ghia", "Kombi Van", "Camper Van"]
+            dont_ask = {'master_index': '99999999',
+                        'jurisdiction': 'NSW',
+                        'item_number': 1,
+                        'publication': "smh",
+                        'car_make': 'Volkswagen',
+                        "transmission": 'none',
+                        'phone2': 'none',
+                        'dealers_licence': 'none',
+                        'who': 'WW',
+                        "interior_trim": 'none',
+                        'air': 'none',
+                        'model_level': 'none',
+                        "trim_level": 'none',
+                        'VIN': 'none',
+                        'Engine_No': 'none',
+                        'Body_No': 'none',
+                        'Location': 'Sydney'}
+            must_ask = {"rego_plate": 'VWV123',
+                        "iso_advert_date": '1970-02-28',
+                        "car_model": "NO Default",
+                        'body_style': 'none',
+                        "model_code": "none",
+                        "model_year": 'none',
+                        'capacity': 'none',
+                        "colour": 'unknown',
+                        "phone1": 'No Default',
+                        "price": 'none',
+                        "milage": 'none',
+                        "month": 'none'}
+            clues = {"rego_plate": "VWX123",
+                    'iso_advert_date': "1984-12-25",
+                    'car_model': VW_list,
+                    'body_style': ["Fastback", "S/W" ],
+                    'model_code': ["Type 1", "Type 2", "Type 3"],
+                    'model_year': ["1960", "1979"],
+                    'capacity': ["1200", "1300", "1500", "1600", "1600S"],
+                    'colour': ["White", "Cream", "Grey", "Black"],
+                    'phone1': ["9186407"],
+                    'price': ["$3400"],
+                    'milage': ["40000mis", "55000kms"],
+                    'month': ["January", "February", "March"]}
+
 
         else:
             break
