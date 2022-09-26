@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Load_Wheels_Menu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQL_Utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dealers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dealers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Display_Plates_V3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Display_Plates_V3.py" afterDir="false" />
@@ -198,13 +200,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546911100455</updated>
-    </task>
-    <task id="LOCAL-00013" summary="added valiants">
-      <created>1552475009133</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1552475009133</updated>
     </task>
     <task id="LOCAL-00014" summary="added more valiants">
       <created>1553679532128</created>
@@ -542,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662585161619</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Volkswagens">
+      <created>1662810516720</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1662810516720</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TodoView">
@@ -585,7 +587,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added more valiants" />
     <MESSAGE value="added more valiants ramblers renaults rovers" />
     <MESSAGE value="added P76s" />
     <MESSAGE value="added even more P76s" />
@@ -610,6 +611,7 @@
     <MESSAGE value="start of cleanup" />
     <MESSAGE value="add Triumph" />
     <MESSAGE value="Morris , Austin, Mini" />
-    <option name="LAST_COMMIT_MESSAGE" value="Morris , Austin, Mini" />
+    <MESSAGE value="Volkswagens" />
+    <option name="LAST_COMMIT_MESSAGE" value="Volkswagens" />
   </component>
 </project>

@@ -1,23 +1,65 @@
 import sqlite3
 import re
+from Display_Plates_V3 import Advertisement
 
-def get_sql_plate_data( plate ):
+
+def get_sql_plate_data(plate):
     #  print kwargs
 
     conn = open_database('../advertisements_indexed.db')
 
     sql = "select * from adverts where rego_plate LIKE '{0}%'".format( plate)
 
-    #print(sql)
+#    print(sql)
+    ads = {}
 
     try:
         cursor = conn.cursor()
         results = cursor.execute(sql)
-        ads = results.fetchall()
+        ads_dict = results.fetchall()
         conn.close()
+        for ads_record in ads_dict:  # we make a lists of database indexes for distinct plate numbers, insert into dictionary
+            plate = str(ads_record[1])
+            title = ads_record[1]
+            jurisdiction = ads_record[2]
+            ad_date = ads_record[3]
+            publication = ads_record[5]
+            make = ads_record[6]
+            model = ads_record[7]
+            car_year = ads_record[8]
+            capacity = ads_record[9]
+            colour = ads_record[10]
+            phone1 = ads_record[11]
+            interior_trim = ads_record[15]
+            body_style = ads_record[16]
+            trim_level = ads_record[17]
+            price = ads_record[18]
+            milage = ads_record[19]
+            model_code = ads_record[20]
+            month = ads_record[21]
+            transmission = ads_record[22]
+            model_level = ads_record[24]
+            ads_master_index = ads_record[0]
+            new_ad = Advertisement(ad_index=ads_master_index, title=title, jurisdiction=jurisdiction,
+                               make=make, model_code=model_code, trim_level=trim_level,
+                               model=model, colour=colour, phone1=phone1,
+                               car_year=car_year, capacity=capacity, body_style=body_style,
+                               model_level=model_level, interior_trim=interior_trim,
+                               month=month, ad_date=ad_date, price=price, milage=milage,
+                               transmission=transmission)
+            new_ad.set_suburb()
+            new_ad.set_dealer()
+#            print("master_index = ", str(ads_master_index))
+            ads[ads_master_index] = new_ad
+
+        for old_ads in ads:
+            ads[old_ads].print_ad()
+
         return ads
 
-    except:
+    #except:
+    except Exception as e:
+        print(e)
         print("I am unable to connect to the database")
         conn.close()
 
@@ -79,7 +121,6 @@ def add_adverts( row):
 
 
 def main():
-    from Display_Plates_V3 import Advertisement
     Data_Fill = { "master_index": '99999999',
                   "rego_plate": 'ABC123',
                   "jurisdiction": 'NSW',

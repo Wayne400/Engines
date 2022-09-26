@@ -221,6 +221,7 @@ dealers_list = {
 '7092095': ("Autosearch", "unknown", "unknown", "LD5177"),
 '7092927': ("Eldon Motors", "25 Canterbury Rd.", "Punchbowl", "LD5026"),
 '7093891': ("Boyded of Greenacre", "273 Hume Hwy", "Greenacre", "LD"),
+'7093988': ("Jack Brabham Ford", "204-220 Hume Hwy", "Bankstown", "LD"),
 '7097997': ("Boyded of Bankstown", "273 Hume Hwy", "Greenacre", "LD"),
 '7265000': ("Motown Motors", "248 Hume Hwy", "Cabramatta", "LD1087"),
 '7265666': ("Gilbert & Roach", "662 Woodville Rd", "Guildford", "LD30"),
