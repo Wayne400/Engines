@@ -327,7 +327,7 @@ def main():
                     'trim_level': ["TC", "Coupe", "S"],
                     'model_year': ["1960", "1979"],
                     'transmission': ["Auto", "Man"],
-                    'colour': ["White", "Cream", "Grey", "Black"],
+                    'colour': ["Mexico Brown", "Cameron Green", "Almond", "White", "Cream", "Grey", "Black"],
                     'interior_trim': ["Champagne", "Red Leather", "Burgundy", "Bone Leather", "Tan", "Fawn","Brown", "Brick"],
                     'phone1': ["(043)844207"], 'price': ["$3400"], 'milage': ["40000mis", "55000kms"],
                     'month': ["January", "February", "March"]}
