@@ -2,7 +2,7 @@ import sqlite3
 import re
 from collections import defaultdict
 from sydney_exchange import get_exchange_dict
-from Dealers import dealers_list
+from Dealers import nsw_dealers_list
 from datetime import datetime
 from NSW_Plate_Info import get_month
 from SQL_Utils import get_sql_pictures_all
@@ -18,7 +18,9 @@ def check_production( make, model, sort1, sort2, sort3):
     leyland_model_start = {'Mini': '1959','P76': '1973', 'Marina': '1972', 'Tasman': '1972', 'Kimberley': '1972', 'Freeway': '1964', '1000': '1969'}
     rover_model_start = {'P3': '1948','RXX': '1960','75': '1954','90': '1954','P4': '1954','95': '1961','100': '1960','110': '1961','105R': '1955',\
                          '105S': '1955','105': '1959', 'P6': '1965NSW', '2000': '1965','2000TC': '1965', '3500': '1967','P5B': '1965','3L':'1960',\
-                         'P5': '1959', 'P5Bcoupe': '1967', '3.5L': '1967', '3.5': '1967', 'P5coupe': '1964','NO Default': '1950','SD1': '1978'}
+                         'P5': '1959', 'P5Bcoupe': '1967', '3.5L': '1967', '3.5': '1967', 'P5coupe': '1964','NO Default': '1950',
+                         'SD1': '1978','Range Rover':'1970', 'Land Rover':'1950'
+                         }
     rambler_model_start = {'Rambler': '1960','Ambassador': '1960', 'Hornet': '1970','Gremlin': '1970',\
                            'Rebel': '1967', 'Javelin': '1969', 'AMX': '1969', 'Matador':'1971',\
                            'American':'1963', 'Classic':'1961', 'Marlin':'1964', 'X-Coupe':'1975', 'RXX':'1960'}
@@ -169,9 +171,10 @@ class RegoPlate(object):
             self.transmission = ""
 
 
-        description = self.make
+        description = ""
 
         if self.model == "Valiant":
+            description = self.make
             description = self.model
             if self.model_code != "none":
                 description = self.model_code + " " + description
@@ -183,8 +186,8 @@ class RegoPlate(object):
                 description = description + " " + self.body_style
             if self.capacity != "none":
                 description = description + " " + self.capacity
-
-        if self.make == "Leyland":
+        elif self.make == "Leyland":
+            description = self.make
             if self.model == "P76":
                 description = description + " " + self.model
             else:
@@ -197,8 +200,8 @@ class RegoPlate(object):
                 description = description + " " + self.capacity
             if self.transmission != "none":
                 description = description + " " + self.transmission
-
-        if self.make == "Triumph":
+        elif self.make == "Triumph":
+                description = self.make
                 description = description + " " + self.model
                 if self.model_code != "none":
                     description = description + " " + self.model_code
@@ -208,49 +211,56 @@ class RegoPlate(object):
                     description  = description + " " + self.trim_level + " " + self.transmission
                 else:
                     description  = description + " " + self.transmission
-
-
-        if self.make == "Rover":
+        elif self.make == "Rover":
+            description = self.make
             if self.model != "none":
                 if self.model_code != "none":
                     description = description + " " + self.model_code
                 if self.body_style != "none":
                     description = description + " " + self.body_style
-                if self.trim_level != "XX":
+                if self.trim_level != "XX" and self.trim_level != "none":
                     description  = description  + " " + self.model + " " + self.trim_level + " " + self.transmission
                 else:
                     description  = description  + " " + self.model + " " + self.transmission
-
-
-
-        if self.make == "Peugeot":
+        elif self.make == "Peugeot":
+            description = self.make
             if self.model != 'none':
                 description = description + " " + self.model
-
-
-        if self.make == "Renault":
+        elif self.make == "Renault":
+            description = self.make
             if self.model != 'RXX':
                 description = description + " " + self.model
-            if self.trim_level != "XX":
+            if self.trim_level != "XX" and self.trim_level != "none":
                 description = description + " " + self.trim_level
-
-
-        if self.make == "Rambler":
+        elif self.make == "Rambler":
+            description = self.make
             if self.model != "none" or self.model != "Rambler":
                 description = description+ " " + self.model
             if self.trim_level != "none":
                 description = description + " " + self.trim_level
             if self.capacity != "none":
                 description = description + " " + self.capacity
-
-        if self.make == "Volkswagen":
-                description = description + " " + self.model
+        elif self.make == "Volkswagen":
+                description = self.make
                 if self.model_code != "none":
                     description = description + " " + self.model_code
                 if self.capacity != "none":
                     description = description + " " + self.capacity
                 if self.body_style != "none":
                     description = description + " " + self.body_style
+        else:
+            if self.model_code != "none":
+                description = self.model_code
+            description = description + " " + self.make
+            if self.model != "none":
+                description = description+ " " + self.model
+            if self.trim_level != "none":
+                description = description + " " + self.trim_level
+            if self.model_level != "none":
+                description = description + " " + self.model_level
+            if self.body_style != "none":
+                description = description + " " + self.body_style
+
 
         colour_description = ""
         if self.colour != "unknown":
@@ -279,7 +289,7 @@ class Advertisement(object):
 
     def __init__(self, title="", jurisdiction="NSW", make="", model="", model_level = "", model_code = "",
                  colour="", phone1="", dealers_licence="none", ad_index="", trim_level="", capacity="", body_style="", interior_trim="none",
-                 car_year="none", month="none", ad_date="", year_predict="1999", suburb="none", price="$$$", milage="none", transmission="none"):
+                 car_year="none", month="none", ad_date="", publication="", year_predict="1999", suburb="none", price="$$$", milage="none", transmission="none"):
 
         self.title = title
         self.jurisdiction = jurisdiction
@@ -298,6 +308,7 @@ class Advertisement(object):
         self.year = car_year
         self.month = month
         self.ad_date = ad_date
+        self.publication = publication
         self.year_predict = year_predict
         self.suburb = suburb
         self.price = price
@@ -322,8 +333,8 @@ class Advertisement(object):
 
     def set_dealer(self):
         number = self.phone1
-        if number in dealers_list:
-            dealer_data = dealers_list[number]
+        if number in nsw_dealers_list and self.jurisdiction == "NSW":
+            dealer_data = nsw_dealers_list[number]
             self.dealers_licence = dealer_data[3]
             print("found you dealer", dealer_data[0], dealer_data[1], dealer_data[2], dealer_data[3])
 
@@ -355,7 +366,7 @@ class Advertisement(object):
             if self.capacity != "none":
                 description = description + " " + self.capacity
 
-        if self.make == "Leyland":
+        elif self.make == "Leyland":
             if self.model == "P76":
                 description = description + " " + self.model
             else:
@@ -369,18 +380,18 @@ class Advertisement(object):
             if self.transmission != "none":
                 description = description + " " + self.transmission
 
-        if self.make == "Rover":
+        elif self.make == "Rover":
             description = description + " " + self.model
             if self.model_code != "none":
                 description = description + " " + self.model_code
             if self.body_style != "none":
                 description = description + " " + self.body_style
-            if self.trim_level != "XX":
+            if self.trim_level != "XX" and self.trim_level != "none":
                     description  = description + " " + self.trim_level + " " + self.transmission
             else:
                     description  = description + " " + self.transmission
 
-        if self.make == "Triumph":
+        elif self.make == "Triumph":
                 description = description + " " + self.model
                 if self.model_code != "none":
                     description = description + " " + self.model_code
@@ -391,17 +402,17 @@ class Advertisement(object):
                 else:
                     description  = description + " " + self.transmission
 
-        if self.make == "Peugeot":
+        elif self.make == "Peugeot":
             if self.model != "none":
                 description =  description + " " + self.model
 
-        if self.make == "Renault":
+        elif self.make == "Renault":
             if self.model != 'RXX':
                 description = description + " " + self.model
-            if self.trim_level != "XX":
+            if self.trim_level != "XX" and self.trim_level != "none":
                 description = description + " " + self.trim_level
 
-        if self.make == "Rambler":
+        elif self.make == "Rambler":
             if self.model != "none" or self.model != "Rambler":
                 description = description  + " " + self.model
             if self.trim_level != "none":
@@ -409,10 +420,25 @@ class Advertisement(object):
             if self.capacity != "none":
                 description = description + " " + self.capacity
 
-        if self.make == "Volkswagen":
+        elif self.make == "Volkswagen":
                 description = description + " " + self.model
                 if self.model_code != "none":
                     description = description + " " + self.model_code
+                if self.capacity != "none":
+                    description = description + " " + self.capacity
+                if self.body_style != "none":
+                    description = description + " " + self.body_style
+
+        else:  # works for Holdens
+            if self.model != "none" or self.model_code != "none":
+                if self.model_code != "none":
+                    description = description + " " + self.model_code
+                if self.model != "none":
+                    description = description + " " + self.model
+                if self.model_level != "none":
+                    description = description + " " + self.model_level
+                if self.trim_level != "none":
+                    description = description + " " + self.trim_level
                 if self.capacity != "none":
                     description = description + " " + self.capacity
                 if self.body_style != "none":
@@ -432,10 +458,9 @@ class Advertisement(object):
 
             # description = self.year + " " + description
 
-
-        print('{0:6} {1:10} {2:3} {3:4} {4:35} {5:16} {6:7} {7:11} {8:20} {9:7}' \
-               .format(self.title, self.ad_date, self.month, self.year, description, self.colour, \
-                        self.price, self.phone1, self.suburb, self.dealers_licence))
+        print('{0:6} {1:10} {2:12} {3:3} {4:4} {5:35} {6:16} {7:7} {8:11} {9:18} {10:6} {11:5}' \
+               .format(self.title, self.ad_date, self.publication, self.month, self.year, description, self.colour, \
+                        self.price, self.phone1, self.suburb, self.dealers_licence, self.index))
 
 
 class Picture(object):
@@ -601,9 +626,9 @@ def get_sql_data_all( **kwargs):
    #     sql = "select * from adverts"
     if jurisdiction == "all"  and publication == "all":
         sql = "select * from adverts"
-    elif jurisdiction != "all"  and publication == "all":
+    elif jurisdiction != "all" and publication == "all":
         sql = "select * from adverts where jurisdiction = '{}'".format(jurisdiction)
-    elif  jurisdiction == "all"  and publication != "all":
+    elif  jurisdiction == "all" and publication != "all":
         sql = "select * from adverts where publication = '{}'".format(publication)
     elif jurisdiction != "all" and publication != "all" and publication_year != "all":
         sql = "select * from adverts where publication = '{0}' and iso_advert_date LIKE '{1}%'".format(publication, publication_year)
@@ -611,7 +636,7 @@ def get_sql_data_all( **kwargs):
         sql = "select * from adverts where jurisdiction = '{}' and publication = '{}' ".format(
                      jurisdiction, publication)
 
-    print(sql)
+    print("get_sql_data_all" , sql)
 
     try:
         conn = sqlite3.connect(connectstring)
@@ -646,12 +671,7 @@ def get_sql_data(car_model_list, **kwargs):
     print(jurisdiction, publication, publication_year, car_model , car_make, car_model_list)
     connectstring = kwargs["connectstring"]
     if car_model == "all":
-        print("gotcha")
-        car_model_or_string = f"( car_model = '{car_model_list[0]}' "
-        stop = len(car_model_list)
-        for x in range(1, stop):
-            car_model_or_string += f" or car_model = '{car_model_list[x]}' "
-        car_model_or_string += " ) and "
+        car_model_or_string = ""
     else:
         car_model_or_string = f" car_model =  '{car_model}' and"
 
@@ -690,13 +710,18 @@ def get_sql_data(car_model_list, **kwargs):
 
 
 def main():
-    nsw_plate_list = []
-    vic_plate_list = []
-    qld_plate_list = []
+    nsw_plate_object_list = []
+    vic_plate_object_list = []
+    qld_plate_object_list = []
+    nsw_plate_basic_list = []
+    vic_plate_basic_list = []
+    qld_plate_basic_list = []
+
     ads_list = []
     ads_table = []
     go_again = 'y'
-    pick_make = 'none'
+    pick_make = 'all'
+    pick_model = 'dummy'
     while go_again != 'n':
         while True:
             State_list = ["NSW", "VIC", "QLD", "SA", "WA", "TAS", "NT", "ACT", "all"]
@@ -753,19 +778,24 @@ def main():
                                                 jurisdiction=pick_state)
                 break
 
-            elif pick_make == "fo" or pick_make == "Ford":
-                Ford_list = ["Falcon", "Cortina", "Capri"]
-                ads_table = get_sql_data(car_model_list=Ford_list, car_make="Ford",
-                                         connectstring="../advertisements_indexed.db",
-                                         jurisdiction=pick_state, publication_year=pick_year,
-                                         publication=pick_publication)
-                break
+ #           elif pick_make == "fo" or pick_make == "Ford":
+  #              Ford_list = ["Falcon", "Cortina", "Capri"]
+  #              ads_table = get_sql_data(car_model_list=Ford_list, car_make="Ford",
+  #                                       connectstring="../advertisements_indexed.db",
+  #                                       jurisdiction=pick_state, publication_year=pick_year,
+  #                                       publication=pick_publication)
+  #              break
             elif pick_make == "Ren" or pick_make == "Renault":
                 Renault_list = ["R4", "R8", "R10", "R12", "R16", "R10S", "10S", "R15", "R17", "RXX"]
                 if pick_make == "Ren":
                     pick_make = "Renault"
-                Model_list = Renault_list
-                ads_table = get_model(Model_list, pick_make, pick_state, pick_year, pick_publication)
+                print(Renault_list)
+                pick_model = input(f"please enter {pick_make} model: ")
+#                ads_table = get_model(Model_list, pick_make, pick_state, pick_year, pick_publication)
+                ads_table = get_sql_data(car_model_list=Renault_list, car_make=pick_make, car_model=pick_model,
+                                         connectstring="../advertisements_indexed.db",
+                                         jurisdiction=pick_state, publication_year=pick_year,
+                                         publication=pick_publication)
                 break
             elif pick_make == "Peu" or pick_make == "Peugeot":
                 Peugeot_list = ["403", "403B", "404", "504"]
@@ -852,13 +882,62 @@ def main():
             elif pick_make == 'x':
                 break
             else:
-                print("try again?")
+                ads_table = get_sql_data(car_model_list="all", car_make=pick_make, car_model="all",
+                                         connectstring="../advertisements_indexed.db",
+                                         jurisdiction=pick_state, publication_year=pick_year,
+                                         publication=pick_publication)
+                break
+#                print("try again?")
         print("finished sql query")
         ###### process data but can gather more
 
-        nsw_plate_list_index = []
-        vic_plate_list_index = []
-        qld_plate_list_index = []
+        pics_dict = {}
+        pics_table = get_sql_pictures_all(connectstring="../advertisements_indexed.db", jurisdiction=pick_state,
+                                          publication="all", publication_year="all", car_make=pick_make, car_model=pick_model)
+        for pics_record in pics_table:  # create the picture objects
+            new_pic = Picture(picture_index=pics_record[0], rego_plate=pics_record[1],
+                              jurisdiction=pics_record[2], rego_sticker=pics_record[3],
+                              iso_publication_date=pics_record[4], page_number=pics_record[5],
+                              magazine=pics_record[6], make=pics_record[7],
+                              model=pics_record[8], description=pics_record[9],
+                              car_year=pics_record[10], model_code=pics_record[11],
+                              model_level=pics_record[12], trim_level=pics_record[13])
+            pics_dict[pics_record[0]] = new_pic
+        for pic in pics_dict: # print them all out
+            new_pic = pics_dict[pic]
+          #  new_pic.print_picture()
+        for pic in pics_dict:  # make new plate objects for nsw,vic and qld
+            if pics_dict[pic].jurisdiction == "VIC":
+                vic_pic = pics_dict[pic]
+                if vic_pic.title not in vic_plate_basic_list:
+                    vic_plate = RegoPlate(title=vic_pic.title, jurisdiction=vic_pic.jurisdiction,
+                                          make=vic_pic.make, model_code=vic_pic.model_code,
+                                          trim_level=vic_pic.trim_level, model=vic_pic.model,
+                                          car_year=vic_pic.year, colour=vic_pic.description,
+                                          model_level=vic_pic.model_level, )
+                    vic_plate_object_list.append(vic_plate)
+                    vic_plate_basic_list.append(vic_pic.title)
+            if pics_dict[pic].jurisdiction == "NSW":
+                nsw_pic = pics_dict[pic]
+                if nsw_pic.title not in nsw_plate_basic_list:
+                    nsw_plate = RegoPlate(title=nsw_pic.title, jurisdiction=nsw_pic.jurisdiction,
+                                          make=nsw_pic.make, model_code=nsw_pic.model_code,
+                                          trim_level=nsw_pic.trim_level, model=nsw_pic.model,
+                                          car_year=nsw_pic.year, colour=nsw_pic.description,
+                                          model_level=nsw_pic.model_level, )
+                    nsw_plate_object_list.append(nsw_plate)
+                    nsw_plate_basic_list.append(nsw_pic.title)
+
+                    if not re.match('^[A-Z][A-Z][0-9]{3}', nsw_pic.title):
+                        return_above = check_production(make=nsw_pic.make, model=nsw_pic.model,
+                                                        sort1=nsw_pic.model_code, sort2=nsw_pic.model_level,
+                                                        sort3=nsw_pic.year)
+                        nsw_list = check_plate_nsw3(target_plate=nsw_pic.title, model_start_year=return_above)
+                        nsw_plate.set_year_predict("1999")
+                        nsw_plate.set_nsw_epoch(nsw_list)
+                    else:
+                        nsw_plate.set_nsw_epoch(7)  # for personal plates 5 digit match
+
         no_of_cars = 0
         already_found = 0
         ads_dict = {}
@@ -892,7 +971,7 @@ def main():
                                        car_year=car_year, capacity=capacity, body_style=body_style,
                                        model_level=model_level, interior_trim=interior_trim,
                                        month=month, ad_date=ad_date, price=price, milage=milage,
-                                       transmission=transmission)
+                                       transmission=transmission, publication=publication)
                 new_ad.set_suburb()
                 ads_dict[ads_master_index] = new_ad
             #        if re.match('^[A-Q][A-Z][A-Z][0-9]{3}', plate):  # check valid plate
@@ -901,7 +980,7 @@ def main():
             if (re.match('^[A-Q][A-Z][A-Z][0-9]{3}', plate) or re.match('^[A-Z][A-Z][0-9]{3}',
                                                                         plate)) and jurisdiction == "NSW":  # check valid plate
 
-                if plate not in nsw_plate_list_index:
+                if plate not in nsw_plate_basic_list:
                     nsw_plate = RegoPlate(ad_index=ads_master_index, title=title, jurisdiction=jurisdiction,
                                           make=make, model_code=model_code, trim_level=trim_level,
                                           model=model, colour=colour,
@@ -923,11 +1002,11 @@ def main():
                     #                if new_plate.jurisdiction == "VIC" or new_plate.jurisdiction == "QLD":
                     #                    new_plate.set_nsw_epoch(7)  # for personal plates 5 digit match
 
-                    nsw_plate_list.append(nsw_plate)
-                    nsw_plate_list_index.append(plate)
+                    nsw_plate_object_list.append(nsw_plate)
+                    nsw_plate_basic_list.append(plate)
                 else:
                     already_found = already_found + 1
-                    for plate_stored in nsw_plate_list:
+                    for plate_stored in nsw_plate_object_list:
                         if plate_stored.title == plate:
                             plate_stored.set_year(car_year)
                             plate_stored.set_colour(colour)
@@ -943,7 +1022,7 @@ def main():
 
             if (re.match('^[A-Q][A-Z][A-Z][0-9]{3}', plate) or re.match('^[A-Z][A-Z][0-9]{3}',
                                                                         plate)) and jurisdiction == "VIC":  # check valid plate
-                if plate not in vic_plate_list_index:
+                if plate not in vic_plate_basic_list:
                     vic_plate = RegoPlate(ad_index=ads_master_index, title=title, jurisdiction=jurisdiction,
                                           make=make, model_code=model_code, trim_level=trim_level,
                                           model=model, colour=colour,
@@ -958,11 +1037,11 @@ def main():
                             return_above = check_production(make=make, model=model, sort1=model_code, sort2=model_level,
                                                             sort3=ads_record[8])
 
-                    vic_plate_list.append(vic_plate)
-                    vic_plate_list_index.append(plate)
+                    vic_plate_object_list.append(vic_plate)
+                    vic_plate_basic_list.append(plate)
                 else:
                     already_found = already_found + 1
-                    for plate_stored in vic_plate_list:
+                    for plate_stored in vic_plate_object_list:
                         if plate_stored.title == plate:
                             plate_stored.set_year(car_year)
                             plate_stored.set_colour(colour)
@@ -977,7 +1056,7 @@ def main():
                 print(make, model, colour, publication, ad_date, phone1, jurisdiction)
 
             if jurisdiction == "QLD":  # check valid plate
-                if plate not in qld_plate_list_index:
+                if plate not in qld_plate_basic_list:
                     qld_plate = RegoPlate(ad_index=ads_master_index, title=title, jurisdiction=jurisdiction,
                                           make=make, model_code=model_code, trim_level=trim_level,
                                           model=model, colour=colour,
@@ -988,11 +1067,11 @@ def main():
                     no_of_cars = no_of_cars + 1
                     # new_plate.set_suburb(ads_record[11])
 
-                    qld_plate_list.append(qld_plate)
-                    qld_plate_list_index.append(plate)
+                    qld_plate_object_list.append(qld_plate)
+                    qld_plate_basic_list.append(plate)
                 else:
                     already_found = already_found + 1
-                    for plate_stored in qld_plate_list:
+                    for plate_stored in qld_plate_object_list:
                         if plate_stored.title == plate:
                             plate_stored.set_year(car_year)
                             plate_stored.set_colour(colour)
@@ -1015,10 +1094,10 @@ def main():
     print("**********************************  NEW SOUTH WALES      *******************************************")
     print("*" * 80)
 
-    #  nsw_plate_list.sort()
+    #  nsw_plate_object_list.sort()
     for x in range(1, 8):
         print("*" * 80)
-        for plate_stored in sorted(nsw_plate_list, key=lambda plate: plate.title):
+        for plate_stored in sorted(nsw_plate_object_list, key=lambda plate: plate.title):
             nsw_epoch = plate_stored.get_nsw_epoch()
             # suburb = plate_stored.set_suburb()
             if x == int(nsw_epoch):  # there are 4 nsw plate lists
@@ -1026,36 +1105,22 @@ def main():
     print("*" * 80)
     print("**********************************    VICTORIA          *******************************************")
     print("*" * 80)
-    # vic_plate_list.sort()
-    for vic_plate_stored in sorted(vic_plate_list, key=lambda plate: plate.title):
+    # vic_plate_object_list.sort()
+    for vic_plate_stored in sorted(vic_plate_object_list, key=lambda plate: plate.title):
         vic_plate_stored.print_plate()
 
     print("*" * 80)
     print("**********************************    QUEENSLAND         *******************************************")
     print("*" * 80)
 
-    # qld_plate_list.sort()
-    for qld_plate_stored in sorted(qld_plate_list, key=lambda plate: plate.title):
+    # qld_plate_object_list.sort()
+    for qld_plate_stored in sorted(qld_plate_object_list, key=lambda plate: plate.title):
         qld_plate_stored.print_plate()
 
     # ads_dict = []
     go_again = 'y'
     pick_make = 'none'
-    pics_dict = {}
-    pics_table = get_sql_pictures_all(connectstring="../advertisements_indexed.db", jurisdiction="all",
-                                      publication="all", publication_year="all")
-    for pics_record in pics_table:
-        new_pic = Picture(picture_index=pics_record[0], rego_plate=pics_record[1],
-                          jurisdiction=pics_record[2], rego_sticker=pics_record[3],
-                          iso_publication_date=pics_record[4], page_number=pics_record[5],
-                          magazine=pics_record[6], make=pics_record[7],
-                          model=pics_record[8], description=pics_record[9],
-                          car_year=pics_record[10], model_code=pics_record[11],
-                          model_level=pics_record[12], trim_level=pics_record[13])
-        pics_dict[pics_record[0]] = new_pic
-    for pic in pics_dict:
-        new_pic = pics_dict[pic]
-        new_pic.print_picture()
+
     while go_again != 'n':
         while True:
             plate_search = input("Enter Plate number or q for quit: ")
@@ -1064,8 +1129,8 @@ def main():
                 plate_selected = {}
                 if plate_search == "number" or plate_search == "n":
                     number_search = input("Enter Phone number: ")
-                    if number_search in dealers_list:
-                        dealer_data = dealers_list[number_search]
+                    if number_search in nsw_dealers_list:
+                        dealer_data = nsw_dealers_list[number_search]
                         dealer_street = dealer_data[1]
                         dealer_licence = dealer_data[3]
                         dealer_name = dealer_data[0]

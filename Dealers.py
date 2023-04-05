@@ -2,7 +2,7 @@
 
 
 
-dealers_list = {
+nsw_dealers_list = {
 
 '112244': ("Wallhampton Motors", "23 Bingo St.", "Wallhampton", "LD007"),
 
@@ -73,7 +73,7 @@ dealers_list = {
 '522XXXX': ("Anonymous", "11 Melrose Ave", "Sylvania", "LD1642"),
 '5229660': ("Anonymous", "unknown", "unknown" , "LD3256"),
 '5240214': ("WH Lober & Co", "1 Kiora Rd.", "Miranda", "LD402"),
-'5240666': ("Finnie Ford", "458 Kingsway", "Miranda", "LD"),
+'5240666': ("Finnie Ford", "458 The Kingsway", "Miranda", "LD"),
 '5252277': ("Larke Hoskins", "25 Kiora Rd", "Miranda", "LD402"),
 '5257151': ("Anonymous", "unknown", "unknown", "LD03329"),
 '5257351': ("Norm Lindroos Motors", "unknown", "unknown", "LD"),
@@ -89,6 +89,7 @@ dealers_list = {
 '5602976': ("Frank McGath Motors", "unknown", "Dulwich Hill", "LD132"),
 '5604801': ("Anonymous", "unknown", "Dulwich Hill", "LD4166"),
 '5608845': ("Anonymous", "unknown", "Dulwich", "LD709"),
+'5795021': ("Savell Bros.", "Downtown", "Hurstville", "LD"),
 '5796333': ("Larke Hoskins", "41 Treacy St.", "Hurstville", "LD403"),
 '5796721': ("Dominelli Ford", "Cnr Forest Rd & Bridge St", "Hurstville", "LD00375"),
 '5796943': ("Dominelli Ford", "Cnr Forest Rd & Bridge St", "Hurstville", "LD00375"),
@@ -240,6 +241,7 @@ dealers_list = {
 '7472525': ("Colin Still Family Cars", "356 Parramatta Rd", "Burwood", "LD2104"),
 '7474601': ("Cord Car Co", "320 Parramatta Rd", "Burwood", "LD4538"),
 '7476666': ("John Muirs Quality Corner", "275 Parramatta Rd", "Five Dock", "LD198"),
+'7508888': ("Lakemba Chrysler", "unknown Rd.", "Lakemba", "LD"),
 '7591672': ("Anonymous", "unknown Rd.", "unknown", "LD"),
 '7591679': ("Greg Jackson Motors", "908 Canterbury Rd", "Lakemba", "LD"),
 '7593333': ("Brian Maher", "830 Canterbury Rd", "Lakemba", "LD"),
@@ -335,6 +337,65 @@ dealers_list = {
 
 }
 
+vic_dealers_list = {
+
+'112244': ("Wallhampton Motors", "23 Bingo St.", "Wallhampton", "LD007"),
+
+'201154': ("B.J. Car Sales", "1450 Malvern Road", "Malvern", "LMCT2279"),
+'202111': ("Norman Ritchie Motors", "519 Burke Rd.", "Camberwell", "none"),
+'292210': ("Grant's of Burwood", "117 Burwood Highway", "Burwood", "LT2455"),
+'2115555': ("Booran Holden", "1049 Glenhunty Rd.", "Caulfield", "LT2455"),
+'2119736': ("Anonymous", "unknow street", "Unknown", "LMCT772"),
+'2324444': ("Collins Chrysler", "556 High St.", "Mt. Waverley", "LMCT2459"),
+
+'3297477': ("AMI City", "559 Elizabeth St.", "Melbourne", "none"),
+'3471361': ("Anonymous", "476 Elizabeth St.", "Melbourne", "LMCT789"),
+'3477777': ("Volsville", "600 Elizabeth St.", "Melbourne", "LMT2718"),
+'3503477': ("Mike Cini Approved Cars", "465 Sydney Rd.", "Coburg", "LMCT2586"),
+'3795682': ("AMI Essendon", "995 Mt. Alexandria Rd.", "Essendon", "none"),
+'3798800': ("Universal", "1966 Mt. Alexandria Rd.", "Essendon", "LMCT1542"),
+
+'485151': ("Jaywoods", "434 High St.", "Northcote", "LMCT490"),
+'491291': ("anonymous", "unknown", "unknown", "LMCT598"),
+'4192323': ("Unknown", "66 Johnson St.", "Fitzroy", "LMCT2499"),
+'4192677': ("Unknown", "66 Johnson St.", "Fitzroy", "LMCT2499"),
+'4595147': ("Courtney & Patterson Motors", "45 Bell St.", "West Heidelberg", "LMCT145"),
+'4891688': ("Gould's", "520 High St.", "Northcote", "LMCT184"),
+'4891755': ("Bob Jane Fairfield", "364 Heidelberg Road", "Fairfield", "1296"),
+
+
+'536006': ("Camco", "369 Hawthorn Rd.", "Caulfield" , "LMCT845"),
+'564062': ("New Oakleigh Motors", "Cnr Dandenong & Fern Tree Gully Rds.", "Oakleigh" , "LMCT414"),
+'5195157': ("Anonymous", "unknown", "unknown" , "LD1849"),
+'5469122': ("Springvale Ford", "170 Springvale Rd.", "Springvale" , "Unknown"),
+'5605194': ("Rod Fagg", "unknown", "unknown" , "LMCT484"),
+'5690261': ("Garry & Warren Smith", "1575 Dandenong Rd.", "Oakleigh" , "LMCT507"),
+
+
+'686813': ("New Footscray Motors", "78 Hopkins St.", "Footscray", "none"),
+'697857': ("Preston Motors", "333 Clarendon St.", "South Melbourne", "LN1546"),
+
+'760333': ("Anonymous", "unknown", "unknown", "LD35"),
+'7355555': ("Yarra Valley Motors", "unknown", "unknown", "LMCT1541"),
+'7835465': ("Bayside Torana Territory", "Cnr. Overton and Dandenong Rds.", "Frankston", "LMT461"),
+'7929718': ("Whitehorse Motors", "37 Lonsdale St.", "Dandenong", "MTL1541"),
+
+'804562': ("Clive Green Motors", "135 White Horse Rd.", "Balwyn", "LMCT1990"),
+'866266': ("Roberts of Kew", "343 High St.", "Kew", "LN1560"),
+'8505000': ("Anonymous", "unknown", "unknown", "LMT1254"),
+'8704544': ("Brentmor Ringwood", "72 White Horse Rd.", "Ringwood", "LMCT386"),
+'8788877': ("Fairdale Motors", "101 White Horse Rd.", "Blackburn", "LN1290"),
+'8789841': ("Alan Coffey", "Unknown", "Unknown", "LN1993"),
+
+'913231': ("Preston Motors", "170 Chapel St.", "St. Kilda", "LMCT1546"),
+'955634': ("Bay Road Motors", "1000 Nepean Hwy.", "Moorabbin", "LMT558"),
+'956415': ("Moorabbin Motor Market", "988 Nepean Highway", "Unknown", "LN993"),
+'957646': ("Paul Raymond Motors", "980 Nepean Highway", "Moorabbin", "LMCT1571"),
+'975559': ("Volksworld", "921 Nepean Hwy", "Moorabbin", "LMCT1532"),
+'933383': ("Vaneed Motors", "1242 Nepean Hwy.", "Cheltenham", "LMT2454"),
+
+}
+
 
 
 
@@ -342,8 +403,8 @@ def main():
 
 
 
-    for key in sorted(dealers_list):
-       dealer_data = dealers_list[key]
+    for key in sorted(nsw_dealers_list):
+       dealer_data = nsw_dealers_list[key]
        dealer_name = dealer_data[0]
        dealer_licence = dealer_data[3]
        dealer_suburb = dealer_data[2]

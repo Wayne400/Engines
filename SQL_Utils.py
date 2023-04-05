@@ -8,21 +8,33 @@ def get_sql_pictures_all( **kwargs):
     connectstring = kwargs["connectstring"]
     publication = kwargs["publication"]
     publication_year = kwargs["publication_year"]
+    car_make = kwargs["car_make"]
+    car_model = kwargs["car_model"]
+
+    if car_make == "all":
+        car_make_and_model = ""
+    else:
+        if car_model == "all":
+            car_make_and_model = f" car_make = '{car_make}' and"
+        else:
+            car_make_and_model = f" car_make = '{car_make}' and car_model = '{car_model}' and"
 
    #     sql = "select * from adverts"
-    if jurisdiction == "all"  and publication == "all":
-        sql = "select * from pictures"
-    elif jurisdiction != "all"  and publication == "all":
-        sql = "select * from pictures where jurisdiction = '{}'".format(jurisdiction)
-    elif  jurisdiction == "all"  and publication != "all":
-        sql = "select * from pictures where publication = '{}'".format(publication)
+    if jurisdiction == "all" and publication == "all":
+        if car_make == "all":
+            sql = "select * from pictures "
+        else:
+            sql = f"select * from pictures where {car_make_and_model[:-3]} "
+    elif jurisdiction != "all" and publication == "all":
+        sql = f"select * from pictures where {car_make_and_model} jurisdiction = '{jurisdiction}'"
+    elif  jurisdiction == "all" and publication != "all":
+        sql = f"select * from pictures where {car_make_and_model} publication = '{publication}'"
     elif jurisdiction != "all" and publication != "all" and publication_year != "all":
-        sql = "select * from pictures where publication = '{0}' and iso_advert_date LIKE '{1}%'".format(publication, publication_year)
+        sql = f"select * from pictures where {car_make_and_model} publication = '{publication}' and iso_advert_date LIKE '{publication_year}%'"
     else:
-        sql = "select * from pictures where jurisdiction = '{}' and publication = '{}' ".format(
-                     jurisdiction, publication)
+        sql = f"select * from pictures where {car_make_and_model} jurisdiction = '{jurisdiction}' and publication = '{publication}'"
 
-    print(sql)
+    print("get_sql_pictures_all", sql, kwargs)
 
     try:
         conn = sqlite3.connect(connectstring)

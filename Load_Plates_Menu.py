@@ -10,8 +10,8 @@ def get_sql_plate_data(plate):
 
     sql = "select * from adverts where rego_plate LIKE '{0}%'".format( plate)
 
-#    print(sql)
-    ads = {}
+    print(sql)
+    #ads = {}
 
     try:
         cursor = conn.cursor()
@@ -210,13 +210,12 @@ def main():
             Renault_list = ["R4", "R8", "R10", "R12", "R16", "R10S", "10S", "R15", "R17", "1.4", "RXX"]
          #   print(Renault_list)
             dont_ask = {'master_index': '99999999',
-                        'jurisdiction': 'NSW',
+                        'jurisdiction': 'VIC',
                         'item_number': 1,
-                        'publication': "smh",
+                        'publication': "age",
                         'car_make': 'Renault',
                         'capacity': 'none',
                         'phone2': 'none',
-                        'dealers_licence': 'none',
                         'who': 'WW',
                         "model_code": "none",
                         'body_style': 'none',
@@ -225,11 +224,12 @@ def main():
                         'VIN': 'none',
                         'Engine_No': 'none',
                         'Body_No': 'none',
-                        'Location': 'Sydney'}
+                        'Location': 'Melbourne'}
             must_ask = {"rego_plate": 'REN123',
                         "iso_advert_date": '1970-02-28',
+                        'dealers_licence': 'none',
                         "car_model": "RXX",
-                        "trim_level": 'XX',
+                        "trim_level": 'none',
                         "model_year": 'none',
                         "transmission": 'none',
                         "colour": 'unknown',
@@ -238,7 +238,7 @@ def main():
                         "price": 'none',
                         "milage": 'none',
                         "month": 'none'}
-            clues = {"rego_plate": "REN123", 'iso_advert_date': "1984-12-25",
+            clues = {"rego_plate": "REN123", 'iso_advert_date': "1984-12-25", "dealers_licence": "1234",
                     'car_model': ["750", "R4", "R8", "R10", "R12", "R16", "R10S", "10S", "R15", "R17", "1.4", "R20", "RXX"],
                     'trim_level': ["TL", "TS", "GL", "S", "Gordini"],
                     'model_year': ["1960", "1979"],
@@ -517,6 +517,7 @@ def main():
             break
 
         ads_dict = {}
+        ads = {}
         # for question in must_ask:
         for question in Data_Fill:
             if question in must_ask:
@@ -530,7 +531,9 @@ def main():
 
         plate = Data_Fill["rego_plate"][0:3]
         add_adverts( Data_Fill)
+        ads = []
         ads = get_sql_plate_data(plate)
+        print(type(ads))
         for ads_record in ads:  # we make a lists of database indexes for distinct plate numbers, insert into dictionary
             plate = str(ads_record[1])
             title = ads_record[1]

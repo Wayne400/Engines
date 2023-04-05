@@ -176,7 +176,7 @@ def get_month(target_plate):
 '1972-08-01': ("GAA280", "EIY761", "GAX474", "GAX601", "none"),
 '1972-09-01': ("GBA418", "GBS966", "GBF483", "none", "none"),
 '1972-10-01': ("GBB809", "GCH970", "GCU547", "none", "none"),
-'1972-11-01': ("GDW436", "none", "none", "none", "none"),
+'1972-11-01': ("GDW436", "GDV910", "none", "none", "none"),
 '1972-12-01': ("GDK650", "GDP317", "none", "none", "none"),
 
 
