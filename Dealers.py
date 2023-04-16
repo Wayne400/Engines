@@ -227,6 +227,7 @@ nsw_dealers_list = {
 '7265000': ("Motown Motors", "248 Hume Hwy", "Cabramatta", "LD1087"),
 '7265666': ("Gilbert & Roach", "662 Woodville Rd", "Guildford", "LD30"),
 '7273966': ("Park Motors", "296 Hume Hwy", "Cabramatta", "LD4802"),
+'7274708': ("Ern Jones Motors","350 Hume Hwy", "Bankstown", "LD608"),
 '7278554': ("Ken Sale Motors", "726 Woodville Rd", "Villawood", "LD813"),
 '7278877': ("Ken Sale Motors", "726 Woodville Rd", "Villawood", "LD813"),
 '7279544': ("Ken Sale Motors", "216 Hume Hwy", "Cabramatta", "LD5689"),

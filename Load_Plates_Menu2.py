@@ -1,7 +1,7 @@
 import sqlite3
 import re
 from Display_Plates_V3 import Advertisement
-
+from SQL_Utils import get_sql_pictures_all
 
 def get_sql_plate_data(plate):
     #  print kwargs
@@ -110,7 +110,7 @@ def add_adverts( row):
                         transmission=row["transmission"], price=row["price"], milage=row["milage"],month=row["month"],
                         air=row["air"],
                         VIN=row["VIN"], Engine_No=row["Engine_No"], Body_No=row["Body_No"],Location=row["Location"])
-        #print(sql)
+        print(sql)
         try:
             cursor.execute(sql)
         except:
@@ -121,7 +121,7 @@ def add_adverts( row):
 
 def Do_Car_Sales_Menu2( publication):
 
-    Make_List = ["Datsun", "Ford", "Holden", "Isuzu", "Leyland", "Peugeot", "Rambler",
+    Make_List = ["Datsun", "Ford", "Holden", "Isuzu", "Jaguar", "Leyland", "Peugeot", "Rambler",
                  "Renault", "Rover", "Triumph", "Valiant", "Volkswagen",
                 ]
 
@@ -139,13 +139,10 @@ def Do_Car_Sales_Menu2( publication):
                   }                                     # 25 - 28
 
     must_ask = {
-        'Chrysler': ['car_model', 'model_code', 'model_level', 'trim_level'],
         'Citroen': [ 'car_model', 'model_code', 'model_level'],
         'Datsun': [ 'car_model', 'model_level', 'trim_level'],
-        'Jaguar': [ 'car_model'],
-        'Mazda': [ 'car_make', "model_code", "model_level", "trim_level"],
+        'Mazda': [ 'car_model', "model_code", "model_level", "trim_level"],
         'Peugeot': [ 'car_model', "model_code", "model_level"],
-        'Rambler': [ 'car_model', "trim_level"],
         'Renault': [ 'car_model', "trim_level"],
         'Rolls Royce': [ 'car_make', "model_code", "model_level", "trim_level"],
         'Subaru': ['car_model'],
@@ -170,6 +167,7 @@ def Do_Car_Sales_Menu2( publication):
     Make_Dict["BMW"] = ['2002', '318']
     Trim_Level["BMW", "2002"] = ['none']
 
+    must_ask['Chrysler'] = ['car_model', 'model_code', 'model_level', 'trim_level'],
     Make_Dict['Chrysler'] = ['Valiant', 'Dodge', 'Centura', 'Royal']
     Model_Code['Chrysler', 'Dodge'] = ['Phoenix', 'Custom 880']
     Model_Code['Chrysler', 'Centura'] = ['KB', 'KC']
@@ -244,7 +242,7 @@ def Do_Car_Sales_Menu2( publication):
 
 
 
-    must_ask['Holden'] = ['car_model', 'model_code', 'model_level', 'trim_level', 'body_style']
+    must_ask['Holden'] = ['car_model', 'model_code', 'trim_level', 'body_style']
     Make_Dict['Holden'] = ["Standard", "Special", "Kingswood", "Torana", "Premier", "Monaro", "Belmont", "Statesman", "Gemini", "Brougham"]
     Trim_Level['Holden', 'Kingswood'] = ['SL', 'SS']
     Trim_Level['Holden', 'Statesman'] = ['De Ville', 'Caprice', 'none']
@@ -254,6 +252,8 @@ def Do_Car_Sales_Menu2( publication):
     Trim_Level['Holden', 'Torana'] = ['S', 'SL', 'GTR', 'GTR XU-1', 'SLE', 'SLR/5000']
     Trim_Level['Holden', 'Monaro'] = ['S', 'SS', 'GTS', 'GTS 350', 'GTS 327']
     Trim_Level['Holden', 'Premier'] = ['S', 'SS']
+    Trim_Level['Holden', 'Statesman'] = ['Deville']
+    Trim_Level['Holden', 'Belmont'] = ['S', 'SL']
     Trim_Level['Holden', 'Gemini'] = ['S', 'SL', 'Coupe']
     Model_Code['Holden','none'] = ['FE', 'FC', 'FB', 'EK', 'EJ', 'EH', 'HD', 'HR', 'HK', 'HT', 'HG', 'HQ', 'HJ', 'HZ']
     Model_Code['Holden','Standard'] = ['EJ', 'EH', 'HD', 'HR']
@@ -272,14 +272,17 @@ def Do_Car_Sales_Menu2( publication):
     Model_Level['Holden', 'Premier'] = [ "202", "253", "308"],
     Model_Level['Holden', 'Brougham'] = [ "307", "308"],
     Model_Level['Holden', 'none'] = ["none"],
+    Model_Level['Holden', 'Belmont'] = ["none"],
     Model_Level['Holden', 'Special'] = ["none"],
     Body_Style['Holden', 'Kingswood'] = ["Panel Van", "Sedan", "Utility", "Station Wagon"],
     Body_Style['Holden', 'Special'] = ["Panel Van", "Sedan", "Utility", "Station Wagon"],
     Body_Style['Holden', 'Premier'] = ["Sedan", "Station Wagon"],
     Body_Style['Holden', 'Brougham'] = ["Sedan"],
+    Body_Style['Holden', 'Statesman'] = ["Sedan"],
     Body_Style['Holden', 'Monaro'] = ["Coupe"],
     Body_Style['Holden', 'Torana'] = ["Sedan", "4door", "2door", "Coupe"],
     Body_Style['Holden', 'none'] = ["Panel Van", "Sedan", "Utility", "Station Wagon"],
+    Body_Style['Holden', 'Belmont'] = ["Panel Van", "Sedan", "Utility", "Station Wagon"],
 
     must_ask['Honda'] = ['car_model']
     Make_Dict["Honda"] = ['n360', 's600', 'Civic', 'Z', '1500']
@@ -289,11 +292,12 @@ def Do_Car_Sales_Menu2( publication):
     Model_Level['Isuzu', 'Bellett'] = ["1500"]
     Trim_Level['Isuzu', 'Bellett'] = ['none']
 
+    must_ask['Jaguar'] = ['car_model']
+    Make_Dict['Jaguar'] = ["XJ6", "420", "Mk.I", "Mk.II", "Mk.VII", "S-TYPE", "Mk.X", "420G", "E-Type", "XJS"]
+
     must_ask['Lancia'] = ['car_model', 'model_level']
     Make_Dict['Lancia'] = ['Fulvia']
     Model_Level['Lancia', 'Fulvia'] = ['2C']
-
-    Make_Dict['Jaguar'] = ["XJ6", "420", "MKI", "MKII", "XJS"]
 
     must_ask['Leyland'] = ['car_model', 'model_level', 'trim_level']
     Make_Dict['Leyland'] = ["P76", "Austin", "Morris", "Mini", "Wolseley"]
@@ -326,6 +330,7 @@ def Do_Car_Sales_Menu2( publication):
 
     must_ask['Pontiac'] = ['car_model']
     Make_Dict['Pontiac'] = ['Parisienne']
+
 
     must_ask['Rambler'] = ['car_model', 'trim_level']
     Make_Dict['Rambler'] = ["Gremlin", "Hornet", "Matador", "Rebel", "Classic", "Ambassador", "Javelin", "American",
@@ -565,6 +570,12 @@ def main():
             plate = Data_Fill["rego_plate"][0:3]
             add_adverts(Data_Fill)
             ads = get_sql_plate_data(plate)
+            pics_dict = {}
+            pics_dict = get_sql_pictures_all(connectstring="../advertisements_indexed.db", jurisdiction=Data_Fill["jurisdiction"],
+                                          publication="all", publication_year="all", car_make="all", car_model="all", car_plate=Data_Fill["rego_plate"] )
+            for pic in pics_dict: # print them out
+                new_pic = pics_dict[pic]
+                new_pic.print_picture()
 
 if __name__ == '__main__':
     main()

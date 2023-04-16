@@ -12,6 +12,13 @@ from SQL_Utils import get_sql_pictures_all
 def check_production( make, model, sort1, sort2, sort3):
     if model == 'none' and make != 'Chrysler':
         model = "RXX"
+    Model_Code_Start = {}
+    Model_Code_Finish = {}
+    Model_Code_Start['Holden', 'Large'] = {'FX': '1948', 'FJ': '195310', 'FE': '195607', 'FC': '195805', 'HK': '196801', 'HT': '196905'}
+    Model_Code_Finish['Holden', 'Large'] = {'FX': '1948', 'FJ': '195705', 'FE': '195804', 'FC': '196001','HK': '196905', 'HT': '197007'}
+
+    holden_series_start = {'FX': '1948', 'FJ': '1953', 'FE': '1956', 'FC': '1958', 'FB': '1965', 'EK': '1966', 'EJ': '1967', \
+                            'EH':'1969', 'HD': '1970', 'HR':'1971', 'HK':'1973', 'HT': '1975', 'HG':'1976', 'HQ':'1978','HJ':'1973','HZ':'1973'}
     renault_model_start = {'750': '1950', 'RXX': '1960','R4': '1958', 'R8': '1961','Gordini': '1963', 'R10': '1965',
                            'R10S': '1970','R12': '1969','R16':'1965', 'R15': '1971','R17':'1973','1.4':'1976','R20':'1975'}
     peugeot_model_start = {'203': '1952','203C': '1955', '40X': '1960', '403': '1955', '403B': '1958', '404': '1963', '504': '1969'}
@@ -463,7 +470,7 @@ class Advertisement(object):
                         self.price, self.phone1, self.suburb, self.dealers_licence, self.index))
 
 
-class Picture(object):
+class Picture_Old(object):
 
     def __init__(self, picture_index="", rego_plate="", jurisdiction="", rego_sticker="",
                  iso_publication_date="", page_number=0, magazine="",
@@ -892,17 +899,17 @@ def main():
         ###### process data but can gather more
 
         pics_dict = {}
-        pics_table = get_sql_pictures_all(connectstring="../advertisements_indexed.db", jurisdiction=pick_state,
-                                          publication="all", publication_year="all", car_make=pick_make, car_model=pick_model)
-        for pics_record in pics_table:  # create the picture objects
-            new_pic = Picture(picture_index=pics_record[0], rego_plate=pics_record[1],
-                              jurisdiction=pics_record[2], rego_sticker=pics_record[3],
-                              iso_publication_date=pics_record[4], page_number=pics_record[5],
-                              magazine=pics_record[6], make=pics_record[7],
-                              model=pics_record[8], description=pics_record[9],
-                              car_year=pics_record[10], model_code=pics_record[11],
-                              model_level=pics_record[12], trim_level=pics_record[13])
-            pics_dict[pics_record[0]] = new_pic
+        pics_dict = get_sql_pictures_all(connectstring="../advertisements_indexed.db", jurisdiction=pick_state,
+                                          publication="all", publication_year="all", car_make=pick_make, car_model=pick_model, car_plate="none")
+#        for pics_record in pics_table:  # create the picture objects
+#            new_pic = Picture(picture_index=pics_record[0], rego_plate=pics_record[1],
+#                              jurisdiction=pics_record[2], rego_sticker=pics_record[3],
+#                              iso_publication_date=pics_record[4], page_number=pics_record[5],
+#                              magazine=pics_record[6], make=pics_record[7],
+#                              model=pics_record[8], description=pics_record[9],
+#                              car_year=pics_record[10], model_code=pics_record[11],
+#                              model_level=pics_record[12], trim_level=pics_record[13])
+#            pics_dict[pics_record[0]] = new_pic
         for pic in pics_dict: # print them all out
             new_pic = pics_dict[pic]
           #  new_pic.print_picture()

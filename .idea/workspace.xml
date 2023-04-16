@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Load_Wheels_Menu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQL_Utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dealers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dealers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Display_Plates_V3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Display_Plates_V3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Load_Plates_Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Load_Plates_Menu2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Menu2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL_Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQL_Utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sydney_exchange.py" beforeDir="false" afterPath="$PROJECT_DIR$/sydney_exchange.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.Dsplay_Plates_V3">
+  <component name="RunManager" selected="Python.Load_Wheels_Menu">
     <configuration name="Dsplay_Plates_V3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Engines" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -130,7 +130,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unique_Cars_Rambler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Load_Wheels_Menu" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Engines" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -142,7 +142,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Unique_Cars_Rambler.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Load_Wheels_Menu.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -176,16 +176,16 @@
       <item itemvalue="Python.Dsplay_Plates_V3" />
       <item itemvalue="Python.Load_Plates_Menu" />
       <item itemvalue="Python.Load_Plates_Rover" />
-      <item itemvalue="Python.Unique_Cars_Rambler" />
+      <item itemvalue="Python.Load_Wheels_Menu" />
       <item itemvalue="Python.engines10" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Load_Wheels_Menu" />
+        <item itemvalue="Python.Load_Plates_Menu" />
         <item itemvalue="Python.Dsplay_Plates_V3" />
         <item itemvalue="Python.engines10" />
-        <item itemvalue="Python.Load_Plates_Menu" />
         <item itemvalue="Python.Load_Plates_Rover" />
-        <item itemvalue="Python.Unique_Cars_Rambler" />
       </list>
     </recent_temporary>
   </component>
@@ -200,34 +200,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546911100455</updated>
-    </task>
-    <task id="LOCAL-00014" summary="added more valiants">
-      <created>1553679532128</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1553679532128</updated>
-    </task>
-    <task id="LOCAL-00015" summary="added more valiants ramblers renaults rovers">
-      <created>1554985639297</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1554985639297</updated>
-    </task>
-    <task id="LOCAL-00016" summary="added P76s">
-      <created>1555494660673</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1555494660673</updated>
-    </task>
-    <task id="LOCAL-00017" summary="added even more P76s">
-      <created>1556881323911</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1556881323911</updated>
     </task>
     <task id="LOCAL-00018" summary="added even more P76s">
       <created>1557136614070</created>
@@ -544,7 +516,35 @@
       <option name="project" value="LOCAL" />
       <updated>1662810516720</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Add Picture table">
+      <created>1664233895095</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1664233895095</updated>
+    </task>
+    <task id="LOCAL-00064" summary="enhance picture table">
+      <created>1664541548043</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1664541548044</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Menu for pictures">
+      <created>1667214334652</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1667214334659</updated>
+    </task>
+    <task id="LOCAL-00066" summary="General update">
+      <created>1680732107551</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1680732107551</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TodoView">
@@ -587,10 +587,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added more valiants ramblers renaults rovers" />
-    <MESSAGE value="added P76s" />
-    <MESSAGE value="added even more P76s" />
-    <MESSAGE value="fix engines10 database" />
     <MESSAGE value="fix engines10 database reads and compares" />
     <MESSAGE value="Finished adding overs" />
     <MESSAGE value="more Ramblers from 1979" />
@@ -612,6 +608,10 @@
     <MESSAGE value="add Triumph" />
     <MESSAGE value="Morris , Austin, Mini" />
     <MESSAGE value="Volkswagens" />
-    <option name="LAST_COMMIT_MESSAGE" value="Volkswagens" />
+    <MESSAGE value="Add Picture table" />
+    <MESSAGE value="enhance picture table" />
+    <MESSAGE value="Menu for pictures" />
+    <MESSAGE value="General update" />
+    <option name="LAST_COMMIT_MESSAGE" value="General update" />
   </component>
 </project>
