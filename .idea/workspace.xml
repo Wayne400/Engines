@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dealers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dealers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Display_Plates_V3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Display_Plates_V3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Load_Plates_Menu2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Menu2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL_Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQL_Utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sydney_exchange.py" beforeDir="false" afterPath="$PROJECT_DIR$/sydney_exchange.py" afterDir="false" />
-    </list>
+    <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -200,13 +193,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546911100455</updated>
-    </task>
-    <task id="LOCAL-00018" summary="added even more P76s">
-      <created>1557136614070</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1557136614070</updated>
     </task>
     <task id="LOCAL-00019" summary="fix engines10 database">
       <created>1557136667034</created>
@@ -544,7 +530,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680732107551</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="General update 2023">
+      <created>1681681962997</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1681681962999</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TodoView">
@@ -587,7 +580,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix engines10 database reads and compares" />
     <MESSAGE value="Finished adding overs" />
     <MESSAGE value="more Ramblers from 1979" />
     <MESSAGE value="even more Ramblers from 1979" />
@@ -612,6 +604,7 @@
     <MESSAGE value="enhance picture table" />
     <MESSAGE value="Menu for pictures" />
     <MESSAGE value="General update" />
-    <option name="LAST_COMMIT_MESSAGE" value="General update" />
+    <MESSAGE value="General update 2023" />
+    <option name="LAST_COMMIT_MESSAGE" value="General update 2023" />
   </component>
 </project>
