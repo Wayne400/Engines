@@ -5,6 +5,7 @@ from sydney_exchange import get_exchange_dict
 from Dealers import nsw_dealers_list
 from datetime import datetime
 from NSW_Plate_Info import get_month
+from VIC_Plate_Info import get_month_vic
 from SQL_Utils import get_sql_pictures_all
 
 
@@ -20,7 +21,7 @@ def check_production( make, model, sort1, sort2, sort3):
     holden_series_start = {'FX': '1948', 'FJ': '1953', 'FE': '1956', 'FC': '1958', 'FB': '1965', 'EK': '1966', 'EJ': '1967', \
                             'EH':'1969', 'HD': '1970', 'HR':'1971', 'HK':'1973', 'HT': '1975', 'HG':'1976', 'HQ':'1978','HJ':'1973','HZ':'1973'}
     renault_model_start = {'750': '1950', 'RXX': '1960','R4': '1958', 'R8': '1961','Gordini': '1963', 'R10': '1965',
-                           'R10S': '1970','R12': '1969','R16':'1965', 'R15': '1971','R17':'1973','1.4':'1976','R20':'1975'}
+                           'R10S': '1970','R12': '1969','R16':'1965', 'R15': '1971','R17':'1973','1.4':'1976','R20':'1975','Floride':'1958'}
     peugeot_model_start = {'203': '1952','203C': '1955', '40X': '1960', '403': '1955', '403B': '1958', '404': '1963', '504': '1969'}
     leyland_model_start = {'Mini': '1959','P76': '1973', 'Marina': '1972', 'Tasman': '1972', 'Kimberley': '1972', 'Freeway': '1964', '1000': '1969'}
     rover_model_start = {'P3': '1948','RXX': '1960','75': '1954','90': '1954','P4': '1954','95': '1961','100': '1960','110': '1961','105R': '1955',\
@@ -281,9 +282,14 @@ class RegoPlate(object):
 
         no_of_ads_string = ""
         no_of_ads = len(self.ads_list)
+        estimate_month = ""
         if no_of_ads > 1:
             no_of_ads_string = str(no_of_ads)
-        estimate_month = get_month(self.title)
+        if self.jurisdiction == 'NSW':
+            estimate_month = get_month(self.title)
+        if self.jurisdiction == 'VIC':
+            estimate_month = get_month_vic(self.title)
+
         if estimate_month == "none":
             estimate_month = ""
 
@@ -643,6 +649,25 @@ def get_sql_data_all( **kwargs):
         sql = "select * from adverts where jurisdiction = '{}' and publication = '{}' ".format(
                      jurisdiction, publication)
 
+ #   print("get_sql_data_all" , sql)
+
+    try:
+        conn = sqlite3.connect(connectstring)
+        cursor = conn.cursor()
+#        print('connected!' + connectstring)
+        results = cursor.execute(sql)
+        ads = results.fetchall()
+        conn.close()
+        return ads
+
+    except:
+        print("I am unable to connect to the database")
+        conn.close()
+
+def get_sql_number(connectstring, number):
+
+    sql = "select * from adverts where phone1 = '{}' or phone2 ='{}'".format(number,number)
+
     print("get_sql_data_all" , sql)
 
     try:
@@ -720,9 +745,11 @@ def main():
     nsw_plate_object_list = []
     vic_plate_object_list = []
     qld_plate_object_list = []
+    sa_plate_object_list = []
     nsw_plate_basic_list = []
     vic_plate_basic_list = []
     qld_plate_basic_list = []
+    sa_plate_basic_list = []
 
     ads_list = []
     ads_table = []
@@ -924,6 +951,29 @@ def main():
                                           model_level=vic_pic.model_level, )
                     vic_plate_object_list.append(vic_plate)
                     vic_plate_basic_list.append(vic_pic.title)
+
+            if pics_dict[pic].jurisdiction == "QLD":
+                qld_pic = pics_dict[pic]
+                if qld_pic.title not in qld_plate_basic_list:
+                    qld_plate = RegoPlate(title=qld_pic.title, jurisdiction=qld_pic.jurisdiction,
+                                          make=qld_pic.make, model_code=qld_pic.model_code,
+                                          trim_level=qld_pic.trim_level, model=qld_pic.model,
+                                          car_year=qld_pic.year, colour=qld_pic.description,
+                                          model_level=qld_pic.model_level, )
+                    qld_plate_object_list.append(qld_plate)
+                    qld_plate_basic_list.append(qld_pic.title)
+
+            if pics_dict[pic].jurisdiction == "SA":
+                sa_pic = pics_dict[pic]
+                if sa_pic.title not in sa_plate_basic_list:
+                    sa_plate = RegoPlate(title=sa_pic.title, jurisdiction=sa_pic.jurisdiction,
+                                          make=sa_pic.make, model_code=sa_pic.model_code,
+                                          trim_level=sa_pic.trim_level, model=sa_pic.model,
+                                          car_year=sa_pic.year, colour=sa_pic.description,
+                                          model_level=sa_pic.model_level, )
+                    sa_plate_object_list.append(sa_plate)
+                    sa_plate_basic_list.append(sa_pic.title)
+
             if pics_dict[pic].jurisdiction == "NSW":
                 nsw_pic = pics_dict[pic]
                 if nsw_pic.title not in nsw_plate_basic_list:
@@ -1089,6 +1139,35 @@ def main():
                                 plate_stored.set_interior_trim(interior_trim)
                             if capacity != "none":
                                 plate_stored.capacity = capacity
+
+            if jurisdiction == "SA":  # check valid plate
+                if plate not in sa_plate_basic_list:
+                    sa_plate = RegoPlate(ad_index=ads_master_index, title=title, jurisdiction=jurisdiction,
+                                          make=make, model_code=model_code, trim_level=trim_level,
+                                          model=model, colour=colour,
+                                          car_year=car_year, capacity=capacity, body_style=body_style,
+                                          model_level=model_level, interior_trim=interior_trim,
+                                          transmission=transmission)
+
+                    no_of_cars = no_of_cars + 1
+                    # new_plate.set_suburb(ads_record[11])
+
+                    sa_plate_object_list.append(sa_plate)
+                    sa_plate_basic_list.append(plate)
+                else:
+                    already_found = already_found + 1
+                    for plate_stored in sa_plate_object_list:
+                        if plate_stored.title == plate:
+                            plate_stored.set_year(car_year)
+                            plate_stored.set_colour(colour)
+                            plate_stored.grow_ad_list(ads_master_index)
+                            #                         if ads_record[10] != "unknown":
+                            #                             plate_stored.colour = ads_record[10]
+                            if interior_trim != "none":
+                                plate_stored.set_interior_trim(interior_trim)
+                            if capacity != "none":
+                                plate_stored.capacity = capacity
+
             elif (plate == model) or (plate == make):  # Dont create a plate object
                 print(make, model, colour, publication, ad_date, phone1, jurisdiction)
 
@@ -1123,6 +1202,14 @@ def main():
     # qld_plate_object_list.sort()
     for qld_plate_stored in sorted(qld_plate_object_list, key=lambda plate: plate.title):
         qld_plate_stored.print_plate()
+
+    print("*" * 80)
+    print("**********************************    SOUTH AUSTRALIA         *******************************************")
+    print("*" * 80)
+
+    for sa_plate_stored in sorted(sa_plate_object_list, key=lambda plate: plate.title):
+        sa_plate_stored.print_plate()
+
 
     # ads_dict = []
     go_again = 'y'

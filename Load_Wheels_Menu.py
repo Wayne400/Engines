@@ -77,7 +77,7 @@ def add_pictures( row):
 
 def Menu(Default_Data_Fill):
 
-    Magazine_List = ["Wheels", "Modern Motor", "Wheels Road Tests"]
+    Magazine_List = ['Wheels', 'Modern Motor', 'Motor Manual', 'Wheels Road Tests']
     print(Magazine_List)
     magazine = input("<Magazine> ")
     Data_Fill  = Do_Car_Sales_Menu2(magazine)
@@ -86,7 +86,7 @@ def Menu(Default_Data_Fill):
         "rego_plate": 'RAM232',
         "jurisdiction": 'NSW',
         "rego_sticker": 'none',
-        "iso_publication_date": '1972-07-01',
+        "iso_publication_date": '1973-05-01',
         'page_number': "28",
         "description": 'none'
     }
@@ -108,23 +108,22 @@ def main():
                   "master_index": '99999999',
     }
 
-    pics_table = get_sql_pictures_all(connectstring="../advertisements_indexed.db", jurisdiction="all",
-                                 publication="all", publication_year="all", car_model="all", car_make="all")
-    for pics_record in pics_table:
-        print(pics_record[0], pics_record[1], pics_record[2], pics_record[3], pics_record[4], pics_record[5],
-              pics_record[6], pics_record[7], pics_record[8], pics_record[9], pics_record[10], pics_record[11],
-              pics_record[12], pics_record[13])
+    pics_dict = get_sql_pictures_all(connectstring="../advertisements_indexed.db", jurisdiction="all",
+                                 publication="all", publication_year="all", car_model="all", car_make="all", car_plate="none")
+    for pic in pics_dict:
+        new_pic = pics_dict[pic]
+        new_pic.print_picture()
 
 
     while True:
         Data_Fill = Menu(Default_Fill)
         add_pictures( Data_Fill)
-        pics_table = get_sql_pictures_all(connectstring="../advertisements_indexed.db", jurisdiction="all",
-                                 publication="all", publication_year="all", car_make="all", car_model="all")
-        for pics_record in pics_table:
-            print(pics_record[0], pics_record[1], pics_record[2], pics_record[3], pics_record[4], "page", pics_record[5],
-                          pics_record[6], pics_record[7], pics_record[8], pics_record[9], pics_record[10],
-                          pics_record[11], pics_record[12], pics_record[13])
+        pics_dict = get_sql_pictures_all(connectstring="../advertisements_indexed.db", jurisdiction="all",
+                                 publication="all", publication_year="all", car_make="all", car_model="all", car_plate="none")
+        for pic in pics_dict:
+            new_pic = pics_dict[pic]
+            new_pic.print_picture()
+
         plate = Data_Fill["rego_plate"][0:3]
         get_sql_plate_data(plate)
 

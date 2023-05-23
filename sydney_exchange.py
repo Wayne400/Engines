@@ -70,7 +70,7 @@ def get_exchange_dict():
     exchange_dict['440'] = 'Pymble ???'
     exchange_dict['449'] = 'St Ives, Turramurra, Pymble'
     exchange_dict['450'] = 'Terry Hills, Duffys Forest'
-    exchange_dict['451'] = 'Frenchs Forest, Belrose'
+    exchange_dict['451'] = 'Frenchs Forest,Belrose,Beacon Hill'
     exchange_dict['452'] = "Frenchs Forest"
     exchange_dict['455'] = "Brooklyn"
     exchange_dict['456'] = "Berowra"  # UBDno13 p114
@@ -139,7 +139,7 @@ def get_exchange_dict():
     exchange_dict['635'] = 'Parramatta, Westmead, Merrylands'
     exchange_dict['636'] = 'Greystanes, Parramatta'
     exchange_dict['637'] = 'Granville, Merrylands. Parramatta'
-    exchange_dict['638'] = 'Rydalmere'
+    exchange_dict['638'] = 'Rydalmere,Ermington'
     exchange_dict['639'] = 'Baulkham Hills'
     exchange_dict['642'] = 'Chullora, Belfield, Enfield'
     exchange_dict['644'] = 'Bass Hill, Sefton, Regents Park'

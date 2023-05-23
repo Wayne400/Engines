@@ -1,6 +1,6 @@
 
-def get_month(target_plate):
-    nsw_plate_search = {
+def get_month_vic(target_plate):
+    vic_plate_search = {
 
 
 '1960-01-01': ("none", "none", "none", "none", "none"),
@@ -152,18 +152,18 @@ def get_month(target_plate):
 '1970-11-01': ("ACQ643", "none", "none", "none", "none"),
 '1970-12-01': ("ABQ154", "BMK203", "AMQ153", "AKQ327", "none"),
 
-'1971-01-01': ("AVQ692", "AIL658", "AWI069", "AIL145", "none"),
+'1971-01-01': ("none", "none", "none", "none", "none"),
 '1971-02-01': ("none", "none", "none", "none", "none"),
-'1971-03-01': ("BAI631", "BAI218", "none", "none", "none"),
-'1971-04-01': ("BBQ466", "BDQ153", "BGI676", "BHQ948", "none"),
-'1971-05-01': ("BMQ458", "BKQ309", "none", "none", "none"),
+'1971-03-01': ("none", "none", "none", "none", "none"),
+'1971-04-01': ("none", "none", "none", "none", "none"),
+'1971-05-01': ("none", "none", "none", "none", "none"),
 '1971-06-01': ("none", "none", "none", "none", "none"),
-'1971-07-01': ("BQV847", "BQV249", "BQV586", "none", "none"),
-'1971-08-01': ("CFQ813", "CUQ354", "none", "none", "none"),
-'1971-09-01': ("CIK740", "none", "none", "none", "none"),
-'1971-10-01': ("CQB172", "none", "none", "none", "none"),
-'1971-11-01': ("DAI235", "none", "none", "none", "none"),
-'1971-12-01': ("DBQ714", "CQO004", "none", "none", "none"),
+'1971-07-01': ("KXF508", "KYK711", "none", "none", "none"),
+'1971-08-01': ("none", "none", "none", "none", "none"),
+'1971-09-01': ("none", "none", "none", "none", "none"),
+'1971-10-01': ("none", "none", "none", "none", "none"),
+'1971-11-01': ("none", "none", "none", "none", "none"),
+'1971-12-01': ("none", "none", "none", "none", "none"),
 
 
 '1972-01-01': ("none", "none", "none", "none", "none"),
@@ -281,7 +281,7 @@ def get_month(target_plate):
 '1979-08-01': ("none", "none", "none", "none", "none"),
 '1979-09-01': ("none", "none", "none", "none", "none"),
 '1979-10-01': ("none", "none", "none", "none", "none"),
-'1979-11-01': ("KMG348", "none", "none", "none", "none"),
+'1979-11-01': ("none", "none", "none", "none", "none"),
 '1979-12-01': ("none", "none", "none", "none", "none"),
 
 # FOA000  ** ** 1980 ** **
@@ -289,8 +289,8 @@ def get_month(target_plate):
 '1980-01-01': ("none", "none", "none", "none", "none"),
 '1980-02-01': ("none", "none", "none", "none", "none"),
 '1980-03-01': ("none", "none", "none", "none", "none"),
-'1980-04-01': ("KQR472", "none", "none", "none", "none"),
-'1980-05-01': ("KSD681", "none", "none", "none", "none"),
+'1980-04-01': ("none", "none", "none", "none", "none"),
+'1980-05-01': ("none", "none", "none", "none", "none"),
 '1980-06-01': ("none", "none", "none", "none", "none"),
 '1980-07-01': ("none", "none", "none", "none", "none"),
 '1980-08-01': ("none", "none", "none", "none", "none"),
@@ -370,8 +370,8 @@ def get_month(target_plate):
 
 }
     found_month = "none"
-    for key in sorted(nsw_plate_search):
-       month = nsw_plate_search[key]
+    for key in sorted(vic_plate_search):
+       month = vic_plate_search[key]
        for plate in month:
            if plate[0:3] == target_plate[0:3]:
                found_month = key

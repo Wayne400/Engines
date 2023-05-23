@@ -107,7 +107,7 @@ def get_sql_pictures_all(**kwargs):
             description = picture[9]
             model_year = picture[10]
             model_code = picture[11]
-        #           print(plate, jurisdiction, rego_sticker, model_year, make, model, description, mag_title, mag_date, "page", page_number, model_code)
+#            print(plate, jurisdiction, rego_sticker, model_year, make, model, description, mag_title, mag_date, "page", page_number, model_code)
 
         for pics_record in pics_table:  # create the picture objects
             new_pic = Picture(picture_index=pics_record[0], rego_plate=pics_record[1],
