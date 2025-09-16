@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d9ba7f4d-9610-4530-b8a8-a281deb82906" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/VIC_Plate_Info.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DisplayPlates.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Display_Plates_V4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Get_Car_Sales_Data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dealers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dealers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DisplayPlatesX.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Display_PLates_OOP_v2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Display_PlatesV1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Display_PlatesV2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Display_Plates_OOP.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Display_Plates_V3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Display_Plates_V3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Load_Plates_Menu2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Menu2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Load_Plates_Wheels.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Plates_Wheels.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Load_Wheels_Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load_Wheels_Menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSW_Plate_Info.py" beforeDir="false" afterPath="$PROJECT_DIR$/NSW_Plate_Info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL_Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQL_Utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sydney_exchange.py" beforeDir="false" afterPath="$PROJECT_DIR$/sydney_exchange.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql_test.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +57,15 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="1SrwyjRVNTpdYBYSozXG4RikHi3" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -60,15 +74,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Python3__Cleanup&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RunManager" selected="Python.Load_Wheels_Menu">
     <configuration name="Dsplay_Plates_V3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Engines" />
@@ -562,16 +575,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -586,7 +594,15 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

@@ -11,6 +11,7 @@ from SQL_Utils import get_sql_pictures_all
 
 
 def check_production( make, model, sort1, sort2, sort3):
+    # sort1=model_code, sort2=model_level, sort3=car_year
     if model == 'none' and make != 'Chrysler':
         model = "RXX"
     Model_Code_Start = {}
@@ -47,19 +48,22 @@ def check_production( make, model, sort1, sort2, sort3):
     if make == 'Rover':
         model_start_year = rover_model_start[model]
     if model == 'Valiant':
+        # sort1=model_code(R,S,VC,VH,VJ), sort2=model_level(Regal,VIP,Charger), sort3=car_year
         if sort3 > '5000' and sort3 != 'none':
           sort3 = '19' + sort3[0:2]
 
         if sort1 != "none":
-            #print sort2 , target_plate
             model_start_year = valiant_series_start[sort1]
-            #print model_start_year
-        elif sort1 == "none"  and sort2 != "none":
+        elif sort1 == "none"  and sort2 != "none" and sort3 == "none":
             model_start_year = valiant_model_start[sort2]
-            #print sort1, target_plate
-            #print model_start_year
+        elif sort1 == "none"  and sort2 != "none" and sort3 != "none":
+            if int(sort3) >= int(valiant_model_start[sort2]):
+                model_start_year = sort3
+            else:
+                model_start_year = valiant_model_start[sort2]  # No VIPs in 1966
         elif sort1 == "none"  and sort2 == "none" and sort3 != "none":
             model_start_year = sort3
+
         #    print make, model, sort1, sort2, sort3, model_start_year,
 
     return  model_start_year
@@ -592,23 +596,30 @@ def get_sql_data_mascot(car_model_list, **kwargs):
 
 def get_sql_data_series(car_model_list, **kwargs):
     #  print kwargs
+    car_level_list = kwargs["car_level_list"]
     jurisdiction = kwargs["jurisdiction"]
     connectstring = kwargs["connectstring"]
     car_make = kwargs["car_make"]
     stop = len(car_model_list)
+    stop2 = len(car_level_list)
     car_model_or_string = "( model_code = '{}'".format(car_model_list[0])
+    car_level_or_string = "( model_level = '{}'".format(car_level_list[0])
     for x in range(1, stop):
         car_model_or_string += " or " + "model_code = '{}'".format(car_model_list[x])
     #      print car_model_list[x]
     car_model_or_string += " )"
+    for x in range(1, stop2):
+        car_level_or_string += " or " + "model_level = '{}'".format(car_level_list[x])
+    car_level_or_string += " )"
+
     #     sql = "select * from adverts"
     #  car_model_string = "car_model = '{}'".format(car_model_list[0])
     if jurisdiction == "all":
        sql = "select * from adverts where {} and car_make = '{}'".format(
            car_model_or_string, car_make)
     else:
-        sql = "select * from adverts where {} and jurisdiction = '{}' and car_make = '{}'".format(
-            car_model_or_string, jurisdiction, car_make)
+        sql = "select * from adverts where {} and jurisdiction = '{}' and car_make = '{}' and {} ".format(
+            car_model_or_string, jurisdiction, car_make, car_level_or_string)
 
 #    sql = "select * from adverts where {} and jurisdiction = '{}' and car_make = '{}'".format(
 #        car_model_or_string, jurisdiction, car_make)
@@ -890,7 +901,13 @@ def main():
                     Valiant_list = ["none", "R", "S", "AP5", "AP6", "VC", "VE", "VF", "VG", "VH", "VJ", "VK", "CL",
                                     "CM"]
 
-                ads_table = get_sql_data_series(car_model_list=Valiant_list, car_make="Chrysler",
+                Valiant_level_list = {'Utility', 'Regal', 'Charger' , 'VIP' , 'Safari', 'Ranger', 'Chrysler', 'Valiant', 'Pacer', 'Hardtop' ,'Wagon' }
+                print(Valiant_level_list)
+                pick_level = input("please enter Model Level: " )
+                if pick_level != "all":
+                    Valiant_level_list = [pick_level]
+
+                ads_table = get_sql_data_series(car_model_list=Valiant_list, car_level_list=Valiant_level_list, car_make="Chrysler",
                                                 connectstring="../advertisements_indexed.db",
                                                 jurisdiction=pick_state)
                 break
@@ -1050,7 +1067,7 @@ def main():
                     if nsw_plate.jurisdiction == "NSW":
                         if not re.match('^[A-Z][A-Z][0-9]{3}', plate):
                             return_above = check_production(make=make, model=model, sort1=model_code, sort2=model_level,
-                                                            sort3=ads_record[8])
+                                                            sort3=car_year)
                             nsw_list = check_plate_nsw3(target_plate=title, model_start_year=return_above)
                             nsw_plate.set_year_predict("1999")
                             nsw_plate.set_nsw_epoch(nsw_list)

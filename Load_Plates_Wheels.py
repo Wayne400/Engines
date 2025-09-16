@@ -47,7 +47,7 @@ def add_adverts(cursor, ads):
 
     master_index1 = 0
     for row in ads:
-        print row
+        print(row)
         master_index1 += 1
 
 

@@ -52,18 +52,18 @@ def add_pictures( row):
 
         sql = '''insert into pictures (picture_index, rego_plate, jurisdiction,
          rego_sticker, iso_publication_date, page_number, magazine,
-                 car_make, car_model, description, model_year, model_code, model_level, trim_level)
+                 car_make, car_model, description, price, model_year, model_code, model_level, trim_level)
                   values
          ({picture_index}, "{rego_plate}", "{jurisdiction}", "{rego_sticker}", 
          "{iso_publication_date}", {page_number}, "{magazine}", 
-        "{car_make}", "{car_model}", "{description}", "{model_year}", "{model_code}", "{model_level}", "{trim_level}")'''
+        "{car_make}", "{car_model}", "{description}", "{price}", "{model_year}", "{model_code}", "{model_level}", "{trim_level}")'''
 
         sql = sql.format(picture_index=master_index1, rego_plate=row["rego_plate"],
                         jurisdiction=row["jurisdiction"], rego_sticker=row["rego_sticker"],
                         iso_publication_date=row["iso_publication_date"],
                         page_number=row["page_number"], magazine=row["magazine"],
                         car_make=row["car_make"], car_model=row["car_model"],
-                        description=row["description"], model_year=row["model_year"],
+                        description=row["description"], price=row["price"], model_year=row["model_year"],
                         model_code=row["model_code"],model_level=row["model_level"], trim_level=row["trim_level"])
         print(sql)
         try:
@@ -77,31 +77,49 @@ def add_pictures( row):
 
 def Menu(Default_Data_Fill):
 
-    Magazine_List = ['Wheels', 'Modern Motor', 'Motor Manual', 'Wheels Road Tests']
+    Magazine_List = ['Wheels', 'Modern Motor', 'Motor Manual', 'Wheels Road Tests', 'Facebook']
     print(Magazine_List)
     magazine = input("<Magazine> ")
-    Data_Fill  = Do_Car_Sales_Menu2(magazine)
-    Data_Fill['magazine'] = magazine
-    clues = {
-        "rego_plate": 'RAM232',
+    clues = {}
+    must_ask = {
         "jurisdiction": 'NSW',
+        "rego_plate": 'RAM232',
         "rego_sticker": 'none',
         "iso_publication_date": '1973-05-01',
         'page_number': "28",
-        "description": 'none'
-    }
+        "price": 'none',
+        'description': 'none',
 
+    }
+    Data_Fill = Do_Car_Sales_Menu2(magazine, clues)
+    Data_Fill['magazine'] = magazine
     # for question in must_ask:
-    retry = False
-    for question in clues:
-            print(clues[question])
-            answer = input(question + "<" + clues[question] + ">")
+#    retry = False
+#    for question in clues:
+#            print(clues[question])
+#            answer = input(question + "<" + clues[question] + ">")
+#            if answer == "":
+#                Data_Fill[question] = clues[question]
+#            else:
+#                Data_Fill[question] = answer
+
+#    return Data_Fill
+    # for question in must_ask:
+    for question in must_ask:
+            if question in clues:
+                print(clues[question])
+                answer = input(question + "<" + must_ask[question] + ">")
+            else:
+                print(must_ask[question])
+                answer = input(question + "<" + must_ask[question] + ">")
             if answer == "":
-                Data_Fill[question] = clues[question]
+                Data_Fill[question] = must_ask[question]
             else:
                 Data_Fill[question] = answer
 
     return Data_Fill
+
+
 
 def main():
     Default_Fill = {
